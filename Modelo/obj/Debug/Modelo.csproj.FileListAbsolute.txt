@@ -1,0 +1,17 @@
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.Migrations.CrearBD.resources
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.csproj.GenerateResource.cache
