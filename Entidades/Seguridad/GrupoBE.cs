@@ -15,17 +15,17 @@ namespace Entidades
     {
         [Key]
         public int Id { get; set; }
-        public string Nombre { get; set; }
+        //public string Nombre { get; set; }
 
 
-        /*
+        
         public ComponenteBE Componente { get; set; }
 
         public GrupoBE()
         {
             // Constructor sin parámetros
         }
-
+        /*
         
         public GrupoBE(string nombre)
         {

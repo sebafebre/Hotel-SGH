@@ -150,9 +150,28 @@ namespace Controladora
 
 
 
+        public Dictionary<int, int> ContarReservasPorDiaDelMes()
+        {
+            return reservaDAL.ContarReservasPorDiaDelMes();
+        }
+
+        public List<HabitacionBE> ObtenerHabitacionesDesdeBaseDeDatos()
+        {
+            return reservaDAL.ObtenerHabitacionesDesdeBaseDeDatos();
+        }
 
 
+        public Tuple<List<string>, List<int>> PrepararDatosParaGrafico(List<HabitacionBE> habitaciones)
+        {
+            return reservaDAL.PrepararDatosParaGrafico(habitaciones);
+        }
 
+        
+
+        public decimal CalcularGananciaFuturaAproximada()
+        {
+            return reservaDAL.CalcularGananciaFuturaAproximada();
+        }
 
     }
 }

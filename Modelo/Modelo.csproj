@@ -57,9 +57,9 @@
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="ContextoBD.cs" />
     <Compile Include="EmpleadoDAL.cs" />
-    <Compile Include="Migrations\202402202129077_CrearBD.cs" />
-    <Compile Include="Migrations\202402202129077_CrearBD.designer.cs">
-      <DependentUpon>202402202129077_CrearBD.cs</DependentUpon>
+    <Compile Include="Migrations\202402222209278_crearBD.cs" />
+    <Compile Include="Migrations\202402222209278_crearBD.designer.cs">
+      <DependentUpon>202402222209278_crearBD.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PedidoDAL.cs" />
@@ -84,8 +84,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202402202129077_CrearBD.resx">
-      <DependentUpon>202402202129077_CrearBD.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202402222209278_crearBD.resx">
+      <DependentUpon>202402222209278_crearBD.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

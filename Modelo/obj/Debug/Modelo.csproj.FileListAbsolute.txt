@@ -13,5 +13,5 @@ C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.csproj.CoreCompileInput
 C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.csproj.CopyComplete
 C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.dll
 C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.pdb
-C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.Migrations.CrearBD.resources
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.Migrations.crearBD.resources
 C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.csproj.GenerateResource.cache

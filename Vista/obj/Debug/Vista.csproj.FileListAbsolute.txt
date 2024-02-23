@@ -36,3 +36,4 @@ C:\Users\sebaf\Desktop\SGH - UAI\Vista\obj\Debug\Vista.Administrador.frmUsuarios
 C:\Users\sebaf\Desktop\SGH - UAI\Vista\obj\Debug\Vista.Administrador.frmGruposPermisos.resources
 C:\Users\sebaf\Desktop\SGH - UAI\Vista\obj\Debug\Vista.Paneles.frmCheckOut.resources
 C:\Users\sebaf\Desktop\SGH - UAI\Vista\obj\Debug\Vista.Administrador.frmEmpleado.resources
+C:\Users\sebaf\Desktop\SGH - UAI\Vista\obj\Debug\Vista.Paneles.frmOcupacion.resources

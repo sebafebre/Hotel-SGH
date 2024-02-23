@@ -7,13 +7,13 @@ namespace Modelo.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class CrearBD : IMigrationMetadata
+    public sealed partial class crearBD : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CrearBD));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(crearBD));
         
         string IMigrationMetadata.Id
         {
-            get { return "202402202129077_CrearBD"; }
+            get { return "202402222209278_crearBD"; }
         }
         
         string IMigrationMetadata.Source

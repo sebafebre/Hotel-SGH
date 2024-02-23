@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
+using System.Data.Entity;
+
 
 namespace Modelo
 {
@@ -83,7 +85,7 @@ namespace Modelo
                          select new
                          {
                              Id = g.Id,
-                             Nombre = g.Nombre
+                             Nombre = g.Componente.Nombre
                          };
             dgvGrupos.DataSource = grupos.ToList();
         }
@@ -97,7 +99,7 @@ namespace Modelo
                          select new
                          {
                              Id = g.Id,
-                             Nombre = g.Nombre
+                             Nombre = g.Componente.Nombre
                          };
             dgvGrupos.DataSource = grupos.ToList();
         }
@@ -108,10 +110,12 @@ namespace Modelo
         {
             try
             {
-                if (con.Grupo.Any(g => g.Nombre == grupo.Nombre))
+                if (con.Grupo.Any(g => g.Componente.Nombre == grupo.Componente.Nombre))
                 {
                     throw new Exception("Ya existe un grupo con ese nombre.");
                 }
+                //grupo.Componente.Id = grupo.Id;
+                //grupo.Componente.Nombre = grupo.Componente.Nombre;
                 con.Grupo.Add(grupo);
                 con.SaveChanges();
 
@@ -120,16 +124,19 @@ namespace Modelo
             {
                 throw new Exception("No se pudo agregar el grupo. " + ex.Message);
             }
-            
+
         }
 
         public void ModificarGrupo(GrupoBE grupo)
         {
             try
             {
-                GrupoBE grupoAModificar = con.Grupo.Find(grupo.Id);
-                grupoAModificar.Id = grupo.Id;
-                grupoAModificar.Nombre = grupo.Nombre;
+                GrupoBE grupoAModificar = con.Grupo.Include(g => g.Componente).FirstOrDefault(g => g.Id == grupo.Id);
+
+
+
+                //Ahora modificar el cliente
+                grupoAModificar.Componente.Nombre = grupo.Componente.Nombre;
 
                 con.SaveChanges();
             }
@@ -144,7 +151,8 @@ namespace Modelo
         {
             try
             {
-                GrupoBE grupoAEliminar = con.Grupo.Find(idGrupo);
+                GrupoBE grupoAEliminar = con.Grupo.Include(g => g.Componente).FirstOrDefault(g => g.Id == idGrupo);
+                con.Componente.Remove(grupoAEliminar.Componente);
                 con.Grupo.Remove(grupoAEliminar);
                 con.SaveChanges();
             }

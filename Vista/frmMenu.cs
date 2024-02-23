@@ -25,6 +25,7 @@ namespace Vista
             this.usuario = usuario;
             controladorPermisos = new UsuarioBLL();
             //---------------------->//VerificarP();
+            ValidacionesBLL.AbrirFormulario(typeof(Vista.Paneles.frmOcupacion), this);
         }
 
         private void VerificarP()
@@ -34,7 +35,7 @@ namespace Vista
             List<string> permisos = new List<string>();
             foreach (var item in permisosUsuario)
             {
-                permisos.Add(item.Nombre);
+                permisos.Add(item.Componente.Nombre);
             }
             if (permisos.Contains("frmOcupacion"))
             {

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Modelo
 {
@@ -24,7 +25,7 @@ namespace Modelo
                            select new
                            {
                                Id = p.Id,
-                               Nombre = p.Nombre
+                               Nombre = p.Componente.Nombre
                            };
             dgvPermisos.DataSource = permisos.ToList();
         }
@@ -37,7 +38,7 @@ namespace Modelo
                            select new
                            {
                                Id = p.Id,
-                               Nombre = p.Nombre
+                               Nombre = p.Componente.Nombre
                            };
             dgvPermisos.DataSource = permisos.ToList();
         }
@@ -51,7 +52,7 @@ namespace Modelo
         {
             try
             {
-                if (con.Permiso.Any(p => p.Nombre == permiso.Nombre))
+                if (con.Permiso.Any(p => p.Componente.Nombre == permiso.Componente.Nombre))
                 {
                     throw new Exception("Ya existe un permiso con ese nombre.");
                 }
@@ -70,9 +71,9 @@ namespace Modelo
         {
             try
             {
-                PermisoBE permisoAModificar = con.Permiso.Find(permiso.Id);
+                PermisoBE permisoAModificar = con.Permiso.Include(g => g.Componente).FirstOrDefault(g => g.Id == permiso.Id);
                 permisoAModificar.Id = permiso.Id;
-                permisoAModificar.Nombre = permiso.Nombre;
+                permisoAModificar.Componente.Nombre = permiso.Componente.Nombre;
 
                 con.SaveChanges();
             }
@@ -87,7 +88,8 @@ namespace Modelo
         {
             try
             {
-                PermisoBE permisoAEliminar = con.Permiso.Find(idPermiso);
+                PermisoBE permisoAEliminar = con.Permiso.Include(g => g.Componente).FirstOrDefault(g => g.Id == idPermiso);
+                con.Componente.Remove(permisoAEliminar.Componente);
                 con.Permiso.Remove(permisoAEliminar);
                 con.SaveChanges();
             }

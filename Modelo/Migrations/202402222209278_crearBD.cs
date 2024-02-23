@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CrearBD : DbMigration
+    public partial class crearBD : DbMigration
     {
         public override void Up()
         {
@@ -32,6 +32,15 @@
                         Direccion = c.String(maxLength: 60),
                         FechaNacimiento = c.DateTime(nullable: false, storeType: "date"),
                         EstadoActivo = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Componente",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Nombre = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -173,9 +182,11 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Nombre = c.String(),
+                        Componente_Id = c.Int(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Componente", t => t.Componente_Id)
+                .Index(t => t.Componente_Id);
             
             CreateTable(
                 "dbo.GrupoPermiso",
@@ -196,9 +207,11 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Nombre = c.String(),
+                        Componente_Id = c.Int(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Componente", t => t.Componente_Id)
+                .Index(t => t.Componente_Id);
             
             CreateTable(
                 "dbo.Usuario",
@@ -235,7 +248,9 @@
             DropForeignKey("dbo.UsuarioGrupo", "Grupo_Id", "dbo.Grupo");
             DropForeignKey("dbo.Usuario", "Empleado_Id", "dbo.Empleado");
             DropForeignKey("dbo.GrupoPermiso", "Permiso_Id", "dbo.Permiso");
+            DropForeignKey("dbo.Permiso", "Componente_Id", "dbo.Componente");
             DropForeignKey("dbo.GrupoPermiso", "Grupo_Id", "dbo.Grupo");
+            DropForeignKey("dbo.Grupo", "Componente_Id", "dbo.Componente");
             DropForeignKey("dbo.DetallePedido", "Producto_Id", "dbo.Producto");
             DropForeignKey("dbo.DetallePedido", "Pedido_Id", "dbo.Pedido");
             DropForeignKey("dbo.DetalleFactura", "Producto_Id", "dbo.Producto");
@@ -250,8 +265,10 @@
             DropIndex("dbo.UsuarioGrupo", new[] { "Usuario_Id" });
             DropIndex("dbo.UsuarioGrupo", new[] { "Grupo_Id" });
             DropIndex("dbo.Usuario", new[] { "Empleado_Id" });
+            DropIndex("dbo.Permiso", new[] { "Componente_Id" });
             DropIndex("dbo.GrupoPermiso", new[] { "Permiso_Id" });
             DropIndex("dbo.GrupoPermiso", new[] { "Grupo_Id" });
+            DropIndex("dbo.Grupo", new[] { "Componente_Id" });
             DropIndex("dbo.DetallePedido", new[] { "Producto_Id" });
             DropIndex("dbo.DetallePedido", new[] { "Pedido_Id" });
             DropIndex("dbo.Reserva", new[] { "Habitacion_Id" });
@@ -276,6 +293,7 @@
             DropTable("dbo.Empleado");
             DropTable("dbo.Factura");
             DropTable("dbo.DetalleFactura");
+            DropTable("dbo.Componente");
             DropTable("dbo.Persona");
             DropTable("dbo.Cliente");
         }

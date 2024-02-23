@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public abstract class ComponenteBE
+    [Table("Componente")]
+    public  class ComponenteBE
     {
 
         public int Id { get; set; }

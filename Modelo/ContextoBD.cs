@@ -31,7 +31,7 @@ namespace Modelo
         }
         #endregion
 
-        protected ContextoBD() : base("BD")
+        public ContextoBD() : base("BD")
         {
             /*
             if (!Database.Exists("BD"))
@@ -39,6 +39,7 @@ namespace Modelo
         }
 
         #region Entidades Seguridad
+        public DbSet<ComponenteBE> Componente { get; set; }
         public DbSet<GrupoBE> Grupo { get; set; }
         public DbSet<PermisoBE> Permiso { get; set; }
         public DbSet<UsuarioBE> Usuario { get; set; }

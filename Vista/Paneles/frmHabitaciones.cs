@@ -19,7 +19,7 @@ namespace Vista.Paneles
     {
         HabitacionBLL habitacionBLL = new HabitacionBLL();
         ValidacionesBLL validacionBLL = new ValidacionesBLL();
-        
+        int nroHabitacion;
         public frmHabitaciones()
         {
             InitializeComponent();
@@ -36,7 +36,12 @@ namespace Vista.Paneles
                     HabitacionBE habitacion = new HabitacionBE();
                     habitacion.Id = Convert.ToInt32(txtIdHabitacion.Text);
                     habitacion.Piso = Convert.ToInt32(cbPiso.Text);
-                    habitacion.NroHabitacion = Convert.ToInt32(cbNumHabitacion.Text);
+
+
+                    string numeroCompletoHabitacion = String.Format("{0:D2}{1:D2}", Convert.ToInt32(cbPiso.Text), Convert.ToInt32(cbNumHabitacion.Text));
+
+
+                    habitacion.NroHabitacion = Convert.ToInt32(numeroCompletoHabitacion);
 
                     string estadoSeleccionado = habitacionBLL.ObtenerEstadoSeleccionado(flpEstado);
                     habitacion.Estado = estadoSeleccionado;
@@ -86,7 +91,7 @@ namespace Vista.Paneles
                     habitacion.TipoHabitacion = cbTipoHabitacion.Text;
                     habitacion.TipoCamas = cbNroCamas.Text;
                     habitacionBLL.AgregarHabitacion(habitacion);
-                    MessageBox.Show("Habitacion agregada correctamente", "Agregar Habitacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Habitacion agregada correctamente", "Agregar Habitacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     habitacionBLL.ListarHabitacionesEnDataGridView(dgvHabitaciones);
                     validacionBLL.LimpiarCampos(this.Controls);
@@ -132,7 +137,7 @@ namespace Vista.Paneles
                 if (dgvHabitaciones.CurrentRow != null)
                 {
                     txtIdHabitacion.Text = dgvHabitaciones.CurrentRow.Cells[0].Value.ToString();
-                    cbNumHabitacion.Text = dgvHabitaciones.CurrentRow.Cells[1].Value.ToString();
+                    //cbNumHabitacion.Text = string numeroHabitacionSimple = numeroCompletoHabitacion.Substring(2);
                     cbPiso.SelectedItem = dgvHabitaciones.CurrentRow.Cells[2].Value.ToString();
                     cbTipoHabitacion.SelectedItem = dgvHabitaciones.CurrentRow.Cells[3].Value.ToString();
 
@@ -140,8 +145,44 @@ namespace Vista.Paneles
 
                     txtPrecioDiario.Text = dgvHabitaciones.CurrentRow.Cells[5].Value.ToString();
                     cbNroCamas.SelectedItem = dgvHabitaciones.CurrentRow.Cells[6].Value.ToString();
+                    string numeroCompletoHabitacion = dgvHabitaciones.CurrentRow.Cells[1].Value.ToString();
+
                     
+
+
+                    // Obtener el último dígito si es un número de tres dígitos o los dos últimos si es de cuatro dígitos
+                    int ultimosDigitos = Convert.ToInt32( numeroCompletoHabitacion.Substring(numeroCompletoHabitacion.Length - 2));
+
+                    // Si los dos últimos dígitos son "00", tomamos solo el tercer dígito
+                    if (ultimosDigitos < 10 && numeroCompletoHabitacion.Length >= 3)
+                    {
+                        string tercerDigito = numeroCompletoHabitacion.Substring(numeroCompletoHabitacion.Length - 3, 1);
+                        cbNumHabitacion.Text = tercerDigito;
+                    }
+                    else
+                    {
+                        cbNumHabitacion.Text = ultimosDigitos.ToString();
+                    }
+
+                    /*
+                    cbNumHabitacion.Text = numeroCompletoHabitacion.Substring(2);
+
+
+                    // Obtener el último dígito si es un número de tres dígitos o los dos últimos si es de cuatro dígitos
+                    string ultimosDigitos = numeroCompletoHabitacion.Substring(numeroCompletoHabitacion.Length - 2);
+
+                    // Si los dos últimos dígitos son "00", tomamos solo el tercer dígito
+                    if (ultimosDigitos == "00" && numeroCompletoHabitacion.Length >= 3)
+                    {
+                        string tercerDigito = numeroCompletoHabitacion.Substring(numeroCompletoHabitacion.Length - 3, 1);
+                        cbNumHabitacion.Text = tercerDigito; 
+                    }
+                    else
+                    {
+                       cbNumHabitacion.Text = ultimosDigitos;
+                    }*/
                 }
+
             }
             catch (Exception ex)
             {
