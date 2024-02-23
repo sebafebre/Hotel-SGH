@@ -636,6 +636,7 @@ namespace Modelo
 
 
 
+
         //Pone los detallespedido del pedido seleccionado
         public void ListarDetallesDelPedidoDGV(int nroPedido, DataGridView dataGridView)
         {
@@ -1133,9 +1134,9 @@ namespace Modelo
                         contenidoFactura.AppendLine($"Subtotal: {reserva.Subtotal}");
                         contenidoFactura.AppendLine($"Impuestos: {reserva.Impuestos}");
                         contenidoFactura.AppendLine($"Total de la factura: {reserva.Total}");
-
+                        string ubica = "SGH - UAI";
                         string nombreCarpetaExistente = "FacturasHotel";
-                        string rutaCarpetaExistente = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), nombreCarpetaExistente);
+                        string rutaCarpetaExistente = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), ubica, nombreCarpetaExistente);
                         string carpetaReserva = Path.Combine(rutaCarpetaExistente, nroReserva.ToString());
 
                         if (!Directory.Exists(carpetaReserva))

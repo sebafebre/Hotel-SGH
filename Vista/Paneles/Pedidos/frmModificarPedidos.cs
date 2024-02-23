@@ -234,7 +234,7 @@ namespace Vista.Paneles.Pedidos
                     txtNombreProducto.Text = dgvDetalles.CurrentRow.Cells[2].Value.ToString();
                     txtCantProducto.Text = dgvDetalles.CurrentRow.Cells[3].Value.ToString();
                     lblPrecioProd.Text = dgvDetalles.CurrentRow.Cells[4].Value.ToString();
-                    lblTotalPedido.Text = dgvDetalles.CurrentRow.Cells[5].Value.ToString();
+                    
 
                     
                     ClienteBE clienteReserva;

@@ -30,8 +30,6 @@
         {
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.dgvDetalles = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblTotalPedido = new System.Windows.Forms.Label();
             this.flpEstado = new System.Windows.Forms.FlowLayoutPanel();
             this.rbAPagar = new System.Windows.Forms.RadioButton();
             this.rbPagoInstantaneo = new System.Windows.Forms.RadioButton();
@@ -91,24 +89,6 @@
             this.dgvDetalles.Size = new System.Drawing.Size(931, 185);
             this.dgvDetalles.TabIndex = 103;
             this.dgvDetalles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalles_CellClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(961, 404);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 16);
-            this.label1.TabIndex = 151;
-            this.label1.Text = "Total del Pedido:";
-            // 
-            // lblTotalPedido
-            // 
-            this.lblTotalPedido.AutoSize = true;
-            this.lblTotalPedido.Location = new System.Drawing.Point(1077, 404);
-            this.lblTotalPedido.Name = "lblTotalPedido";
-            this.lblTotalPedido.Size = new System.Drawing.Size(16, 16);
-            this.lblTotalPedido.TabIndex = 150;
-            this.lblTotalPedido.Text = "...";
             // 
             // flpEstado
             // 
@@ -370,8 +350,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnModificarDetalle);
             this.Controls.Add(this.btnEliminarPedido);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblTotalPedido);
             this.Controls.Add(this.flpEstado);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtNroReserva);
@@ -407,8 +385,6 @@
 
         private System.Windows.Forms.DataGridView dgvPedidos;
         private System.Windows.Forms.DataGridView dgvDetalles;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblTotalPedido;
         private System.Windows.Forms.FlowLayoutPanel flpEstado;
         private System.Windows.Forms.RadioButton rbAPagar;
         private System.Windows.Forms.RadioButton rbPagoInstantaneo;

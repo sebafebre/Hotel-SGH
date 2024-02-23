@@ -8,12 +8,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 using System.Windows.Forms;
 
-namespace Vista.Paneles
+namespace Vista.Paneles.Pedidos
 {
-    public partial class frmPedidos : Form
+    public partial class frmAgregarPedidos : Form
     {
         CheckInBLL checkinBLL = new CheckInBLL();
 
@@ -26,24 +25,14 @@ namespace Vista.Paneles
         int PrecioProductoSelec = 0;
 
 
-        List<DetallePedidoBE> listaDetallesPedidos = new List<DetallePedidoBE>(); 
+        List<DetallePedidoBE> listaDetallesPedidos = new List<DetallePedidoBE>();
 
-
-
-
-        public frmPedidos()
+        public frmAgregarPedidos()
         {
             InitializeComponent();
             checkinBLL.ListarReservasActivasEnDataGridView(dgvReservas);
             pedidoBLL.ListarProductosEnDGV(dgvProductos);
         }
-
-        private void txtBuscarDNI_TextChanged(object sender, EventArgs e)
-        {
-            string dni = txtBuscarDNI.Text.Trim().ToLower();
-            checkinBLL.BuscarClientePorDNI(dni, dgvReservas);
-        }
-
 
         private bool ValidarCampos()
         {
@@ -69,42 +58,36 @@ namespace Vista.Paneles
             return true;
         }
 
-
-
-
-
-
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
-                if(ValidarCampos())
+                if (ValidarCampos())
                 {
-                    
-                        if (CantProductoSelec > Convert.ToInt32(txtCantProducto.Text))
-                        {
 
-                            // Agregar el producto al pedido
-                            //pedidoBLL.AgregarProductoAPedido(IdReservaDGV, IdProducto, NombreProducto, CantidadProducto, PrecioProducto);
-                            //pedidoBLL.AgregarPedido( IdProductoSelec, txtNombreProducto.Text, Convert.ToInt32(txtCantProducto.Text));
+                    if (CantProductoSelec > Convert.ToInt32(txtCantProducto.Text))
+                    {
 
-                            listaDetallesPedidos = pedidoBLL.AgregarPedido(listaDetallesPedidos, dgvProductos, IdProductoSelec, txtNombreProducto.Text, Convert.ToInt32(txtCantProducto.Text));
+                        // Agregar el producto al pedido
+                        //pedidoBLL.AgregarProductoAPedido(IdReservaDGV, IdProducto, NombreProducto, CantidadProducto, PrecioProducto);
+                        //pedidoBLL.AgregarPedido( IdProductoSelec, txtNombreProducto.Text, Convert.ToInt32(txtCantProducto.Text));
 
-                            // Actualizar el total del pedido
-                            //pedidoBLL.ActualizarTotalPedido(IdReservaDGV, Convert.ToInt32(lblTotal.Text) + (CantidadProducto * PrecioProducto));
+                        listaDetallesPedidos = pedidoBLL.AgregarPedido(listaDetallesPedidos, dgvProductos, IdProductoSelec, txtNombreProducto.Text, Convert.ToInt32(txtCantProducto.Text));
 
-                            // Actualizar el DataGridView de productos
-                            //pedidoBLL.ListarProductosEnDGV(dgvProductos);
-                            pedidoBLL.CargarDetallesEnDataGridView(listaDetallesPedidos, dgvDetalles);
+                        // Actualizar el total del pedido
+                        //pedidoBLL.ActualizarTotalPedido(IdReservaDGV, Convert.ToInt32(lblTotal.Text) + (CantidadProducto * PrecioProducto));
 
-                            lblTotalPedido.Text = listaDetallesPedidos.Sum(d => d.Total).ToString();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No hay suficiente stock del producto seleccionado.");
-                        }
-                    
+                        // Actualizar el DataGridView de productos
+                        //pedidoBLL.ListarProductosEnDGV(dgvProductos);
+                        pedidoBLL.CargarDetallesEnDataGridView(listaDetallesPedidos, dgvDetalles);
+
+                        lblTotalPedido.Text = listaDetallesPedidos.Sum(d => d.Total).ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay suficiente stock del producto seleccionado.");
+                    }
+
                 }
                 else
                 {
@@ -116,6 +99,7 @@ namespace Vista.Paneles
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
         }
 
         private void btnFinalizarPedido_Click(object sender, EventArgs e)
@@ -143,17 +127,18 @@ namespace Vista.Paneles
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-
         }
 
-        private void btnModificarPedidos_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            ValidacionesBLL.CambiarPanel(typeof(Vista.Paneles.Pedidos.frmModificarPedidos), this);
-        }
-
-        private void btnAgregarProductoStock_Click(object sender, EventArgs e)
-        {
-            ValidacionesBLL.CambiarPanel(typeof(Vista.Paneles.Pedidos.frmProductos), this);
+            try
+            {
+                listaDetallesPedidos = pedidoBLL.CancelarPedido(listaDetallesPedidos, dgvProductos, dgvDetalles);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void dgvReservas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -201,36 +186,21 @@ namespace Vista.Paneles
 
                     //lblTotal.Text = (Convert.ToInt32(txtCantProducto.Text) * PrecioProductoSelec).ToString();
 
-                    if(txtCantProducto.Text != "")
+                    if (txtCantProducto.Text != "")
                     {
                         lblTotal.Text = (Convert.ToInt32(txtCantProducto.Text) * PrecioProductoSelec).ToString();
                     }
-                    
+
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                listaDetallesPedidos = pedidoBLL.CancelarPedido(listaDetallesPedidos, dgvProductos, dgvDetalles);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            
         }
 
         private void txtCantProducto_TextChanged(object sender, EventArgs e)
         {
-            
             if (txtCantProducto.Text != "")
             {
                 lblTotal.Text = (Convert.ToInt32(txtCantProducto.Text) * PrecioProductoSelec).ToString();
@@ -241,21 +211,13 @@ namespace Vista.Paneles
         {
             string nroHabitacion = txtNroHabitacion.Text.Trim().ToLower();
             checkinBLL.BuscarClientePorNumHabitacion(nroHabitacion, dgvReservas);
-        }
-
-        private void txtNombreProducto_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
-        private void btnFrmPedidos_Click(object sender, EventArgs e)
+        private void txtBuscarDNI_TextChanged(object sender, EventArgs e)
         {
-            ValidacionesBLL.AbrirFormulario(typeof(Vista.Paneles.frmPedidos), this);
-        }
-
-        private void txtNroReserva_TextChanged(object sender, EventArgs e)
-        {
-
+            string dni = txtBuscarDNI.Text.Trim().ToLower();
+            checkinBLL.BuscarClientePorDNI(dni, dgvReservas);
         }
     }
 }

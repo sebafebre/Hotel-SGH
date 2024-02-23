@@ -129,10 +129,10 @@
     <Compile Include="Paneles\frmOcupacion.Designer.cs">
       <DependentUpon>frmOcupacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paneles\frmPedidos.cs">
+    <Compile Include="Paneles\Pedidos\frmPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Paneles\frmPedidos.Designer.cs">
+    <Compile Include="Paneles\Pedidos\frmPedidos.Designer.cs">
       <DependentUpon>frmPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Paneles\frmReservas.cs">
@@ -140,6 +140,12 @@
     </Compile>
     <Compile Include="Paneles\frmReservas.Designer.cs">
       <DependentUpon>frmReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paneles\Pedidos\frmAgregarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\Pedidos\frmAgregarPedidos.Designer.cs">
+      <DependentUpon>frmAgregarPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Paneles\Pedidos\frmModificarPedidos.cs">
       <SubType>Form</SubType>
@@ -191,11 +197,14 @@
     <EmbeddedResource Include="Paneles\frmOcupacion.resx">
       <DependentUpon>frmOcupacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Paneles\frmPedidos.resx">
+    <EmbeddedResource Include="Paneles\Pedidos\frmPedidos.resx">
       <DependentUpon>frmPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\frmReservas.resx">
       <DependentUpon>frmReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\Pedidos\frmAgregarPedidos.resx">
+      <DependentUpon>frmAgregarPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\Pedidos\frmModificarPedidos.resx">
       <DependentUpon>frmModificarPedidos.cs</DependentUpon>

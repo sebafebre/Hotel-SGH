@@ -110,7 +110,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(1480, 450);
+            this.ClientSize = new System.Drawing.Size(1480, 472);
             this.Controls.Add(this.pBarMantenimiento);
             this.Controls.Add(this.pBarOcupadas);
             this.Controls.Add(this.pBarDisponibles);

@@ -1,9 +1,0 @@
-DETALLE DE LA FACTURA
-Cliente: enzo pe
-Reserva ID: 1
-Fecha de la reserva: 02/02/2024 0:00:00 hasta 15/02/2024 0:00:00
-Total de la estadia: 3900,00
-Productos:
-Subtotal: 3900,00
-Impuestos: 0,00
-Total de la factura: 3900,00

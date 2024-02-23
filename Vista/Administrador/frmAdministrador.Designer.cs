@@ -42,7 +42,7 @@
             this.panelPedidos.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panelPedidos.Location = new System.Drawing.Point(5, 45);
             this.panelPedidos.Name = "panelPedidos";
-            this.panelPedidos.Size = new System.Drawing.Size(1507, 453);
+            this.panelPedidos.Size = new System.Drawing.Size(1507, 445);
             this.panelPedidos.TabIndex = 136;
             // 
             // panel1
@@ -102,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1538, 543);
+            this.ClientSize = new System.Drawing.Size(1538, 513);
             this.Controls.Add(this.panelPedidos);
             this.Controls.Add(this.panel1);
             this.Name = "frmAdministrador";
