@@ -71,9 +71,15 @@ namespace Vista.Paneles
                     txtNroReserva.Text = dgvReservas.CurrentRow.Cells[0].Value.ToString();
                     txtNombreCliente.Text = dgvReservas.CurrentRow.Cells[1].Value.ToString();
                     txtBuscarDNI.Text = dgvReservas.CurrentRow.Cells[2].Value.ToString();
+                    //cambiar tipo de dato a fecha
+                    DateTime fechallegada = Convert.ToDateTime(dgvReservas.CurrentRow.Cells[3].Value);
+                    DateTime fechaIda = Convert.ToDateTime(dgvReservas.CurrentRow.Cells[4].Value);
+                    lblFechaLlegada.Text = fechallegada.ToString("dd/MM/yyyy");
+                    lblFechaIda.Text = fechaIda.ToString("dd/MM/yyyy");
 
-                    lblFechaLlegada.Text = dgvReservas.CurrentRow.Cells[3].Value.ToString();
-                    lblFechaIda.Text = dgvReservas.CurrentRow.Cells[4].Value.ToString();
+
+                    //lblFechaLlegada.Text = dgvReservas.CurrentRow.Cells[3].Value.ToString();
+                    //lblFechaIda.Text = dgvReservas.CurrentRow.Cells[4].Value.ToString();
                     lblNroHabitacion.Text = dgvReservas.CurrentRow.Cells[5].Value.ToString();
                     lblTipoHabitacion.Text = dgvReservas.CurrentRow.Cells[6].Value.ToString();
                     lblCamas.Text = dgvReservas.CurrentRow.Cells[7].Value.ToString();
@@ -110,87 +116,12 @@ namespace Vista.Paneles
             checkinBLL.ListarReservasTodasEnDataGridView(dgvReservas);
         }
 
-        private void lblTotal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCamas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTipoHabitacion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNroHabitacion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFechaIda_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFechaLlegada_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtNombreCliente_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtIdCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
         {
 
         }
@@ -201,16 +132,6 @@ namespace Vista.Paneles
         }
 
         private void txtNroReserva_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvReservas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

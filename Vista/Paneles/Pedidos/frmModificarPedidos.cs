@@ -154,8 +154,13 @@ namespace Vista.Paneles.Pedidos
             {
                 if (txtNroHabitacion.Text != "")
                 {
-                    int nroHabitacion = Convert.ToInt32(txtNroHabitacion.Text.Trim());
-                    pedidoBLL.BuscarPorNumHabitacion(nroHabitacion, dgvPedidos);
+                    //int nroHabitacion = Convert.ToInt32(txtNroHabitacion.Text.Trim());
+                    //pedidoBLL.BuscarPorNumHabitacion(nroHabitacion, dgvPedidos);
+
+
+                    string nroHabitacion = txtNroHabitacion.Text.Trim().ToLower();
+                    checkinBLL.BuscarClientePorNumHabitacion(nroHabitacion, dgvPedidos);
+
                 }
 
             }
@@ -233,7 +238,7 @@ namespace Vista.Paneles.Pedidos
                     //
                     txtNombreProducto.Text = dgvDetalles.CurrentRow.Cells[2].Value.ToString();
                     txtCantProducto.Text = dgvDetalles.CurrentRow.Cells[3].Value.ToString();
-                    lblPrecioProd.Text = dgvDetalles.CurrentRow.Cells[4].Value.ToString();
+                    lblPrecioProd.Text = dgvDetalles.CurrentRow.Cells[5].Value.ToString();
                     
 
                     

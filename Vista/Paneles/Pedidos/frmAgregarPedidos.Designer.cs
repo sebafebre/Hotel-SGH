@@ -201,6 +201,8 @@
             this.txtNroHabitacion.Size = new System.Drawing.Size(160, 22);
             this.txtNroHabitacion.TabIndex = 151;
             this.txtNroHabitacion.TextChanged += new System.EventHandler(this.txtNroHabitacion_TextChanged);
+            this.txtNroHabitacion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNroHabitacion_KeyDown);
+            this.txtNroHabitacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroHabitacion_KeyPress);
             // 
             // btnFinalizarPedido
             // 

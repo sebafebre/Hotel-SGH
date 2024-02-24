@@ -144,15 +144,15 @@ namespace Modelo
                 dataGridView.Rows[rowIndex].Cells[6].Value = habitacion.TipoCamas;
             }
         }
-        
+
         
         #endregion
-        
 
 
 
-        
-        public string ObtenerEstadoSeleccionado(Control flowLayoutPanel)
+
+
+            public string ObtenerEstadoSeleccionado(Control flowLayoutPanel)
         {
             foreach (Control control in flowLayoutPanel.Controls)
             {

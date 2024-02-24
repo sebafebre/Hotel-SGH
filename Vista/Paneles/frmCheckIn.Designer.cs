@@ -75,7 +75,6 @@
             this.txtNroReserva.Name = "txtNroReserva";
             this.txtNroReserva.Size = new System.Drawing.Size(103, 22);
             this.txtNroReserva.TabIndex = 76;
-            this.txtNroReserva.TextChanged += new System.EventHandler(this.txtNroReserva_TextChanged);
             // 
             // label1
             // 
@@ -85,7 +84,6 @@
             this.label1.Size = new System.Drawing.Size(23, 16);
             this.label1.TabIndex = 75;
             this.label1.Text = "ID:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgvReservas
             // 
@@ -100,7 +98,6 @@
             this.dgvReservas.Size = new System.Drawing.Size(931, 394);
             this.dgvReservas.TabIndex = 74;
             this.dgvReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservas_CellClick);
-            this.dgvReservas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservas_CellContentClick);
             // 
             // txtIdReserva
             // 
@@ -119,7 +116,6 @@
             this.label8.Size = new System.Drawing.Size(67, 16);
             this.label8.TabIndex = 93;
             this.label8.Text = "ID Cliente:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtIdCliente
             // 
@@ -128,7 +124,6 @@
             this.txtIdCliente.ReadOnly = true;
             this.txtIdCliente.Size = new System.Drawing.Size(65, 22);
             this.txtIdCliente.TabIndex = 92;
-            this.txtIdCliente.TextChanged += new System.EventHandler(this.txtIdCliente_TextChanged);
             // 
             // txtBuscarDNI
             // 
@@ -146,7 +141,6 @@
             this.label6.Size = new System.Drawing.Size(77, 16);
             this.label6.TabIndex = 90;
             this.label6.Text = "DNI Cliente:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnCheckIn
             // 
@@ -161,12 +155,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1057, 279);
+            this.label2.Location = new System.Drawing.Point(1039, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 96;
             this.label2.Text = "Estadia   de:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtNombreCliente
             // 
@@ -174,7 +167,6 @@
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(160, 22);
             this.txtNombreCliente.TabIndex = 98;
-            this.txtNombreCliente.TextChanged += new System.EventHandler(this.txtNombreCliente_TextChanged);
             // 
             // label3
             // 
@@ -184,67 +176,60 @@
             this.label3.Size = new System.Drawing.Size(103, 16);
             this.label3.TabIndex = 99;
             this.label3.Text = "Nombre Cliente:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1234, 279);
+            this.label7.Location = new System.Drawing.Point(1244, 295);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 16);
             this.label7.TabIndex = 101;
             this.label7.Text = "hasta:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // lblFechaLlegada
             // 
             this.lblFechaLlegada.AutoSize = true;
-            this.lblFechaLlegada.Location = new System.Drawing.Point(1159, 279);
+            this.lblFechaLlegada.Location = new System.Drawing.Point(1142, 295);
             this.lblFechaLlegada.Name = "lblFechaLlegada";
             this.lblFechaLlegada.Size = new System.Drawing.Size(16, 16);
             this.lblFechaLlegada.TabIndex = 102;
             this.lblFechaLlegada.Text = "...";
-            this.lblFechaLlegada.Click += new System.EventHandler(this.lblFechaLlegada_Click);
             // 
             // lblFechaIda
             // 
             this.lblFechaIda.AutoSize = true;
-            this.lblFechaIda.Location = new System.Drawing.Point(1293, 279);
+            this.lblFechaIda.Location = new System.Drawing.Point(1293, 295);
             this.lblFechaIda.Name = "lblFechaIda";
             this.lblFechaIda.Size = new System.Drawing.Size(16, 16);
             this.lblFechaIda.TabIndex = 103;
             this.lblFechaIda.Text = "...";
-            this.lblFechaIda.Click += new System.EventHandler(this.lblFechaIda_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1034, 185);
+            this.label10.Location = new System.Drawing.Point(1020, 185);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 16);
             this.label10.TabIndex = 104;
             this.label10.Text = "Nro Habitacion:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1030, 212);
+            this.label11.Location = new System.Drawing.Point(1014, 212);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(106, 16);
             this.label11.TabIndex = 105;
             this.label11.Text = "Tipo Habitacion:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(1079, 244);
+            this.label12.Location = new System.Drawing.Point(1067, 244);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 16);
             this.label12.TabIndex = 106;
             this.label12.Text = "Camas:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // lblNroHabitacion
             // 
@@ -254,7 +239,6 @@
             this.lblNroHabitacion.Size = new System.Drawing.Size(16, 16);
             this.lblNroHabitacion.TabIndex = 107;
             this.lblNroHabitacion.Text = "...";
-            this.lblNroHabitacion.Click += new System.EventHandler(this.lblNroHabitacion_Click);
             // 
             // lblTipoHabitacion
             // 
@@ -264,7 +248,6 @@
             this.lblTipoHabitacion.Size = new System.Drawing.Size(16, 16);
             this.lblTipoHabitacion.TabIndex = 108;
             this.lblTipoHabitacion.Text = "...";
-            this.lblTipoHabitacion.Click += new System.EventHandler(this.lblTipoHabitacion_Click);
             // 
             // lblCamas
             // 
@@ -274,7 +257,6 @@
             this.lblCamas.Size = new System.Drawing.Size(16, 16);
             this.lblCamas.TabIndex = 109;
             this.lblCamas.Text = "...";
-            this.lblCamas.Click += new System.EventHandler(this.lblCamas_Click);
             // 
             // label5
             // 
@@ -284,7 +266,6 @@
             this.label5.Size = new System.Drawing.Size(41, 16);
             this.label5.TabIndex = 110;
             this.label5.Text = "Total:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblTotal
             // 
@@ -294,7 +275,6 @@
             this.lblTotal.Size = new System.Drawing.Size(16, 16);
             this.lblTotal.TabIndex = 111;
             this.lblTotal.Text = "...";
-            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
             // 
             // btnResPendientes
             // 

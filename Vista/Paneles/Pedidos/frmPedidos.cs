@@ -20,7 +20,8 @@ namespace Vista.Paneles
         public frmPedidos()
         {
             InitializeComponent();
-            
+            ValidacionesBLL.CambiarPanel(typeof(Pedidos.frmAgregarPedidos), this);
+
         }
 
 

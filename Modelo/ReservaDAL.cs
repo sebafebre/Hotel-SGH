@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using System.Windows.Forms.DataVisualization.Charting;
+
 
 namespace Modelo
 {
@@ -84,21 +86,7 @@ namespace Modelo
             return habitacionDisponible;
         }
 
-
-        //Hacer un metodo para agregar una reserva a la base de datos, con los datos de la reserva,  Cliente.Id y HabitacionId
-        public string AgregarReserva(ReservaBE reserva)
-        {
-            try
-            {
-                con.Reserva.Add(reserva);
-                con.SaveChanges();
-                return "Reserva agregada correctamente";
-            }
-            catch (Exception ex)
-            {
-                return "No se pudo agregar la reserva. " + ex.Message;
-            }
-        }
+        
 
 
 
@@ -155,41 +143,65 @@ namespace Modelo
 
 
         //Modificar Reserva
-        public string ModificarReserva(ReservaBE reserva, int idCliente, int idHabitacion)
+        public void ModificarReserva(ReservaBE reserva, int idCliente, int idHabitacion, DateTime fechaInicio, DateTime fechaFin)
         {
             try
             {
-                // Buscar la reserva en la base de datos
-                var reservaExistente = con.Reserva.Find(reserva.Id);
-                var clienteDeReserva = con.Cliente.Find(idCliente);
-                var habitacionDeReserva = con.Habitacion.Find(idHabitacion);
+                // Obtener el cliente y la habitación correspondientes a los IDs proporcionados
+                var cliente = con.Cliente.Find(idCliente);
+                var habitacion = con.Habitacion.Find(idHabitacion);
 
-                // Verificar si la reserva existe
-                if (reservaExistente == null)
+                if (cliente == null || habitacion == null)
                 {
-                    return "La reserva no existe.";
+                    MessageBox.Show("El cliente o la habitación no existen.");
+                    
                 }
 
-                // Actualizar los datos de la reserva existente con los datos de la reserva proporcionada
-                reservaExistente.Cliente = clienteDeReserva;
-                reservaExistente.Habitacion = habitacionDeReserva;
+                // Verificar si la habitación está disponible para las fechas seleccionadas
+                bool habitacionDisponible = VerificarDisponibilidadHabitacion(idHabitacion, fechaInicio, fechaFin);
 
-                reservaExistente.FechaLlegada = reserva.FechaLlegada;
-                reservaExistente.FechaIda = reserva.FechaIda;
-                reservaExistente.NroReserva = reserva.NroReserva;
-                reservaExistente.Estado = "Pendiente";
-                reservaExistente.Subtotal = reserva.Subtotal;
-                reservaExistente.Impuestos = reserva.Impuestos;
-                reservaExistente.Total = reserva.Total;
+                if (!habitacionDisponible)
+                {
+                    MessageBox.Show("La habitación no está disponible para las fechas seleccionadas.");
+                    
+                }
+                else
+                {
+                    // Buscar la reserva en la base de datos
+                    var reservaExistente = con.Reserva.Find(reserva.Id);
+                    var clienteDeReserva = con.Cliente.Find(idCliente);
+                    var habitacionDeReserva = con.Habitacion.Find(idHabitacion);
 
-                // Guardar los cambios en la base de datos
-                con.SaveChanges();
+                    // Verificar si la reserva existe
+                    if (reservaExistente == null)
+                    {
+                        MessageBox.Show ("La reserva no existe.");
+                    }
 
-                return "Reserva modificada correctamente";
+                    // Actualizar los datos de la reserva existente con los datos de la reserva proporcionada
+                    reservaExistente.Cliente = clienteDeReserva;
+                    reservaExistente.Habitacion = habitacionDeReserva;
+
+                    reservaExistente.FechaLlegada = reserva.FechaLlegada;
+                    reservaExistente.FechaIda = reserva.FechaIda;
+                    reservaExistente.NroReserva = reserva.NroReserva;
+                    reservaExistente.Estado = "Pendiente";
+                    reservaExistente.Subtotal = reserva.Subtotal;
+                    reservaExistente.Impuestos = reserva.Impuestos;
+                    reservaExistente.Total = reserva.Total;
+
+                    // Guardar los cambios en la base de datos
+                    con.SaveChanges();
+
+                    MessageBox.Show( "Reserva modificada correctamente");
+
+                }
+
+                
             }
             catch (Exception ex)
             {
-                return "No se pudo modificar la reserva. " + ex.Message;
+                MessageBox.Show( "No se pudo modificar la reserva. " + ex.Message);
             }
         }
 
@@ -280,13 +292,7 @@ namespace Modelo
 
 
 
-        /*
-        //Mostrar datos en el DataGridView
-        public List<ReservaBE> ListarReservas()
-        {
-            return con.Reserva.ToList();
-        }
-        */
+ 
 
 
 
@@ -498,6 +504,8 @@ namespace Modelo
             }
         }
         
+
+
         
         public void DateTimePickerCambia2(DateTimePicker fechaLlegadaDateTimePicker, DateTimePicker fechaIdaDateTimePicker, string tipoHabitacion, string nroCamas, DataGridView dataGridViewHabitaciones, Label labelError)
         {
@@ -509,15 +517,22 @@ namespace Modelo
             if (fechaLlegada > fechaIda)
             {
                 // Mostrar un mensaje de error o realizar alguna acción
-                MessageBox.Show("La fecha de llegada no puede ser mayor que la fecha de ida.");
-                return;
+                labelError.Text = "La fecha de llegada no puede ser mayor que la fecha de ida.";
+                
+            }
+            if (fechaLlegada <= fechaIda)
+            {
+                // Mostrar un mensaje de error o realizar alguna acción
+                labelError.Text = "";
+                // Consultar las habitaciones disponibles para el rango de fechas seleccionado y los criterios de tipo de habitación y número de camas
+                List<HabitacionBE> habitacionesDisponibles = ConsultarHabitacionesDisponibles2(fechaLlegada, fechaIda, tipoHabitacion, nroCamas);
+
+                // Mostrar las habitaciones disponibles en el DataGridView
+                MostrarHabitacionesDisponiblesEnDataGridView(habitacionesDisponibles, dataGridViewHabitaciones,labelError);
+
             }
 
-            // Consultar las habitaciones disponibles para el rango de fechas seleccionado y los criterios de tipo de habitación y número de camas
-            List<HabitacionBE> habitacionesDisponibles = ConsultarHabitacionesDisponibles2(fechaLlegada, fechaIda, tipoHabitacion, nroCamas);
-
-            // Mostrar las habitaciones disponibles en el DataGridView
-            MostrarHabitacionesDisponiblesEnDataGridView(habitacionesDisponibles, dataGridViewHabitaciones,labelError);
+            
         }
 
 
@@ -526,9 +541,7 @@ namespace Modelo
             List<HabitacionBE> habitacionesDisponibles = new List<HabitacionBE>();
 
             // Consultar las reservas que se superponen con el rango de fechas dado
-            var reservasSuperpuestas = con.Reserva
-                                            .Where(r => !(r.FechaLlegada >= fechaIda || r.FechaIda <= fechaLlegada))
-                                            .ToList();
+            var reservasSuperpuestas = con.Reserva.Where(r => !(r.FechaLlegada >= fechaIda || r.FechaIda <= fechaLlegada)).ToList();
 
             // Obtener todas las habitaciones
             var todasLasHabitaciones = con.Habitacion.ToList();
@@ -562,10 +575,11 @@ namespace Modelo
             // Verificar si hay habitaciones disponibles para mostrar
             if (habitaciones.Count > 0)
             {
+                labelError.Text = "";
                 // Agregar cada habitación disponible al DataGridView
                 foreach (var habitacion in habitaciones)
                 {
-                    dataGridViewHabitaciones.Rows.Add(habitacion.Id, habitacion.NroHabitacion, habitacion.TipoHabitacion, habitacion.Piso, habitacion.PrecioDiario, habitacion.TipoCamas);
+                    dataGridViewHabitaciones.Rows.Add(habitacion.Id, habitacion.NroHabitacion, habitacion.TipoHabitacion, habitacion.Estado ,habitacion.Piso, habitacion.PrecioDiario, habitacion.TipoCamas);
                 }
             }
             else
@@ -780,9 +794,9 @@ namespace Modelo
 
         #endregion
 
-
+       
         //Busca la reserva del DataGridView y cambia el estado a "Activa"
-        public void CheckOut(int idReserva)
+         /*public void CheckOut(int idReserva)
         {
             try
             {
@@ -805,7 +819,34 @@ namespace Modelo
                 MessageBox.Show("No se pudo finalizar la reserva. " + ex.Message);
             }
 
-        }
+        }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -921,6 +962,50 @@ namespace Modelo
 
             return Tuple.Create(estados, cantidades);
         }
+
+
+
+
+
+
+        public void CargarDatosChart(Chart chartPIE) 
+        {
+            // Limpia los puntos existentes en el Chart
+            chartPIE.Series[0].Points.Clear();
+
+            // Consulta a la base de datos para obtener la cantidad de habitaciones en cada estado
+            int totalHabitaciones = con.Habitacion.Count();
+            int habitacionesDisponibles = con.Habitacion.Where(h => h.Estado == "Disponible").Count(); 
+            int habitacionesOcupadas = con.Habitacion.Where(h => h.Estado == "Ocupado").Count();
+            int habitacionesLimpieza = con.Habitacion.Where(h => h.Estado == "Limpieza").Count();
+
+            // Calcula los porcentajes
+            double porcentajeDisponibles = Math.Round((double)habitacionesDisponibles / totalHabitaciones * 100);
+            double porcentajeOcupadas = Math.Round((double)habitacionesOcupadas / totalHabitaciones * 100);
+            double porcentajeLimpieza = Math.Round((double)habitacionesLimpieza / totalHabitaciones * 100);
+
+
+            // Agrega los datos al Chart
+            chartPIE.Series[0].Points.AddXY($"Disponible {porcentajeDisponibles}%", porcentajeDisponibles);
+            chartPIE.Series[0].Points.AddXY($"Ocupada {porcentajeOcupadas}%", porcentajeOcupadas);
+            chartPIE.Series[0].Points.AddXY($"Limpieza {porcentajeLimpieza}%", porcentajeLimpieza);
+
+            // Configura los colores de los segmentos del Chart
+            chartPIE.Series[0].Points[0].Color = Color.Lime; // Color para "Disponible"
+            chartPIE.Series[0].Points[1].Color = Color.OrangeRed;   // Color para "Ocupada"
+            chartPIE.Series[0].Points[2].Color = Color.Cyan;  // Color para "Limpieza"
+
+            // Configura el Chart
+            //chartPIE.Series[1].ChartType = SeriesChartType.Pie;
+            //chartPIE.Legends[1].Enabled = true;
+        }
+
+
+
+
+
+
+
 
         #endregion
 
@@ -1212,7 +1297,7 @@ namespace Modelo
             }
         }*/
 
-        
+
 
 
 
@@ -1293,11 +1378,86 @@ namespace Modelo
             }
         }
 
+        
+        
+        
+        
+        
+        
+        
+        
+        //Obtener los pedidos de las reservas que vencen desntro de este mes
+        private float ObtenerPedidosFinMes(DateTime primerDiaDelMes, DateTime ultimoDiaDelMes)
+        {
+            using (var con = new ContextoBD())
+            {
+                try
+                {
+                    float TotalGanancia = 0;
+                    
+
+                    List<PedidoBE> pedidosVencenMesActual = con.Pedido.Where(p => p.Estado == "PagoPendiente"  && p.Reserva.Estado == "Activa" && (p.Reserva.FechaIda >= primerDiaDelMes && p.Reserva.FechaIda <= ultimoDiaDelMes)).ToList();
+                    
+                    foreach (var pedido in pedidosVencenMesActual)
+                    {
+                         TotalGanancia =+ (float)pedido.Total;
+                    }
+
+                    return TotalGanancia;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener los pedidos activos del mes: " + ex.Message);
+                    return -101;
+                }
+            }
+        }
+
+        public float Prueba()
+        {
+
+
+            using (var con = new ContextoBD())
+            {
+                try
+                {
+                    //SAca los dias del mes
+                    DateTime fechaActual = DateTime.Now;
+                    DateTime primerDiaDelMes = new DateTime(fechaActual.Year, fechaActual.Month, 1);
+                    DateTime ultimoDiaDelMes = primerDiaDelMes.AddMonths(1).AddDays(-1);
+
+                    float PrecioTotalReservas = 0;
+
+                    List<ReservaBE> reservasActivas = ObtenerReservasActivasMes(primerDiaDelMes, ultimoDiaDelMes);
+                    
+
+                    foreach (var reserva in reservasActivas)
+                    {
+
+                        DateTime fechaInicio = reserva.FechaLlegada > primerDiaDelMes ? reserva.FechaLlegada : primerDiaDelMes;
+                        DateTime fechaFin = reserva.FechaIda < ultimoDiaDelMes ? reserva.FechaIda : ultimoDiaDelMes;
+
+                        int Dias = Convert.ToInt32((fechaFin - fechaInicio).TotalDays);
+                        PrecioTotalReservas += (float) reserva.Habitacion.PrecioDiario * Dias;
+                    }
+                    float totalPedidos = ObtenerPedidosFinMes(primerDiaDelMes, ultimoDiaDelMes);
+
+                    return PrecioTotalReservas + totalPedidos;
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de excepciones si ocurre algún error al acceder a la base de datos
+                    Console.WriteLine("Error al obtener las reservas activas para el día especificado: " + ex.Message);
+                    return -101; ; // Devuelve una lista vacía en caso de error
+                }
+            }
 
 
 
+        }
 
         #endregion
+
 
 
 
@@ -1305,47 +1465,35 @@ namespace Modelo
 
         #region ProgressBar Estado de reservas
 
-        #region Metodo Chart Circular Estado actual de las habitaciones
 
-        public int ObtenerHabitacionesOcupadas()
+        public void MostrarProgresBar(ProgressBar pbarDisponible, Label lblDisponible ,ProgressBar pbarOcupadas , Label lblOcupadas, ProgressBar pbarLimpieza, Label lblLimpieza)
         {
-            // Aquí suponemos que "con" es tu contexto de base de datos
-            // Puedes reemplazar "con" con el nombre real de tu contexto
             using (var con = new ContextoBD())
             {
-                try
-                {
-                    // Consulta para obtener las habitaciones desde la base de datos
-                    List<HabitacionBE> habitaciones = con.Habitacion.ToList().Where(h => h.Estado == "Ocupada").ToList();
-                    int habOcupadas = habitaciones.Count();
-                    return habOcupadas;
-                }
-                catch (Exception ex)
-                {
-                    // Manejo de excepciones si ocurre algún error al acceder a la base de datos
-                    Console.WriteLine("Error al obtener las habitaciones desde la base de datos: " + ex.Message);
-                    return 0; // O devuelve una lista vacía o lanza una excepción según lo que necesites
-                }
+
+                int totalHabitaciones = con.Habitacion.Count();
+
+                int habitacionesDisponibles = con.Habitacion.Where(h => h.Estado == "Disponible").Count();
+                int habitacionesOcupadas = con.Habitacion.Where(h => h.Estado == "Ocupada").Count();
+                int habitacionesLimpieza = con.Habitacion.Where(h => h.Estado == "Limpieza").Count();
+
+                pbarDisponible.Maximum = totalHabitaciones;
+                pbarDisponible.Value = habitacionesDisponibles;
+                pbarDisponible.ForeColor = Color.Lime;
+                lblDisponible.Text = habitacionesDisponibles.ToString();
+
+                pbarOcupadas.Maximum = totalHabitaciones;
+                pbarOcupadas.Value = habitacionesOcupadas;
+                pbarOcupadas.ForeColor = Color.OrangeRed;
+                lblOcupadas.Text = habitacionesOcupadas.ToString();
+
+                pbarLimpieza.Maximum = totalHabitaciones;
+                pbarLimpieza.Value = habitacionesLimpieza;
+                pbarLimpieza.ForeColor = Color.Cyan;
+                lblLimpieza.Text = habitacionesLimpieza.ToString();
+
             }
         }
-
-
-
-
-
-        
-
-        #endregion
-
-
-
-
-
-
-
-
-
-
 
         #endregion
 

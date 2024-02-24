@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace Modelo
 {
@@ -21,7 +22,8 @@ namespace Modelo
             ReservaBE reserva = con.Reserva.FirstOrDefault(r => r.NroReserva == nroReserva);
             ClienteBE cliente = reserva.Cliente;
 
-            UsuarioBE usuario = con.Usuario.FirstOrDefault(u => u.Nombre == usuarioActual);
+            UsuarioBE usuario = con.Usuario.Include(u => u.Empleado).FirstOrDefault(u => u.Nombre == usuarioActual);
+            
             EmpleadoBE empleado = usuario.Empleado;
             
 
@@ -104,12 +106,14 @@ namespace Modelo
                     transaction.Commit();
 
                     Console.WriteLine("Pedido Realizado");
+                    MessageBox.Show("Pedido guardado con exito");
                 }
                 catch (Exception ex)
                 {
                     // Rollback de la transacción en caso de error
                     transaction.Rollback();
                     Console.WriteLine("Error al finalizar el pedido: " + ex.Message);
+                    MessageBox.Show("Error al finalizar el pedido: " + ex.Message);
                     // Manejar el error adecuadamente, posiblemente mostrar un mensaje al usuario
                 }
             }
@@ -251,6 +255,7 @@ namespace Modelo
                 {
                     transaction.Rollback();
                     Console.WriteLine("Error al generar y enviar la factura : " + ex.Message);
+                    MessageBox.Show("Error al generar y enviar la factura : " + ex.Message);
 
                 }
             }

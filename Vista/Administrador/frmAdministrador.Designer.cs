@@ -48,8 +48,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Controls.Add(this.btnGruposPermisos);
             this.panel1.Controls.Add(this.btnEmpleados);
+            this.panel1.Controls.Add(this.btnGruposPermisos);
             this.panel1.Controls.Add(this.btnUsuarios);
             this.panel1.Controls.Add(this.btnGruposUsuario);
             this.panel1.Location = new System.Drawing.Point(5, 5);
@@ -59,9 +59,9 @@
             // 
             // btnGruposPermisos
             // 
-            this.btnGruposPermisos.Location = new System.Drawing.Point(421, 5);
+            this.btnGruposPermisos.Location = new System.Drawing.Point(750, 3);
             this.btnGruposPermisos.Name = "btnGruposPermisos";
-            this.btnGruposPermisos.Size = new System.Drawing.Size(234, 26);
+            this.btnGruposPermisos.Size = new System.Drawing.Size(239, 26);
             this.btnGruposPermisos.TabIndex = 120;
             this.btnGruposPermisos.Text = "Gestionar Grupos y Permisos";
             this.btnGruposPermisos.UseVisualStyleBackColor = true;
@@ -69,9 +69,9 @@
             // 
             // btnEmpleados
             // 
-            this.btnEmpleados.Location = new System.Drawing.Point(691, 5);
+            this.btnEmpleados.Location = new System.Drawing.Point(14, 3);
             this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(161, 26);
+            this.btnEmpleados.Size = new System.Drawing.Size(239, 26);
             this.btnEmpleados.TabIndex = 121;
             this.btnEmpleados.Text = "Registrar Empleados";
             this.btnEmpleados.UseVisualStyleBackColor = true;
@@ -79,9 +79,9 @@
             // 
             // btnUsuarios
             // 
-            this.btnUsuarios.Location = new System.Drawing.Point(8, 5);
+            this.btnUsuarios.Location = new System.Drawing.Point(260, 3);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(161, 26);
+            this.btnUsuarios.Size = new System.Drawing.Size(239, 26);
             this.btnUsuarios.TabIndex = 118;
             this.btnUsuarios.Text = "Gestionar Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
@@ -89,9 +89,9 @@
             // 
             // btnGruposUsuario
             // 
-            this.btnGruposUsuario.Location = new System.Drawing.Point(185, 5);
+            this.btnGruposUsuario.Location = new System.Drawing.Point(505, 3);
             this.btnGruposUsuario.Name = "btnGruposUsuario";
-            this.btnGruposUsuario.Size = new System.Drawing.Size(220, 26);
+            this.btnGruposUsuario.Size = new System.Drawing.Size(239, 26);
             this.btnGruposUsuario.TabIndex = 119;
             this.btnGruposUsuario.Text = "Gestionar Grupos del usuario";
             this.btnGruposUsuario.UseVisualStyleBackColor = true;

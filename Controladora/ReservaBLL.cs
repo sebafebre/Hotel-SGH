@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Controladora
 {
@@ -66,20 +67,16 @@ namespace Controladora
             return reservaDAL.GuardarReserva(idCliente, idHabitacion, fechaInicio, fechaFin, nroReserva);
         }*/
 
-        public string AgregarReserva(ReservaBE reserva)
-        {
-            return reservaDAL.AgregarReserva(reserva);
-        }
-
+       
         public bool GuardarReserva(int idCliente, int idHabitacion, DateTime fechaInicio, DateTime fechaFin, decimal subtotal, decimal imp, decimal total)
         {
             return reservaDAL.GuardarReserva(idCliente, idHabitacion, fechaInicio, fechaFin, subtotal, imp, total);
         }
 
         //Modificar Reserva
-        public string ModificarReserva(ReservaBE reserva, int idCliente, int idHabitacion)
+        public void ModificarReserva(ReservaBE reserva, int idCliente, int idHabitacion, DateTime fechaInicio, DateTime fechaFin)
         {
-            return reservaDAL.ModificarReserva(reserva, idCliente, idHabitacion);
+             reservaDAL.ModificarReserva(reserva, idCliente, idHabitacion, fechaInicio, fechaFin);
         }
 
         public string EliminarReserva(int IdReserva)
@@ -118,7 +115,7 @@ namespace Controladora
 
 
 
-        #region Listar en DGView
+        #region Listar Reservas en DGView
         public void ListarReservasPendientesEnDataGridView(DataGridView dataGridView)
         {
             reservaDAL.ListarReservasPendientesEnDataGridView(dataGridView);
@@ -141,10 +138,7 @@ namespace Controladora
 
 
         //Busca la reserva del DataGridView y cambia el estado a "Activa"
-        public void CheckOut(int idReserva)
-        {
-            reservaDAL.CheckOut(idReserva);
-        }
+        
 
 
 
@@ -172,6 +166,23 @@ namespace Controladora
         {
             return reservaDAL.CalcularGananciaFuturaAproximada();
         }
+        public float Prueba()
+        {
+            return reservaDAL.Prueba();
+        }
 
+
+        public void CargarDatosChart(Chart chartPIE)
+        {
+            reservaDAL.CargarDatosChart(chartPIE);
+
+        }
+
+
+        public void MostrarProgresBar(ProgressBar pbarDisponible, Label lblDisponible, ProgressBar pbarOcupadas, Label lblOcupadas, ProgressBar pbarLimpieza, Label lblLimpieza)
+        {
+            reservaDAL.MostrarProgresBar(pbarDisponible, lblDisponible, pbarOcupadas, lblOcupadas, pbarLimpieza, lblLimpieza);
+
+        }
     }
 }

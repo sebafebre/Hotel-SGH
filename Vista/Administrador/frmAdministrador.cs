@@ -20,6 +20,7 @@ namespace Vista.Administrador
         public frmAdministrador()
         {
             InitializeComponent();
+            ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmEmpleado), this);
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)

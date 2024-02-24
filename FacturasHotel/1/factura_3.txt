@@ -1,0 +1,16 @@
+DETALLE DE LA FACTURA
+Fecha de la emision de la Factura:  24/02/2024 4:32:33   
+Cliente: Enzo    perez
+Reserva ID: 1
+Fecha de la reserva: 22/02/2024 0:00:00 hasta 23/02/2024 0:00:00
+ 
+ 
+ 
+ 
+ 
+
+Productos:
+Producto: Coca cola  cantidad: 1  precio U: 100   total:  121  
+Subtotal: 100
+Impuestos: 21
+Total de la factura: 121

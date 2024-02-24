@@ -27,14 +27,13 @@ namespace Vista.Paneles
         public frmReservas()
         {
             InitializeComponent();
-            //reservaBLL.BuscarClientesDGVReserva(dgvClientes);
+            
             clienteBLL.ListarClientesActivosEnDataGridView(dgvClientes);
 
             habitacionBLL.ListarHabitacionesEnDataGridView(dgvHabitaciones);
-            //reservaBLL.ListarHabitacionesDGVReservas(dgvHabitaciones);
+            
             reservaBLL.ListarReservasEnDataGridView(dgvReservas);
-            //dtpFechaIda.CustomFormat = "yyyy-MM-dd HH:mm:ss";
-            //dtpFechaLlegada.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            
 
         }
 
@@ -91,23 +90,27 @@ namespace Vista.Paneles
 
         public void CalcularPrecios()
         {
-            float Total = 0;
+            double Total = 0;
             
-            int dias = (dtpFechaIda.Value.Date - dtpFechaLlegada.Value.Date).Days;
+            int dias = (dtpFechaIda.Value.Date - dtpFechaLlegada.Value.Date ).Days;
 
-            float PrecioDiarioHab = PrecioDiario;
+            double PrecioDiarioHab = PrecioDiario;
 
-            float SubTotal = PrecioDiarioHab * dias;
+            double SubTotal = PrecioDiarioHab * dias;
 
-            float Impuestos = SubTotal * (21 / 100); //IVA 21%
-
-            lblSubtotal.Text = SubTotal.ToString();
-
-            lblImpuestos.Text = Impuestos.ToString();
+            double Impuestos = SubTotal * 0.21; //IVA 21%
 
             Total = SubTotal + Impuestos;
 
-            lblTotal.Text = Total.ToString();
+            if(Total >= 0)
+            {
+                lblSubtotal.Text = SubTotal.ToString();
+
+                lblImpuestos.Text = Impuestos.ToString();
+
+                lblTotal.Text = Total.ToString();
+            }
+
         }
 
         private void txtBuscarDNI_TextChanged(object sender, EventArgs e)
@@ -141,7 +144,7 @@ namespace Vista.Paneles
                 if (dgvHabitaciones.CurrentRow != null)
                 {
                     txtIdHabitacion.Text = dgvHabitaciones.CurrentRow.Cells[0].Value.ToString();
-                    PrecioDiario = Convert.ToInt32(dgvHabitaciones.CurrentRow.Cells[4].Value);
+                    PrecioDiario = Convert.ToInt32(dgvHabitaciones.CurrentRow.Cells[5].Value);
                     CalcularPrecios();
                 }
             }
@@ -219,7 +222,10 @@ namespace Vista.Paneles
                     reserva.Habitacion = new HabitacionBE();
 
                     reserva.Id = Convert.ToInt32(txtIdReserva.Text);
-                    
+
+                    DateTime fechaInicio = dtpFechaLlegada.Value; // Obtener la fecha de llegada del control DateTimePicker
+                    DateTime fechaFin = dtpFechaIda.Value; // Obtener la fecha de ida del control DateTimePicker
+
                     reserva.FechaLlegada = dtpFechaLlegada.Value;
                     reserva.FechaIda = dtpFechaIda.Value;
                     reserva.NroReserva = Convert.ToInt32(txtNroReserva.Text);
@@ -227,12 +233,12 @@ namespace Vista.Paneles
                     reserva.Impuestos = Convert.ToDecimal(lblImpuestos.Text);
                     reserva.Total = Convert.ToDecimal(lblTotal.Text);
 
-                    reservaBLL.ModificarReserva(reserva, IdDelCliente, IdDeHabitacion);
-                    MessageBox.Show("Reserva modificada correctamente", "Modificar Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    reservaBLL.ModificarReserva(reserva, IdDelCliente, IdDeHabitacion, fechaInicio, fechaFin);
+                    
                 }
                 else
                 {
-                    MessageBox.Show("Debe seleccionar un cliente", "Modificar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Debe seleccionar una reserva la cual modificar", "Modificar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 reservaBLL.ListarReservasEnDataGridView(dgvReservas);
             }
@@ -268,6 +274,11 @@ namespace Vista.Paneles
                 MessageBox.Show("Error: " + ex.Message);
             }
 
+        }
+
+        private void btnTodasHabs_Click(object sender, EventArgs e)
+        {
+            habitacionBLL.ListarHabitacionesEnDataGridView(dgvHabitaciones);
         }
     }
 }

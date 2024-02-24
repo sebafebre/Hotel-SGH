@@ -28,9 +28,18 @@ namespace Vista.Paneles
         {
             reservasPorDia = reservaBLL.ContarReservasPorDiaDelMes();
             MostrarGraficoBarras();
-            CargarDatosAlChart();
-            MostrarGananciaTotal();
-            CargarProgressBar();
+
+            //CargarDatosAlChart();
+
+            //MostrarGananciaTotal();
+            Prueba();
+
+            //CargarProgressBar();
+
+            reservaBLL.MostrarProgresBar(pBarDisponibles, lblCantDisponible, pBarOcupadas, lblCantOcupada, pBarLimpieza, lblCantLimpieza);
+            reservaBLL.CargarDatosChart(ctEstadosHabitaciones);
+
+
         }
 
         private void MostrarGraficoBarras()
@@ -56,10 +65,16 @@ namespace Vista.Paneles
             // Preparar los datos para el gráfico
             var datosParaGrafico = reservaBLL.PrepararDatosParaGrafico(habitaciones);
 
+            Color[] colores = new Color[] { Color.IndianRed, Color.Lime, Color.Cyan };
             // Añadir los datos al chart
             for (int i = 0; i < datosParaGrafico.Item1.Count; i++)
             {
                 ctEstadosHabitaciones.Series["Series1"].Points.AddXY(datosParaGrafico.Item1[i], datosParaGrafico.Item2[i]);
+
+                ctEstadosHabitaciones.Series["Series1"].Points[i].Color = colores[i];
+
+
+
             }
         }
 
@@ -67,6 +82,12 @@ namespace Vista.Paneles
         {
             decimal gananciaTotal = reservaBLL.CalcularGananciaFuturaAproximada();
             txtGananciaMensual.Text = gananciaTotal.ToString("C"); // Muestra la ganancia total en formato de moneda
+        }
+
+        private void Prueba()
+        {
+            float gananciaTotal = reservaBLL.Prueba();
+            txtGananciaMensual.Text = gananciaTotal.ToString();
         }
 
         private void CargarProgressBar()
@@ -89,15 +110,17 @@ namespace Vista.Paneles
                 if (cantidades.Count == 3)
                 {
                     pBarDisponibles.Value = cantidades[0];
+                    
+
                     pBarOcupadas.Value = cantidades[1];
-                    pBarMantenimiento.Value = cantidades[2];
+                    pBarLimpieza.Value = cantidades[2];
                 }
                 else if (cantidades.Count == 2)
                 {
                     // Si solo hay dos estados, asume que el tercero (mantenimiento) está en cero
                     pBarDisponibles.Value = cantidades[0];
                     pBarOcupadas.Value = cantidades[1];
-                    pBarMantenimiento.Value = 0;
+                    pBarLimpieza.Value = 0;
                 }
             }
             else

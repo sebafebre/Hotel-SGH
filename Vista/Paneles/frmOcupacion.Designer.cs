@@ -39,7 +39,10 @@
             this.txtGananciaMensual = new System.Windows.Forms.TextBox();
             this.pBarDisponibles = new System.Windows.Forms.ProgressBar();
             this.pBarOcupadas = new System.Windows.Forms.ProgressBar();
-            this.pBarMantenimiento = new System.Windows.Forms.ProgressBar();
+            this.pBarLimpieza = new System.Windows.Forms.ProgressBar();
+            this.lblCantDisponible = new System.Windows.Forms.Label();
+            this.lblCantOcupada = new System.Windows.Forms.Label();
+            this.lblCantLimpieza = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ctReservasPorDia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctEstadosHabitaciones)).BeginInit();
             this.SuspendLayout();
@@ -86,24 +89,57 @@
             // 
             // pBarDisponibles
             // 
+            this.pBarDisponibles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.pBarDisponibles.Location = new System.Drawing.Point(61, 357);
             this.pBarDisponibles.Name = "pBarDisponibles";
-            this.pBarDisponibles.Size = new System.Drawing.Size(229, 23);
+            this.pBarDisponibles.Size = new System.Drawing.Size(358, 23);
             this.pBarDisponibles.TabIndex = 3;
             // 
             // pBarOcupadas
             // 
-            this.pBarOcupadas.Location = new System.Drawing.Point(61, 386);
+            this.pBarOcupadas.ForeColor = System.Drawing.Color.Red;
+            this.pBarOcupadas.Location = new System.Drawing.Point(61, 390);
             this.pBarOcupadas.Name = "pBarOcupadas";
-            this.pBarOcupadas.Size = new System.Drawing.Size(229, 23);
+            this.pBarOcupadas.Size = new System.Drawing.Size(358, 23);
             this.pBarOcupadas.TabIndex = 4;
             // 
-            // pBarMantenimiento
+            // pBarLimpieza
             // 
-            this.pBarMantenimiento.Location = new System.Drawing.Point(61, 415);
-            this.pBarMantenimiento.Name = "pBarMantenimiento";
-            this.pBarMantenimiento.Size = new System.Drawing.Size(229, 23);
-            this.pBarMantenimiento.TabIndex = 5;
+            this.pBarLimpieza.ForeColor = System.Drawing.Color.Cyan;
+            this.pBarLimpieza.Location = new System.Drawing.Point(61, 430);
+            this.pBarLimpieza.Name = "pBarLimpieza";
+            this.pBarLimpieza.Size = new System.Drawing.Size(358, 23);
+            this.pBarLimpieza.TabIndex = 5;
+            // 
+            // lblCantDisponible
+            // 
+            this.lblCantDisponible.AutoSize = true;
+            this.lblCantDisponible.BackColor = System.Drawing.SystemColors.Control;
+            this.lblCantDisponible.Location = new System.Drawing.Point(362, 360);
+            this.lblCantDisponible.Name = "lblCantDisponible";
+            this.lblCantDisponible.Size = new System.Drawing.Size(44, 16);
+            this.lblCantDisponible.TabIndex = 7;
+            this.lblCantDisponible.Text = "label1";
+            // 
+            // lblCantOcupada
+            // 
+            this.lblCantOcupada.AutoSize = true;
+            this.lblCantOcupada.BackColor = System.Drawing.SystemColors.Control;
+            this.lblCantOcupada.Location = new System.Drawing.Point(362, 393);
+            this.lblCantOcupada.Name = "lblCantOcupada";
+            this.lblCantOcupada.Size = new System.Drawing.Size(44, 16);
+            this.lblCantOcupada.TabIndex = 8;
+            this.lblCantOcupada.Text = "label1";
+            // 
+            // lblCantLimpieza
+            // 
+            this.lblCantLimpieza.AutoSize = true;
+            this.lblCantLimpieza.BackColor = System.Drawing.SystemColors.Control;
+            this.lblCantLimpieza.Location = new System.Drawing.Point(362, 433);
+            this.lblCantLimpieza.Name = "lblCantLimpieza";
+            this.lblCantLimpieza.Size = new System.Drawing.Size(44, 16);
+            this.lblCantLimpieza.TabIndex = 9;
+            this.lblCantLimpieza.Text = "label2";
             // 
             // frmOcupacion
             // 
@@ -111,7 +147,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1480, 472);
-            this.Controls.Add(this.pBarMantenimiento);
+            this.Controls.Add(this.lblCantLimpieza);
+            this.Controls.Add(this.lblCantOcupada);
+            this.Controls.Add(this.lblCantDisponible);
+            this.Controls.Add(this.pBarLimpieza);
             this.Controls.Add(this.pBarOcupadas);
             this.Controls.Add(this.pBarDisponibles);
             this.Controls.Add(this.txtGananciaMensual);
@@ -134,6 +173,9 @@
         private System.Windows.Forms.TextBox txtGananciaMensual;
         private System.Windows.Forms.ProgressBar pBarDisponibles;
         private System.Windows.Forms.ProgressBar pBarOcupadas;
-        private System.Windows.Forms.ProgressBar pBarMantenimiento;
+        private System.Windows.Forms.ProgressBar pBarLimpieza;
+        private System.Windows.Forms.Label lblCantDisponible;
+        private System.Windows.Forms.Label lblCantOcupada;
+        private System.Windows.Forms.Label lblCantLimpieza;
     }
 }

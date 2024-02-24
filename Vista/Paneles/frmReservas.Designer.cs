@@ -59,6 +59,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtIdHabitacion = new System.Windows.Forms.TextBox();
             this.lblError = new System.Windows.Forms.Label();
+            this.btnTodasHabs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
@@ -259,7 +260,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(517, 253);
+            this.label7.Location = new System.Drawing.Point(499, 252);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 16);
             this.label7.TabIndex = 81;
@@ -287,7 +288,7 @@
             "Medium",
             "Premium",
             "Suit"});
-            this.cbTipoHabitacion.Location = new System.Drawing.Point(520, 274);
+            this.cbTipoHabitacion.Location = new System.Drawing.Point(502, 274);
             this.cbTipoHabitacion.Name = "cbTipoHabitacion";
             this.cbTipoHabitacion.Size = new System.Drawing.Size(121, 24);
             this.cbTipoHabitacion.TabIndex = 83;
@@ -301,7 +302,7 @@
             "2-Simple",
             "1-Matrimonial",
             "2-Matrimoniales"});
-            this.cbNroCamas.Location = new System.Drawing.Point(677, 274);
+            this.cbNroCamas.Location = new System.Drawing.Point(659, 274);
             this.cbNroCamas.Name = "cbNroCamas";
             this.cbNroCamas.Size = new System.Drawing.Size(121, 24);
             this.cbNroCamas.TabIndex = 85;
@@ -310,7 +311,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(674, 252);
+            this.label5.Location = new System.Drawing.Point(656, 252);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 16);
             this.label5.TabIndex = 86;
@@ -344,7 +345,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(843, 257);
+            this.label11.Location = new System.Drawing.Point(802, 249);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 16);
             this.label11.TabIndex = 91;
@@ -352,7 +353,7 @@
             // 
             // txtIdHabitacion
             // 
-            this.txtIdHabitacion.Location = new System.Drawing.Point(855, 276);
+            this.txtIdHabitacion.Location = new System.Drawing.Point(805, 276);
             this.txtIdHabitacion.Name = "txtIdHabitacion";
             this.txtIdHabitacion.ReadOnly = true;
             this.txtIdHabitacion.Size = new System.Drawing.Size(65, 22);
@@ -362,10 +363,20 @@
             // 
             this.lblError.AutoSize = true;
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(1154, 257);
+            this.lblError.Location = new System.Drawing.Point(1085, 246);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 16);
             this.lblError.TabIndex = 92;
+            // 
+            // btnTodasHabs
+            // 
+            this.btnTodasHabs.Location = new System.Drawing.Point(887, 275);
+            this.btnTodasHabs.Name = "btnTodasHabs";
+            this.btnTodasHabs.Size = new System.Drawing.Size(84, 24);
+            this.btnTodasHabs.TabIndex = 93;
+            this.btnTodasHabs.Text = "Ver todas";
+            this.btnTodasHabs.UseVisualStyleBackColor = true;
+            this.btnTodasHabs.Click += new System.EventHandler(this.btnTodasHabs_Click);
             // 
             // frmReservas
             // 
@@ -373,6 +384,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1595, 495);
+            this.Controls.Add(this.btnTodasHabs);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtIdHabitacion);
@@ -446,5 +458,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtIdHabitacion;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button btnTodasHabs;
     }
 }

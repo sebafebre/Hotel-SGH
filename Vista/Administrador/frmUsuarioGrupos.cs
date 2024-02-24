@@ -127,7 +127,7 @@ namespace Vista.Administrador
                 {
                     usuarioBLL.AgregarGrupoAUsuario(idUsuario, idGrupo);
                     grupoBLL.ListarGruposUsuarioEnDataGridView(dgvGrupos, idUsuario);
-                    validacionBLL.LimpiarCampos(this.Controls);
+                    //validacionBLL.LimpiarCampos(this.Controls);
                 }
             }
             catch (Exception ex)
@@ -147,7 +147,7 @@ namespace Vista.Administrador
 
                     usuarioBLL.EliminarGrupoAUsuario(idUsuario, idGrupo);
                     grupoBLL.ListarGruposUsuarioEnDataGridView(dgvGrupos, idUsuario);
-                    validacionBLL.LimpiarCampos(this.Controls);
+                    //validacionBLL.LimpiarCampos(this.Controls);
 
                 }
             }

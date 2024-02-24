@@ -123,22 +123,17 @@ namespace Vista.Paneles.Pedidos
                             string Estado = "PagoPendiente";
                             stateBLL.FinalizarPedido(listaDetallesPedidos, nroReservaDGV, Estado, "A", usuarioActual);
 
-                            
-                            MessageBox.Show("Se guardo el pedido con exito.");
                         }
                         if(rbPagoInstantaneo.Checked == true)
                         {
                             string Estado = "PagoInstantaneo";
                             stateBLL.FinalizarPedido(listaDetallesPedidos, nroReservaDGV, Estado, "A", usuarioActual);
 
-                            
-                            MessageBox.Show("Se guardo el pedido con exito.");
+
                         }
 
-                        //stateBLL.FinalizarPedido( listaDetallesPedidos, nroReservaDGV, string Estado, string tipoFactura, int idUsuario).
 
-                        //pedidoBLL.FinalizarPedido(listaDetallesPedidos, nroReservaDGV);
-                        MessageBox.Show("Error, asegurese de haber completado todos los campos");
+                        
                     }
                     else
                     {
@@ -176,11 +171,9 @@ namespace Vista.Paneles.Pedidos
                 if (dgvReservas.CurrentRow != null)
                 {
                     nroReservaDGV = Convert.ToInt32(dgvReservas.CurrentRow.Cells[0].Value.ToString());
-                    txtNroReserva.Text = dgvReservas.CurrentRow.Cells[1].Value.ToString();
-                    lblTotal.Text = dgvReservas.CurrentRow.Cells[4].Value.ToString();
+                    txtNroReserva.Text = nroReservaDGV.ToString();
+                    lblTotal.Text = dgvReservas.CurrentRow.Cells[8].Value.ToString();
                     int NumHab = Convert.ToInt32(dgvReservas.CurrentRow.Cells[5].Value.ToString());
-
-
 
 
                     ClienteBE clienteReserva;
@@ -236,8 +229,7 @@ namespace Vista.Paneles.Pedidos
 
         private void txtNroHabitacion_TextChanged(object sender, EventArgs e)
         {
-            string nroHabitacion = txtNroHabitacion.Text.Trim().ToLower();
-            checkinBLL.BuscarClientePorNumHabitacion(nroHabitacion, dgvReservas);
+            
 
         }
 
@@ -245,6 +237,19 @@ namespace Vista.Paneles.Pedidos
         {
             string dni = txtBuscarDNI.Text.Trim().ToLower();
             checkinBLL.BuscarClientePorDNI(dni, dgvReservas);
+        }
+
+        private void txtNroHabitacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+
+        }
+
+        private void txtNroHabitacion_KeyDown(object sender, KeyEventArgs e)
+        {
+            string nroHabitacion = txtNroHabitacion.Text.Trim().ToLower();
+            checkinBLL.BuscarClientePorNumHabitacion(nroHabitacion, dgvReservas);
+
         }
     }
 }

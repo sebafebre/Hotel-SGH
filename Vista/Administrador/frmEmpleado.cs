@@ -21,6 +21,7 @@ namespace Vista.Administrador
         public frmEmpleado()
         {
             InitializeComponent();
+            empleadoBLL.ListarEmpleadosEnDGV(dgvEmpleados);
         }
 
         private bool ValidarCampos()
@@ -107,6 +108,7 @@ namespace Vista.Administrador
                         empleadoBLL.ModificarEmpleado(empleado);
                         MessageBox.Show("Empleado modificado correctamente", "Modificar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         validacionBLL.LimpiarCampos(this.Controls);
+                        empleadoBLL.ListarEmpleadosEnDGV(dgvEmpleados);
                     }
                     else
                     {
@@ -200,8 +202,8 @@ namespace Vista.Administrador
                     txtTelefono.Text = dgvEmpleados.CurrentRow.Cells[5].Value.ToString();
                     txtMail.Text = dgvEmpleados.CurrentRow.Cells[6].Value.ToString();
                     dtpFechaNacimiento.Value = Convert.ToDateTime(dgvEmpleados.CurrentRow.Cells[7].Value.ToString());
-                    cbCargo.Text = dgvEmpleados.CurrentRow.Cells[8].Value.ToString();
-                    cbPuesto.Text = dgvEmpleados.CurrentRow.Cells[9].Value.ToString();
+                    cbCargo.SelectedItem = dgvEmpleados.CurrentRow.Cells[8].Value.ToString();
+                    cbPuesto.SelectedItem = dgvEmpleados.CurrentRow.Cells[9].Value.ToString();
                 }
             }
             catch (Exception ex)
@@ -219,25 +221,29 @@ namespace Vista.Administrador
         private void cbCargo_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbPuesto.Items.Clear(); // Limpiamos los elementos previos
-
-            // Dependiendo del sector seleccionado, agregamos las opciones de puestos correspondientes
-            switch (cbCargo.SelectedItem.ToString())
+            if(cbCargo.Text != "")
             {
-                case "Recepción":
-                case "Recepción/Atención al Cliente":
-                    cbPuesto.Items.AddRange(new string[] { "Recepcionista", "Jefe de Recepción", "Supervisor de Recepción", "Bartender" });
-                    break;
-                case "Limpieza":
-                    cbPuesto.Items.AddRange(new string[] { "Personal de Limpieza", "Jefa de Limpieza", "Supervisora de Limpieza" });
-                    break;
-                case "Administrativo":
-                    cbPuesto.Items.AddRange(new string[] { "Gerente", "Contador", "Secretaria" });
-                    break;
-                // Añadir más casos según tus necesidades
-                default:
-                    // En caso de otro sector o ningún sector seleccionado, no se agregan opciones de puesto
-                    break;
+                // Dependiendo del sector seleccionado, agregamos las opciones de puestos correspondientes
+                switch (cbCargo.SelectedItem.ToString())
+                {
+                    case "Recepción":
+                    case "Recepción/Atención al Cliente":
+                        cbPuesto.Items.AddRange(new string[] { "Recepcionista", "Jefe de Recepción", "Supervisor de Recepción", "Bartender" });
+                        break;
+                    case "Limpieza":
+                        cbPuesto.Items.AddRange(new string[] { "Personal de Limpieza", "Jefa de Limpieza", "Supervisora de Limpieza" });
+                        break;
+                    case "Administrativo":
+                        cbPuesto.Items.AddRange(new string[] { "Gerente", "Contador", "Secretaria" });
+                        break;
+                    // Añadir más casos según tus necesidades
+                    default:
+                        // En caso de otro sector o ningún sector seleccionado, no se agregan opciones de puesto
+                        break;
+                }
+
             }
+            
         }
 
         
