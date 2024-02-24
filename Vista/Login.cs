@@ -15,6 +15,9 @@ namespace Vista
     public partial class Login : Form
     {
         UsuarioBLL _controladoraUsuario = new UsuarioBLL();
+
+        
+
         public Login()
         {
             InitializeComponent();
@@ -37,7 +40,13 @@ namespace Vista
                 lblErrorClave.Text = "Debe ingresar la clave";
                 return;
             }*/
-            ///
+
+
+
+
+            string nombre = txtNombreUsuario.Text;
+            string clave = txtClave.Text;
+            UsuarioBE.usaurioLogueado = nombre;
 
 
             frmMenu ForM = new frmMenu();
@@ -51,8 +60,7 @@ namespace Vista
 
 
 
-            string nombre = txtNombreUsuario.Text;
-            string clave = txtClave.Text;
+            
 
             // Realizar la autenticación del usuario
             /*

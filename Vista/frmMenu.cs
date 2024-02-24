@@ -17,6 +17,11 @@ namespace Vista
         private UsuarioBE usuario;
         private UsuarioBLL controladorPermisos;
 
+        string usuarioActual = UsuarioBE.usaurioLogueado;
+
+        //UsuarioBE.usaurioLogueado = nombre;
+
+
 
 
         public frmMenu(/*UsuarioBE usuario*/)

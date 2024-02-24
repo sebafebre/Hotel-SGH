@@ -71,6 +71,7 @@
     <Compile Include="Seguridad\PermisoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad\UsuarioDAL.cs" />
+    <Compile Include="StateDAL.cs" />
     <Compile Include="ValidacionesDAL.cs" />
   </ItemGroup>
   <ItemGroup>

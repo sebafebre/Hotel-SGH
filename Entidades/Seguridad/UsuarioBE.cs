@@ -12,6 +12,13 @@ namespace Entidades
     [Table("Usuario")]
     public partial class UsuarioBE
     {
+        #region Atributos privados
+        private int id;
+        private string nombre;
+        private string clave;
+        #endregion
+
+        #region Propiedades publicas
 
         [Key]
         public int Id { get; set; } 
@@ -19,10 +26,12 @@ namespace Entidades
         public string Clave { get; set; }
 
         public EmpleadoBE Empleado { get; set; }
+        #endregion
 
-        public UsuarioBE()
-        {
-            //Grupos = new List<GrupoBE>();
-        }
+
+        //Propiedad estatica para acceder al usuario desde cualquier frm
+        public static string usaurioLogueado { get; set; }
+
+
     }
 }

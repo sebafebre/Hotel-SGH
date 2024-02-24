@@ -18,6 +18,10 @@ namespace Vista.Paneles.Pedidos
 
         PedidoBLL pedidoBLL = new PedidoBLL();
 
+        StateBLL stateBLL = new StateBLL();
+
+        string usuarioActual = UsuarioBE.usaurioLogueado;
+
         int nroReservaDGV = 0;
 
         int IdProductoSelec = 0;
@@ -110,8 +114,31 @@ namespace Vista.Paneles.Pedidos
                 {
                     if (listaDetallesPedidos.Count > 0)
                     {
-                        pedidoBLL.FinalizarPedido(listaDetallesPedidos, nroReservaDGV);
-                        MessageBox.Show("Se guardo el pedido con exito.");
+                        if(rbAPagar.Checked == false && rbPagoInstantaneo.Checked == false)
+                        {
+                            MessageBox.Show("Debe seleccionar cuando lo quiere abonar");
+                        }
+                        if (rbAPagar.Checked == true)
+                        {
+                            string Estado = "PagoPendiente";
+                            stateBLL.FinalizarPedido(listaDetallesPedidos, nroReservaDGV, Estado, "A", usuarioActual);
+
+                            
+                            MessageBox.Show("Se guardo el pedido con exito.");
+                        }
+                        if(rbPagoInstantaneo.Checked == true)
+                        {
+                            string Estado = "PagoInstantaneo";
+                            stateBLL.FinalizarPedido(listaDetallesPedidos, nroReservaDGV, Estado, "A", usuarioActual);
+
+                            
+                            MessageBox.Show("Se guardo el pedido con exito.");
+                        }
+
+                        //stateBLL.FinalizarPedido( listaDetallesPedidos, nroReservaDGV, string Estado, string tipoFactura, int idUsuario).
+
+                        //pedidoBLL.FinalizarPedido(listaDetallesPedidos, nroReservaDGV);
+                        MessageBox.Show("Error, asegurese de haber completado todos los campos");
                     }
                     else
                     {

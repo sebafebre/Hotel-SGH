@@ -43,7 +43,7 @@ namespace Vista.Paneles
 
         private void btnAgregarPedido_Click(object sender, EventArgs e)
         {
-            ValidacionesBLL.AbrirFormulario(typeof(Pedidos.frmAgregarPedidos), this);
+            ValidacionesBLL.CambiarPanel(typeof(Pedidos.frmAgregarPedidos), this);
         }
     }
 }

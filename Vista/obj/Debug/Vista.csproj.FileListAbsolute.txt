@@ -37,3 +37,4 @@ C:\Users\sebaf\Desktop\SGH - UAI\Vista\obj\Debug\Vista.Administrador.frmGruposPe
 C:\Users\sebaf\Desktop\SGH - UAI\Vista\obj\Debug\Vista.Paneles.frmCheckOut.resources
 C:\Users\sebaf\Desktop\SGH - UAI\Vista\obj\Debug\Vista.Administrador.frmEmpleado.resources
 C:\Users\sebaf\Desktop\SGH - UAI\Vista\obj\Debug\Vista.Paneles.frmOcupacion.resources
+C:\Users\sebaf\Desktop\SGH - UAI\Vista\obj\Debug\Vista.Paneles.Pedidos.frmAgregarPedidos.resources

@@ -329,7 +329,7 @@
             // 
             // btnModificarEstado
             // 
-            this.btnModificarEstado.Location = new System.Drawing.Point(1267, 141);
+            this.btnModificarEstado.Location = new System.Drawing.Point(1232, 155);
             this.btnModificarEstado.Name = "btnModificarEstado";
             this.btnModificarEstado.Size = new System.Drawing.Size(124, 23);
             this.btnModificarEstado.TabIndex = 160;

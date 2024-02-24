@@ -262,10 +262,24 @@ namespace Modelo
                 }
                 if (reserva.Estado == "Activa")
                 {
-                    MessageBox.Show("La reserva ya está activa");
+                    MessageBox.Show("La reserva ya está activa ");
+                }
+                if (reserva.Estado == "Finalizada")
+                {
+                    MessageBox.Show("La reserva ya a  finalizado");
+                }
+                if(reserva.Habitacion.Estado == "Ocupada")
+                {
+                    MessageBox.Show("La habitación está ocupada");
+                }
+                if (reserva.Habitacion.Estado == "Limpieza")
+                {
+                    MessageBox.Show("La habitación está siendo Limpiada, \n informe que habra una demora para entregar la habitacion y \n avisele al personal de limpieza que le den prioridad a la habitacion numero:", reserva.Habitacion.NroHabitacion.ToString() );
                 }
                 reserva.Estado = "Activa";
+                reserva.Habitacion.Estado = "Ocupada";
                 con.SaveChanges();
+                MessageBox.Show("Se realizo el Check-In con exito y la reserva fue Activada");
                 //return "Reserva Activa";
 
             }

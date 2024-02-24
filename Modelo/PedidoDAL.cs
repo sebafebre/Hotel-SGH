@@ -13,6 +13,7 @@ using System.Data.Entity.Core.Mapping;
 using System.IO;
 using System.Data.Entity;
 using System.Diagnostics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Modelo
 {
@@ -435,8 +436,7 @@ namespace Modelo
 
 
 
-
-        public void FinalizarPedido(List<DetallePedidoBE> listaDetallesPedidos, int nroReserva   /*, DataGridView dgvProductos, int idProducto, string NomProduct, int Cantidad*/)
+        /*public void FinalizarPedido(List<DetallePedidoBE> listaDetallesPedidos, int nroReserva)   //, DataGridView dgvProductos, int idProducto, string NomProduct, int Cantidad)
         {
             using (var transaction = con.Database.BeginTransaction())
             {
@@ -449,7 +449,7 @@ namespace Modelo
                     {
                         NroPedido = con.Pedido.Count() + 1,
                         Reserva = con.Reserva.FirstOrDefault(r => r.NroReserva == nroReserva),
-                        Estado = "Pendiente",
+                        Estado = "PagoPendiente",
                         FechaCreacion = DateTime.Now,
                         Total = listaDetallesPedidos.Sum(d => d.Total)
                     };
@@ -477,16 +477,17 @@ namespace Modelo
 
                     // Se agregan los detalles de pedido a la base de datos
                     con.DetallePedido.AddRange(listaDetallesPedidos);
-                    /*
+                    
+                    
                     // Se actualiza el stock de los productos
-                    foreach (var detallePedido in listaDetallesPedidos)
-                    {
-                        ProductoBE producto = con.Producto.FirstOrDefault(p => p.Id == detallePedido.Producto.Id);
-                        if (producto != null) // Verifica si el producto existe
-                        {
-                            producto.CantidadStock -= detallePedido.CantidadPedida;
-                        }
-                    }*/
+                    //foreach (var detallePedido in listaDetallesPedidos)
+                    //{
+                    //    ProductoBE producto = con.Producto.FirstOrDefault(p => p.Id == detallePedido.Producto.Id);
+                    //    if (producto != null) // Verifica si el producto existe
+                    //    {
+                    //        producto.CantidadStock -= detallePedido.CantidadPedida;
+                    //    }
+                    //}
 
 
                     // Guardar todos los cambios en la base de datos
@@ -505,7 +506,8 @@ namespace Modelo
                     // Manejar el error adecuadamente, posiblemente mostrar un mensaje al usuario
                 }
             }
-        }
+        }*/
+        
         public void CargarDetallesEnDataGridView(List<DetallePedidoBE> listaDetalles, DataGridView dataGridView)
         {
             // Limpiar las filas existentes en el DataGridView
@@ -891,11 +893,92 @@ namespace Modelo
 
         #endregion
 
+
         #region Realizar Facturas y enviar --> CheckOut
 
 
+        
 
 
+
+
+
+        
+
+        public void GenerarFacturaTXT(int nroReserva, string tipoFactura, int idUsuario)
+        {
+            try
+            {
+                GenerarFactura_DetalleFactura(nroReserva, tipoFactura, idUsuario);
+                using (var transaction = con.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        List<PedidoBE> listaPedidos = ObtenerPedidosPendientesDeReserva(nroReserva);
+                        List<DetallePedidoBE> listaDetalles = new List<DetallePedidoBE>();
+                        ReservaBE reserva = con.Reserva.FirstOrDefault(r => r.NroReserva == nroReserva);
+                        reserva.Estado = "Finalizada";
+                        reserva.Habitacion.Estado = "Limpieza";
+                        foreach (var pedido in listaPedidos)
+                        {
+                            listaDetalles = ObtenerDetallesPedidoDeLaReserva(nroReserva);
+                            pedido.Estado = "Pagado";
+                            con.SaveChanges();
+                        }
+
+                        
+                        ClienteBE cliente = reserva.Cliente;
+
+                        StringBuilder contenidoFactura = new StringBuilder();
+                        contenidoFactura.AppendLine("DETALLE DE LA FACTURA");
+                        contenidoFactura.AppendLine($"Cliente: {cliente.Persona.Nombre} {cliente.Persona.Apellido}");
+                        contenidoFactura.AppendLine($"Reserva ID: {reserva.NroReserva}");
+                        contenidoFactura.AppendLine($"Fecha de la reserva: {reserva.FechaLlegada} hasta {reserva.FechaIda}");
+                        contenidoFactura.AppendLine($"Total de la estadia: {reserva.Total}");
+                        contenidoFactura.AppendLine("Productos:");
+
+                        foreach (var producto in listaDetalles)
+                        {
+                            contenidoFactura.AppendLine($"Producto: {producto.NombreProducto}  cantidad {producto.CantidadPedida} precio: {producto.Producto.PrecioUnitario} total {producto.Total}  ");
+                        }
+
+                        contenidoFactura.AppendLine($"Subtotal: {reserva.Subtotal}");
+                        contenidoFactura.AppendLine($"Impuestos: {reserva.Impuestos}");
+                        contenidoFactura.AppendLine($"Total de la factura: {reserva.Total}");
+                        string ubica = "SGH - UAI";
+                        string nombreCarpetaExistente = "FacturasHotel";
+                        string rutaCarpetaExistente = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), ubica, nombreCarpetaExistente);
+                        string carpetaReserva = Path.Combine(rutaCarpetaExistente, nroReserva.ToString());
+
+                        if (!Directory.Exists(carpetaReserva))
+                        {
+                            Directory.CreateDirectory(carpetaReserva);
+                        }
+
+                        int nroFactura = con.Factura.Count();
+                        string nombreArchivo = $"factura_{nroFactura}.txt";
+                        string rutaArchivo = Path.Combine(carpetaReserva, nombreArchivo);
+
+                        File.WriteAllText(rutaArchivo, contenidoFactura.ToString());
+
+                        // Enviar correo electrónico con el archivo adjunto
+                        EnviarCorreoElectronico(cliente.Persona.Mail, "Factura de la reserva", "Adjunto se encuentra la factura de su reserva.", rutaArchivo, "HotelSGH.Diploma@gmail.com");
+
+                        transaction.Commit();
+                        Console.WriteLine("Factura generada y correo electrónico enviado correctamente.");
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        Console.WriteLine("Error al enviar la factura: " + ex.Message);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al generar la factura: " + ex.Message);
+            }
+        }
 
         private void GenerarFactura_DetalleFactura(int nroReserva, string tipoFactura, int idUsuario)
         {
@@ -968,15 +1051,7 @@ namespace Modelo
             }
         }
 
-
-
-
-
-
-
-
-        /*
-        private void GenerarFactura_DetalleFactura(int nroReserva, string tipoFactura, int idUsuario)
+        /*private void GenerarFactura_DetalleFactura(int nroReserva, string tipoFactura, int idUsuario)
         {
             using (var transaction = con.Database.BeginTransaction())
             {
@@ -1064,7 +1139,8 @@ namespace Modelo
         }*/
 
 
-        static void EnviarCorreoElectronico(string destinatario, string asunto, string cuerpo, string adjunto, string mail)
+        //Sin funcionar por la seguridad de Gmail (habilitar el acceso de aplicaciones menos seguras) ---> verificacion de 2 pasos
+        public void EnviarCorreoElectronico(string destinatario, string asunto, string cuerpo, string adjunto, string mail)
         {
             try
             {
@@ -1096,211 +1172,21 @@ namespace Modelo
             }
         }
 
-        public void GenerarFacturaTXT(int nroReserva, string tipoFactura, int idUsuario)
-        {
-            try
-            {
-                GenerarFactura_DetalleFactura(nroReserva, tipoFactura, idUsuario);
-                using (var transaction = con.Database.BeginTransaction())
-                {
-                    try
-                    {
-                        List<PedidoBE> listaPedidos = ObtenerPedidosPendientesDeReserva(nroReserva);
-                        List<DetallePedidoBE> listaDetalles = new List<DetallePedidoBE>();
-
-                        foreach (var pedido in listaPedidos)
-                        {
-                            listaDetalles = ObtenerDetallesPedidoDeLaReserva(nroReserva);
-                            pedido.Estado = "Pagado";
-                            con.SaveChanges();
-                        }
-
-                        ReservaBE reserva = con.Reserva.FirstOrDefault(r => r.NroReserva == nroReserva);
-                        ClienteBE cliente = reserva.Cliente;
-
-                        StringBuilder contenidoFactura = new StringBuilder();
-                        contenidoFactura.AppendLine("DETALLE DE LA FACTURA");
-                        contenidoFactura.AppendLine($"Cliente: {cliente.Persona.Nombre} {cliente.Persona.Apellido}");
-                        contenidoFactura.AppendLine($"Reserva ID: {reserva.NroReserva}");
-                        contenidoFactura.AppendLine($"Fecha de la reserva: {reserva.FechaLlegada} hasta {reserva.FechaIda}");
-                        contenidoFactura.AppendLine($"Total de la estadia: {reserva.Total}");
-                        contenidoFactura.AppendLine("Productos:");
-
-                        foreach (var producto in listaDetalles)
-                        {
-                            contenidoFactura.AppendLine($"Producto: {producto.NombreProducto}  cantidad {producto.CantidadPedida} precio: {producto.Producto.PrecioUnitario} total {producto.Total}  ");
-                        }
-
-                        contenidoFactura.AppendLine($"Subtotal: {reserva.Subtotal}");
-                        contenidoFactura.AppendLine($"Impuestos: {reserva.Impuestos}");
-                        contenidoFactura.AppendLine($"Total de la factura: {reserva.Total}");
-                        string ubica = "SGH - UAI";
-                        string nombreCarpetaExistente = "FacturasHotel";
-                        string rutaCarpetaExistente = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), ubica, nombreCarpetaExistente);
-                        string carpetaReserva = Path.Combine(rutaCarpetaExistente, nroReserva.ToString());
-
-                        if (!Directory.Exists(carpetaReserva))
-                        {
-                            Directory.CreateDirectory(carpetaReserva);
-                        }
-
-                        int nroFactura = con.Factura.Count();
-                        string nombreArchivo = $"factura_{nroFactura}.txt";
-                        string rutaArchivo = Path.Combine(carpetaReserva, nombreArchivo);
-
-                        File.WriteAllText(rutaArchivo, contenidoFactura.ToString());
-
-                        // Enviar correo electrónico con el archivo adjunto
-                        EnviarCorreoElectronico(cliente.Persona.Mail, "Factura de la reserva", "Adjunto se encuentra la factura de su reserva.", rutaArchivo, "HotelSGH.Diploma@gmail.com");
-
-                        transaction.Commit();
-                        Console.WriteLine("Factura generada y correo electrónico enviado correctamente.");
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        Console.WriteLine("Error al enviar la factura: " + ex.Message);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al generar la factura: " + ex.Message);
-            }
-        }
+        
+       
 
 
 
 
 
 
-        /*
-        static void EnviarCorreoElectronico(string destinatario, string asunto, string cuerpo, string adjunto, string mail)
-        {
-            MailMessage correo = new MailMessage();
-            correo.From = new MailAddress(mail);
-            correo.To.Add(destinatario);
-            correo.Subject = asunto;
-            correo.Body = cuerpo;
-
-            // Adjuntar el archivo
-            Attachment adjuntoCorreo = new Attachment(adjunto);
-            correo.Attachments.Add(adjuntoCorreo);
-
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
-            smtp.Port = 587;
-            smtp.Credentials = new NetworkCredential("MatiiiPerezzz44444444@gmail.com", "Matiperez@");
-            smtp.EnableSsl = true;
-
-            smtp.Send(correo);
-
-            // Liberar recursos
-            adjuntoCorreo.Dispose();
-            correo.Dispose();
-        }
-        public void GenerarFacturaTXT(int nroReserva, string tipoFactura, int idUsuario)
-        {
-            try
-            {
-                GenerarFactura_DetalleFactura(nroReserva, tipoFactura, idUsuario);
-                using (var transaction = con.Database.BeginTransaction())
-                {
-                    try
-                    {
-
-                        List<PedidoBE> listaPedidos = ObtenerPedidosPendientesDeReserva(nroReserva);
-
-                        
-
-                        List<DetallePedidoBE> listaDetalles = new List<DetallePedidoBE>();
-
-                        //buscamos que empleado esta realizando la factura, mediante el id del usuario que se logueo (el id es parameteo de entrada)
-
-
-                        foreach (var pedido in listaPedidos)
-                        {
-                            listaDetalles = ObtenerDetallesPedidoDeLaReserva(nroReserva);
-                            pedido.Estado = "Pagado";
-
-                            con.SaveChanges();
-                        }
-
-                        ReservaBE reserva = con.Reserva.FirstOrDefault(r => r.NroReserva == nroReserva);
-                        ClienteBE cliente = reserva.Cliente;
-
-
-                        //List<string> detalleProductos = ObtenerDetalleProductos(); // Obtener los detalles de los productos
-                        //Reserva reserva = ObtenerReserva(); // Obtener la reserva
-                        //Cliente cliente = ObtenerCliente(); // Obtener el cliente
-
-                        // Generar el contenido del archivo de texto
-                        StringBuilder contenidoFactura = new StringBuilder();
-                        contenidoFactura.AppendLine("DETALLE DE LA FACTURA");
-                        contenidoFactura.AppendLine($"Cliente: {cliente.Persona.Nombre} {cliente.Persona.Apellido}");
-                        contenidoFactura.AppendLine($"Reserva ID: {reserva.NroReserva}");
-                        contenidoFactura.AppendLine($"Fecha de la reserva: {reserva.FechaLlegada} hasta {reserva.FechaIda}");
-                        contenidoFactura.AppendLine($"Total de la estadia: {reserva.Total}");
-                        contenidoFactura.AppendLine("Productos:");
-
-                        foreach (var producto in listaDetalles)
-                        {
-                            //contenidoFactura.AppendLine(producto);
-                            contenidoFactura.AppendLine($"Producto: {producto.NombreProducto}  cantidad {producto.CantidadPedida} precio: {producto.Producto.PrecioUnitario} total {producto.Total}  ");
-                        }
-
-                        contenidoFactura.AppendLine($"Subtotal: {reserva.Subtotal}");
-                        contenidoFactura.AppendLine($"Impuestos: {reserva.Impuestos}");
-                        contenidoFactura.AppendLine($"Total de la factura: {reserva.Total}");
-
-                        // Guardar el contenido en un archivo de texto
-                        //string rutaArchivo = "factura.txt";
-                        //System.IO.File.WriteAllText(rutaArchivo, contenidoFactura.ToString());
-
-
-
-                        string nombreCarpetaExistente = "FacturasHotel"; // Nombre de la carpeta existente en el escritorio
-                        string rutaCarpetaExistente = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), nombreCarpetaExistente);
-
-                        // Crear la carpeta con el número de reserva dentro de la carpeta existente si no existe
-                        string carpetaReserva = Path.Combine(rutaCarpetaExistente, nroReserva.ToString());
-
-                        if (!Directory.Exists(carpetaReserva))
-                        {
-                            Directory.CreateDirectory(carpetaReserva);
-                        }
-
-                        int nroFactura = con.Factura.Count(); // Número de factura único
-
-                        // Guardar el archivo dentro de la carpeta de la reserva
-                        string nombreArchivo = $"factura_{nroFactura}.txt"; // Nombre único del archivo de factura
-
-                        string rutaArchivo = Path.Combine(carpetaReserva, nombreArchivo);
-
-                        File.WriteAllText(rutaArchivo, contenidoFactura.ToString());
 
 
 
 
-                        // Enviar correo electrónico con el archivo adjunto
-                        EnviarCorreoElectronico(cliente.Persona.Mail, "Factura de la reserva", "Adjunto se encuentra la factura de su reserva.", rutaArchivo, "MatiiiPerezzz44444444@gmail.com");
-                        transaction.Commit();
-                        Console.WriteLine("Factura generada y correo electrónico enviado correctamente.");
 
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        Console.WriteLine("Error al envial la factura: " + ex.Message);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al generar la factura: " + ex.Message);
-            }
-        }
-        */
+
+
         #endregion
     }
 }
