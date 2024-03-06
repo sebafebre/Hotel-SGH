@@ -1,5 +1,7 @@
 ﻿using Controladora;
+using Controladora.SeguridadBLL;
 using Entidades;
+using Entidades.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,10 +20,50 @@ namespace Vista.Paneles
         ReservaBLL reservaBLL = new ReservaBLL();
         private Dictionary<int, int> reservasPorDia;
 
+        GrupoBLL grupoBLL = new GrupoBLL();
+
+        string usuarioActual = UsuarioBE.usaurioLogueado;
+
         public frmOcupacion()
         {
             InitializeComponent();
+            VerificasPermisos();
+
+
+        }
+
+
+
+
+
+
+
+        public void VerificasPermisos()
+        {
             
+
+            List<PermisoBE> permisosUsuario = grupoBLL.ObtenerPermisosDelUsuario(usuarioActual);
+
+            List<string> permisos = new List<string>();
+
+            //foreach (var item in permisosUsuario)
+            foreach (var item in permisosUsuario)
+            {
+                permisos.Add(item.Componente.Nombre);
+            }
+            if (permisos.Contains("GA002 verGanancias"))
+            {
+                lblGanancia.Visible = true;
+                txtGananciaMensual.Visible = true;
+            }
+            else
+            {
+                lblGanancia.Visible = false;
+                txtGananciaMensual.Visible = false;
+            }
+
+            
+
         }
 
         private void frmOcupacion_Load(object sender, EventArgs e)
@@ -35,6 +77,8 @@ namespace Vista.Paneles
             Prueba();
 
             //CargarProgressBar();
+
+            reservaBLL.VerificarCancelacionReservas();
 
             reservaBLL.MostrarProgresBar(pBarDisponibles, lblCantDisponible, pBarOcupadas, lblCantOcupada, pBarLimpieza, lblCantLimpieza);
             reservaBLL.CargarDatosChart(ctEstadosHabitaciones);
@@ -132,6 +176,8 @@ namespace Vista.Paneles
 
 
         }
-
+        
+        
+        
     }
 }

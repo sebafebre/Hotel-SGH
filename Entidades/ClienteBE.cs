@@ -11,6 +11,9 @@ namespace Entidades
     [Table("Cliente")]
     public class ClienteBE
     {
+        private int id;
+        private PersonaBE persona;
+        private DateTime fechaDeAlta;
         
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

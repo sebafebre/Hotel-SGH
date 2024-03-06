@@ -14,6 +14,18 @@ namespace Entidades
     [Table("Persona")]
     public partial class PersonaBE
     {
+        private int id;
+        private string nombre;
+        private string apellido;
+        private string dni;
+        private string telefono;
+        private string mail;
+        private string direccion;
+        private DateTime fechaNacimiento;
+        private bool estadoActivo;
+
+
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

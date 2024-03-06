@@ -24,7 +24,7 @@ namespace Modelo
         //private ContextoBD dbContext;
         //dbContext = ContextoBD.Instancia();
 
-        ContextoBD con = ContextoBD.Instance();
+        ContextoBD con = new ContextoBD();
 
        
         
@@ -1172,8 +1172,8 @@ namespace Modelo
             }
         }
 
-        
-       
+
+
 
 
 
@@ -1188,6 +1188,30 @@ namespace Modelo
 
 
         #endregion
+
+
+
+
+
+
+        public List<DetallePedidoBE> ObtenerListaDetallesPedidos(int nroPedido)
+        { 
+            List<DetallePedidoBE> listaDetalles = new List<DetallePedidoBE>();
+
+            PedidoBE pedido = con.Pedido.FirstOrDefault(p => p.NroPedido == nroPedido);
+
+            if (pedido != null)
+            {
+                listaDetalles = con.DetallePedido.Where(d => d.Pedido == pedido && d.Pedido.Estado == "PagoPendiente").ToList();
+            }
+
+            return listaDetalles;
+        }
+
+
+
+
+
     }
 }
 

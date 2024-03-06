@@ -12,7 +12,7 @@ namespace Modelo
     public class CheckInDAL
     {
         //ContextoBD con = new ContextoBD();
-        ContextoBD con = ContextoBD.Instance();
+        ContextoBD con = new ContextoBD();
         public void BuscarClientePorDNI(string dni, DataGridView dgvClientes)
         {
             foreach (DataGridViewRow row in dgvClientes.Rows)
@@ -268,7 +268,7 @@ namespace Modelo
                 {
                     MessageBox.Show("La reserva ya a  finalizado");
                 }
-                if(reserva.Habitacion.Estado == "Ocupada")
+                if(reserva.Habitacion.Estado == "Ocupado")
                 {
                     MessageBox.Show("La habitación está ocupada");
                 }
@@ -277,7 +277,7 @@ namespace Modelo
                     MessageBox.Show("La habitación está siendo Limpiada, \n informe que habra una demora para entregar la habitacion y \n avisele al personal de limpieza que le den prioridad a la habitacion numero:", reserva.Habitacion.NroHabitacion.ToString() );
                 }
                 reserva.Estado = "Activa";
-                reserva.Habitacion.Estado = "Ocupada";
+                reserva.Habitacion.Estado = "Ocupado";
                 con.SaveChanges();
                 MessageBox.Show("Se realizo el Check-In con exito y la reserva fue Activada");
                 //return "Reserva Activa";

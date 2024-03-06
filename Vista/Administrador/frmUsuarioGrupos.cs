@@ -20,14 +20,17 @@ namespace Vista.Administrador
         GrupoBLL grupoBLL = new GrupoBLL();
         PermisoBLL permisoBLL = new PermisoBLL();
         ValidacionesBLL validacionBLL = new ValidacionesBLL();
+        PermisoBLL permisosBLL = new PermisoBLL();
 
-
+        int idComponentePermiso = 0;
+        int idComponenteGrupo = 0;
+        int idComponenteEliminar = 0;
         public frmUsuarioGrupos()
         {
             InitializeComponent();
             usuarioBLL.ListarUsuariosEnDGV(dgvUsuarios);
             grupoBLL.ListarGruposEnDGV(dgvGrupos);
-            
+            permisosBLL.ListarPermisosEnDGV(dgvPermisos);
 
         }
 
@@ -40,7 +43,7 @@ namespace Vista.Administrador
                 return false;
 
             }
-            if (txtIdGrupo.Text == "")
+            if (txtIdComponenteGrupo.Text == "")
             {
                 MessageBox.Show("Debe seleccionar un Grupo el cual asignarle al Usuario");
                 dgvGrupos.Focus();
@@ -63,7 +66,9 @@ namespace Vista.Administrador
                     txtDNI.Text = dgvUsuarios.CurrentRow.Cells[5].Value?.ToString() ?? ""; // Si es null, asigna una cadena vacía
 
                     int idUsuario = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value?.ToString());
-                    grupoBLL.ListarGruposUsuarioEnDataGridView(dgvGrupos, idUsuario);
+                    grupoBLL.ListarGruposEnDGV(dgvGrupos);
+
+                    usuarioBLL.ListarGruposYPermisosUsuarioEnDataGridView(dgvGrupoPermisoUsuario, idUsuario);
 
                     /* ObtenerDatosClienteYHabitacion
                     ClienteBE clienteReserva;
@@ -90,10 +95,10 @@ namespace Vista.Administrador
                 //Poner los datos del cliente seleccionado en los campos correspondientes
                 if (dgvGrupos.CurrentRow != null)
                 {
-                    txtIdGrupo.Text = dgvGrupos.CurrentRow.Cells[0].Value?.ToString();
+                    txtIdComponenteGrupo.Text = dgvGrupos.CurrentRow.Cells[0].Value?.ToString();
 
-                    int idGrupo = Convert.ToInt32(dgvGrupos.CurrentRow.Cells[0].Value?.ToString());
-                    permisoBLL.ListarPermisosGrupoEnDGV(dgvPermisosDelGrupo, idGrupo);
+                    int IdComponenteGrupo = Convert.ToInt32(dgvGrupos.CurrentRow.Cells[0].Value?.ToString());
+                    //permisoBLL.ListarPermisosGrupoEnDGV(dgvGrupoPermisoUsuario, idGrupo);
 
                     /* ObtenerDatosClienteYHabitacion
                     ClienteBE clienteReserva;
@@ -120,14 +125,20 @@ namespace Vista.Administrador
             try
             {
                 int idUsuario = Convert.ToInt32(txtIdUsuario.Text);
-                int idGrupo = Convert.ToInt32(txtIdGrupo.Text);
+                int IdComponenteGrupotext = Convert.ToInt32(txtIdComponenteGrupo.Text);
+                
 
 
-                if (ValidarCampos())
+                if (txtIdComponenteGrupo.Text != "" && txtIdUsuario.Text != "")
                 {
-                    usuarioBLL.AgregarGrupoAUsuario(idUsuario, idGrupo);
-                    grupoBLL.ListarGruposUsuarioEnDataGridView(dgvGrupos, idUsuario);
+                    usuarioBLL.AgregarGrupoAUsuario(idUsuario, IdComponenteGrupotext);
+                    usuarioBLL.ListarGruposYPermisosUsuarioEnDataGridView(dgvGrupoPermisoUsuario, idUsuario);
                     //validacionBLL.LimpiarCampos(this.Controls);
+
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un grupo y un usuario para eliminar");
                 }
             }
             catch (Exception ex)
@@ -139,16 +150,23 @@ namespace Vista.Administrador
         private void btnEliminarGrupo_Click(object sender, EventArgs e)
         {
             try
-            {
-                if(ValidarCampos())
+            {  
+                
+
+            
+                if(txtIdEliminar.Text != "" && txtIdUsuario.Text !="")
                 {
                     int idUsuario = Convert.ToInt32(txtIdUsuario.Text);
-                    int idGrupo = Convert.ToInt32(txtIdGrupo.Text);
+                    int idComponenteEliminar = Convert.ToInt32(txtIdEliminar.Text);
 
-                    usuarioBLL.EliminarGrupoAUsuario(idUsuario, idGrupo);
-                    grupoBLL.ListarGruposUsuarioEnDataGridView(dgvGrupos, idUsuario);
+                    usuarioBLL.EliminarGrupoAUsuario(idUsuario, idComponenteEliminar);
+                    usuarioBLL.ListarGruposYPermisosUsuarioEnDataGridView(dgvGrupoPermisoUsuario, idUsuario);
                     //validacionBLL.LimpiarCampos(this.Controls);
 
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un grupo y un usuario para eliminar");
                 }
             }
             catch (Exception ex)
@@ -175,6 +193,127 @@ namespace Vista.Administrador
         private void btnTodos_Click(object sender, EventArgs e)
         {
             grupoBLL.ListarGruposEnDGV(dgvGrupos);
+        }
+
+        private void btnAgregarPermiso_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int idUsuario = Convert.ToInt32(txtIdUsuario.Text);
+
+                if (txtIdComponentePermiso.Text != "" && txtIdUsuario.Text != "")
+                {
+                    usuarioBLL.AgregarPermisoAUsuario(idUsuario, idComponentePermiso);
+                    //permisoBLL.ListarPermisosGrupoEnDGV(dgvGrupoPermisoUsuario, idUsuario);
+                    //validacionBLL.LimpiarCampos(this.Controls);
+                    usuarioBLL.ListarGruposYPermisosUsuarioEnDataGridView(dgvGrupoPermisoUsuario, idUsuario);
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un permiso y un usuario para eliminar");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+        }
+
+        private void btnEliminarPermiso_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+
+                if (txtIdEliminar.Text != "" && txtIdUsuario.Text != "")
+                {
+                    int idUsuario = Convert.ToInt32(txtIdUsuario.Text);
+                    //int idPermiso = Convert.ToInt32(txtIdPermiso.Text);
+                    idComponentePermiso = Convert.ToInt32(txtIdEliminar.Text);
+
+                    usuarioBLL.EliminarPermisoAUsuario(idUsuario, idComponentePermiso );
+                    //permisoBLL.ListarPermisosGrupoEnDGV(dgvGrupoPermisoUsuario, idUsuario);
+                    //validacionBLL.LimpiarCampos(this.Controls);
+                    usuarioBLL.ListarGruposYPermisosUsuarioEnDataGridView(dgvGrupoPermisoUsuario, idUsuario);
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un permiso y un usuario para eliminar");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+
+        }
+
+        private void dgvPermisos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                //Poner los datos del cliente seleccionado en los campos correspondientes
+                if (dgvPermisos.CurrentRow != null)
+                {
+                    txtIdComponentePermiso.Text = dgvPermisos.CurrentRow.Cells[0].Value?.ToString();
+                   
+                    idComponentePermiso = (int)dgvPermisos.CurrentRow.Cells[0].Value;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            /*
+            try
+            {
+                //Poner los datos del cliente seleccionado en los campos correspondientes
+                if (dgvPermisos.CurrentRow != null)
+                {
+                    txtIdPermiso.Text = dgvGrupos.CurrentRow.Cells[0].Value?.ToString();
+
+                    int idPermiso = Convert.ToInt32(dgvGrupos.CurrentRow.Cells[0].Value?.ToString());
+                    //permisoBLL.ListarPermisosGrupoEnDGV(dgvPermisosDelGrupo, idPermiso);
+
+                    /* ObtenerDatosClienteYHabitacion
+                    ClienteBE clienteReserva;
+                    HabitacionBE habitacionReserva;
+
+                    pedidoBLL.ObtenerDatosClienteYHabitacion(nroReservaDGV, out clienteReserva, out habitacionReserva);
+
+                    txtNroHabitacion.Text = habitacionReserva.NroHabitacion.ToString();
+                    txtNombreCliente.Text = clienteReserva.Persona.Nombre + clienteReserva.Persona.Apellido;
+                    txtBuscarDNI.Text = clienteReserva.Persona.DNI;*//*
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }*/
+
+        }
+
+        private void dgvGrupoPermisoUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                //Poner los datos del cliente seleccionado en los campos correspondientes
+                if (dgvGrupoPermisoUsuario.CurrentRow != null)
+                {
+                    //txtIdPermiso.Text = dgvPermisos.CurrentRow.Cells[0].Value?.ToString();
+                    
+                    txtIdEliminar.Text = dgvGrupoPermisoUsuario.CurrentRow.Cells[0].Value?.ToString();
+                    idComponenteEliminar = (int)dgvGrupoPermisoUsuario.CurrentRow.Cells[0].Value;
+                }
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }

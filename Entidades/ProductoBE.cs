@@ -11,12 +11,10 @@ namespace Entidades
     [Table("Producto")]
     public partial class ProductoBE
     {
-        /*
-        public ProductoBE()
-        {
-            this.DetallesFactura = new HashSet<DetalleFacturaBE>();
-            this.DetallesPedido = new HashSet<DetallePedidoBE>();
-        }*/
+        private int id;
+        private string nombreProducto;
+        private int cantidadStock;
+        private int precioUnitario;
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -24,8 +22,5 @@ namespace Entidades
         public string NombreProducto { get; set; }
         public int CantidadStock { get; set; }
         public int PrecioUnitario { get; set; }
-
-        //public virtual ICollection<DetalleFacturaBE> DetallesFactura { get; set; }
-        //public virtual ICollection<DetallePedidoBE> DetallesPedido { get; set; }
     }
 }

@@ -60,8 +60,9 @@ namespace Vista.Paneles
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
-            {   
-                if(ValidarCampos())
+            {
+                
+                if (ValidarCampos() )
                 {
                     ClienteBE cliente = new ClienteBE();
                     cliente.Persona = new PersonaBE();
@@ -76,9 +77,8 @@ namespace Vista.Paneles
                     cliente.Persona.FechaNacimiento = dtpFechaNacimiento.Value;
                     cliente.FechaDeAlta = DateTime.Now;
 
-                    string resultado = clienteBLL.AgregarCliente(cliente);
-                    MessageBox.Show(resultado);
-
+                    clienteBLL.AgregarCliente(cliente);
+                  
                     //this.clienteTableAdapter.Fill(this.sGHDataSet.Cliente);
 
                     clienteBLL.ListarClientesActivosEnDataGridView(dgvClientes);
@@ -216,9 +216,99 @@ namespace Vista.Paneles
                 dtpFechaNacimiento.Focus();
                 return false;
             }
+            else if (!validacionesBLL.ValidarEmail(txtMail.Text))
+            {
+                MessageBox.Show("El mail no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMail.Focus();
+                return false;
+            }
+
             
+
             return true;
             
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                
+                validacionesBLL.ValidarSoloLetras((TextBox)sender);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                validacionesBLL.ValidarSoloLetras((TextBox)sender);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void txtDNI_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string dni = txtDNI.Text;
+                //validacionesBLL.ValidarDni(dni);
+                validacionesBLL.ValidarSoloNumeros((TextBox)sender);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string numero = txtTelefono.Text;
+                validacionesBLL.ValidarSoloNumeros((TextBox)sender);
+                //validacionesBLL.ValidarTelefono(numero);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void txtMail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                validacionesBLL.ValidarFechaNac(dtpFechaNacimiento.Value);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

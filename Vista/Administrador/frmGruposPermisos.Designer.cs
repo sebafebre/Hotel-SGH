@@ -63,7 +63,7 @@
             // 
             // btnModificarPermiso
             // 
-            this.btnModificarPermiso.Location = new System.Drawing.Point(1079, 269);
+            this.btnModificarPermiso.Location = new System.Drawing.Point(1079, 290);
             this.btnModificarPermiso.Name = "btnModificarPermiso";
             this.btnModificarPermiso.Size = new System.Drawing.Size(124, 38);
             this.btnModificarPermiso.TabIndex = 180;
@@ -90,7 +90,7 @@
             // 
             // btnTodos
             // 
-            this.btnTodos.Location = new System.Drawing.Point(1079, 336);
+            this.btnTodos.Location = new System.Drawing.Point(1079, 185);
             this.btnTodos.Name = "btnTodos";
             this.btnTodos.Size = new System.Drawing.Size(124, 26);
             this.btnTodos.TabIndex = 173;
@@ -100,7 +100,7 @@
             // 
             // btnEliminarPermiso
             // 
-            this.btnEliminarPermiso.Location = new System.Drawing.Point(1079, 227);
+            this.btnEliminarPermiso.Location = new System.Drawing.Point(1079, 330);
             this.btnEliminarPermiso.Name = "btnEliminarPermiso";
             this.btnEliminarPermiso.Size = new System.Drawing.Size(124, 38);
             this.btnEliminarPermiso.TabIndex = 171;
@@ -190,7 +190,7 @@
             // 
             // btnAgregarPermiso
             // 
-            this.btnAgregarPermiso.Location = new System.Drawing.Point(1079, 185);
+            this.btnAgregarPermiso.Location = new System.Drawing.Point(1079, 246);
             this.btnAgregarPermiso.Name = "btnAgregarPermiso";
             this.btnAgregarPermiso.Size = new System.Drawing.Size(124, 38);
             this.btnAgregarPermiso.TabIndex = 183;
@@ -239,7 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(154)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(1473, 457);
             this.Controls.Add(this.btnQuitarPermisoAGrupo);
             this.Controls.Add(this.btnAgregarPermisoAGrupo);

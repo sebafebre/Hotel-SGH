@@ -11,12 +11,14 @@ namespace Entidades
     [Table("Empleado")]
     public partial class EmpleadoBE
     {
-        /*
-        public EmpleadoBE()
-        {
-            this.Facturas = new HashSet<FacturaBE>();
-            this.Usuarios = new HashSet<UsuarioBE>();
-        }*/
+
+        private int id;
+        private string puesto;
+        private string cargo;
+        private DateTime fechaIngreso;
+        private PersonaBE persona;
+
+        
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -30,7 +32,5 @@ namespace Entidades
 
         public virtual PersonaBE Persona { get; set; }
 
-        //public virtual ICollection<FacturaBE> Facturas { get; set; }
-        //public virtual ICollection<UsuarioBE> Usuarios { get; set; }
     }
 }

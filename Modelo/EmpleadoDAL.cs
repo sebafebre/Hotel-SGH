@@ -11,7 +11,7 @@ namespace Modelo
     public class EmpleadoDAL
     {
         //ContextoBD con = new ContextoBD();
-        ContextoBD con = ContextoBD.Instance();
+        ContextoBD con = new ContextoBD();
 
 
         #region Agregar Modificar ELiminar Clientes

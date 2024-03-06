@@ -31,98 +31,147 @@
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblErrorUsuairo = new System.Windows.Forms.Label();
             this.lblErrorClave = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombreUsuario
             // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(466, 121);
+            this.txtNombreUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreUsuario.Location = new System.Drawing.Point(511, 170);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(268, 22);
             this.txtNombreUsuario.TabIndex = 0;
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(466, 191);
+            this.txtClave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtClave.Location = new System.Drawing.Point(511, 234);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(268, 22);
             this.txtClave.TabIndex = 1;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(548, 253);
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(133)))), ((int)(((byte)(136)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(166)))), ((int)(((byte)(163)))));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(580, 350);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(107, 50);
+            this.btnLogin.Size = new System.Drawing.Size(145, 68);
             this.btnLogin.TabIndex = 2;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Text = "Iniciar Sesion";
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(116, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "SGH";
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 152);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(42, 405);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 16);
+            this.label2.Size = new System.Drawing.Size(343, 31);
             this.label2.TabIndex = 4;
             this.label2.Text = "Sistema de Gestion Hotelera";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(568, 92);
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(597, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 16);
+            this.label3.Size = new System.Drawing.Size(96, 37);
             this.label3.TabIndex = 5;
             this.label3.Text = "LogIn";
             // 
             // lblErrorUsuairo
             // 
             this.lblErrorUsuairo.AutoSize = true;
-            this.lblErrorUsuairo.Location = new System.Drawing.Point(496, 152);
+            this.lblErrorUsuairo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorUsuairo.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorUsuairo.Location = new System.Drawing.Point(462, 152);
             this.lblErrorUsuairo.Name = "lblErrorUsuairo";
-            this.lblErrorUsuairo.Size = new System.Drawing.Size(44, 16);
+            this.lblErrorUsuairo.Size = new System.Drawing.Size(0, 20);
             this.lblErrorUsuairo.TabIndex = 6;
-            this.lblErrorUsuairo.Text = "label4";
             // 
             // lblErrorClave
             // 
             this.lblErrorClave.AutoSize = true;
-            this.lblErrorClave.Location = new System.Drawing.Point(499, 222);
+            this.lblErrorClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorClave.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorClave.Location = new System.Drawing.Point(462, 216);
             this.lblErrorClave.Name = "lblErrorClave";
-            this.lblErrorClave.Size = new System.Drawing.Size(44, 16);
+            this.lblErrorClave.Size = new System.Drawing.Size(0, 20);
             this.lblErrorClave.TabIndex = 7;
-            this.lblErrorClave.Text = "label5";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(154)))), ((int)(((byte)(141)))));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(424, 445);
+            this.panel1.TabIndex = 8;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vista.Properties.Resources.puerta_abierta__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(76, 85);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(256, 256);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MintCream;
+            this.label1.Location = new System.Drawing.Point(142, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 58);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "SGH";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(870, 366);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
+            this.ClientSize = new System.Drawing.Size(870, 445);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblErrorClave);
             this.Controls.Add(this.lblErrorUsuairo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtNombreUsuario);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(53)))), ((int)(((byte)(52)))));
             this.Name = "Login";
             this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,6 +187,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblErrorUsuairo;
         private System.Windows.Forms.Label lblErrorClave;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -9,13 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controladora.SeguridadBLL;
+using Entidades.Seguridad;
 
 namespace Vista
 {
     public partial class frmMenu : Form
     {
-        private UsuarioBE usuario;
-        private UsuarioBLL controladorPermisos;
+        //private UsuarioBE usuario;
+        UsuarioBLL controladorPermisos = new UsuarioBLL();
+        GrupoBLL grupoBLL = new GrupoBLL();
 
         string usuarioActual = UsuarioBE.usaurioLogueado;
 
@@ -27,95 +30,101 @@ namespace Vista
         public frmMenu(/*UsuarioBE usuario*/)
         {
             InitializeComponent();
-            this.usuario = usuario;
-            controladorPermisos = new UsuarioBLL();
-            //---------------------->//VerificarP();
+            //this.usuario = usuario;
+            //controladorPermisos = new UsuarioBLL();
+
+            VerificarP();
             ValidacionesBLL.AbrirFormulario(typeof(Vista.Paneles.frmOcupacion), this);
+
+
+            lblUsuario.Text = usuarioActual;
+
+
         }
 
         private void VerificarP()
         {
-            List<PermisoBE> permisosUsuario = controladorPermisos.ObtenerPermisosUsuario(usuario.Id);
+            //List<PermisoBE> permisosUsuario = controladorPermisos.ObtenerPermisosUsuario(usuarioActual);
+
+            //List<ComponenteBE> listaPermisos = controladorPermisos.ObtenerPermisosPorUsuario(usuarioActual);
+
+            List<PermisoBE> permisosUsuario = grupoBLL.ObtenerPermisosDelUsuario(usuarioActual);
 
             List<string> permisos = new List<string>();
+
+            //foreach (var item in permisosUsuario)
             foreach (var item in permisosUsuario)
             {
                 permisos.Add(item.Componente.Nombre);
             }
-            if (permisos.Contains("frmOcupacion"))
+            if (permisos.Contains("PS01 frmOcupacion"))
             {
                 btnOcupacion.Enabled = true;
-                btnOcupacion.BackColor = Color.Green;
             }
             else
             {
                 btnOcupacion.Enabled = false;
                 btnOcupacion.BackColor = Color.Gray;
             }
-            if (permisos.Contains("frmHabitaciones"))
+            if (permisos.Contains("GH001 frmHabitaciones"))
             {
                 btnHabitaciones.Enabled = true;
-                btnHabitaciones.BackColor = Color.Green;
             }
             else
             {
                 btnHabitaciones.Enabled = false;
                 btnHabitaciones.BackColor = Color.Gray;
             }
-            if (permisos.Contains("frmClientes"))
+            if (permisos.Contains("GC001 frmClientes"))
             {
                 btnClientes.Enabled = true;
-                btnClientes.BackColor = Color.Green;
             }
             else
             {
                 btnClientes.Enabled = false;
                 btnClientes.BackColor = Color.Gray;
             }
-            if (permisos.Contains("frmReservas"))
+            if (permisos.Contains("GR001 frmReservas"))
             {
                 btnReservas.Enabled = true;
-                btnReservas.BackColor = Color.Green;
             }
             else
             {
                 btnReservas.Enabled = false;
                 btnReservas.BackColor = Color.Gray;
             }
-            if (permisos.Contains("frmCheckIn"))
+            if (permisos.Contains("GE001 frmCheckIn"))
             {
                 btnCheckIn.Enabled = true;
-                btnCheckIn.BackColor = Color.Green;
             }
             else
             {
                 btnCheckIn.Enabled = false;
                 btnCheckIn.BackColor = Color.Gray;
             }
-            if (permisos.Contains("frmCheckOut"))
+            if (permisos.Contains("GS001 frmCheckOut"))
             {
                 btnCheckOut.Enabled = true;
-                btnCheckOut.BackColor = Color.Green;
             }
             else
             {
                 btnCheckOut.Enabled = false;
                 btnCheckOut.BackColor = Color.Gray;
             }
-            if (permisos.Contains("frmPedidos"))
+            if (permisos.Contains("GP001 frmPedidos"))
             {
                 btnPedidos.Enabled = true;
-                btnPedidos.BackColor = Color.Green;
+                
             }
             else
             {
                 btnPedidos.Enabled = false;
                 btnPedidos.BackColor = Color.Gray;
             }
-            if (permisos.Contains("frmAdministrador"))
+            if (permisos.Contains("GA001 frmAdministrador"))
             {
                 btnAdministrador.Enabled = true;
-                btnAdministrador.BackColor = Color.Green;
+                
             }
             else
             {
@@ -123,94 +132,7 @@ namespace Vista
                 btnAdministrador.BackColor = Color.Gray;
             }
             
-            /**
-            List<PermisoBE> permisosUsuario = controladorPermisos.ObtenerPermisosUsuario(usuario.Id);
-
-            List<int> permisos = new List<int>();
-            foreach (var item in permisosUsuario)
-            {
-                permisos.Add(item.Id);
-            }
-            if (permisos.Contains(1))
-            {
-                btnOcupacion.Enabled = true;
-                btnOcupacion.BackColor = Color.Green;
-            }
-            else
-            {
-                btnOcupacion.Enabled = false;
-                btnOcupacion.BackColor = Color.Gray;
-            }
-            if (permisos.Contains(2))
-            {
-                btnHabitaciones.Enabled = true;
-                btnHabitaciones.BackColor = Color.Green;
-            }
-            else
-            {
-                btnHabitaciones.Enabled = false;
-                btnHabitaciones.BackColor = Color.Gray;
-            }
-            if (permisos.Contains(3))
-            {
-                btnClientes.Enabled = true;
-                btnClientes.BackColor = Color.Green;
-            }
-            else
-            {
-                btnClientes.Enabled = false;
-                btnClientes.BackColor = Color.Gray;
-            }
-            if (permisos.Contains(4))
-            {
-                btnReservas.Enabled = true;
-                btnReservas.BackColor = Color.Green;
-            }
-            else
-            {
-                btnReservas.Enabled = false;
-                btnReservas.BackColor = Color.Gray;
-            }
-            if (permisos.Contains(5))
-            {
-                btnCheckIn.Enabled = true;
-                btnCheckIn.BackColor = Color.Green;
-            }
-            else
-            {
-                btnCheckIn.Enabled = false;
-                btnCheckIn.BackColor = Color.Gray;
-            }
-            if (permisos.Contains(6))
-            {
-                btnCheckOut.Enabled = true;
-                btnCheckOut.BackColor = Color.Green;
-            }
-            else
-            {
-                btnCheckOut.Enabled = false;
-                btnCheckOut.BackColor = Color.Gray;
-            }
-            if (permisos.Contains(7))
-            {
-                btnPedidos.Enabled = true;
-                btnPedidos.BackColor = Color.Green;
-            }
-            else
-            {
-                btnPedidos.Enabled = false;
-                btnPedidos.BackColor = Color.Gray;
-            }
-            if (permisos.Contains(8))
-            {
-                btnAdministrador.Enabled = true;
-                btnAdministrador.BackColor = Color.Green;
-            }
-            else
-            {
-                btnAdministrador.Enabled = false;
-                btnAdministrador.BackColor = Color.Gray;
-            }*/
+            
         }
 
         private void btnOcupacion_Click(object sender, EventArgs e)
@@ -253,11 +175,20 @@ namespace Vista
             ValidacionesBLL.AbrirFormulario(typeof(Vista.Administrador.frmAdministrador), this);
         }
 
-        private void lblLogOut_Click(object sender, EventArgs e)
+        private void btnLogOut_Click(object sender, EventArgs e)
         {
+            UsuarioBE usuario = new UsuarioBE();
+            usuario.Nombre = usuarioActual;
+            AdministradorDeSesionBE.LogOut(usuario);
+
             Login frmLogIn = new Login();
             frmLogIn.Show();
             this.Hide();
+
         }
+
+
+
+
     }
 }

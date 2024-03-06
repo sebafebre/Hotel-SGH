@@ -10,14 +10,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.ComponentModel;
+using System.IO;
+using OfficeOpenXml;
+using ClosedXML.Excel;
+using OfficeOpenXml.Drawing.Chart;
 
+
+
+
+
+
+//using LicenseContext = OfficeOpenXml.LicenseContext;
 
 namespace Modelo
 {
     public class ReservaDAL
     {
         //ContextoBD con = new ContextoBD();
-        ContextoBD con = ContextoBD.Instance();
+        ContextoBD con = new ContextoBD();
 
         private List<ReservaBE> reservas = new List<ReservaBE>();
 
@@ -90,7 +101,7 @@ namespace Modelo
 
 
 
-        public bool GuardarReserva(int idCliente, int idHabitacion, DateTime fechaInicio, DateTime fechaFin, decimal subtotal, decimal imp, decimal total)
+        public void GuardarReserva(int idCliente, int idHabitacion, DateTime fechaInicio, DateTime fechaFin, decimal subtotal, decimal imp, decimal total)
         {
             try
             {
@@ -100,48 +111,125 @@ namespace Modelo
 
                 if (cliente == null || habitacion == null)
                 {
-                    Console.WriteLine("El cliente o la habitación no existen.");
-                    return false;
+                    MessageBox.Show("El cliente o la habitación no existen.");
+                    
                 }
-
                 // Verificar si la habitación está disponible para las fechas seleccionadas
                 bool habitacionDisponible = VerificarDisponibilidadHabitacion(idHabitacion, fechaInicio, fechaFin);
 
                 if (!habitacionDisponible)
                 {
                     MessageBox.Show("La habitación no está disponible para las fechas seleccionadas.");
-                    return false;
+                    
                 }
-
-                // Crear una nueva instancia de Reserva
-                ReservaBE nuevaReserva = new ReservaBE
+                else
                 {
-                    Habitacion = habitacion,
-                    Cliente = cliente,
-                    FechaLlegada = fechaInicio,
-                    FechaIda = fechaFin,
-                    NroReserva = con.Reserva.Any() ? con.Reserva.Max(h => h.NroReserva) + 1 : 1,
-                    Estado = "Pendiente",
-                    Subtotal = subtotal,
-                    Impuestos = imp,
-                    Total = total
-                };
+                    // Crear una nueva instancia de Reserva
+                    ReservaBE nuevaReserva = new ReservaBE
+                    {
+                        Habitacion = habitacion,
+                        Cliente = cliente,
+                        FechaLlegada = fechaInicio,
+                        FechaIda = fechaFin,
+                        NroReserva = con.Reserva.Any() ? con.Reserva.Max(h => h.NroReserva) + 1 : 1,
+                        Estado = "Pendiente",
+                        Subtotal = subtotal,
+                        Impuestos = imp,
+                        Total = total
+                    };
 
-                // Agregar la nueva reserva al contexto y guardar los cambios
-                con.Reserva.Add(nuevaReserva);
-                con.SaveChanges();
+                    // Agregar la nueva reserva al contexto y guardar los cambios
+                    con.Reserva.Add(nuevaReserva);
+                    con.SaveChanges();
 
-                return true;
+                }
+ 
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al guardar la reserva: " + ex.Message);
-                return false;
+                
+            }
+        }
+
+
+        private bool VerificarDisponibilidadHabitacion(int idHabitacion, DateTime fechaInicio, DateTime fechaFin, int idReservaExcluida)
+        {
+            // Verificar si hay reservas existentes que se superpongan con las fechas seleccionadas
+            bool habitacionDisponible = !con.Reserva.Any(r =>
+                                        r.Habitacion.Id == idHabitacion &&
+                                        r.Id != idReservaExcluida && // Excluir la reserva que estamos modificando
+                                        ((fechaInicio >= r.FechaLlegada && fechaInicio < r.FechaIda) ||
+                                         (fechaFin > r.FechaLlegada && fechaFin <= r.FechaIda) ||
+                                         (fechaInicio <= r.FechaLlegada && fechaFin >= r.FechaIda)));
+
+            return habitacionDisponible;
+        }
+
+
+        public void ModificarReserva(ReservaBE reserva, int idCliente, int idHabitacion, DateTime fechaInicio, DateTime fechaFin)
+        {
+            try
+            {
+                // Obtener el cliente y la habitación correspondientes a los IDs proporcionados
+                var cliente = con.Cliente.Find(idCliente);
+                var habitacion = con.Habitacion.Find(idHabitacion);
+
+                if (cliente == null || habitacion == null)
+                {
+                    MessageBox.Show("El cliente o la habitación no existen.");
+                    return;
+                }
+
+                // Verificar si la habitación está disponible para las fechas seleccionadas
+                bool habitacionDisponible = VerificarDisponibilidadHabitacion(idHabitacion, fechaInicio, fechaFin, reserva.Id);
+
+                if (!habitacionDisponible)
+                {
+                    MessageBox.Show("La habitación no está disponible para las fechas seleccionadas.");
+                    return;
+                }
+                if (habitacionDisponible)
+                {
+                    ReservaBE reservaModificar = con.Reserva.Find(reserva.Id);
+                    reservaModificar.Cliente = cliente;
+                    reservaModificar.Habitacion = habitacion;
+                    reservaModificar.FechaLlegada = fechaInicio;
+                    reservaModificar.FechaIda = fechaFin;
+                    reservaModificar.NroReserva = reserva.NroReserva;
+                    reservaModificar.Estado = reserva.Estado;
+                    reservaModificar.Subtotal = reserva.Subtotal;
+                    reservaModificar.Impuestos = reserva.Impuestos;
+                    reservaModificar.Total = reserva.Total;
+                    con.SaveChanges();
+                    MessageBox.Show("Reserva modificada correctamente");
+                }
+
+                // Resto del código para modificar la reserva...
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo modificar la reserva. " + ex.Message);
             }
         }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
         //Modificar Reserva
         public void ModificarReserva(ReservaBE reserva, int idCliente, int idHabitacion, DateTime fechaInicio, DateTime fechaFin)
         {
@@ -204,9 +292,22 @@ namespace Modelo
                 MessageBox.Show( "No se pudo modificar la reserva. " + ex.Message);
             }
         }
+        */
 
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //Eliminar Reserva
         public string EliminarReserva(int IdReserva)
         {
@@ -794,34 +895,32 @@ namespace Modelo
 
         #endregion
 
-       
+
         //Busca la reserva del DataGridView y cambia el estado a "Activa"
-         /*public void CheckOut(int idReserva)
-        {
-            try
-            {
-                ReservaBE reserva = con.Reserva.Find(idReserva);
-                if (reserva == null)
-                {
-                    MessageBox.Show("No se encontró la reserva");
-                }
-                if (reserva.Estado != "Activa")
-                {
-                    MessageBox.Show("Solo se puede realizar el Check-Out a las reservas Activas");
-                }
-                reserva.Estado = "Finalizada";
-                con.SaveChanges();
-                //return "Reserva Activa";
+        /*public void CheckOut(int idReserva)
+       {
+           try
+           {
+               ReservaBE reserva = con.Reserva.Find(idReserva);
+               if (reserva == null)
+               {
+                   MessageBox.Show("No se encontró la reserva");
+               }
+               if (reserva.Estado != "Activa")
+               {
+                   MessageBox.Show("Solo se puede realizar el Check-Out a las reservas Activas");
+               }
+               reserva.Estado = "Finalizada";
+               con.SaveChanges();
+               //return "Reserva Activa";
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo finalizar la reserva. " + ex.Message);
-            }
+           }
+           catch (Exception ex)
+           {
+               MessageBox.Show("No se pudo finalizar la reserva. " + ex.Message);
+           }
 
-        }*/
-
-
+       }*/
 
 
 
@@ -924,7 +1023,7 @@ namespace Modelo
         {
             // Aquí suponemos que "con" es tu contexto de base de datos
             // Puedes reemplazar "con" con el nombre real de tu contexto
-            using (var con = new ContextoBD())
+            using (var contexto = new ContextoBD())
             {
                 try
                 {
@@ -1357,7 +1456,7 @@ namespace Modelo
 
         private List<ReservaBE> ObtenerReservasActivasMes(DateTime primerDiaDelMes, DateTime ultimoDiaDelMes)
         {
-            using (var con = new ContextoBD())
+            using (var contexto = new ContextoBD())
             {
                 try
                 {
@@ -1389,7 +1488,7 @@ namespace Modelo
         //Obtener los pedidos de las reservas que vencen desntro de este mes
         private float ObtenerPedidosFinMes(DateTime primerDiaDelMes, DateTime ultimoDiaDelMes)
         {
-            using (var con = new ContextoBD())
+            using (var contexto = new ContextoBD())
             {
                 try
                 {
@@ -1417,7 +1516,7 @@ namespace Modelo
         {
 
 
-            using (var con = new ContextoBD())
+            using (var contexto = new ContextoBD())
             {
                 try
                 {
@@ -1468,13 +1567,13 @@ namespace Modelo
 
         public void MostrarProgresBar(ProgressBar pbarDisponible, Label lblDisponible ,ProgressBar pbarOcupadas , Label lblOcupadas, ProgressBar pbarLimpieza, Label lblLimpieza)
         {
-            using (var con = new ContextoBD())
+            using (var contexto = new ContextoBD())
             {
 
                 int totalHabitaciones = con.Habitacion.Count();
 
                 int habitacionesDisponibles = con.Habitacion.Where(h => h.Estado == "Disponible").Count();
-                int habitacionesOcupadas = con.Habitacion.Where(h => h.Estado == "Ocupada").Count();
+                int habitacionesOcupadas = con.Habitacion.Where(h => h.Estado == "Ocupado").Count();
                 int habitacionesLimpieza = con.Habitacion.Where(h => h.Estado == "Limpieza").Count();
 
                 pbarDisponible.Maximum = totalHabitaciones;
@@ -1506,6 +1605,21 @@ namespace Modelo
 
 
 
+        public void VerificarCancelacionReservas()
+        {
+            //En todo cado cambiar por si a la mitad de la estadia sigue pendiente (  && fechalleagda > fechalleagda.AddDays(fechallegada-fechaIda) /2 )
+
+            List<ReservaBE> listaReservas = new List<ReservaBE>();
+            
+            listaReservas = con.Reserva.Where(h => h.Estado == "Pendiente" && h.FechaIda < DateTime.Now).ToList();   
+
+            foreach (var reserva in listaReservas)
+            {
+                reserva.Estado = "Cancelada";
+                con.SaveChanges();
+                
+            }
+        }
 
 
 
@@ -1532,5 +1646,382 @@ namespace Modelo
 
 
 
+       public Dictionary<int, int> ContarReservasPorDiaDelMes2()
+        {
+            DateTime fechaActual = DateTime.Now;
+            DateTime primerDiaDelMes = new DateTime(fechaActual.Year, fechaActual.Month, 1);
+            DateTime ultimoDiaDelMes = primerDiaDelMes.AddMonths(1).AddDays(-1);
+
+            List<ReservaBE> reservasDelMes = con.Reserva
+                .Where(r =>
+                // La reserva comienza antes o durante el mes actual
+                (r.FechaLlegada <= ultimoDiaDelMes && r.FechaIda >= primerDiaDelMes) ||
+                // La reserva termina después o durante el mes actual
+                (r.FechaIda >= primerDiaDelMes && r.FechaIda <= ultimoDiaDelMes))
+                .ToList();
+
+            Dictionary<int, int> reservasPorDia = new Dictionary<int, int>();
+
+            for (int dia = 1; dia <= ultimoDiaDelMes.Day; dia++)
+            {
+                reservasPorDia.Add(dia, 0);
+            }
+
+            foreach (var reserva in reservasDelMes)
+            {
+                DateTime fechaInicio = reserva.FechaLlegada > primerDiaDelMes ? reserva.FechaLlegada : primerDiaDelMes;
+                DateTime fechaFin = reserva.FechaIda < ultimoDiaDelMes ? reserva.FechaIda : ultimoDiaDelMes;
+
+                for (DateTime fecha = fechaInicio; fecha <= fechaFin; fecha = fecha.AddDays(1))
+                {
+                    int diaReserva = fecha.Day;
+                    reservasPorDia[diaReserva]++;
+                }
+            }
+
+            return reservasPorDia;
+        }
+        public void ExportarReservasPorDiaDelMesAExcel(Dictionary<int, int> reservasPorDia)
+        {
+            string ubicacionProyecto = "SGH - UAI - Final";
+            string carpetaExcels = "Excels";
+
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string excelDirectory = Path.Combine(desktopPath, ubicacionProyecto, carpetaExcels);
+
+            // Verificar y crear el directorio de excels si no existe
+            if (!Directory.Exists(excelDirectory))
+            {
+                Directory.CreateDirectory(excelDirectory);
+            }
+
+            // Nombre del archivo de Excel con la fecha actual
+            string excelFileName = $"ReservasPorDia_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+            string excelFilePath = Path.Combine(excelDirectory, excelFileName);
+
+            // Crear un nuevo archivo Excel
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            using (ExcelPackage excelPackage = new ExcelPackage())
+            {
+                // Agregar una nueva hoja al libro Excel
+                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Reservas por día");
+
+                // Encabezado de las columnas
+                worksheet.Cells[1, 1].Value = "Día";
+                worksheet.Cells[1, 2].Value = "Cantidad de Reservas";
+
+                // Llenar los datos en el archivo Excel
+                int row = 2;
+                foreach (var kvp in reservasPorDia)
+                {
+                    worksheet.Cells[row, 1].Value = kvp.Key; // Día
+                    worksheet.Cells[row, 2].Value = kvp.Value; // Cantidad de reservas
+                    row++;
+                }
+
+                // Guardar el archivo Excel en disco
+                FileInfo excelFile = new FileInfo(excelFilePath);
+                excelPackage.SaveAs(excelFile);
+            }
+        }
+
+
+
+
+
+        /*public void ExportarReservasPorDiaDelMesACSV(Dictionary<int, int> reservasPorDia)
+        {
+            string ubicacionProyecto = "SGH - UAI - Final";
+            string carpetaExcels = "Excels";
+
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string csvDirectory = Path.Combine(desktopPath, ubicacionProyecto, carpetaExcels);
+
+            // Verificar y crear el directorio de CSV si no existe
+            if (!Directory.Exists(csvDirectory))
+            {
+                Directory.CreateDirectory(csvDirectory);
+            }
+
+            // Nombre del archivo CSV con la fecha actual
+            string csvFileName = $"ReservasPorDia_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
+            string csvFilePath = Path.Combine(csvDirectory, csvFileName);
+
+            // Escribir los datos en el archivo CSV
+            using (StreamWriter writer = new StreamWriter(csvFilePath, false, Encoding.UTF8))
+            {
+                // Escribir el encabezado
+                writer.WriteLine("Día,Cantidad de Reservas");
+
+                // Escribir los datos
+                foreach (var kvp in reservasPorDia)
+                {
+                    writer.WriteLine($"{kvp.Key},{kvp.Value}");
+                }
+            }
+        }*/
+
+
+        /*
+        public Dictionary<int, int> ContarReservasPorDiaDelMes2(int mes)
+        {
+            // Obtener el año y el mes actual
+            int year = DateTime.Now.Year;
+
+            // Calcular el primer y último día del mes seleccionado por el usuario
+            DateTime primerDiaDelMes = new DateTime(year, mes, 1);
+            DateTime ultimoDiaDelMes = primerDiaDelMes.AddMonths(1).AddDays(-1);
+
+            // Filtrar las reservas para el mes seleccionado por el usuario
+            List<ReservaBE> reservasDelMes = con.Reserva
+                .Where(r =>
+                    // La reserva comienza antes o durante el mes seleccionado
+                    (r.FechaLlegada <= ultimoDiaDelMes && r.FechaIda >= primerDiaDelMes) ||
+                    // La reserva termina después o durante el mes seleccionado
+                    (r.FechaIda >= primerDiaDelMes && r.FechaIda <= ultimoDiaDelMes))
+                .ToList();
+
+            // Inicializar el diccionario de reservas por día
+            Dictionary<int, int> reservasPorDia = new Dictionary<int, int>();
+            for (int dia = 1; dia <= ultimoDiaDelMes.Day; dia++)
+            {
+                reservasPorDia.Add(dia, 0);
+            }
+
+            // Contar las reservas por día
+            foreach (var reserva in reservasDelMes)
+            {
+                DateTime fechaInicio = reserva.FechaLlegada > primerDiaDelMes ? reserva.FechaLlegada : primerDiaDelMes;
+                DateTime fechaFin = reserva.FechaIda < ultimoDiaDelMes ? reserva.FechaIda : ultimoDiaDelMes;
+
+                for (DateTime fecha = fechaInicio; fecha <= fechaFin; fecha = fecha.AddDays(1))
+                {
+                    int diaReserva = fecha.Day;
+                    reservasPorDia[diaReserva]++;
+                }
+            }
+
+            return reservasPorDia;
+        }
+
+
+
+        public void ExportarReservasPorDiaDelMesACSV(Dictionary<int, int> reservasPorDia)
+        {
+            string ubicacionProyecto = "SGH - UAI - Final";
+            string carpetaExcels = "Excels";
+
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string csvDirectory = Path.Combine(desktopPath, ubicacionProyecto, carpetaExcels);
+
+            // Verificar y crear el directorio de CSV si no existe
+            if (!Directory.Exists(csvDirectory))
+            {
+                Directory.CreateDirectory(csvDirectory);
+            }
+
+            // Nombre del archivo CSV con la fecha actual
+            string csvFileName = $"ReservasPorDia_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
+            string csvFilePath = Path.Combine(csvDirectory, csvFileName);
+
+            // Escribir los datos en el archivo CSV
+            using (StreamWriter writer = new StreamWriter(csvFilePath, false, Encoding.UTF8))
+            {
+                // Escribir el encabezado
+                writer.WriteLine("Día,Cantidad de Reservas");
+
+                // Escribir los datos
+                foreach (var kvp in reservasPorDia)
+                {
+                    writer.WriteLine($"{kvp.Key},{kvp.Value}");
+                }
+            }
+        }
+
+        /*
+        public void ExportarReservasPorDiaDelMesACSV(Dictionary<int, int> reservasPorDia)
+        {
+            string ubicacionProyecto = "SGH - UAI - Final";
+            string carpetaExcels = "Excels";
+
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string csvDirectory = Path.Combine(desktopPath, ubicacionProyecto, carpetaExcels);
+
+            //string csvDirectory = Path.Combine(desktopPath, ubicacionProyecto, carpetaExcels);
+
+            if (!Directory.Exists(csvDirectory))
+            {
+                Directory.CreateDirectory(csvDirectory);
+            }
+
+            string csvFileName = $"ReservasPorDia_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
+            string csvFilePath = Path.Combine(csvDirectory, csvFileName);
+
+            using (StreamWriter writer = new StreamWriter(csvFilePath, false, Encoding.UTF8))
+            {
+                writer.WriteLine("Día,Cantidad de Reservas");
+
+                foreach (var kvp in reservasPorDia)
+                {
+                    writer.WriteLine($"{kvp.Key},{kvp.Value}");
+                }
+            }
+        }*/
+
+        /*
+        public void CrearGraficoBarrasEnExcel(string csvFilePath, string excelFilePath)
+        {
+            FileInfo newFile = new FileInfo(excelFilePath);
+            using (ExcelPackage package = new ExcelPackage(newFile))
+            {
+                ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("Reservas");
+
+                string[] lines = File.ReadAllLines(csvFilePath);
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    string[] fields = lines[i].Split(',');
+                    for (int j = 0; j < fields.Length; j++)
+                    {
+                        worksheet.Cells[i + 1, j + 1].Value = fields[j];
+                    }
+                }
+
+                var range = worksheet.Cells[worksheet.Dimension.Address];
+                var table = worksheet.Tables.Add(range, "ReservasTable");
+
+                var chart = worksheet.Drawings.AddChart("ReservasChart", OfficeOpenXml.Drawing.Chart.eChartType.BarClustered);
+                chart.SetPosition(lines.Length + 2, 0, 0, 0);
+                chart.SetSize(600, 400);
+                chart.Title.Text = "Reservas por Día";
+
+                var series = chart.Series.Add(table.WorkSheet.Cells[2, 2, table.Address.End.Row, 2], table.WorkSheet.Cells[2, 1, table.Address.End.Row, 1]);
+                series.Header = worksheet.Cells[1, 2].Value.ToString();
+
+                package.Save();
+            }
+        }
+
+        public void ExportarReservasYCrearGrafico(int mes)
+        {
+            string ubicacionProyecto = "SGH - UAI - Final";
+            string carpetaExcels = "Excels";
+
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string csvDirectory = Path.Combine(desktopPath, ubicacionProyecto, carpetaExcels);
+
+            var reservasPorDia = ContarReservasPorDiaDelMes2(mes);
+            ExportarReservasPorDiaDelMesACSV(reservasPorDia);
+
+            string csvFileName = $"ReservasPorDia_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
+            string csvFilePath = Path.Combine(desktopPath, ubicacionProyecto, carpetaExcels, csvFileName);
+
+            string excelFileName = $"ReservasPorDia_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+            string excelFilePath = Path.Combine(desktopPath, ubicacionProyecto, carpetaExcels, excelFileName);
+
+            CrearGraficoBarrasEnExcel(csvFilePath, excelFilePath);
+        }
+
+        */
+
+        public Dictionary<int, int> ContarReservasPorDiaDelMes2(int mes)
+        {
+            int year = DateTime.Now.Year;
+            DateTime primerDiaDelMes = new DateTime(year, mes, 1);
+            DateTime ultimoDiaDelMes = primerDiaDelMes.AddMonths(1).AddDays(-1);
+
+            List<ReservaBE> reservasDelMes = con.Reserva
+                .Where(r =>
+                    (r.FechaLlegada <= ultimoDiaDelMes && r.FechaIda >= primerDiaDelMes) ||
+                    (r.FechaIda >= primerDiaDelMes && r.FechaIda <= ultimoDiaDelMes))
+                .ToList();
+
+            Dictionary<int, int> reservasPorDia = new Dictionary<int, int>();
+            for (int dia = 1; dia <= ultimoDiaDelMes.Day; dia++)
+            {
+                reservasPorDia.Add(dia, 0);
+            }
+
+            foreach (var reserva in reservasDelMes)
+            {
+                DateTime fechaInicio = reserva.FechaLlegada > primerDiaDelMes ? reserva.FechaLlegada : primerDiaDelMes;
+                DateTime fechaFin = reserva.FechaIda < ultimoDiaDelMes ? reserva.FechaIda : ultimoDiaDelMes;
+
+                for (DateTime fecha = fechaInicio; fecha <= fechaFin; fecha = fecha.AddDays(1))
+                {
+                    int diaReserva = fecha.Day;
+                    reservasPorDia[diaReserva]++;
+                }
+            }
+
+            return reservasPorDia;
+        }
+
+        public void ExportarReservasPorDiaDelMesACSV(Dictionary<int, int> reservasPorDia)
+        {
+            string ubicacionProyecto = "SGH - UAI - Final";
+            string carpetaExcels = "Excels";
+
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string csvDirectory = Path.Combine(desktopPath, ubicacionProyecto, carpetaExcels);
+
+            if (!Directory.Exists(csvDirectory))
+            {
+                Directory.CreateDirectory(csvDirectory);
+            }
+
+            string csvFileName = $"ReservasPorDia_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
+            string csvFilePath = Path.Combine(csvDirectory, csvFileName);
+
+            using (StreamWriter writer = new StreamWriter(csvFilePath, false, Encoding.UTF8))
+            {
+                writer.WriteLine("Día,Cantidad de Reservas");
+
+                foreach (var kvp in reservasPorDia)
+                {
+                    writer.WriteLine($"{kvp.Key},{kvp.Value}");
+                }
+            }
+        }
+
+        public void CrearGraficoBarrasEnExcel(string csvFilePath, string excelFilePath)
+        {
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                var ws = wb.Worksheets.Add("Reservas");
+
+                var csvData = File.ReadAllLines(csvFilePath);
+                for (int i = 0; i < csvData.Length; i++)
+                {
+                    var rowValues = csvData[i].Split(',');
+                    for (int j = 0; j < rowValues.Length; j++)
+                    {
+                        ws.Cell(i + 1, j + 1).Value = rowValues[j];
+                    }
+                }
+
+                
+                wb.SaveAs(excelFilePath);
+            }
+        }
+
+        public void ExportarReservasYCrearGrafico(int mes)
+        {
+            string ubicacionProyecto = "SGH - UAI - Final";
+            string carpetaExcels = "Excels";
+
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string csvDirectory = Path.Combine(desktopPath, ubicacionProyecto, carpetaExcels);
+
+            var reservasPorDia = ContarReservasPorDiaDelMes2(mes);
+            ExportarReservasPorDiaDelMesACSV(reservasPorDia);
+
+            string csvFileName = $"ReservasPorDia_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
+            string csvFilePath = Path.Combine(desktopPath, ubicacionProyecto, carpetaExcels, csvFileName);
+
+            string excelFileName = $"ReservasPorDia_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+            string excelFilePath = Path.Combine(desktopPath, ubicacionProyecto, carpetaExcels, excelFileName);
+
+            CrearGraficoBarrasEnExcel(csvFilePath, excelFilePath);
+        }
     }
 }

@@ -54,9 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackupsBLL.cs" />
     <Compile Include="CheckInBLL.cs" />
     <Compile Include="ClienteBLL.cs" />
     <Compile Include="EmpleadoBLL.cs" />
+    <Compile Include="SeguridadBLL\AdministradorDeSesionBLL.cs" />
     <Compile Include="SeguridadBLL\GrupoBLL.cs" />
     <Compile Include="SeguridadBLL\GrupoPermisoBLL.cs" />
     <Compile Include="HabitacionBLL.cs" />

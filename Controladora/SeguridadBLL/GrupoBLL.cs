@@ -14,14 +14,24 @@ namespace Controladora.SeguridadBLL
         GrupoDAL grupoDAL = new GrupoDAL();
 
         #region Listar en DGVieww
+
+        /*
         public void ListarGruposEnDGV(System.Windows.Forms.DataGridView dgvGrupos)
         {
             grupoDAL.ListarGruposEnDGV(dgvGrupos);
-        }
+        }*/
+        /*
         public void ListarGruposUsuarioEnDataGridView(System.Windows.Forms.DataGridView dgvGrupos, int idUsuario)
         {
             grupoDAL.ListarGruposUsuarioEnDataGridView(dgvGrupos, idUsuario);
+        }*/
+
+        
+        public void ListarGruposEnDGV(System.Windows.Forms.DataGridView dgvGruposPermisosUsuario)
+        {
+            grupoDAL.ListarGruposEnDGV(dgvGruposPermisosUsuario);
         }
+        
         #endregion
 
         #region ABM Grupo
@@ -58,6 +68,58 @@ namespace Controladora.SeguridadBLL
             grupoDAL.AgregarPermisoAGrupo(idGrupo, idPermiso);
         }
         #endregion
+
+
+
+
+        public List<PermisoBE> ObtenerPermisosDelUsuario(string nombreUsuario)
+        {
+            return grupoDAL.ObtenerPermisosDelUsuario(nombreUsuario);
+
+        }
+
+
+
+
+        #region Composite
+
+        private Componente grupo;
+        
+
+        public GrupoBLL()
+        {
+            grupo = new GrupoComposite();
+        }
+
+        public void CrearGrupo(ComponenteBE componente)
+        {
+            grupo.Crear(componente);
+        }
+
+        public void EliminarGrupo(ComponenteBE componente)
+        {
+            grupo.Eliminar(componente);
+        }
+
+        public void ModificarGrupo(ComponenteBE componente)
+        {
+            grupo.Modificar(componente);
+        }
+
+        
+
+
+
+
+        #endregion
+
+
+
+
+
+
+
+
 
     }
 }

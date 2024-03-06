@@ -11,6 +11,17 @@ namespace Entidades
     [Table("DetallePedido")]
     public partial class DetallePedidoBE
     {
+
+        private int id;
+        private string nombreProducto;
+        private int cantidadPedida;
+        private decimal subtotal;
+        private decimal impuestos;
+        private decimal total;
+        private ProductoBE producto;
+        private PedidoBE pedido;
+
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

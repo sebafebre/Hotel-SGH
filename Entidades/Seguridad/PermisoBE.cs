@@ -12,43 +12,19 @@ using System.Xml.Linq;
 namespace Entidades
 {
     [Table("Permiso")]
-    public class PermisoBE //: ComponenteBE
+    public class PermisoBE 
     {
+
+
+        private int id;
+        private ComponenteBE componente;    
+
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         public ComponenteBE Componente { get; set; }
-        //
-        //
-        //
-        //public string Nombre { get; set; }
-
-        /*
-        public PermisoBE(string Nombre): base(Nombre)
-        {
-        }
-        public override void Crear(ComponenteBE p)
-        {
-            
-        }
-        public override void Eliminar(ComponenteBE p)
-        {
-            
-        }
-        public override void Listar(int depth)
-        {
-            
-        }
-
-        */
-
-
-
-
-
-        // Sobrescribe el método de la clase base para agregar un permiso a la base de datos
-        //public override void AgregarComponente(){}
+        
     }
 }

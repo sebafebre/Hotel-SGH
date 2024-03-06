@@ -15,3 +15,82 @@ C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.dll
 C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.pdb
 C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.Migrations.crearBD.resources
 C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.csproj.GenerateResource.cache
+C:\Users\sebaf\Desktop\SGH - UAI\Modelo\obj\Debug\Modelo.Migrations.modificacionPedidoBE.resources
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\obj\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\obj\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\obj\Debug\Modelo.Migrations.InitialCreate.resources
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\obj\Debug\Modelo.csproj.GenerateResource.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Modelo\obj\Debug\Modelo.Migrations.BDcrear.resources
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\obj\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\obj\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\obj\Debug\Modelo.Migrations.CrearBD.resources
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Modelo\obj\Debug\Modelo.csproj.GenerateResource.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\obj\Debug\Modelo.Migrations.CrearBD.resources
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\obj\Debug\Modelo.csproj.GenerateResource.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\obj\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\obj\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\obj\Debug\Modelo.Migrations.tablaBackup.resources
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Modelo\obj\Debug\Modelo.Migrations.actualizarBD.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EPPlus.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.CrearBD.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.tablaBackup.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.actualizarBD.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.GenerateResource.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EPPlus.System.Drawing.dll

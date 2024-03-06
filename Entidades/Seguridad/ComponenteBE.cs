@@ -14,37 +14,25 @@ namespace Entidades
     public  class ComponenteBE
     {
 
+        private int id;
+        private string nombre;
+
+
         public int Id { get; set; }
         public string Nombre { get; set; }
 
-        /*
-        protected int Id { get; set; }
-        protected string Nombre { get; set; }
-        
-        
-        // Constructor
-        public ComponenteBE(string Nombre)
-        {
-            this.Nombre = Nombre;
-        }
-
-        public ComponenteBE()
-        {
-        }
-
-        
-        public abstract void Crear(ComponenteBE c);
-        public abstract void Eliminar(ComponenteBE c);
-        public abstract void Listar(int depth);
-
-        public int ObtenerId()
-        {
-            return Id;
-        }*/
 
     }
 
-    
+    public abstract class Componente
+    {
+        public abstract void Crear(ComponenteBE componente);
+        //void Unir(ComponenteBE componente, GrupoBE grupo);
+        public abstract void Eliminar(ComponenteBE componente);
+        public abstract void Modificar(ComponenteBE componente);
+    }
+
+
 
 
 

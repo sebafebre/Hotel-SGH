@@ -329,11 +329,11 @@
             // 
             // btnModificarEstado
             // 
-            this.btnModificarEstado.Location = new System.Drawing.Point(1232, 155);
+            this.btnModificarEstado.Location = new System.Drawing.Point(1267, 144);
             this.btnModificarEstado.Name = "btnModificarEstado";
-            this.btnModificarEstado.Size = new System.Drawing.Size(124, 23);
+            this.btnModificarEstado.Size = new System.Drawing.Size(124, 43);
             this.btnModificarEstado.TabIndex = 160;
-            this.btnModificarEstado.Text = "Modificar metodo";
+            this.btnModificarEstado.Text = "Modificar metodo de pago";
             this.btnModificarEstado.UseVisualStyleBackColor = true;
             this.btnModificarEstado.Click += new System.EventHandler(this.btnModificarEstado_Click);
             // 
@@ -341,7 +341,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(154)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(1538, 429);
             this.Controls.Add(this.btnModificarEstado);
             this.Controls.Add(this.txtIdDetalle);
@@ -371,7 +371,7 @@
             this.Controls.Add(this.dgvDetalles);
             this.Controls.Add(this.dgvPedidos);
             this.Name = "frmModificarPedidos";
-            this.Text = "frmModificarPedidos";
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).EndInit();
             this.flpEstado.ResumeLayout(false);

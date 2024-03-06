@@ -18,6 +18,12 @@ namespace Vista.Administrador
         GrupoBLL grupoBLL = new GrupoBLL();
         PermisoBLL permisoBLL = new PermisoBLL();
         ValidacionesBLL validacionBLL = new ValidacionesBLL();
+
+        StateBLL stateBLL = new StateBLL();
+
+        int idComponenteGrupo = 0;
+        int idComponentePermiso = 0;
+
         public frmGruposPermisos()
         {
             InitializeComponent();
@@ -34,11 +40,16 @@ namespace Vista.Administrador
             {
                 if (txtNombreGrupo.Text != "")
                 {
-                    GrupoBE grupo = new GrupoBE();
+                    /*GrupoBE grupo = new GrupoBE();
                     grupo.Componente = new ComponenteBE();
                     grupo.Componente.Nombre = txtNombreGrupo.Text;
-                    grupoBLL.AgregarGrupo(grupo);
-                    MessageBox.Show("Grupo agregado correctamente", "Agregar Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    grupoBLL.AgregarGrupo(grupo);*/
+
+                    ComponenteBE componente = new ComponenteBE();
+                    componente.Nombre = txtNombreGrupo.Text;
+                    grupoBLL.CrearGrupo(componente);
+
+                    //MessageBox.Show("Grupo agregado correctamente", "Agregar Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     grupoBLL.ListarGruposEnDGV(dgvGrupos);
                     validacionBLL.LimpiarCampos(this.Controls);
                 }
@@ -62,16 +73,23 @@ namespace Vista.Administrador
                 {
                     if (txtNombreGrupo.Text != "")
                     {
-                        GrupoBE grupo = new GrupoBE();
+                        /*GrupoBE grupo = new GrupoBE();
 
                         grupo.Componente = new ComponenteBE();
                         grupo.Id = Convert.ToInt32(txtIdGrupo.Text);
                         grupo.Componente.Nombre = txtNombreGrupo.Text;
 
-                        grupoBLL.ModificarGrupo(grupo);
+                        grupoBLL.ModificarGrupo(grupo);*/
+
+                        ComponenteBE componente = new ComponenteBE();
+                        componente.Nombre = txtNombreGrupo.Text;
+                        componente.Id = idComponenteGrupo;
+                        grupoBLL.ModificarGrupo(componente);
+
+
                         validacionBLL.LimpiarCampos(this.Controls);
                         grupoBLL.ListarGruposEnDGV(dgvGrupos);
-                        MessageBox.Show("Cliente modificado correctamente", "Modificar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
                     }
                     else
                     {
@@ -99,10 +117,16 @@ namespace Vista.Administrador
             {
                 if (txtIdGrupo.Text != "")
                 {
-
+                    /*
                     int Id = Convert.ToInt32(txtIdGrupo.Text);
-                    grupoBLL.EliminarGrupo(Id);
-                    MessageBox.Show("Grupo eliminado correctamente", "Eliminar Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    grupoBLL.EliminarGrupo(Id);*/
+                    
+                    ComponenteBE componente = new ComponenteBE();
+                    componente.Nombre = txtNombreGrupo.Text;
+                    componente.Id = idComponenteGrupo;
+                    grupoBLL.EliminarGrupo(componente);
+
+                    
                     grupoBLL.ListarGruposEnDGV(dgvGrupos);
                     validacionBLL.LimpiarCampos(this.Controls);
                 }
@@ -129,9 +153,13 @@ namespace Vista.Administrador
                 {
                     txtIdGrupo.Text = dgvGrupos.CurrentRow.Cells[0].Value?.ToString();
                     txtNombreGrupo.Text = dgvGrupos.CurrentRow.Cells[1].Value?.ToString();
+                    
+                    idComponenteGrupo = (int)dgvGrupos.CurrentRow.Cells[0].Value;
 
-                    int idGrupo = Convert.ToInt32(dgvGrupos.CurrentRow.Cells[0].Value?.ToString());
-                    permisoBLL.ListarPermisosGrupoEnDGV(dgvPermisos, idGrupo);
+                    //int idGrupo = Convert.ToInt32(dgvGrupos.CurrentRow.Cells[0].Value?.ToString());
+                    permisoBLL.ListarPermisosGrupoEnDGV(dgvPermisos, idComponenteGrupo);
+
+                    
                 }
             }
             catch (Exception ex)
@@ -154,11 +182,16 @@ namespace Vista.Administrador
             {
                 if (txtNombrePermiso.Text != "")
                 {
-                    PermisoBE permiso = new PermisoBE();
+                    /*PermisoBE permiso = new PermisoBE();
                     permiso.Componente = new ComponenteBE();
                     permiso.Componente.Nombre = txtNombrePermiso.Text;
-                    permisoBLL.AgregarPermiso(permiso);
-                    MessageBox.Show("Permiso agregado correctamente", "Agregar Permiso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    permisoBLL.AgregarPermiso(permiso);*/
+
+                    ComponenteBE componente = new ComponenteBE();
+                    componente.Nombre = txtNombrePermiso.Text;
+                    permisoBLL.CrearPermiso(componente);
+
+                    
                     permisoBLL.ListarPermisosEnDGV(dgvPermisos);
                     validacionBLL.LimpiarCampos(this.Controls);
                 }
@@ -180,9 +213,16 @@ namespace Vista.Administrador
             {
                 if (txtIdPermiso.Text != "")
                 {
-                    int Id = Convert.ToInt32(txtIdPermiso.Text);
-                    permisoBLL.EliminarPermiso(Id);
-                    MessageBox.Show("Permiso eliminado correctamente", "Eliminar Permiso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    /*int Id = Convert.ToInt32(txtIdPermiso.Text);
+                    permisoBLL.EliminarPermiso(Id);*/
+
+                    ComponenteBE componente = new ComponenteBE();
+                    componente.Nombre = txtNombrePermiso.Text;
+                    componente.Id = idComponentePermiso;
+                    permisoBLL.EliminarPermiso(componente);
+
+                    
                     permisoBLL.ListarPermisosEnDGV(dgvPermisos);
                     validacionBLL.LimpiarCampos(this.Controls);
                 }
@@ -204,12 +244,18 @@ namespace Vista.Administrador
             {
                 if (txtIdPermiso.Text != "" && txtNombrePermiso.Text != "")
                 {
-                    PermisoBE permiso = new PermisoBE();
+                    /*PermisoBE permiso = new PermisoBE();
                     permiso.Componente = new ComponenteBE();
                     permiso.Id = Convert.ToInt32(txtIdPermiso.Text);
                     permiso.Componente.Nombre = txtNombrePermiso.Text;
-                    permisoBLL.ModificarPermiso(permiso);
-                    MessageBox.Show("Permiso modificado correctamente", "Modificar Permiso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    permisoBLL.ModificarPermiso(permiso);*/
+
+                    ComponenteBE componente = new ComponenteBE();
+                    componente.Nombre = txtNombrePermiso.Text;
+                    componente.Id = idComponentePermiso;
+                    permisoBLL.ModificarPermiso(componente);
+
+                    
                     permisoBLL.ListarPermisosEnDGV(dgvPermisos);
                     validacionBLL.LimpiarCampos(this.Controls);
                 }
@@ -243,6 +289,7 @@ namespace Vista.Administrador
                 {
                     txtIdPermiso.Text = dgvPermisos.CurrentRow.Cells[0].Value?.ToString();
                     txtNombrePermiso.Text = dgvPermisos.CurrentRow.Cells[1].Value?.ToString();
+                    idComponentePermiso = (int)dgvPermisos.CurrentRow.Cells[0].Value;
                 }
             }
             catch (Exception ex)
@@ -260,11 +307,11 @@ namespace Vista.Administrador
             {
                 if (txtIdGrupo.Text != "" && txtIdPermiso.Text != "")
                 {
-                    int idGrupo = Convert.ToInt32(txtIdGrupo.Text);
-                    int idPermiso = Convert.ToInt32(txtIdPermiso.Text);
-                    grupoBLL.AgregarPermisoAGrupo(idGrupo, idPermiso);
-                    MessageBox.Show("Permiso agregado al grupo correctamente", "Agregar Permiso a Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    permisoBLL.ListarPermisosGrupoEnDGV(dgvPermisos, idGrupo);
+                    //int idGrupo = Convert.ToInt32(txtIdGrupo.Text);
+                    //int idPermiso = Convert.ToInt32(txtIdPermiso.Text);
+                    grupoBLL.AgregarPermisoAGrupo(idComponenteGrupo, idComponentePermiso);
+                    
+                    permisoBLL.ListarPermisosGrupoEnDGV(dgvPermisos, idComponenteGrupo);
                     validacionBLL.LimpiarCampos(this.Controls);
                 }
                 else
@@ -288,8 +335,8 @@ namespace Vista.Administrador
                 {
                     int idGrupo = Convert.ToInt32(txtIdGrupo.Text);
                     int idPermiso = Convert.ToInt32(txtIdPermiso.Text);
-                    grupoBLL.QuitarPermisoAGrupo(idGrupo, idPermiso);
-                    MessageBox.Show("Permiso quitado del grupo correctamente", "Quitar Permiso a Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    grupoBLL.QuitarPermisoAGrupo(idGrupo, idComponentePermiso);
+                    
                     permisoBLL.ListarPermisosGrupoEnDGV(dgvPermisos, idGrupo);
                     validacionBLL.LimpiarCampos(this.Controls);
                 }

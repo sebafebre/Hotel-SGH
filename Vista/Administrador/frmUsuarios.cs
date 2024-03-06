@@ -159,5 +159,28 @@ namespace Vista.Administrador
             }
 
         }
+
+        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                //Poner los datos del usuario seleccionado en los campos correspondientes
+                if (dgvUsuarios.CurrentRow != null)
+                {
+                    txtIdUsuario.Text = dgvUsuarios.CurrentRow.Cells[0].Value.ToString();
+                    txtUsuario.Text = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
+
+                    txtIdEmpleado.Text = dgvUsuarios.CurrentRow.Cells[3].Value.ToString();
+                    txtNombreEmpleado.Text = dgvUsuarios.CurrentRow.Cells[4].Value.ToString();
+                    txtBuscarDNI.Text = dgvUsuarios.CurrentRow.Cells[5].Value.ToString();
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+
+            }        
+        }
     }
 }

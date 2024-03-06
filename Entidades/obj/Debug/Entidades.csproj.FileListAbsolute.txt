@@ -10,3 +10,51 @@ C:\Users\sebaf\Desktop\SGH - UAI\Entidades\obj\Debug\Entidades.csproj.CoreCompil
 C:\Users\sebaf\Desktop\SGH - UAI\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 C:\Users\sebaf\Desktop\SGH - UAI\Entidades\obj\Debug\Entidades.dll
 C:\Users\sebaf\Desktop\SGH - UAI\Entidades\obj\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Entidades\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Entidades\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Entidades\obj\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Entidades\obj\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Entidades\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Entidades\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Entidades\obj\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Entidades\obj\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Entidades\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Entidades\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Entidades\obj\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Entidades\obj\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\obj\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\obj\Debug\Entidades.pdb

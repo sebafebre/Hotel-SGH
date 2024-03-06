@@ -30,8 +30,10 @@
         {
             this.panelPedidos = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnGruposPermisos = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.btnBackups = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
+            this.btnGruposPermisos = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnGruposUsuario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -39,33 +41,47 @@
             // 
             // panelPedidos
             // 
-            this.panelPedidos.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelPedidos.Location = new System.Drawing.Point(5, 45);
+            this.panelPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(154)))), ((int)(((byte)(141)))));
+            this.panelPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPedidos.Location = new System.Drawing.Point(0, 34);
             this.panelPedidos.Name = "panelPedidos";
-            this.panelPedidos.Size = new System.Drawing.Size(1507, 445);
+            this.panelPedidos.Size = new System.Drawing.Size(1538, 479);
             this.panelPedidos.TabIndex = 136;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.btnReportes);
+            this.panel1.Controls.Add(this.btnBackups);
             this.panel1.Controls.Add(this.btnEmpleados);
             this.panel1.Controls.Add(this.btnGruposPermisos);
             this.panel1.Controls.Add(this.btnUsuarios);
             this.panel1.Controls.Add(this.btnGruposUsuario);
-            this.panel1.Location = new System.Drawing.Point(5, 5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1507, 34);
+            this.panel1.Size = new System.Drawing.Size(1538, 34);
             this.panel1.TabIndex = 135;
             // 
-            // btnGruposPermisos
+            // btnReportes
             // 
-            this.btnGruposPermisos.Location = new System.Drawing.Point(750, 3);
-            this.btnGruposPermisos.Name = "btnGruposPermisos";
-            this.btnGruposPermisos.Size = new System.Drawing.Size(239, 26);
-            this.btnGruposPermisos.TabIndex = 120;
-            this.btnGruposPermisos.Text = "Gestionar Grupos y Permisos";
-            this.btnGruposPermisos.UseVisualStyleBackColor = true;
-            this.btnGruposPermisos.Click += new System.EventHandler(this.btnGruposPermisos_Click);
+            this.btnReportes.Location = new System.Drawing.Point(1383, 3);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(107, 26);
+            this.btnReportes.TabIndex = 123;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
+            // btnBackups
+            // 
+            this.btnBackups.Location = new System.Drawing.Point(1270, 3);
+            this.btnBackups.Name = "btnBackups";
+            this.btnBackups.Size = new System.Drawing.Size(107, 26);
+            this.btnBackups.TabIndex = 122;
+            this.btnBackups.Text = "Backups";
+            this.btnBackups.UseVisualStyleBackColor = true;
+            this.btnBackups.Click += new System.EventHandler(this.btnBackups_Click);
             // 
             // btnEmpleados
             // 
@@ -76,6 +92,16 @@
             this.btnEmpleados.Text = "Registrar Empleados";
             this.btnEmpleados.UseVisualStyleBackColor = true;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
+            // 
+            // btnGruposPermisos
+            // 
+            this.btnGruposPermisos.Location = new System.Drawing.Point(750, 3);
+            this.btnGruposPermisos.Name = "btnGruposPermisos";
+            this.btnGruposPermisos.Size = new System.Drawing.Size(239, 26);
+            this.btnGruposPermisos.TabIndex = 120;
+            this.btnGruposPermisos.Text = "Gestionar Grupos y Permisos";
+            this.btnGruposPermisos.UseVisualStyleBackColor = true;
+            this.btnGruposPermisos.Click += new System.EventHandler(this.btnGruposPermisos_Click);
             // 
             // btnUsuarios
             // 
@@ -120,5 +146,7 @@
         private System.Windows.Forms.Button btnGruposUsuario;
         private System.Windows.Forms.Button btnGruposPermisos;
         private System.Windows.Forms.Button btnEmpleados;
+        private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Button btnBackups;
     }
 }

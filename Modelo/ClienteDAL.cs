@@ -2,31 +2,44 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace Modelo
 {
     public class ClienteDAL
     {
         //ContextoBD con = new ContextoBD();
-        ContextoBD con = ContextoBD.Instance();
+        ContextoBD con = new ContextoBD();
 
 
         #region Agregar Modificar ELiminar Clientes
         //Funcion para guardar un cliente en la base de datos
-        public string AgregarCliente(ClienteBE cliente)
+        public void AgregarCliente(ClienteBE cliente)
         {
             try
             {
-                con.Cliente.Add(cliente);
-                con.SaveChanges();
-                return "Cliente agregado correctamente";
+                ClienteBE clienteExistente = con.Cliente.FirstOrDefault(c => c.Persona.DNI == cliente.Persona.DNI);
+
+                if (clienteExistente != null)
+                {
+                    MessageBox.Show("Ya existe un cliente con el DNI ingresado");
+                }
+                else
+                {
+                    con.Cliente.Add(cliente);
+                    con.SaveChanges();
+                    MessageBox.Show("Cliente agregado correctamente");
+
+                }
+                
             }
             catch (Exception ex)
             {
-                return "No se pudo agregar el cliente. " + ex.Message;
+                MessageBox.Show("No se pudo agregar el cliente. " + ex.Message);
             }
         }
 
@@ -190,7 +203,88 @@ namespace Modelo
             MessageBox.Show("Cliente no encontrado.");
         }*/
 
+
+
+
+
+        public int ObtenerIdCliente(ClienteBE cliente)
+        {
+            ClienteBE clienteExistente = con.Cliente.FirstOrDefault(c => c.Persona.DNI == cliente.Persona.DNI);
+            if (clienteExistente != null)
+            {
+                return clienteExistente.Id;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
+
+
         
+
+
+
+        // Método para cargar usuarios en el ComboBox según el número de DNI ingresado
+        public void CargarUsuariosEnComboBox(ComboBox comboBoxClientes, string numeroDNI)
+        {
+            try
+            {
+                List<string> clientes = new List<string>();
+
+                clientes.Clear();
+
+                // Obtener la lista de usuarios desde la base de datos que coinciden con el número de DNI
+                clientes = con.Cliente
+                                  .Include(c => c.Persona)
+                                  .Where(c => c.Persona.EstadoActivo == true && c.Persona.DNI.StartsWith(numeroDNI))
+                                  .Select(c => c.Persona.DNI)
+                                  .ToList();
+
+                // Limpiar la lista de sugerencias del ComboBox
+                comboBoxClientes.Items.Clear();
+
+                // Agregar los usuarios que coinciden con el número de DNI ingresado a la lista de sugerencias del ComboBox
+                comboBoxClientes.Items.AddRange(clientes.ToArray());
+
+                // Mostrar el ComboBox desplegando su lista de opciones
+                comboBoxClientes.DroppedDown = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los usuarios: " + ex.Message);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

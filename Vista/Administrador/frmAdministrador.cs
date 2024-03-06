@@ -50,6 +50,14 @@ namespace Vista.Administrador
             ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmEmpleado), this);
         }
 
-        
+        private void btnBackups_Click(object sender, EventArgs e)
+        {
+            ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmBackUps), this);
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmReportes), this);
+        }
     }
 }

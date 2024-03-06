@@ -133,5 +133,12 @@ namespace Controladora
             pedidoDAL.GenerarFacturaTXT(nroReserva, tipoFactura, idUsuario);
         }
 
+
+
+        public List<DetallePedidoBE> ObtenerListaDetallesPedidos(int nroPedido)
+        {
+            return pedidoDAL.ObtenerListaDetallesPedidos(nroPedido);
+        }
+
     }
 }

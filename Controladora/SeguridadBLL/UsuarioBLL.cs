@@ -9,6 +9,8 @@ using Entidades;
 using Entidades.Seguridad;
 using System.Runtime.Remoting.Contexts;
 using System.Drawing;
+using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Controladora
 {
@@ -23,7 +25,10 @@ namespace Controladora
         {
             return usuarioDAL.ValidarCredenciales(usuario, password);
         }
-        
+        public bool VerificarCredencialesEncriptadas(string nombreUsuario, string clave)
+        {
+            return usuarioDAL.VerificarCredencialesEncriptadas(nombreUsuario, clave);
+        }
 
 
 
@@ -62,31 +67,77 @@ namespace Controladora
 
 
         
-        public List<PermisoBE> ObtenerPermisosUsuario(int idUsuario)
+        public List<PermisoBE> ObtenerPermisosUsuario(string Usuario)
         {
-            return usuarioDAL.ObtenerPermisosUsuario(idUsuario);
+            return usuarioDAL.ObtenerPermisosUsuario(Usuario);
+        }
+
+        
+
+
+
+
+        
+
+
+
+        public List<ComponenteBE> ObtenerPermisosDelUsuario(string nombreUsuario)
+        {
+            return usuarioDAL.ObtenerPermisosDelUsuario(nombreUsuario);
+
         }
 
 
 
 
-        public string AgregarGrupoAUsuario(int idUsuario, int idGrupo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public void AgregarGrupoAUsuario(int idUsuario, int idComponente)
         {
-            return usuarioDAL.AgregarGrupoAUsuario(idUsuario, idGrupo);
+             usuarioDAL.AgregarGrupoAUsuario(idUsuario, idComponente);
         }
 
 
         //Eliminar Grupo del Usuario
-        public string EliminarGrupoAUsuario(int idUsuario, int idGrupo)
+        public void EliminarGrupoAUsuario(int idUsuario, int idComponente)
         {
-            return usuarioDAL.EliminarGrupoAUsuario(idUsuario, idGrupo);
+             usuarioDAL.EliminarGrupoAUsuario(idUsuario, idComponente);
         }
 
 
+        public void AgregarPermisoAUsuario(int idUsuario, int idComponente)
+        {
+            usuarioDAL.AgregarPermisoAUsuario(idUsuario, idComponente);
+        }
 
 
+        public void EliminarPermisoAUsuario(int idUsuario, int idComponente)
+        {
+            usuarioDAL.EliminarPermisoAUsuario(idUsuario, idComponente);
+        }
 
 
+        public void ListarGruposYPermisosUsuarioEnDataGridView(DataGridView dgvGruposPermisosUsuario, int idUsuario)
+        {
+            usuarioDAL.ListarGruposYPermisosUsuarioEnDataGridView(dgvGruposPermisosUsuario, idUsuario);
+        }
 
 
 

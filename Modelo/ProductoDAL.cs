@@ -11,7 +11,7 @@ namespace Modelo
     public class ProductoDAL
     {
         //ContextoBD con = new ContextoBD();
-        ContextoBD con = ContextoBD.Instance();
+        ContextoBD con = new ContextoBD();
         public void AgregarProducto(ProductoBE producto)
         {
             try

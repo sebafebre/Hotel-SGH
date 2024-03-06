@@ -14,7 +14,7 @@ namespace Modelo
     public class GrupoPermisoDAL
     {
         //ContextoBD con = new ContextoBD();
-        ContextoBD con = ContextoBD.Instance();
+        ContextoBD con = new ContextoBD();
 
         // Método para obtener los permisos de un usuario
 

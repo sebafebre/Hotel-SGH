@@ -2,7 +2,9 @@
 using Modelo;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,9 +70,9 @@ namespace Controladora
         }*/
 
        
-        public bool GuardarReserva(int idCliente, int idHabitacion, DateTime fechaInicio, DateTime fechaFin, decimal subtotal, decimal imp, decimal total)
+        public void GuardarReserva(int idCliente, int idHabitacion, DateTime fechaInicio, DateTime fechaFin, decimal subtotal, decimal imp, decimal total)
         {
-            return reservaDAL.GuardarReserva(idCliente, idHabitacion, fechaInicio, fechaFin, subtotal, imp, total);
+            reservaDAL.GuardarReserva(idCliente, idHabitacion, fechaInicio, fechaFin, subtotal, imp, total);
         }
 
         //Modificar Reserva
@@ -184,5 +186,41 @@ namespace Controladora
             reservaDAL.MostrarProgresBar(pbarDisponible, lblDisponible, pbarOcupadas, lblOcupadas, pbarLimpieza, lblLimpieza);
 
         }
+        public void VerificarCancelacionReservas()
+        {
+            reservaDAL.VerificarCancelacionReservas();
+        }
+
+
+
+
+
+
+        public Dictionary<int, int> ContarReservasPorDiaDelMes2()
+        {
+            return reservaDAL.ContarReservasPorDiaDelMes2();
+            
+        }
+
+        public void ExportarReservasPorDiaDelMesACSV(Dictionary<int, int> reservasPorDia)
+        {
+            reservaDAL.ExportarReservasPorDiaDelMesACSV(reservasPorDia);
+            
+        }
+
+        public void ExportarReservasYCrearGrafico(int mes)
+        {
+            reservaDAL.ExportarReservasYCrearGrafico(mes);
+
+        }
+
+        public void ExportarReservasPorDiaDelMesAExcel(Dictionary<int, int> reservasPorDia)
+        {
+            reservaDAL.ExportarReservasPorDiaDelMesAExcel(reservasPorDia);
+
+        }
+
+
+        
     }
 }

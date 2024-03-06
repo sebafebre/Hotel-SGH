@@ -11,7 +11,7 @@ namespace Modelo
     public class HabitacionesDAL
     {
         //ContextoBD con = new ContextoBD();
-        ContextoBD con = ContextoBD.Instance();
+        ContextoBD con = new ContextoBD();
 
         #region ABM Habitacion
         public void AgregarHabitacion(HabitacionBE habitacion)
@@ -145,14 +145,44 @@ namespace Modelo
             }
         }
 
-        
+
+        public void BuscarHabitacionDGV(DataGridView dataGridView)
+        {
+            // Limpiamos las filas existentes en el DataGridView
+            dataGridView.Rows.Clear();
+            dataGridView.Columns.Clear();
+
+            // Obtener la lista de las Habitaciones
+            List<HabitacionBE> listaHabitaciones = con.Habitacion.ToList();
+
+            // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
+
+            dataGridView.Columns.Add("Nro de Habitacion", "Nro de Habitacion");
+            dataGridView.Columns.Add("Piso", "Piso");
+            dataGridView.Columns.Add("Tipo de Habitacion", "Tipo de Habitacion");
+            dataGridView.Columns.Add("Camas", "Camas");
+            dataGridView.Columns.Add("Precio Diario", "Precio Diario");
+
+            foreach (var habitacion in listaHabitaciones)
+            {
+                // Agregamos una fila al DataGridView
+                int rowIndex = dataGridView.Rows.Add();
+
+                dataGridView.Rows[rowIndex].Cells[0].Value = habitacion.NroHabitacion; // Suponiendo que "Nombre" es la segunda columna agregada
+                dataGridView.Rows[rowIndex].Cells[1].Value = habitacion.Piso; // y así sucesivamente
+                dataGridView.Rows[rowIndex].Cells[2].Value = habitacion.TipoHabitacion;
+                dataGridView.Rows[rowIndex].Cells[3].Value = habitacion.PrecioDiario;
+                dataGridView.Rows[rowIndex].Cells[4].Value = habitacion.TipoCamas;
+            }
+        }
+
         #endregion
 
 
 
 
 
-            public string ObtenerEstadoSeleccionado(Control flowLayoutPanel)
+        public string ObtenerEstadoSeleccionado(Control flowLayoutPanel)
         {
             foreach (Control control in flowLayoutPanel.Controls)
             {

@@ -11,17 +11,20 @@ namespace Entidades
     [Table("Pedido")]
     public partial class PedidoBE
     {
-        
+        private int id;
+        private int nroPedido;
+        private string estado;
+        private DateTime fechaCreacion;
+        private decimal total;
+        private ReservaBE reserva;
+
+
+
+
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-
-
-        //Eliminar Cliente 
-        public string Cliente { get; set; }
-
-
 
         public int NroPedido { get; set; }
         public string Estado { get; set; }

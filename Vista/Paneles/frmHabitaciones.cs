@@ -1,4 +1,5 @@
 ﻿using Controladora;
+using Controladora.SeguridadBLL;
 using Entidades;
 using System;
 using System.Collections.Generic;
@@ -19,12 +20,103 @@ namespace Vista.Paneles
     {
         HabitacionBLL habitacionBLL = new HabitacionBLL();
         ValidacionesBLL validacionBLL = new ValidacionesBLL();
+
+        GrupoBLL grupoBLL = new GrupoBLL();
+        string usuarioActual = UsuarioBE.usaurioLogueado;
+
+
         int nroHabitacion;
         public frmHabitaciones()
         {
             InitializeComponent();
             habitacionBLL.ListarHabitacionesEnDataGridView(dgvHabitaciones);
         }
+
+
+
+        public void VerificasPermisos()
+        {
+
+
+            List<PermisoBE> permisosUsuario = grupoBLL.ObtenerPermisosDelUsuario(usuarioActual);
+
+            List<string> permisos = new List<string>();
+
+            //foreach (var item in permisosUsuario)
+            foreach (var item in permisosUsuario)
+            {
+                permisos.Add(item.Componente.Nombre);
+            }
+            if (permisos.Contains("GH003 AgregaHab"))
+            {
+                btnAgregar.Visible = true;
+                
+            }
+            else
+            {
+                btnAgregar.Visible = false;
+               
+            }
+            if (permisos.Contains("GH004 EliminarHab"))
+            {
+                btnEliminar.Visible = true;
+            }
+            else
+            {
+                btnEliminar.Visible = false;
+            }
+            if (permisos.Contains("PL000 Limpieza"))
+            {
+                cbNroCamas.Enabled = false;
+            }
+            else
+            {
+                cbNroCamas.Enabled = true;
+            }
+            if (permisos.Contains("PL000 Limpieza"))
+            {
+                cbPiso.Enabled = false;
+            }
+            else
+            {
+                cbPiso.Enabled = true;
+            }
+            if (permisos.Contains("PL000 Limpieza"))
+            {
+                cbTipoHabitacion.Enabled = false;
+            }
+            else
+            {
+                cbTipoHabitacion.Enabled = true;
+            }
+            if (permisos.Contains("PL000 Limpieza"))
+            {
+                cbNumHabitacion.Enabled = false;
+            }
+            else
+            {
+                cbNumHabitacion.Enabled = true;
+            }
+            
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         #region ABM Habitaciones
         private void btnModificar_Click(object sender, EventArgs e)

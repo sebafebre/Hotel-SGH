@@ -56,7 +56,7 @@ namespace Vista.Administrador
                 txtTelefono.Focus();
                 return false;
             }
-            if (txtMail.Text == "")
+            if (txtMail.Text == "" || validacionBLL.ValidarEmail(txtMail.Text) == false)
             {
                 MessageBox.Show("Debe completar el campo Mail", "Agregar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMail.Focus();
@@ -79,6 +79,8 @@ namespace Vista.Administrador
                 MessageBox.Show("La fecha de nacimiento no puede ser mayor a la fecha actual", "Agregar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            
+            //if(validacionBLL.ValidarDni(txtDNI.Text))
             return true;
         }
 
@@ -202,8 +204,12 @@ namespace Vista.Administrador
                     txtTelefono.Text = dgvEmpleados.CurrentRow.Cells[5].Value.ToString();
                     txtMail.Text = dgvEmpleados.CurrentRow.Cells[6].Value.ToString();
                     dtpFechaNacimiento.Value = Convert.ToDateTime(dgvEmpleados.CurrentRow.Cells[7].Value.ToString());
-                    cbCargo.SelectedItem = dgvEmpleados.CurrentRow.Cells[8].Value.ToString();
-                    cbPuesto.SelectedItem = dgvEmpleados.CurrentRow.Cells[9].Value.ToString();
+
+                    cbCargo.SelectedItem = dgvEmpleados.CurrentRow.Cells[9].Value.ToString();
+
+                    cbPuesto.SelectedItem = dgvEmpleados.CurrentRow.Cells[8].Value.ToString();
+                    
+
                 }
             }
             catch (Exception ex)
@@ -214,8 +220,20 @@ namespace Vista.Administrador
 
         private void txtDNI_TextChanged(object sender, EventArgs e)
         {
-            string dni = txtDNI.Text.Trim().ToLower();
-            empleadoBLL.BuscarEmpleadoPorDNI(dni, dgvEmpleados);
+            try
+            {
+                validacionBLL.ValidarSoloNumeros((TextBox)sender);
+                string dni = txtDNI.Text.Trim().ToLower();
+                empleadoBLL.BuscarEmpleadoPorDNI(dni, dgvEmpleados);
+
+                //string dniTexto = txtDNI.Text;
+                //validacionBLL.ValidarDni(dniTexto);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void cbCargo_SelectedIndexChanged(object sender, EventArgs e)
@@ -246,6 +264,38 @@ namespace Vista.Administrador
             
         }
 
-        
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+            validacionBLL.ValidarSoloLetras((TextBox)sender);
+        }
+
+        private void txtMail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            validacionBLL.ValidarSoloLetras((TextBox)sender);
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                validacionBLL.ValidarSoloNumeros((TextBox)sender);
+                string telefono = txtTelefono.Text;
+                //validacionBLL.ValidarTelefono(telefono);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

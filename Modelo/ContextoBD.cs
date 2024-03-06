@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace Modelo
     {
 
         #region Singleton 
+        /*
         //ContextoBD = Singleton
         static ContextoBD instance;
         // Constructor is 'protected'
@@ -23,15 +25,36 @@ namespace Modelo
         {
             // Uses lazy initialization.
             // Note: this is not thread safe.
-            if (instance == null)
+            if (instance == null || instance.Database.Connection.State == ConnectionState.Closed )
             {
                 instance = new ContextoBD();
             }
             return instance;
+        }*/
+        /*
+        public static ContextoBD instance;
+        private static readonly object lockObject = new object();
+
+        public static ContextoBD Instance
+        {
+            get
+            {
+                lock (lockObject)
+                {
+                    if (instance == null)
+                    {
+                        instance = new ContextoBD();
+                    }
+                    return instance;
+                }
+            }
         }
+        */
+
+
         #endregion
 
-        public ContextoBD() : base("BD")
+        public ContextoBD() : base("pruebaComponente2")
         {
             /*
             if (!Database.Exists("BD"))
@@ -43,8 +66,8 @@ namespace Modelo
         public DbSet<GrupoBE> Grupo { get; set; }
         public DbSet<PermisoBE> Permiso { get; set; }
         public DbSet<UsuarioBE> Usuario { get; set; }
-        public DbSet<UsuarioGrupoBE> UsuarioGrupo { get; set; }
-        public DbSet<GrupoPermisoBE> GrupoPermiso { get; set; }
+        public DbSet<UsuarioGrupoComponenteBE> UsuarioGrupoComponente { get; set; }
+        public DbSet<GrupoComponenteBE> GrupoComponente { get; set; }
         #endregion
 
         #region Entidades
@@ -61,10 +84,12 @@ namespace Modelo
         public DbSet<FacturaBE> Factura { get; set; }
         public DbSet<HabitacionBE> Habitacion { get; set; }
         public DbSet<ReservaBE> Reserva { get; set; }
+
+
+        public DbSet<BackupBE> Backup { get; set; }
         #endregion
 
         
-        //public DbSet<ComponenteBE> Componente { get; set; }
 
 
 

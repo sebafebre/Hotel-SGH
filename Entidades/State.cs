@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public interface IState
+    public abstract class State
     {
-        void ProcesarPedido(List<DetallePedidoBE> listaDetallesPedidos, int nroReserva, string tipoFactura, string rutaCarpetaFacturas, EmpleadoBE empleado);
+        public abstract  void ProcesarPedido(List<DetallePedidoBE> listaDetallesPedidos, int nroReserva, string tipoFactura, string rutaCarpetaFacturas, EmpleadoBE empleado);
     }
     
+    
+
+
 
 }

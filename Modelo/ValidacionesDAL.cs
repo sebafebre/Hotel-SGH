@@ -9,6 +9,10 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.ComponentModel;
+using System.IO;
+
+
 
 namespace Modelo
 {
@@ -222,22 +226,22 @@ namespace Modelo
             return automata.IsMatch(mail);
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
 
 
     }

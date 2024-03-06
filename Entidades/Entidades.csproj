@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackupBE.cs" />
     <Compile Include="ClienteBE.cs" />
     <Compile Include="DetalleFacturaBE.cs" />
     <Compile Include="DetallePedidoBE.cs" />
@@ -61,13 +62,14 @@
     <Compile Include="PersonaBE.cs" />
     <Compile Include="ProductoBE.cs" />
     <Compile Include="ReservaBE.cs" />
+    <Compile Include="Seguridad\AdministradorDeSesionBE.cs" />
     <Compile Include="Seguridad\UsuarioBE.cs" />
     <Compile Include="Seguridad\ComponenteBE.cs" />
     <Compile Include="Seguridad\GrupoBE.cs" />
-    <Compile Include="Seguridad\GrupoPermisoBE.cs" />
+    <Compile Include="Seguridad\GrupoComponenteBE.cs" />
     <Compile Include="Seguridad\PermisoBE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Seguridad\UsuarioGrupoBE.cs" />
+    <Compile Include="Seguridad\UsuarioGrupoComponenteBE.cs" />
     <Compile Include="State.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -11,7 +11,18 @@ namespace Entidades
     [Table("Reserva")]
     public class ReservaBE
     {
-        
+        private int id;
+        private int nroReserva;
+        private DateTime fechaLlegada;
+        private DateTime fechaIda;
+        private decimal subtotal;
+        private decimal impuestos;
+        private decimal total;
+        private string estado;
+        private ClienteBE cliente;
+        private HabitacionBE habitacion;
+
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

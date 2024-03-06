@@ -16,3 +16,79 @@ C:\Users\sebaf\Desktop\SGH - UAI\Controladora\obj\Debug\Controladora.csproj.Core
 C:\Users\sebaf\Desktop\SGH - UAI\Controladora\obj\Debug\Controladora.csproj.CopyComplete
 C:\Users\sebaf\Desktop\SGH - UAI\Controladora\obj\Debug\Controladora.dll
 C:\Users\sebaf\Desktop\SGH - UAI\Controladora\obj\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\Controladora.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\obj\Debug\Controladora.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\obj\Debug\Controladora.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\obj\Debug\Controladora.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\obj\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia\Controladora\obj\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\Controladora.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\obj\Debug\Controladora.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\obj\Debug\Controladora.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\obj\Debug\Controladora.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\obj\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia\Controladora\obj\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\Controladora.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\obj\Debug\Controladora.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\obj\Debug\Controladora.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\obj\Debug\Controladora.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\obj\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - copia - copia - copia (2)\Controladora\obj\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Controladora.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EPPlus.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\obj\Debug\Controladora.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\obj\Debug\Controladora.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\obj\Debug\Controladora.csproj.CopyComplete
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\obj\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\obj\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EPPlus.System.Drawing.dll

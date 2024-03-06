@@ -78,6 +78,7 @@
             // 
             this.dgvProductos.AllowUserToAddRows = false;
             this.dgvProductos.AllowUserToDeleteRows = false;
+            this.dgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Location = new System.Drawing.Point(41, 239);
             this.dgvProductos.Name = "dgvProductos";
@@ -90,6 +91,8 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(1013, 329);
             this.label1.Name = "label1";
@@ -99,6 +102,8 @@
             // 
             // lblTotalPedido
             // 
+            this.lblTotalPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotalPedido.AutoSize = true;
             this.lblTotalPedido.Location = new System.Drawing.Point(1145, 329);
             this.lblTotalPedido.Name = "lblTotalPedido";
@@ -108,9 +113,11 @@
             // 
             // flpEstado
             // 
+            this.flpEstado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flpEstado.Controls.Add(this.rbAPagar);
             this.flpEstado.Controls.Add(this.rbPagoInstantaneo);
-            this.flpEstado.Location = new System.Drawing.Point(1339, 269);
+            this.flpEstado.Location = new System.Drawing.Point(1314, 282);
             this.flpEstado.Name = "flpEstado";
             this.flpEstado.Size = new System.Drawing.Size(159, 59);
             this.flpEstado.TabIndex = 156;
@@ -141,6 +148,7 @@
             // 
             this.dgvDetalles.AllowUserToAddRows = false;
             this.dgvDetalles.AllowUserToDeleteRows = false;
+            this.dgvDetalles.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalles.Location = new System.Drawing.Point(554, 239);
             this.dgvDetalles.Name = "dgvDetalles";
@@ -152,8 +160,10 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1336, 244);
+            this.label8.Location = new System.Drawing.Point(1311, 257);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 16);
             this.label8.TabIndex = 155;
@@ -161,6 +171,8 @@
             // 
             // txtNroReserva
             // 
+            this.txtNroReserva.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNroReserva.Enabled = false;
             this.txtNroReserva.Location = new System.Drawing.Point(1076, 31);
             this.txtNroReserva.Name = "txtNroReserva";
@@ -169,6 +181,8 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(983, 31);
             this.label4.Name = "label4";
@@ -178,6 +192,8 @@
             // 
             // txtCantProducto
             // 
+            this.txtCantProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantProducto.Location = new System.Drawing.Point(1076, 269);
             this.txtCantProducto.Name = "txtCantProducto";
             this.txtCantProducto.Size = new System.Drawing.Size(160, 22);
@@ -186,6 +202,8 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.Location = new System.Drawing.Point(1314, 360);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(124, 38);
@@ -196,6 +214,8 @@
             // 
             // txtNroHabitacion
             // 
+            this.txtNroHabitacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNroHabitacion.Location = new System.Drawing.Point(1076, 115);
             this.txtNroHabitacion.Name = "txtNroHabitacion";
             this.txtNroHabitacion.Size = new System.Drawing.Size(160, 22);
@@ -206,6 +226,8 @@
             // 
             // btnFinalizarPedido
             // 
+            this.btnFinalizarPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinalizarPedido.Location = new System.Drawing.Point(1164, 360);
             this.btnFinalizarPedido.Name = "btnFinalizarPedido";
             this.btnFinalizarPedido.Size = new System.Drawing.Size(124, 38);
@@ -216,6 +238,8 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.Location = new System.Drawing.Point(1014, 360);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(124, 38);
@@ -226,6 +250,8 @@
             // 
             // lblTotal
             // 
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(1147, 302);
             this.lblTotal.Name = "lblTotal";
@@ -235,6 +261,8 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(993, 65);
             this.label6.Name = "label6";
@@ -244,6 +272,8 @@
             // 
             // txtBuscarDNI
             // 
+            this.txtBuscarDNI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscarDNI.Location = new System.Drawing.Point(1076, 59);
             this.txtBuscarDNI.Name = "txtBuscarDNI";
             this.txtBuscarDNI.Size = new System.Drawing.Size(160, 22);
@@ -252,6 +282,8 @@
             // 
             // txtNombreCliente
             // 
+            this.txtNombreCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreCliente.Enabled = false;
             this.txtNombreCliente.Location = new System.Drawing.Point(1076, 87);
             this.txtNombreCliente.Name = "txtNombreCliente";
@@ -260,6 +292,8 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(971, 93);
             this.label3.Name = "label3";
@@ -269,6 +303,8 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(1013, 302);
             this.label7.Name = "label7";
@@ -278,6 +314,8 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(1010, 247);
             this.label2.Name = "label2";
@@ -287,6 +325,8 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(1010, 272);
             this.label5.Name = "label5";
@@ -296,6 +336,8 @@
             // 
             // txtNombreProducto
             // 
+            this.txtNombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreProducto.Location = new System.Drawing.Point(1076, 241);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(160, 22);
@@ -303,6 +345,8 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(975, 118);
             this.label9.Name = "label9";
@@ -314,7 +358,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(154)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(1538, 429);
             this.Controls.Add(this.dgvReservas);
             this.Controls.Add(this.dgvProductos);

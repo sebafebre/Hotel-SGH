@@ -104,12 +104,12 @@
             this.dgvHabitaciones.AllowUserToAddRows = false;
             this.dgvHabitaciones.AllowUserToDeleteRows = false;
             this.dgvHabitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHabitaciones.Location = new System.Drawing.Point(92, 43);
+            this.dgvHabitaciones.Location = new System.Drawing.Point(12, 12);
             this.dgvHabitaciones.Name = "dgvHabitaciones";
             this.dgvHabitaciones.ReadOnly = true;
             this.dgvHabitaciones.RowHeadersWidth = 51;
             this.dgvHabitaciones.RowTemplate.Height = 24;
-            this.dgvHabitaciones.Size = new System.Drawing.Size(988, 409);
+            this.dgvHabitaciones.Size = new System.Drawing.Size(1067, 471);
             this.dgvHabitaciones.TabIndex = 31;
             this.dgvHabitaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHabitaciones_CellClick);
             // 
@@ -309,7 +309,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(154)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(1595, 495);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.cbNumHabitacion);

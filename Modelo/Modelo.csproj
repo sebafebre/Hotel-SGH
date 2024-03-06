@@ -34,16 +34,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>D:\Downloads\closedxml.0.102.2\ClosedXML.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus, Version=7.0.9.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Downloads\epplus.7.0.9 (2)\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces">
+      <HintPath>D:\Downloads\epplus.interfaces.6.1.1\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing">
+      <HintPath>D:\Downloads\epplus.system.drawing.6.1.1\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream">
+      <HintPath>D:\Downloads\microsoft.io.recyclablememorystream.3.0.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>D:\Downloads\system.componentmodel.annotations.5.0.0\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.FileSystem.Primitives" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -54,25 +74,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackUpsDAL.cs" />
     <Compile Include="CheckInDAL.cs" />
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="ContextoBD.cs" />
     <Compile Include="EmpleadoDAL.cs" />
-    <Compile Include="Migrations\202402222209278_crearBD.cs" />
-    <Compile Include="Migrations\202402222209278_crearBD.designer.cs">
-      <DependentUpon>202402222209278_crearBD.cs</DependentUpon>
+    <Compile Include="Migrations\202402270258339_CrearBD.cs" />
+    <Compile Include="Migrations\202402270258339_CrearBD.designer.cs">
+      <DependentUpon>202402270258339_CrearBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403012133397_tablaBackup.cs" />
+    <Compile Include="Migrations\202403012133397_tablaBackup.designer.cs">
+      <DependentUpon>202403012133397_tablaBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403032033282_actualizarBD.cs" />
+    <Compile Include="Migrations\202403032033282_actualizarBD.designer.cs">
+      <DependentUpon>202403032033282_actualizarBD.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PedidoDAL.cs" />
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="ReservaDAL.cs" />
+    <Compile Include="Seguridad\AdministradorDeSesionDAL.cs" />
     <Compile Include="Seguridad\GrupoDAL.cs" />
     <Compile Include="Seguridad\GrupoPermisoDAL.cs" />
     <Compile Include="HabitacionesDAL.cs" />
     <Compile Include="Seguridad\PermisoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad\UsuarioDAL.cs" />
-    <Compile Include="StateDAL.cs" />
+    <Compile Include="contextoState.cs" />
     <Compile Include="ValidacionesDAL.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -86,8 +116,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202402222209278_crearBD.resx">
-      <DependentUpon>202402222209278_crearBD.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202402270258339_CrearBD.resx">
+      <DependentUpon>202402270258339_CrearBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403012133397_tablaBackup.resx">
+      <DependentUpon>202403012133397_tablaBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403032033282_actualizarBD.resx">
+      <DependentUpon>202403032033282_actualizarBD.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

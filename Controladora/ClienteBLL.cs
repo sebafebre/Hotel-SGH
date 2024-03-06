@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,9 +14,9 @@ namespace Controladora
     public class ClienteBLL
     {
         ClienteDAL _clienteDal = new ClienteDAL();
-        public string AgregarCliente(ClienteBE cliente)
+        public void AgregarCliente(ClienteBE cliente)
         {
-            return _clienteDal.AgregarCliente(cliente);
+            _clienteDal.AgregarCliente(cliente);
         }
 
 
@@ -53,12 +54,18 @@ namespace Controladora
             _clienteDal.ListarClientesActivosEnDataGridView(dataGridView);
         }
 
-        
 
 
+        public int ObtenerIdCliente(ClienteBE cliente)
+        {
+            return _clienteDal.ObtenerIdCliente(cliente);
+        }
 
 
-
+        public void CargarUsuariosEnComboBox(ComboBox comboBoxUsuarios, string numeroDNI)
+        {
+            _clienteDal.CargarUsuariosEnComboBox(comboBoxUsuarios, numeroDNI);
+        }
 
 
 

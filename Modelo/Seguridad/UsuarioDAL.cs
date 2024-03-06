@@ -7,13 +7,16 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
+using System.Runtime.Remoting.Contexts;
+using System.ComponentModel;
 
 namespace Modelo
 {
     public class UsuarioDAL
     {
         //ContextoBD con = new ContextoBD();
-        ContextoBD con = ContextoBD.Instance();
+        ContextoBD con = new ContextoBD();
 
         #region Encriptar con SHA256
         public string CalcularHash(string input)
@@ -40,15 +43,23 @@ namespace Modelo
         {
             try
             {
-                // Encriptar la contraseña antes de almacenarla
-                usuario.Clave = CalcularHash(usuario.Clave);
-                // Agregar el usuario a la base de datos
-                //buscar el empleado mediante el id
-                usuario.Empleado = con.Empleado.FirstOrDefault(e => e.Id == usuario.Empleado.Id);
-                con.Usuario.Add(usuario);
-                con.SaveChanges();
+                if (con.Usuario.Any(u => u.Nombre == usuario.Nombre))
+                {
+                    return "El nombre de usuario ya existe";
+                }
+                else
+                {
+                    // Encriptar la contraseña antes de almacenarla
+                    usuario.Clave = CalcularHash(usuario.Clave);
+                    // Agregar el usuario a la base de datos
+                    //buscar el empleado mediante el id
+                    usuario.Empleado = con.Empleado.FirstOrDefault(e => e.Id == usuario.Empleado.Id);
+                    con.Usuario.Add(usuario);
+                    con.SaveChanges();
 
-                return "El usuario se agregó correctamente";
+                    return "El usuario se agregó correctamente";
+                }
+
             }
             catch (Exception ex)
             {
@@ -163,47 +174,58 @@ namespace Modelo
         #region Agregar / Quitar Permisos al Grupo --> GrupoPermiso
 
         //Agregar Grupo a Usuario
-        public string AgregarGrupoAUsuario(int idUsuario, int idGrupo)
+        public void AgregarGrupoAUsuario(int idUsuario, int idComponenteGrupo)
         {
+
+
             try
             {
                 // Buscar el usuario por id
                 UsuarioBE usuario = con.Usuario.FirstOrDefault(u => u.Id == idUsuario);
 
                 // Buscar el grupo por id
-                GrupoBE grupo = con.Grupo.FirstOrDefault(g => g.Id == idGrupo);
+                //ComponenteBE componente = con.Componente.FirstOrDefault(g => g.Id == idComponenteGrupo);
+                GrupoBE grupo = con.Grupo.Include(gp => gp.Componente).Where(gp => gp.Componente.Id == idComponenteGrupo).FirstOrDefault();
 
                 if (usuario != null && grupo != null)
                 {
-                    UsuarioGrupoBE usuarioGrupo = new UsuarioGrupoBE
+                    if (con.UsuarioGrupoComponente.Any(ug => ug.Usuario.Id == idUsuario && ug.Componente.Id == idComponenteGrupo))
+                    {
+                        MessageBox.Show("El usuario ya tiene asignado el grupo");
+                    }
+
+                    UsuarioGrupoComponenteBE usuarioGrupoComponente = new UsuarioGrupoComponenteBE
                     {
                         Usuario = usuario,
-                        Grupo = grupo
+                        Componente = grupo.Componente
                     };
 
                     // Agregar el grupo al usuario
-                    con.UsuarioGrupo.Add(usuarioGrupo);
+                    con.UsuarioGrupoComponente.Add(usuarioGrupoComponente);
 
                     // Guardar los cambios en la base de datos
                     con.SaveChanges();
 
-                    return "El grupo se agregó al usuario correctamente";
+                    //return "El grupo se agregó al usuario correctamente";
+                    MessageBox.Show("El grupo se agregó al usuario correctamente");
                 }
                 else
                 {
-                    return "No se encontró el usuario o el grupo";
+                    //return "No se encontró el usuario o el grupo";
+                    MessageBox.Show("No se encontró el usuario o el grupo");
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al agregar el grupo al usuario: " + ex.Message);
-                return "Error al agregar el grupo al usuario";
+                //return "Error al agregar el grupo al usuario";
+                MessageBox.Show("Error al agregar el grupo al usuario");
             }
         }
 
 
         //Eliminar Grupo del Usuario
-        public string EliminarGrupoAUsuario(int idUsuario, int idGrupo)
+        public void EliminarGrupoAUsuario(int idUsuario, int idComponente)
         {
             try
             {
@@ -211,37 +233,170 @@ namespace Modelo
                 UsuarioBE usuario = con.Usuario.FirstOrDefault(u => u.Id == idUsuario);
 
                 // Buscar el grupo por id
-                GrupoBE grupo = con.Grupo.FirstOrDefault(g => g.Id == idGrupo);
+                ComponenteBE componente = con.Componente.FirstOrDefault(g => g.Id == idComponente);
 
-                if (usuario != null && grupo != null)
+                if (usuario != null && componente != null)
                 {
                     //UsuarioGrupoBE usuarioGrupo = new UsuarioGrupoBE
-                    UsuarioGrupoBE usuarioGrupo = con.UsuarioGrupo.Where(gp => gp.Grupo.Id == idGrupo && gp.Usuario.Id == idUsuario).FirstOrDefault();
+                    UsuarioGrupoComponenteBE usuarioGrupoComponente = con.UsuarioGrupoComponente.Where(gp => gp.Componente.Id == idComponente && gp.Usuario.Id == idUsuario).FirstOrDefault();
                     // Agregar el grupo al usuario
-                    con.UsuarioGrupo.Remove(usuarioGrupo);
+                    con.UsuarioGrupoComponente.Remove(usuarioGrupoComponente);
 
                     // Guardar los cambios en la base de datos
                     con.SaveChanges();
 
-                    return "El grupo se agregó al usuario correctamente";
+                    MessageBox.Show("El grupo se agregó al usuario correctamente");
                 }
                 else
                 {
-                    return "No se encontró el usuario o el grupo";
+
+                    MessageBox.Show("No se encontró el usuario o el grupo");
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al agregar el grupo al usuario: " + ex.Message);
-                return "Error al agregar el grupo al usuario";
+                MessageBox.Show("Error al agregar el grupo al usuario");
+            }
+        }
+
+        public void AgregarPermisoAUsuario(int idUsuario, int idComponente)
+        {
+            try
+            {
+                // Buscar el usuario por id
+                UsuarioBE usuario = con.Usuario.FirstOrDefault(u => u.Id == idUsuario);
+
+                // Buscar el grupo por id
+                ComponenteBE componente = con.Componente.FirstOrDefault(g => g.Id == idComponente);
+
+                if (usuario != null && componente != null)
+                {
+                    if (con.UsuarioGrupoComponente.Any(ug => ug.Usuario.Id == idUsuario && ug.Componente.Id == idComponente))
+                    {
+                        MessageBox.Show("El usuario ya tiene asignado el Permiso");
+                    }
+                    else
+                    {
+                        UsuarioGrupoComponenteBE usuarioGrupoComponente = new UsuarioGrupoComponenteBE
+                        {
+                            Usuario = usuario,
+                            Componente = componente
+                        };
+
+                        // Agregar el grupo al usuario
+                        con.UsuarioGrupoComponente.Add(usuarioGrupoComponente);
+
+                        // Guardar los cambios en la base de datos
+                        con.SaveChanges();
+
+                        //return "El grupo se agregó al usuario correctamente";
+                        MessageBox.Show("El permiso se agregó al usuario correctamente");
+                    }
+                }
+                else
+                {
+                    //return "No se encontró el usuario o el grupo";
+                    MessageBox.Show("No se encontró el usuario o el permiso");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al agregar el permiso al usuario: " + ex.Message);
+                //return "Error al agregar el grupo al usuario";
+                MessageBox.Show("Error al agregar el permiso al usuario");
+            }
+
+        }
+
+
+        public void EliminarPermisoAUsuario(int idUsuario, int idComponente)
+        {
+            try
+            {
+                // Buscar el usuario por id
+                UsuarioBE usuario = con.Usuario.FirstOrDefault(u => u.Id == idUsuario);
+
+                // Buscar el grupo por id
+                ComponenteBE componente = con.Componente.FirstOrDefault(g => g.Id == idComponente);
+
+                if (usuario != null && componente != null)
+                {
+                    //UsuarioGrupoBE usuarioGrupo = new UsuarioGrupoBE
+                    UsuarioGrupoComponenteBE usuarioGrupoComponente = con.UsuarioGrupoComponente.Where(gp => gp.Componente.Id == idComponente && gp.Usuario.Id == idUsuario).FirstOrDefault();
+                    // Agregar el grupo al usuario
+                    con.UsuarioGrupoComponente.Remove(usuarioGrupoComponente);
+
+                    // Guardar los cambios en la base de datos
+                    con.SaveChanges();
+
+                    MessageBox.Show("El permiso se agregó al usuario correctamente");
+                }
+                else
+                {
+
+                    MessageBox.Show("No se encontró el usuario o el permiso");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al agregar el permiso al usuario: " + ex.Message);
+                MessageBox.Show("Error al agregar el permiso al usuario");
             }
         }
 
 
 
 
-        
-        
+
+        //Listar Grupos y permisos del usuario 
+        public void ListarGruposYPermisosUsuarioEnDataGridView(DataGridView dgvGruposPermisosUsuario, int idUsuario)
+        {
+            // Limpiamos las filas existentes en el DataGridView
+            dgvGruposPermisosUsuario.Rows.Clear();
+            dgvGruposPermisosUsuario.Columns.Clear();
+
+            // Obtener la lista de los grupos del usuario
+            List<UsuarioGrupoComponenteBE> listaGruposPermisosUsuario = con.UsuarioGrupoComponente.Include(ug => ug.Componente).Where(ug => ug.Usuario.Id == idUsuario).ToList();
+
+            /*------->No trae el .include(Componente)
+            List<ComponenteBE> componentesUsuario = new List<ComponenteBE>();
+            foreach (var grupopermiso in listaGruposPermisosUsuario)
+            {
+                ComponenteBE comp = con.Componente.FirstOrDefault(p => p.Id == grupopermiso.Componente.Id);
+                if (comp != null)
+                {
+                    componentesUsuario.Add(comp);
+                }
+            }*/
+
+            // Agregamos las columnas al DataGridView
+
+            dgvGruposPermisosUsuario.Columns.Add("Id", "Id");
+            dgvGruposPermisosUsuario.Columns.Add("Nombre", "Nombre");
+
+            // Iteramos sobre la lista de grupos del usuario y agregamos cada grupo al DataGridView
+            foreach (var grupoPermiso in listaGruposPermisosUsuario)
+            {
+                
+                 
+                 int? id = grupoPermiso.Componente.Id;
+                 
+                
+
+
+                int rowIndex = dgvGruposPermisosUsuario.Rows.Add();
+                dgvGruposPermisosUsuario.Rows[rowIndex].Cells["Id"].Value = id ?? 0;  /*grupoPermiso.Componente.Id ?? 0;*/
+                dgvGruposPermisosUsuario.Rows[rowIndex].Cells["Nombre"].Value = grupoPermiso.Componente.Nombre ?? "";
+            }
+        }
+
+
+
+
+
+
+
 
 
         #endregion
@@ -256,57 +411,174 @@ namespace Modelo
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        public List<PermisoBE> ObtenerPermisosUsuario(int idUsuario)
+        public List<ComponenteBE> ObtenerPermisosDelUsuario(string nombreUsuario)
         {
-            var permisosUsuario = new List<PermisoBE>();
-
-            var usuario = con.Usuario.FirstOrDefault(u => u.Id == idUsuario);
+            // Obtener el usuario por su nombre
+            var usuario = con.Usuario.FirstOrDefault(u => u.Nombre == nombreUsuario);
 
             if (usuario != null)
             {
-                var gruposUsuarioIds = con.UsuarioGrupo
-                                .Where(ug => ug.Usuario.Id == usuario.Id)
-                                .Select(ug => ug.Grupo.Id)
-                                .ToList();
+                // Obtener permisos directamente asignados al usuario
+                var permisosUsuario = con.UsuarioGrupoComponente
+                    .Where(ugc => ugc.Usuario.Id == usuario.Id)
+                    .Select(ugc => ugc.Componente)
+                    .ToList();
 
-                foreach (var grupoId in gruposUsuarioIds)
+                var permisosUsuarios = con.UsuarioGrupoComponente
+                    .Where(ugc => ugc.Usuario.Id == usuario.Id)
+                    .Select(ugc => ugc.Componente)
+                    .ToList();
+                var permisosSimples = new List<ComponenteBE>();
+                foreach (var permiso in permisosUsuarios)
                 {
-                    var permisosGrupoIds = con.GrupoPermiso
-                                                    .Where(gp => gp.Grupo.Id == grupoId)
-                                                    .Select(gp => gp.Permiso.Id)
-                                                    .ToList();
-
-                    foreach (var permisoId in permisosGrupoIds)
+                    var permisos = con.Permiso.FirstOrDefault(p => p.Componente.Id == permiso.Id);
+                    if (permisos != null)
                     {
-                        var permiso = con.Permiso.FirstOrDefault(p => p.Id == permisoId);
-                        if (permiso != null)
+                        permisosSimples.Add(permiso);
+                    }
+                }
+                /*
+                // Obtener los grupos del usuario y los permisos asociados a esos grupos
+                var gruposUsuario = con.UsuarioGrupoComponente
+                    .Where(ugc => ugc.Usuario.Id == usuario.Id)
+                    .Select(ugc => ugc.Componente)
+                    .ToList();
+
+
+                var permisosGrupos = new List<GrupoBE>();
+                
+                foreach (var componente in gruposUsuario)
+                {
+                    var permisosGrupo = con.GrupoComponente.Include( gc => gc.Grupo)
+                        .Where(gc => gc.Componente.Id == componente.Id).Select(gc => gc.Grupo.Id).ToList();
+
+                    permisosGrupos.Add(componente);
+                }
+
+                var listaPermisos = new List<ComponenteBE>();
+                foreach (var permiso in permisosGrupos)
+                {
+                    var permisosGrupo = con.GrupoComponente
+                        .Where(gc => gc.Grupo.Id == permiso.Id)
+                        .Select(gc => gc.Componente)
+                        .ToList();
+
+                    permisosGrupos.AddRange(listaPermisos);
+                }*/
+
+                // Obtener los grupos del usuario y los permisos asociados a esos grupos
+                var gruposUsuario = con.UsuarioGrupoComponente
+                    .Where(ugc => ugc.Usuario.Id == usuario.Id)
+                    .Select(ugc => ugc.Componente)
+                    .ToList();
+
+                var permisosGrupos = new List<GrupoBE>();
+
+
+
+                var gruposAsociados = con.GrupoComponente
+                         .Include(gc => gc.Grupo)
+                         .Where(c => con.Grupo.Any(p => p.Componente.Id == c.Id))
+                         .Select(gc => gc.Grupo)
+                         .ToList();
+
+                // Guardar los grupos en la lista de permisosGrupos
+                permisosGrupos.AddRange(gruposAsociados);
+
+
+
+
+
+
+
+
+
+                var listaPermisos = new List<ComponenteBE>();
+                foreach (var permiso in permisosGrupos)
+                {
+                    // Obtener los componentes asociados a los grupos que también están en la tabla de permisos
+                    var componentesGrupoConPermisos = con.GrupoComponente
+                        .Where(gc => gc.Grupo.Id == permiso.Id) // Filtrar por el grupo actual
+                        .Select(gc => gc.Componente) // Seleccionar los componentes asociados al grupo
+                        .Where(c => con.Permiso.Any(p => p.Componente.Id == c.Id)) // Filtrar por los componentes que también están en los permisos
+                        .ToList();
+
+                    // Agregar los componentes a la lista de permisos si no están ya en ella
+                    foreach (var componente in componentesGrupoConPermisos)
+                    {
+                        if (!listaPermisos.Any(p => p.Id == componente.Id))
                         {
-                            permisosUsuario.Add(permiso);
+                            listaPermisos.Add(componente);
                         }
                     }
                 }
 
-            }
+                // Unir los permisos directos del usuario y los permisos de los grupos
 
-            return permisosUsuario;
+                var todosLosPermisos = listaPermisos.Union(permisosSimples).ToList();
+
+                // Devolver los permisos únicos
+                return todosLosPermisos;
+            }
+            else
+            {
+                // Si el usuario no existe, devolver una lista vacía de permisos
+                return new List<ComponenteBE>();
+            }
         }
+
+
+
+
+
+
+
+
+
+        public List<PermisoBE> ObtenerPermisosUsuario(string nombreUsuario)
+        {
+            try
+            {
+                var permisosUsuario = new List<PermisoBE>();
+
+                // Obtener el usuario por su nombre de usuario
+                UsuarioBE usuario = con.Usuario.FirstOrDefault(u => u.Nombre == nombreUsuario);
+
+                if (usuario != null)
+                {
+                    var gruposUsuarioIds = con.UsuarioGrupoComponente
+                                            .Where(ug => ug.Usuario.Id == usuario.Id)
+                                            .Select(ug => ug.Componente.Id)
+                                            .ToList();
+
+                    foreach (var grupoId in gruposUsuarioIds)
+                    {
+                        var permisosGrupoIds = con.GrupoComponente
+                                                .Where(gp => gp.Grupo.Id == grupoId)
+                                                .Select(gp => gp.Componente.Id)
+                                                .ToList();
+
+                        foreach (var permisoId in permisosGrupoIds)
+                        {
+                            var permiso = con.Permiso.Include(u => u.Componente).FirstOrDefault(p => p.Componente.Id == permisoId);
+                            if (permiso != null)
+                            {
+                                permisosUsuario.Add(permiso);
+                            }
+
+                        }
+                    }
+                }
+
+                return permisosUsuario;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener los permisos del usuario: " + ex.Message);
+                return new List<PermisoBE>(); // Devolver una lista vacía en caso de error
+            }
+        }
+
 
 
 
@@ -357,69 +629,6 @@ namespace Modelo
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // Método para obtener los permisos de un usuario mediante las clase (usuario --> usuarioGrupo --> grupo --> grupoPermiso --> permiso)
-        //teniendo el id del usuario, buscar las tablas UsuarioGrupo donde Id sea el Usuario.Id
-        //Ver todos los grupos que hay con es el IdUsuario y buscar en la tabla GrupoPermiso donde el Id sea el Grupo.Id
-        //Despues con eses Grupos.Id, buscar los nombres de los Permisos.Id
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         /*
         public List<GrupoPermisoBE> ObtenerPermisosUsuario(int idUsuario)
         {
@@ -445,11 +654,6 @@ namespace Modelo
                 return null;
             }
         }*/
-
-
-
-
-
 
 
 
@@ -500,7 +704,7 @@ namespace Modelo
                 string claveHash = CalcularHash(clave);
 
                 // Comparar el hash calculado con el hash almacenado en la base de datos
-                if (claveHash == usuario.Clave) 
+                if (claveHash == usuario.Clave)
                 {
                     return true; // Las credenciales son válidas
                 }
@@ -512,16 +716,11 @@ namespace Modelo
 
 
 
-
-
-
-
-
         public UsuarioBE ValidarCredenciales(string nombre, string clave)
         {
             try
             {
-                using (var context = ContextoBD.Instance())
+                using (var context = new ContextoBD())
                 {
                     // Buscar el usuario por nombre de usuario y contraseña
                     UsuarioBE usuario = context.Usuario.FirstOrDefault(u => u.Nombre == nombre && u.Clave == clave);
@@ -538,5 +737,34 @@ namespace Modelo
         }
 
 
+
+
+
+
+        
+        
+
+        
+
+
+
     }
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -63,6 +63,12 @@
     <Compile Include="Administrador\frmAdministrador.Designer.cs">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\frmBackUps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBackUps.Designer.cs">
+      <DependentUpon>frmBackUps.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\frmEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     </Compile>
     <Compile Include="Administrador\frmGruposPermisos.Designer.cs">
       <DependentUpon>frmGruposPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrador\frmUsuarioGrupos.cs">
       <SubType>Form</SubType>
@@ -99,6 +111,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paneles\Reservas\frmAgregarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\Reservas\frmAgregarReserva.Designer.cs">
+      <DependentUpon>frmAgregarReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Paneles\frmCheckIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +128,12 @@
     </Compile>
     <Compile Include="Paneles\frmCheckOut.Designer.cs">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paneles\frmClienteReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\frmClienteReserva.Designer.cs">
+      <DependentUpon>frmClienteReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Paneles\frmClientes.cs">
       <SubType>Form</SubType>
@@ -135,10 +159,22 @@
     <Compile Include="Paneles\Pedidos\frmPedidos.Designer.cs">
       <DependentUpon>frmPedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paneles\frmReservas.cs">
+    <Compile Include="Paneles\Reservas\frmBuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Paneles\frmReservas.Designer.cs">
+    <Compile Include="Paneles\Reservas\frmBuscarCliente.Designer.cs">
+      <DependentUpon>frmBuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paneles\Reservas\frmBuscarHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\Reservas\frmBuscarHabitacion.Designer.cs">
+      <DependentUpon>frmBuscarHabitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paneles\Reservas\frmReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\Reservas\frmReservas.Designer.cs">
       <DependentUpon>frmReservas.cs</DependentUpon>
     </Compile>
     <Compile Include="Paneles\Pedidos\frmAgregarPedidos.cs">
@@ -164,11 +200,17 @@
     <EmbeddedResource Include="Administrador\frmAdministrador.resx">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmBackUps.resx">
+      <DependentUpon>frmBackUps.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmEmpleado.resx">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmGruposPermisos.resx">
       <DependentUpon>frmGruposPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmUsuarioGrupos.resx">
       <DependentUpon>frmUsuarioGrupos.cs</DependentUpon>
@@ -182,11 +224,17 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\Reservas\frmAgregarReserva.resx">
+      <DependentUpon>frmAgregarReserva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Paneles\frmCheckIn.resx">
       <DependentUpon>frmCheckIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\frmCheckOut.resx">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\frmClienteReserva.resx">
+      <DependentUpon>frmClienteReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
@@ -200,7 +248,13 @@
     <EmbeddedResource Include="Paneles\Pedidos\frmPedidos.resx">
       <DependentUpon>frmPedidos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Paneles\frmReservas.resx">
+    <EmbeddedResource Include="Paneles\Reservas\frmBuscarCliente.resx">
+      <DependentUpon>frmBuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\Reservas\frmBuscarHabitacion.resx">
+      <DependentUpon>frmBuscarHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\Reservas\frmReservas.resx">
       <DependentUpon>frmReservas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\Pedidos\frmAgregarPedidos.resx">
@@ -220,6 +274,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -245,7 +300,66 @@
       <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\alt-administrador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alt-administrador %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alt-administrador1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-de-archivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-de-archivo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circulo-de-usuario %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grafico-histograma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cama.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conserje-de-campana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-del-circulo-del-edificio-hacia-la-derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recibo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alt-administrador %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir-alternativa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir-alternativa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir-alternativa %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puerta-abierta %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puerta-abierta %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circulo-de-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circulo-de-usuario %281%291.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -18,8 +18,13 @@ namespace Vista.Paneles.Pedidos
         PedidoBLL pedidoBLL = new PedidoBLL();
         CheckInBLL checkinBLL = new CheckInBLL();
         ValidacionesBLL validacionBLL = new ValidacionesBLL();
+        StateBLL stateBLL = new StateBLL();
 
         List<DetallePedidoBE> listaDetallesPedidos = new List<DetallePedidoBE>();
+
+
+        string usuarioActual = UsuarioBE.usaurioLogueado;
+
 
         public frmModificarPedidos()
         {
@@ -208,6 +213,9 @@ namespace Vista.Paneles.Pedidos
                     txtBuscarDNI.Text = clienteReserva.Persona.DNI;
                     txtNroPedido.Text = nroPedido.ToString();
 
+
+                    
+
                     DGV_DatosEstadoPedido();
 
                     //ListarDetallesDelPedidoDGV(int IdPedido, DataGridView dataGridView)
@@ -268,11 +276,22 @@ namespace Vista.Paneles.Pedidos
                     int nroPedido = Convert.ToInt32(txtNroPedido.Text);
                     string estadoSeleccionado = validacionBLL.ObtenerEstadoSeleccionado(flpEstado);
                     //pedido.Estado = estadoSeleccionado;
-                    pedidoBLL.ModificarEstadoPedido(nroPedido, estadoSeleccionado);
+                    if (estadoSeleccionado == "PagoPendiente")
+                    {
+                        List<DetallePedidoBE> listaDetallesPedidos = pedidoBLL.ObtenerListaDetallesPedidos(nroPedido);
 
-                    MessageBox.Show("Habitacion modificada correctamente", "Modificar Habitacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    pedidoBLL.ListarPedidosEnDataGridView(dgvPedidos);
-                    validacionBLL.LimpiarCampos(this.Controls);
+                        stateBLL.FinalizarPedido(listaDetallesPedidos, nroPedido, estadoSeleccionado, "A", usuarioActual);
+
+                        //pedidoBLL.ModificarEstadoPedido(nroPedido, estadoSeleccionado);
+
+                        MessageBox.Show("Habitacion modificada correctamente", "Modificar Habitacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        pedidoBLL.ListarPedidosEnDataGridView(dgvPedidos);
+                        validacionBLL.LimpiarCampos(this.Controls);
+                    }
+                    else
+                    {
+                        MessageBox.Show("El pedido ya pagado no se puede modificar, solo se puede pagar el pedido que se encuentra con el pago pendiente", "Modificar Estado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {

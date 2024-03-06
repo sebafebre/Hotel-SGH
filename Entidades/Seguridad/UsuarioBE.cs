@@ -6,6 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.Eventing.Reader;
 
 namespace Entidades
 {
@@ -33,5 +34,17 @@ namespace Entidades
         public static string usaurioLogueado { get; set; }
 
 
+
+        
+
+
+
+
+
+
+
+
     }
+
+    
 }
