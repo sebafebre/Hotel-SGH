@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.IO;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace Modelo
     public class BackUpsDAL
     {
         ContextoBD con = new ContextoBD();
-        public void CrearBackup()
+        /*public void CrearBackup()
         {
             try
             {
@@ -49,6 +50,47 @@ namespace Modelo
                 con.SaveChanges();
 
                 MessageBox.Show("Copia de seguridad creada exitosamente.");
+                MessageBox.Show("Backup creado exitosamente.");
+                // CargarBackups(); // Llamada a método en la capa de vista
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al crear la copia de seguridad: " + ex.Message);
+            }
+        }*/
+        public class AppConfig
+        {
+            public string DataDirectory { get; set; }
+        }
+
+        public void CrearBackup()
+        {
+            try
+            {
+                // Get the SQL Server data directory
+                var appConfig = (AppConfig)ConfigurationManager.GetSection("entityFramework/appSettings");
+                string dataDirectory = appConfig.DataDirectory;
+
+                // Nombre del archivo de respaldo con la fecha actual
+                string backupFileName = $"Backup_{DateTime.Now:yyyyMMdd_HHmmss}.bak";
+                string backupPath = Path.Combine(dataDirectory, backupFileName);
+
+                // Consulta SQL para realizar la copia de seguridad de la base de datos actual
+                string query = $"BACKUP DATABASE PruebaComponente2 TO DISK = '{backupPath}'";
+                con.Database.ExecuteSqlCommand(TransactionalBehavior.DoNotEnsureTransaction, query);
+
+                // Guarda los detalles del backup en la base de datos
+                var nuevoBackup = new BackupBE
+                {
+                    RutaArchivo = backupPath,
+                    FechaDeDatos = DateTime.Now
+                };
+
+                con.Backup.Add(nuevoBackup);
+                con.SaveChanges();
+
+                MessageBox.Show("Copia de seguridad creada exitosamente.");
+                MessageBox.Show("Backup creado exitosamente.");
                 // CargarBackups(); // Llamada a método en la capa de vista
             }
             catch (Exception ex)
@@ -56,7 +98,6 @@ namespace Modelo
                 MessageBox.Show("Error al crear la copia de seguridad: " + ex.Message);
             }
         }
-
         public void EliminarBackup(BackupBE backup)
         {
             try

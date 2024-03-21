@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuditoriaBLL.cs" />
     <Compile Include="BackupsBLL.cs" />
     <Compile Include="CheckInBLL.cs" />
     <Compile Include="ClienteBLL.cs" />

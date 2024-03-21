@@ -20,6 +20,8 @@ namespace Vista.Paneles.Pedidos
 
         StateBLL stateBLL = new StateBLL();
 
+        ReservaBLL reservaBLL = new ReservaBLL();
+
         string usuarioActual = UsuarioBE.usaurioLogueado;
 
         int nroReservaDGV = 0;
@@ -47,19 +49,23 @@ namespace Vista.Paneles.Pedidos
                 return false;
 
             }
-            if (IdProductoSelec == 0)
+            else if (IdProductoSelec == 0)
             {
                 MessageBox.Show("Debe seleccionar un producto");
                 dgvProductos.Focus();
                 return false;
             }
-            if (txtCantProducto.Text == "")
+            else if (txtCantProducto.Text == "")
             {
                 MessageBox.Show("Debe ingresar una cantidad");
                 txtCantProducto.Focus();
                 return false;
             }
-            return true;
+            else
+            {
+                return true;
+            }
+            //return true;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -72,20 +78,16 @@ namespace Vista.Paneles.Pedidos
                     if (CantProductoSelec > Convert.ToInt32(txtCantProducto.Text))
                     {
 
-                        // Agregar el producto al pedido
-                        //pedidoBLL.AgregarProductoAPedido(IdReservaDGV, IdProducto, NombreProducto, CantidadProducto, PrecioProducto);
-                        //pedidoBLL.AgregarPedido( IdProductoSelec, txtNombreProducto.Text, Convert.ToInt32(txtCantProducto.Text));
 
                         listaDetallesPedidos = pedidoBLL.AgregarPedido(listaDetallesPedidos, dgvProductos, IdProductoSelec, txtNombreProducto.Text, Convert.ToInt32(txtCantProducto.Text));
 
-                        // Actualizar el total del pedido
-                        //pedidoBLL.ActualizarTotalPedido(IdReservaDGV, Convert.ToInt32(lblTotal.Text) + (CantidadProducto * PrecioProducto));
-
-                        // Actualizar el DataGridView de productos
-                        //pedidoBLL.ListarProductosEnDGV(dgvProductos);
+                        
                         pedidoBLL.CargarDetallesEnDataGridView(listaDetallesPedidos, dgvDetalles);
 
                         lblTotalPedido.Text = listaDetallesPedidos.Sum(d => d.Total).ToString();
+
+                        txtCantProducto.Text = "";
+                        txtNombreProducto.Text = "";
                     }
                     else
                     {
@@ -118,22 +120,45 @@ namespace Vista.Paneles.Pedidos
                         {
                             MessageBox.Show("Debe seleccionar cuando lo quiere abonar");
                         }
-                        if (rbAPagar.Checked == true)
+                        else
                         {
-                            string Estado = "PagoPendiente";
-                            stateBLL.FinalizarPedido(listaDetallesPedidos, nroReservaDGV, Estado, "A", usuarioActual);
+                            if (rbAPagar.Checked == true)
+                            {
+                                string Estado = "PagoPendiente";
+                                stateBLL.FinalizarPedido(listaDetallesPedidos, nroReservaDGV, Estado, "A", usuarioActual, 0);
+
+                            }
+                            if (rbPagoInstantaneo.Checked == true)
+                            {
+                                string Estado = "Pago en el momento";
+
+
+
+                                frmPago formularioPago = new frmPago();
+                                formularioPago.Accion = "PagoDePedido";
+                                formularioPago.nroReserva = nroReservaDGV;
+                                formularioPago.listaDetallesPedidos = listaDetallesPedidos;
+                                formularioPago.Estado = Estado;
+                                formularioPago.nroPedido = 0;
+                                formularioPago.ShowDialog(); // Abre el formulario de búsqueda de cliente como un cuadro de diálogo
+
+
+
+                                /*
+                                string Estado = "Pago en el momento";
+                                stateBLL.FinalizarPedido(listaDetallesPedidos, nroReservaDGV, Estado, "A", usuarioActual, 0);
+                                */
+
+                            }
+
+
+                            dgvDetalles.Rows.Clear();
+                            txtCantProducto.Text = "";
+                            txtNombreProducto.Text = "";
+                            listaDetallesPedidos.Clear();
 
                         }
-                        if(rbPagoInstantaneo.Checked == true)
-                        {
-                            string Estado = "PagoInstantaneo";
-                            stateBLL.FinalizarPedido(listaDetallesPedidos, nroReservaDGV, Estado, "A", usuarioActual);
-
-
-                        }
-
-
-                        
+ 
                     }
                     else
                     {
@@ -156,6 +181,12 @@ namespace Vista.Paneles.Pedidos
             try
             {
                 listaDetallesPedidos = pedidoBLL.CancelarPedido(listaDetallesPedidos, dgvProductos, dgvDetalles);
+
+                txtCantProducto.Text = "";
+                txtNombreProducto.Text = "";
+                lblTotalPedido.Text = "0";
+                listaDetallesPedidos.Clear();
+                dgvDetalles.Rows.Clear();
             }
             catch (Exception ex)
             {
@@ -163,7 +194,94 @@ namespace Vista.Paneles.Pedidos
             }
         }
 
-        private void dgvReservas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void txtCantProducto_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCantProducto.Text != "")
+            {
+                lblTotal.Text = (Convert.ToInt32(txtCantProducto.Text) * PrecioProductoSelec).ToString();
+            }
+        }
+
+        private void txtNroHabitacion_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (usuarioEscribiendo)
+                {
+                    if (!string.IsNullOrEmpty(txtNroHabitacion.Text))
+                    {
+                        string nroHabitacion = txtNroHabitacion.Text.Trim().ToLower();
+                        checkinBLL.BuscarClientePorNumHabitacion(nroHabitacion, dgvReservas);
+                    }
+
+
+
+                    // Restablecer usuarioEscribiendo solo cuando el usuario ha terminado de escribir
+                    usuarioEscribiendo = false;
+                }
+                if (string.IsNullOrEmpty(txtNroHabitacion.Text))
+                {
+                    reservaBLL.ListarReservasActivasEnDataGridView(dgvReservas);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+        }
+
+        private void txtBuscarDNI_TextChanged(object sender, EventArgs e)
+        {
+            /*
+            string dni = txtBuscarDNI.Text.Trim().ToLower();
+            checkinBLL.BuscarClientePorDNI(dni, dgvReservas);*/
+
+            try
+            {
+                if (usuarioEscribiendo)
+                {
+                    if (!string.IsNullOrEmpty(txtBuscarDNI.Text))
+                    {
+                        string dni = txtBuscarDNI.Text.Trim().ToLower();
+                        checkinBLL.BuscarClientePorDNI(dni, dgvReservas);
+                    }
+
+                    // Restablecer usuarioEscribiendo solo cuando el usuario ha terminado de escribir
+                    usuarioEscribiendo = false;
+                }
+                if (string.IsNullOrEmpty(txtBuscarDNI.Text))
+                {
+                    reservaBLL.ListarReservasActivasEnDataGridView(dgvReservas);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+
+
+        }
+
+        private void txtNroHabitacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            usuarioEscribiendo = e.KeyChar != '\b';
+        }
+
+        private void txtNroHabitacion_KeyDown(object sender, KeyEventArgs e)
+        {
+            string nroHabitacion = txtNroHabitacion.Text.Trim().ToLower();
+            checkinBLL.BuscarClientePorNumHabitacion(nroHabitacion, dgvReservas);
+
+        }
+
+        private void dgvReservas_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -183,7 +301,7 @@ namespace Vista.Paneles.Pedidos
 
                     txtNroHabitacion.Text = habitacionReserva.NroHabitacion.ToString();
                     txtNombreCliente.Text = clienteReserva.Persona.Nombre + clienteReserva.Persona.Apellido;
-                    txtBuscarDNI.Text = clienteReserva.Persona.DNI;
+                    txtBuscarDNI.Text = clienteReserva.Persona.DNI.ToString();
                 }
             }
             catch (Exception ex)
@@ -192,7 +310,7 @@ namespace Vista.Paneles.Pedidos
             }
         }
 
-        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProductos_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -218,38 +336,10 @@ namespace Vista.Paneles.Pedidos
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-        private void txtCantProducto_TextChanged(object sender, EventArgs e)
+        private bool usuarioEscribiendo = false;
+        private void txtBuscarDNI_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtCantProducto.Text != "")
-            {
-                lblTotal.Text = (Convert.ToInt32(txtCantProducto.Text) * PrecioProductoSelec).ToString();
-            }
-        }
-
-        private void txtNroHabitacion_TextChanged(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void txtBuscarDNI_TextChanged(object sender, EventArgs e)
-        {
-            string dni = txtBuscarDNI.Text.Trim().ToLower();
-            checkinBLL.BuscarClientePorDNI(dni, dgvReservas);
-        }
-
-        private void txtNroHabitacion_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-
-        }
-
-        private void txtNroHabitacion_KeyDown(object sender, KeyEventArgs e)
-        {
-            string nroHabitacion = txtNroHabitacion.Text.Trim().ToLower();
-            checkinBLL.BuscarClientePorNumHabitacion(nroHabitacion, dgvReservas);
-
+            usuarioEscribiendo = e.KeyChar != '\b';
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using DocumentFormat.OpenXml.Wordprocessing;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -81,8 +82,23 @@ namespace Modelo
             try
             {
                 ProductoBE productoAEliminar = con.Producto.Find(id);
-                con.Producto.Remove(productoAEliminar);
-                con.SaveChanges();
+                
+                DetallePedidoBE detallePedido = con.DetallePedido.FirstOrDefault(dp => dp.Producto.Id == id);
+                if(detallePedido != null)
+                {
+                    MessageBox.Show("No se puede eliminar el producto porque está asociado al detalle de un pedido");
+                }
+                else
+                {
+                    if (MessageBox.Show("¿Está seguro que desea eliminar el producto?", "Eliminar Producto", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        con.Producto.Remove(productoAEliminar);
+                        con.SaveChanges();
+                        MessageBox.Show("Producto eliminado correctamente", "Eliminar Producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    
+                }
+                
             }
             catch (Exception ex)
             {

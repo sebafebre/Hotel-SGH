@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Creado por Sebastian Febre
+// https://github.com/sebafebre
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -9,6 +12,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Entidades;
 using Entidades.Seguridad;
+using Entidades.Auditoria;
 
 namespace Modelo
 {
@@ -16,21 +20,7 @@ namespace Modelo
     {
 
         #region Singleton 
-        /*
-        //ContextoBD = Singleton
-        static ContextoBD instance;
-        // Constructor is 'protected'
 
-        public static ContextoBD Instance()
-        {
-            // Uses lazy initialization.
-            // Note: this is not thread safe.
-            if (instance == null || instance.Database.Connection.State == ConnectionState.Closed )
-            {
-                instance = new ContextoBD();
-            }
-            return instance;
-        }*/
         /*
         public static ContextoBD instance;
         private static readonly object lockObject = new object();
@@ -54,11 +44,9 @@ namespace Modelo
 
         #endregion
 
-        public ContextoBD() : base("pruebaComponente2")
+        public ContextoBD() : base("HotelSGH")
         {
-            /*
-            if (!Database.Exists("BD"))
-                Database.SetInitializer(new DropCreateDatabaseAlways<DataContext>());*/
+           
         }
 
         #region Entidades Seguridad
@@ -68,6 +56,13 @@ namespace Modelo
         public DbSet<UsuarioBE> Usuario { get; set; }
         public DbSet<UsuarioGrupoComponenteBE> UsuarioGrupoComponente { get; set; }
         public DbSet<GrupoComponenteBE> GrupoComponente { get; set; }
+        #endregion
+
+        #region Auditoria
+
+        public DbSet<DetallePedidoHistoricoBE> DetallePedidoHistorico { get; set; }
+        public DbSet<PedidoHistoricoBE> PedidoHistorico { get; set; }
+
         #endregion
 
         #region Entidades
@@ -96,3 +91,24 @@ namespace Modelo
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Creado por Sebastian Febre
+// https://github.com/sebafebre

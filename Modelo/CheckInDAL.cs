@@ -37,7 +37,7 @@ namespace Modelo
             foreach (DataGridViewRow row in dgvClientes.Rows)
             {
                 // Verificamos si el valor en la columna "DNI" contiene el texto ingresado en el TextBox
-                if (row.Cells["Nro de Habitacion"].Value != null && row.Cells["Nro de Habitacion"].Value.ToString().ToLower().Contains(NumHabitacion))
+           if (row.Cells["Nro de Habitacion"].Value != null && row.Cells["Nro de Habitacion"].Value.ToString().ToLower().Contains(NumHabitacion))
                 {
                     row.Visible = true; // Si hay coincidencia, mostramos la fila
                 }
@@ -260,28 +260,30 @@ namespace Modelo
                 {
                     MessageBox.Show("No se encontró la reserva");
                 }
-                if (reserva.Estado == "Activa")
+                else if (reserva.Estado == "Activa")
                 {
                     MessageBox.Show("La reserva ya está activa ");
                 }
-                if (reserva.Estado == "Finalizada")
+                else if (reserva.Estado == "Finalizada")
                 {
-                    MessageBox.Show("La reserva ya a  finalizado");
+                    MessageBox.Show("La reserva ya a finalizado");
                 }
-                if(reserva.Habitacion.Estado == "Ocupado")
+                else if (reserva.Habitacion.Estado == "Ocupado")
                 {
                     MessageBox.Show("La habitación está ocupada");
                 }
-                if (reserva.Habitacion.Estado == "Limpieza")
+                else if (reserva.Habitacion.Estado == "Limpieza")
                 {
                     MessageBox.Show("La habitación está siendo Limpiada, \n informe que habra una demora para entregar la habitacion y \n avisele al personal de limpieza que le den prioridad a la habitacion numero:", reserva.Habitacion.NroHabitacion.ToString() );
                 }
-                reserva.Estado = "Activa";
-                reserva.Habitacion.Estado = "Ocupado";
-                con.SaveChanges();
-                MessageBox.Show("Se realizo el Check-In con exito y la reserva fue Activada");
-                //return "Reserva Activa";
-
+                else
+                {
+                    reserva.Estado = "Activa";
+                    reserva.Habitacion.Estado = "Ocupado";
+                    con.SaveChanges();
+                    MessageBox.Show("Se realizo el Check-In con exito y la reserva fue Activada");
+                    //return "Reserva Activa";
+                }
             }
             catch (Exception ex)
             {

@@ -21,6 +21,7 @@ namespace Vista.Paneles
         {
             InitializeComponent();
             ValidacionesBLL.CambiarPanel(typeof(Pedidos.frmAgregarPedidos), this);
+            lblFormulario.Text = "Agregar Pedido";
 
         }
 
@@ -28,11 +29,14 @@ namespace Vista.Paneles
         private void btnModificarPedidos_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.CambiarPanel(typeof(Pedidos.frmModificarPedidos), this);
+            lblFormulario.Text = "Modificar Pedido";
         }
 
         private void btnAgregarProductoStock_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.CambiarPanel(typeof(Pedidos.frmProductos), this);
+            lblFormulario.Text = "Productos";
+
         }
 
        
@@ -40,11 +44,13 @@ namespace Vista.Paneles
         private void btnFrmPedidos_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.AbrirFormulario(typeof(frmPedidos), this);
+            //lblFormulario.Text = "Pedidos";
         }
 
         private void btnAgregarPedido_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.CambiarPanel(typeof(Pedidos.frmAgregarPedidos), this);
+            lblFormulario.Text = "Agregar Pedido";
         }
     }
 }

@@ -63,11 +63,11 @@
     <Compile Include="Administrador\frmAdministrador.Designer.cs">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\frmBackUps.cs">
+    <Compile Include="Administrador\frmAuditoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador\frmBackUps.Designer.cs">
-      <DependentUpon>frmBackUps.cs</DependentUpon>
+    <Compile Include="Administrador\frmAuditoria.Designer.cs">
+      <DependentUpon>frmAuditoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrador\frmEmpleado.cs">
       <SubType>Form</SubType>
@@ -111,6 +111,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paneles\frmPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\frmPago.Designer.cs">
+      <DependentUpon>frmPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Paneles\Reservas\frmAgregarReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,11 +135,11 @@
     <Compile Include="Paneles\frmCheckOut.Designer.cs">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paneles\frmClienteReserva.cs">
+    <Compile Include="Paneles\Reservas\frmCrearCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Paneles\frmClienteReserva.Designer.cs">
-      <DependentUpon>frmClienteReserva.cs</DependentUpon>
+    <Compile Include="Paneles\Reservas\frmCrearCliente.Designer.cs">
+      <DependentUpon>frmCrearCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Paneles\frmClientes.cs">
       <SubType>Form</SubType>
@@ -171,12 +177,6 @@
     <Compile Include="Paneles\Reservas\frmBuscarHabitacion.Designer.cs">
       <DependentUpon>frmBuscarHabitacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paneles\Reservas\frmReservas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Paneles\Reservas\frmReservas.Designer.cs">
-      <DependentUpon>frmReservas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Paneles\Pedidos\frmAgregarPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,8 +200,8 @@
     <EmbeddedResource Include="Administrador\frmAdministrador.resx">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmBackUps.resx">
-      <DependentUpon>frmBackUps.cs</DependentUpon>
+    <EmbeddedResource Include="Administrador\frmAuditoria.resx">
+      <DependentUpon>frmAuditoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmEmpleado.resx">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
@@ -224,6 +224,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\frmPago.resx">
+      <DependentUpon>frmPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Paneles\Reservas\frmAgregarReserva.resx">
       <DependentUpon>frmAgregarReserva.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,8 +236,8 @@
     <EmbeddedResource Include="Paneles\frmCheckOut.resx">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Paneles\frmClienteReserva.resx">
-      <DependentUpon>frmClienteReserva.cs</DependentUpon>
+    <EmbeddedResource Include="Paneles\Reservas\frmCrearCliente.resx">
+      <DependentUpon>frmCrearCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
@@ -253,9 +256,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\Reservas\frmBuscarHabitacion.resx">
       <DependentUpon>frmBuscarHabitacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Paneles\Reservas\frmReservas.resx">
-      <DependentUpon>frmReservas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\Pedidos\frmAgregarPedidos.resx">
       <DependentUpon>frmAgregarPedidos.cs</DependentUpon>

@@ -1,0 +1,15 @@
+DETALLE DE LA FACTURA
+Fecha de la emision de la Factura:  11/03/2024 18:36:00   
+Cliente: Sebastian    Febre
+Reserva ID: 2
+Fecha de la reserva: 08/03/2024 0:00:00 hasta 03/04/2024 0:00:00
+ 
+ 
+ 
+ 
+Productos:
+Producto: CocaCola  cantidad: 2  precio U: 100   total:  242,00  
+Producto: Agua  cantidad: 2  precio U: 75   total:  181,50  
+Subtotal: 350,00
+Impuestos: 73,50
+Total de la factura: 502,15

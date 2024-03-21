@@ -55,6 +55,42 @@ C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\bin\Debug\EntityFramework.xml
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\obj\Debug\Entidades.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\obj\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Entidades\obj\Debug\Entidades.csproj.Up2Date
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Entidades\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Entidades\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Entidades\obj\Debug\Entidades.csproj.Up2Date
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Entidades\obj\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Entidades\obj\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Entidades\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Entidades\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Entidades\obj\Debug\Entidades.csproj.Up2Date
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Entidades\obj\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Entidades\obj\Debug\Entidades.pdb
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Entidades\bin\Debug\Entidades.dll.config
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Entidades\bin\Debug\Entidades.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Entidades\bin\Debug\Entidades.pdb
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Entidades\bin\Debug\EntityFramework.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Entidades\bin\Debug\EntityFramework.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Entidades\obj\Debug\Entidades.csproj.Up2Date
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Entidades\obj\Debug\Entidades.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Entidades\obj\Debug\Entidades.pdb

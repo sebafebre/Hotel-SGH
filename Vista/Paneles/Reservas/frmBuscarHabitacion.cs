@@ -17,49 +17,116 @@ namespace Vista.Paneles.Reservas
     {
         HabitacionBLL habitacionBLL = new HabitacionBLL();
         ReservaBLL reservaBLL = new ReservaBLL();
+
+        public HabitacionBE HabitacionSeleccionada { get; private set; }
+        public DateTime FechaInicio { get; private set; }
+        public DateTime FechaFin { get; private set; }
+
+        #region Variables
+        int PrecioDiario = 0;
+        int nroHabitacion = 0;
+        string tipoHabitacion = "";
+        string camas = "";
+
+        #endregion
+
         public frmBuscarHabitacion()
         {
             InitializeComponent();
-            habitacionBLL.BuscarHabitacionDGV(dgvHabitaciones);
+            habitacionBLL.BuscarHabitacionesDGV(dgvHabitaciones);
 
-            //reservaBLL.DateTimePickerCambia2(dtpFechaLlegada, dtpFechaIda, cbTipoHabitacion.Text, cbNroCamas.Text, dgvHabitaciones, lblError);
         }
 
-        // Propiedad para almacenar el cliente seleccionado
-        public HabitacionBE HabitacionSeleccionado { get; private set; }
-
-        // Método para procesar la selección del usuario y cerrar el formulario
-        private void btnAceptar_Click(object sender, EventArgs e)
+        private void dgvHabitaciones_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Obtener el cliente seleccionado del DataGridView
-            HabitacionSeleccionado = ObtenerHabitacionSeleccionado();
-
-            // Cerrar el formulario
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
-
-        // Método para obtener el cliente seleccionado del DataGridView
-        private HabitacionBE ObtenerHabitacionSeleccionado()
-        {
-            HabitacionBE habitacionSeleccionado = null;
-
-            // Verificar si hay al menos una fila seleccionada en el DataGridView
-            if (dgvHabitaciones.SelectedRows.Count > 0)
+            try
             {
-                // Obtener la fila seleccionada
-                DataGridViewRow filaSeleccionada = dgvHabitaciones.SelectedRows[0];
+                if (dgvHabitaciones.CurrentRow != null)
+                {
+                    
+                    nroHabitacion = Convert.ToInt32(dgvHabitaciones.CurrentRow.Cells[0].Value);
+                    txtNroHabitacion.Text = dgvHabitaciones.CurrentRow.Cells[0].Value.ToString();
 
-                // Obtener los valores de las celdas de la fila seleccionada
-                int idCliente = Convert.ToInt32(filaSeleccionada.Cells["Id"].Value); // Suponiendo que la columna que contiene el Id se llama "Id"
-                string nombreCliente = Convert.ToString(filaSeleccionada.Cells["Nombre"].Value); // Suponiendo que la columna que contiene el nombre se llama "Nombre"
-                                                                                                 // Aquí debes obtener los valores de las otras columnas según corresponda
+                    cbTipoHabitacion.Text = dgvHabitaciones.CurrentRow.Cells[1].Value.ToString();
+                    tipoHabitacion = dgvHabitaciones.CurrentRow.Cells[1].Value.ToString();
 
-                // Crear un nuevo objeto Cliente con los valores obtenidos
-                //habitacionSeleccionado = new HabitacionBE(idCliente, nombreCliente /*, otros valores */);
+                    cbNroCamas.Text = dgvHabitaciones.CurrentRow.Cells[2].Value.ToString();
+                    camas = dgvHabitaciones.CurrentRow.Cells[2].Value.ToString();
+
+                    PrecioDiario = Convert.ToInt32(dgvHabitaciones.CurrentRow.Cells[3].Value);
+                    CalcularPrecios();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
+        public void CalcularPrecios()
+        {
+            double Total = 0;
+
+            int dias = (dtpFechaIda.Value.Date - dtpFechaLlegada.Value.Date).Days;
+
+            double PrecioDiarioHab = PrecioDiario;
+
+            double SubTotal = PrecioDiarioHab * dias;
+
+            double Impuestos = SubTotal * 0.21; //IVA 21%
+
+            Total = SubTotal + Impuestos;
+
+            if (Total >= 0)
+            {
+                lblTotal.Text = Total.ToString();
             }
 
-            return habitacionSeleccionado;
+        }
+
+        private void btnTodasHabs_Click(object sender, EventArgs e)
+        {
+            cbNroCamas.SelectedIndex = -1;
+            cbTipoHabitacion.SelectedIndex = -1;
+            reservaBLL.filtrarHabitacionesDisponiblesDTP(dtpFechaLlegada, dtpFechaIda, cbTipoHabitacion.Text, cbNroCamas.Text, dgvHabitaciones, lblError);
+        }
+
+        private void dtpFechaLlegada_ValueChanged(object sender, EventArgs e)
+        {
+            reservaBLL.filtrarHabitacionesDisponiblesDTP(dtpFechaLlegada, dtpFechaIda, cbTipoHabitacion.Text, cbNroCamas.Text, dgvHabitaciones, lblError);
+            CalcularPrecios();
+        }
+
+        private void dtpFechaIda_ValueChanged(object sender, EventArgs e)
+        {
+            reservaBLL.filtrarHabitacionesDisponiblesDTP(dtpFechaLlegada, dtpFechaIda, cbTipoHabitacion.Text, cbNroCamas.Text, dgvHabitaciones, lblError);
+            CalcularPrecios();
+        }
+
+        private void cbTipoHabitacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            reservaBLL.filtrarHabitacionesDisponiblesDTP(dtpFechaLlegada, dtpFechaIda, cbTipoHabitacion.Text, cbNroCamas.Text, dgvHabitaciones, lblError);
+        }
+
+        private void cbNroCamas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            reservaBLL.filtrarHabitacionesDisponiblesDTP(dtpFechaLlegada, dtpFechaIda, cbTipoHabitacion.Text, cbNroCamas.Text, dgvHabitaciones, lblError);
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            FechaFin = dtpFechaIda.Value;
+            FechaInicio = dtpFechaLlegada.Value;
+
+            HabitacionSeleccionada = new HabitacionBE();
+            HabitacionSeleccionada.NroHabitacion = nroHabitacion;
+            HabitacionSeleccionada.PrecioDiario = PrecioDiario;
+            HabitacionSeleccionada.TipoCamas = camas;
+            HabitacionSeleccionada.TipoHabitacion = tipoHabitacion;
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

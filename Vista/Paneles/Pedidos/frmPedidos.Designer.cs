@@ -31,15 +31,19 @@
             this.btnModificarPedidos = new System.Windows.Forms.Button();
             this.btnAgregarProductoStock = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblFormulario = new System.Windows.Forms.Label();
             this.btnAgregarPedido = new System.Windows.Forms.Button();
             this.panelPedidos = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnModificarPedidos
             // 
-            this.btnModificarPedidos.Location = new System.Drawing.Point(1150, 9);
+            this.btnModificarPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificarPedidos.FlatAppearance.BorderSize = 0;
+            this.btnModificarPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(92)))), ((int)(((byte)(75)))));
+            this.btnModificarPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarPedidos.Location = new System.Drawing.Point(1169, 21);
             this.btnModificarPedidos.Name = "btnModificarPedidos";
             this.btnModificarPedidos.Size = new System.Drawing.Size(161, 26);
             this.btnModificarPedidos.TabIndex = 118;
@@ -49,7 +53,11 @@
             // 
             // btnAgregarProductoStock
             // 
-            this.btnAgregarProductoStock.Location = new System.Drawing.Point(1349, 9);
+            this.btnAgregarProductoStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarProductoStock.FlatAppearance.BorderSize = 0;
+            this.btnAgregarProductoStock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(92)))), ((int)(((byte)(75)))));
+            this.btnAgregarProductoStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarProductoStock.Location = new System.Drawing.Point(1342, 21);
             this.btnAgregarProductoStock.Name = "btnAgregarProductoStock";
             this.btnAgregarProductoStock.Size = new System.Drawing.Size(161, 26);
             this.btnAgregarProductoStock.TabIndex = 119;
@@ -60,19 +68,34 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(154)))), ((int)(((byte)(153)))));
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblFormulario);
             this.panel1.Controls.Add(this.btnAgregarPedido);
             this.panel1.Controls.Add(this.btnModificarPedidos);
             this.panel1.Controls.Add(this.btnAgregarProductoStock);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1538, 41);
+            this.panel1.Size = new System.Drawing.Size(1538, 58);
             this.panel1.TabIndex = 133;
+            // 
+            // lblFormulario
+            // 
+            this.lblFormulario.AutoSize = true;
+            this.lblFormulario.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormulario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblFormulario.Location = new System.Drawing.Point(24, 9);
+            this.lblFormulario.Name = "lblFormulario";
+            this.lblFormulario.Size = new System.Drawing.Size(133, 38);
+            this.lblFormulario.TabIndex = 122;
+            this.lblFormulario.Text = "SubMenu";
             // 
             // btnAgregarPedido
             // 
-            this.btnAgregarPedido.Location = new System.Drawing.Point(963, 9);
+            this.btnAgregarPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarPedido.FlatAppearance.BorderSize = 0;
+            this.btnAgregarPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(92)))), ((int)(((byte)(75)))));
+            this.btnAgregarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarPedido.Location = new System.Drawing.Point(996, 21);
             this.btnAgregarPedido.Name = "btnAgregarPedido";
             this.btnAgregarPedido.Size = new System.Drawing.Size(161, 26);
             this.btnAgregarPedido.TabIndex = 120;
@@ -84,19 +107,10 @@
             // 
             this.panelPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(154)))), ((int)(((byte)(141)))));
             this.panelPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPedidos.Location = new System.Drawing.Point(0, 41);
+            this.panelPedidos.Location = new System.Drawing.Point(0, 58);
             this.panelPedidos.Name = "panelPedidos";
-            this.panelPedidos.Size = new System.Drawing.Size(1538, 465);
+            this.panelPedidos.Size = new System.Drawing.Size(1538, 448);
             this.panelPedidos.TabIndex = 134;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(73, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 121;
-            this.label1.Text = "label1";
             // 
             // frmPedidos
             // 
@@ -120,6 +134,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelPedidos;
         private System.Windows.Forms.Button btnAgregarPedido;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblFormulario;
     }
 }

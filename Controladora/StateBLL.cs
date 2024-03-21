@@ -13,62 +13,15 @@ namespace Controladora
     {
         contextoState stateDAL = new contextoState();
 
-        public void FinalizarPedido(List<DetallePedidoBE> listaDetallesPedidos, int nroReserva, string Estado, string tipoFactura, string usuarioActual)
+        public void FinalizarPedido(List<DetallePedidoBE> listaDetallesPedidos, int nroReserva, string Estado, string tipoFactura, string usuarioActual, int nroPedido)
         {
-            stateDAL.FinalizarPedido(listaDetallesPedidos, nroReserva, Estado, tipoFactura, usuarioActual);
+            stateDAL.FinalizarPedido(listaDetallesPedidos, nroReserva, Estado, tipoFactura, usuarioActual, nroPedido);
 
 
         }
 
 
-        #region Composite
-        /*
-
-        private Composite grupo;
-        private Composite permiso;
-
-
-        
-        public StateBLL()
-        {
-            grupo = new Grupo();
-            permiso = new Permiso();
-        }
-
-        public void CrearGrupo(ComponenteBE componente)
-        {
-            grupo.Crear(componente);
-        }
-
-        public void EliminarGrupo(ComponenteBE componente)
-        {
-            grupo.Eliminar(componente);
-        }
-
-        public void ModificarGrupo(ComponenteBE componente)
-        {
-            grupo.Modificar(componente);
-        }
-
-        public void CrearPermiso(ComponenteBE componente)
-        {
-            permiso.Crear(componente);
-        }
-
-        public void EliminarPermiso(ComponenteBE componente)
-        {
-            permiso.Eliminar(componente);
-        }
-
-        public void ModificarPermiso(ComponenteBE componente)
-        {
-            permiso.Modificar(componente);
-        }
-
-
-        */
-
-        #endregion
+       
 
     }
 }

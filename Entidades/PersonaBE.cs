@@ -17,8 +17,8 @@ namespace Entidades
         private int id;
         private string nombre;
         private string apellido;
-        private string dni;
-        private string telefono;
+        private int dni;
+        private double telefono;
         private string mail;
         private string direccion;
         private DateTime fechaNacimiento;
@@ -34,10 +34,10 @@ namespace Entidades
         public string Nombre { get; set; }
         [StringLength(20)]
         public string Apellido { get; set; }
-        [StringLength(8)]
-        public string DNI { get; set; }
-        [StringLength(20)]
-        public string Telefono { get; set; }
+        
+        public int DNI { get; set; }
+        
+        public double Telefono { get; set; }
         [StringLength(40)]
         public string Mail { get; set; }
         [StringLength(60)]

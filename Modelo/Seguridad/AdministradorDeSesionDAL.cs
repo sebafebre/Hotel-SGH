@@ -22,7 +22,7 @@ namespace Modelo.Seguridad
 
         public void Login(UsuarioBE usuario)
         {
-            if(usuarioDAL .VerificarCredencialesEncriptadas(usuario.Nombre, usuario.Clave) == true)
+            if(usuarioDAL .VerificarContraseña(usuario.Nombre, usuario.Clave) == true)
             {
                 UsuarioBE usuarioNuevo = con.Usuario.Where(u => u.Nombre == usuario.Nombre).FirstOrDefault();
                 AdministradorDeSesionBE.Login(usuarioNuevo);

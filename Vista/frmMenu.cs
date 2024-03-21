@@ -17,12 +17,11 @@ namespace Vista
     public partial class frmMenu : Form
     {
         //private UsuarioBE usuario;
-        UsuarioBLL controladorPermisos = new UsuarioBLL();
+        UsuarioBLL usaurioBLL = new UsuarioBLL();
         GrupoBLL grupoBLL = new GrupoBLL();
 
         string usuarioActual = UsuarioBE.usaurioLogueado;
 
-        //UsuarioBE.usaurioLogueado = nombre;
 
 
 
@@ -30,29 +29,26 @@ namespace Vista
         public frmMenu(/*UsuarioBE usuario*/)
         {
             InitializeComponent();
-            //this.usuario = usuario;
-            //controladorPermisos = new UsuarioBLL();
+            
 
             VerificarP();
             ValidacionesBLL.AbrirFormulario(typeof(Vista.Paneles.frmOcupacion), this);
+            UsuarioBE usuario = usaurioBLL.obtenerUsuarioLogueado(usuarioActual);
 
-
-            lblUsuario.Text = usuarioActual;
+            lblUsuario.Text = usuario.Empleado.Persona.Nombre +" "+ usuario.Empleado.Persona.Apellido;
+            lblFormulario.Text = "Ocupación";
 
 
         }
 
         private void VerificarP()
         {
-            //List<PermisoBE> permisosUsuario = controladorPermisos.ObtenerPermisosUsuario(usuarioActual);
-
-            //List<ComponenteBE> listaPermisos = controladorPermisos.ObtenerPermisosPorUsuario(usuarioActual);
+            
 
             List<PermisoBE> permisosUsuario = grupoBLL.ObtenerPermisosDelUsuario(usuarioActual);
 
             List<string> permisos = new List<string>();
 
-            //foreach (var item in permisosUsuario)
             foreach (var item in permisosUsuario)
             {
                 permisos.Add(item.Componente.Nombre);
@@ -138,41 +134,49 @@ namespace Vista
         private void btnOcupacion_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.AbrirFormulario(typeof(Vista.Paneles.frmOcupacion), this);
+            lblFormulario.Text = "Ocupación";
         }
 
         private void btnHabitaciones_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.AbrirFormulario(typeof(Vista.Paneles.frmHabitaciones), this);
+            lblFormulario.Text = "Habitaciones";
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.AbrirFormulario(typeof(Vista.Paneles.frmClientes), this);
+            lblFormulario.Text = "Clientes";
         }
 
         private void btnReservas_Click(object sender, EventArgs e)
         {
-            ValidacionesBLL.AbrirFormulario(typeof(Vista.Paneles.frmReservas), this);
+            ValidacionesBLL.AbrirFormulario(typeof(Vista.Paneles.frmAgregarReserva ), this);
+            lblFormulario.Text = "Reservas";
         }
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.AbrirFormulario(typeof(Vista.Paneles.frmCheckIn), this);
+            lblFormulario.Text = "Check In";
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.AbrirFormulario(typeof(Vista.Paneles.frmCheckOut), this);
+            lblFormulario.Text = "Check Out";
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.AbrirFormulario(typeof(Vista.Paneles.frmPedidos), this);
+            lblFormulario.Text = "Pedidos";
         }
 
         private void btnAdministrador_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.AbrirFormulario(typeof(Vista.Administrador.frmAdministrador), this);
+            lblFormulario.Text = "Administrador";
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -187,8 +191,9 @@ namespace Vista
 
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
-
-
+        }
     }
 }

@@ -1,0 +1,9 @@
+DETALLE DE LA FACTURA
+Cliente: Sebastian Febre
+Reserva ID: 2
+Fecha de la reserva: 08/03/2024 0:00:00 hasta 03/04/2024 0:00:00
+Total de la estadia: 17303,00
+Productos:
+Subtotal: 14300,00
+Impuestos: 3003,00
+Total de la factura: 17303,00

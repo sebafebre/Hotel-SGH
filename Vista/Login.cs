@@ -18,8 +18,9 @@ namespace Vista
     {
         UsuarioBLL _controladoraUsuario = new UsuarioBLL();
 
+        private AdministradorDeSesionBE _sesionActual;
 
-        //AdministradorDeSesionBE admSesion = AdministradorDeSesionBE.obtenerInstancia;
+        AdministradorDeSesionBE admSesion = AdministradorDeSesionBE.ObtenerInstancia;
         public Login()
         {
             InitializeComponent();
@@ -27,78 +28,54 @@ namespace Vista
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //PASAR A LA CONTROLADORA
-            /*
-            lblErrorUsuairo.Text = "";
-            lblErrorClave.Text = "";
-            if (string.IsNullOrEmpty(txtNombreUsuario.Text))
-            {
-                lblErrorUsuairo.Text = "Debe ingresar el nombre de usuario";
-                return;
-            }
 
-            if (string.IsNullOrEmpty(txtClave.Text))
-            {
-                lblErrorClave.Text = "Debe ingresar la clave";
-                return;
-            }*/
-
-
-
+            
+            
+            
 
             string nombre = txtNombreUsuario.Text;
             string clave = txtClave.Text;
             UsuarioBE.usaurioLogueado = nombre;
+            
 
-            /*
-            frmMenu ForM = new frmMenu();
-            ForM.Show();
-            this.Hide();
-            */
-
-
-
-
-
-
-
-            AdministradorDeSesionBLL adm = new AdministradorDeSesionBLL();
-
-            // Realizar la autenticación del usuario
-
-            //UsuarioBE usuario = _controladoraUsuario.ValidarCredenciales(nombre, clave);
-            //if (usuario != null)
-            if (_controladoraUsuario.VerificarCredencialesEncriptadas(nombre, clave))
+            
+            if (_sesionActual == null || _sesionActual.Usuario == null)
             {
-                UsuarioBE usuario = new UsuarioBE();
-                usuario.Nombre = nombre;
-                usuario.Clave = clave;
 
-                adm.Login(usuario);
-                //AdministradorDeSesionBE pep = AdministradorDeSesionBE.obtenerInstancia;
-                // Abrir el formulario de permisos y pasar el usuario autenticado
-                //MostrarPermisosForm(usuarioAutenticado);
-                //frmMenu ForM = new frmMenu(usuario);
+                if (_controladoraUsuario.VerificarContraseña(nombre, clave))
+                {
+                    
 
-                frmMenu ForM = new frmMenu();
-                ForM.Show();
+                    UsuarioBE usuario = new UsuarioBE();
+                    usuario.Nombre = nombre;
+                    usuario.Clave = clave;
 
-                this.Hide(); // Ocultar el formulario de inicio de sesión
+
+
+                    AdministradorDeSesionBE.Login(usuario);
+
+                    frmMenu ForM = new frmMenu();
+                    ForM.Show();
+
+                    this.Hide(); // Ocultar el formulario de inicio de sesión
+                }
+                else
+                {
+                    MessageBox.Show("Credenciales incorrectas. Inténtelo de nuevo.");
+                }
             }
             else
             {
-                MessageBox.Show("Credenciales incorrectas. Inténtelo de nuevo.");
+                // La sesión ya está iniciada
+                MessageBox.Show("La sesión está iniciada para el usuario: " + _sesionActual.Usuario.Nombre);
             }
+            
 
         }
+
+       
+
 
         
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            UsuarioBE usuario = new UsuarioBE();
-            //usuario.Nombre = usuarioActual;
-            AdministradorDeSesionBE.LogOut(usuario);
-        }
     }
 }

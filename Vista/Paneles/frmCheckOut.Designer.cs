@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnResTodas = new System.Windows.Forms.Button();
             this.btnResFinalizadas = new System.Windows.Forms.Button();
             this.btnResActivas = new System.Windows.Forms.Button();
@@ -48,12 +54,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNroReserva = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvReservas = new System.Windows.Forms.DataGridView();
             this.txtIdReserva = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNroHabitacion = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.lblTotalConExtras = new System.Windows.Forms.Label();
+            this.dgvReservas = new System.Windows.Forms.DataGridView();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
@@ -61,7 +67,8 @@
             // 
             // btnResTodas
             // 
-            this.btnResTodas.Location = new System.Drawing.Point(303, 412);
+            this.btnResTodas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnResTodas.Location = new System.Drawing.Point(303, 482);
             this.btnResTodas.Name = "btnResTodas";
             this.btnResTodas.Size = new System.Drawing.Size(91, 25);
             this.btnResTodas.TabIndex = 143;
@@ -71,7 +78,8 @@
             // 
             // btnResFinalizadas
             // 
-            this.btnResFinalizadas.Location = new System.Drawing.Point(206, 412);
+            this.btnResFinalizadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnResFinalizadas.Location = new System.Drawing.Point(206, 482);
             this.btnResFinalizadas.Name = "btnResFinalizadas";
             this.btnResFinalizadas.Size = new System.Drawing.Size(91, 25);
             this.btnResFinalizadas.TabIndex = 142;
@@ -81,7 +89,8 @@
             // 
             // btnResActivas
             // 
-            this.btnResActivas.Location = new System.Drawing.Point(109, 412);
+            this.btnResActivas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnResActivas.Location = new System.Drawing.Point(109, 482);
             this.btnResActivas.Name = "btnResActivas";
             this.btnResActivas.Size = new System.Drawing.Size(91, 25);
             this.btnResActivas.TabIndex = 141;
@@ -91,7 +100,8 @@
             // 
             // btnResPendientes
             // 
-            this.btnResPendientes.Location = new System.Drawing.Point(12, 412);
+            this.btnResPendientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnResPendientes.Location = new System.Drawing.Point(12, 482);
             this.btnResPendientes.Name = "btnResPendientes";
             this.btnResPendientes.Size = new System.Drawing.Size(91, 25);
             this.btnResPendientes.TabIndex = 140;
@@ -101,8 +111,9 @@
             // 
             // lblTotal
             // 
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(1342, 336);
+            this.lblTotal.Location = new System.Drawing.Point(1323, 402);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(16, 16);
             this.lblTotal.TabIndex = 139;
@@ -110,8 +121,9 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1246, 336);
+            this.label5.Location = new System.Drawing.Point(1227, 402);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 16);
             this.label5.TabIndex = 138;
@@ -119,8 +131,9 @@
             // 
             // lblFechaIda
             // 
+            this.lblFechaIda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFechaIda.AutoSize = true;
-            this.lblFechaIda.Location = new System.Drawing.Point(1473, 297);
+            this.lblFechaIda.Location = new System.Drawing.Point(1454, 363);
             this.lblFechaIda.Name = "lblFechaIda";
             this.lblFechaIda.Size = new System.Drawing.Size(16, 16);
             this.lblFechaIda.TabIndex = 131;
@@ -128,8 +141,9 @@
             // 
             // lblFechaLlegada
             // 
+            this.lblFechaLlegada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFechaLlegada.AutoSize = true;
-            this.lblFechaLlegada.Location = new System.Drawing.Point(1342, 297);
+            this.lblFechaLlegada.Location = new System.Drawing.Point(1323, 363);
             this.lblFechaLlegada.Name = "lblFechaLlegada";
             this.lblFechaLlegada.Size = new System.Drawing.Size(16, 16);
             this.lblFechaLlegada.TabIndex = 130;
@@ -137,8 +151,9 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1402, 297);
+            this.label7.Location = new System.Drawing.Point(1383, 363);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 16);
             this.label7.TabIndex = 129;
@@ -164,8 +179,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1246, 297);
+            this.label2.Location = new System.Drawing.Point(1227, 363);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 126;
@@ -173,9 +189,10 @@
             // 
             // btnCheckOut
             // 
-            this.btnCheckOut.Location = new System.Drawing.Point(1035, 357);
+            this.btnCheckOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCheckOut.Location = new System.Drawing.Point(1016, 423);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(182, 48);
+            this.btnCheckOut.Size = new System.Drawing.Size(160, 48);
             this.btnCheckOut.TabIndex = 125;
             this.btnCheckOut.Text = "Check-Out";
             this.btnCheckOut.UseVisualStyleBackColor = true;
@@ -205,6 +222,7 @@
             this.txtBuscarDNI.Size = new System.Drawing.Size(160, 22);
             this.txtBuscarDNI.TabIndex = 122;
             this.txtBuscarDNI.TextChanged += new System.EventHandler(this.txtBuscarDNI_TextChanged);
+            this.txtBuscarDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarDNI_KeyPress);
             // 
             // label6
             // 
@@ -242,20 +260,6 @@
             this.label1.TabIndex = 118;
             this.label1.Text = "ID:";
             // 
-            // dgvReservas
-            // 
-            this.dgvReservas.AllowUserToAddRows = false;
-            this.dgvReservas.AllowUserToDeleteRows = false;
-            this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservas.Location = new System.Drawing.Point(12, 134);
-            this.dgvReservas.Name = "dgvReservas";
-            this.dgvReservas.ReadOnly = true;
-            this.dgvReservas.RowHeadersWidth = 51;
-            this.dgvReservas.RowTemplate.Height = 24;
-            this.dgvReservas.Size = new System.Drawing.Size(931, 272);
-            this.dgvReservas.TabIndex = 117;
-            this.dgvReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservas_CellClick);
-            // 
             // txtIdReserva
             // 
             this.txtIdReserva.Location = new System.Drawing.Point(119, 37);
@@ -267,7 +271,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(26, 102);
+            this.label9.Location = new System.Drawing.Point(12, 99);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 16);
             this.label9.TabIndex = 145;
@@ -280,11 +284,13 @@
             this.txtNroHabitacion.Size = new System.Drawing.Size(103, 22);
             this.txtNroHabitacion.TabIndex = 144;
             this.txtNroHabitacion.TextChanged += new System.EventHandler(this.txtNroHabitacion_TextChanged);
+            this.txtNroHabitacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroHabitacion_KeyPress);
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1246, 373);
+            this.label13.Location = new System.Drawing.Point(1227, 439);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(255, 16);
             this.label13.TabIndex = 146;
@@ -292,33 +298,118 @@
             // 
             // lblTotalConExtras
             // 
+            this.lblTotalConExtras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotalConExtras.AutoSize = true;
-            this.lblTotalConExtras.Location = new System.Drawing.Point(1518, 373);
+            this.lblTotalConExtras.Location = new System.Drawing.Point(1499, 439);
             this.lblTotalConExtras.Name = "lblTotalConExtras";
             this.lblTotalConExtras.Size = new System.Drawing.Size(16, 16);
             this.lblTotalConExtras.TabIndex = 147;
             this.lblTotalConExtras.Text = "...";
             // 
+            // dgvReservas
+            // 
+            this.dgvReservas.AllowUserToAddRows = false;
+            this.dgvReservas.AllowUserToDeleteRows = false;
+            this.dgvReservas.AllowUserToResizeColumns = false;
+            this.dgvReservas.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(230)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(135)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(230)))), ((int)(((byte)(205)))));
+            this.dgvReservas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvReservas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvReservas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvReservas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(154)))), ((int)(((byte)(153)))));
+            this.dgvReservas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvReservas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvReservas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(192)))), ((int)(((byte)(152)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(135)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(230)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReservas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(242)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(135)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(192)))), ((int)(((byte)(152)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvReservas.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvReservas.EnableHeadersVisualStyles = false;
+            this.dgvReservas.Location = new System.Drawing.Point(12, 124);
+            this.dgvReservas.Name = "dgvReservas";
+            this.dgvReservas.ReadOnly = true;
+            this.dgvReservas.RowHeadersVisible = false;
+            this.dgvReservas.RowHeadersWidth = 51;
+            this.dgvReservas.RowTemplate.Height = 24;
+            this.dgvReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvReservas.Size = new System.Drawing.Size(971, 347);
+            this.dgvReservas.TabIndex = 149;
+            this.dgvReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservas_CellClick_1);
+            // 
             // dgvPedidos
             // 
             this.dgvPedidos.AllowUserToAddRows = false;
             this.dgvPedidos.AllowUserToDeleteRows = false;
+            this.dgvPedidos.AllowUserToResizeColumns = false;
+            this.dgvPedidos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(230)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(135)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(230)))), ((int)(((byte)(205)))));
+            this.dgvPedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPedidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPedidos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(154)))), ((int)(((byte)(153)))));
+            this.dgvPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPedidos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvPedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(192)))), ((int)(((byte)(152)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(135)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(230)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedidos.Location = new System.Drawing.Point(980, 134);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(242)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(135)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(192)))), ((int)(((byte)(152)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPedidos.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvPedidos.EnableHeadersVisualStyles = false;
+            this.dgvPedidos.Location = new System.Drawing.Point(1008, 37);
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.ReadOnly = true;
+            this.dgvPedidos.RowHeadersVisible = false;
             this.dgvPedidos.RowHeadersWidth = 51;
             this.dgvPedidos.RowTemplate.Height = 24;
-            this.dgvPedidos.Size = new System.Drawing.Size(616, 146);
-            this.dgvPedidos.TabIndex = 148;
+            this.dgvPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPedidos.Size = new System.Drawing.Size(530, 295);
+            this.dgvPedidos.TabIndex = 150;
             // 
             // frmCheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(154)))), ((int)(((byte)(141)))));
-            this.ClientSize = new System.Drawing.Size(1686, 450);
+            this.ClientSize = new System.Drawing.Size(1567, 516);
             this.Controls.Add(this.dgvPedidos);
+            this.Controls.Add(this.dgvReservas);
             this.Controls.Add(this.lblTotalConExtras);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label9);
@@ -343,7 +434,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNroReserva);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvReservas);
             this.Controls.Add(this.txtIdReserva);
             this.Name = "frmCheckOut";
             this.Text = "frmCheckOut";
@@ -376,12 +466,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNroReserva;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvReservas;
         private System.Windows.Forms.TextBox txtIdReserva;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNroHabitacion;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblTotalConExtras;
+        private System.Windows.Forms.DataGridView dgvReservas;
         private System.Windows.Forms.DataGridView dgvPedidos;
     }
 }

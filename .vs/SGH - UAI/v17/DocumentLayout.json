@@ -1,0 +1,1726 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\reservadal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\reservadal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\habitacionesdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\habitacionesdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\clientedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\clientedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\contextobd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\contextobd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\checkindal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\checkindal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\backupsdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\backupsdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\auditoriadal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\auditoriadal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\empleadodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\empleadodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\reportesdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\reportesdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\contextostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\contextostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|d:\\todo\\facultad\\3a-segundo_cuatrimestre\\trabajo de diploma\\sgh - uai - final\\vista\\administrador\\frmadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\auditoria\\detallepedidohistoricobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\auditoria\\detallepedidohistoricobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\seguridadbll\\administradordesesionbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\seguridadbll\\administradordesesionbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\auditoriabll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\auditoriabll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\statebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\statebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\checkinbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\checkinbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\clientebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\clientebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\empleadobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\empleadobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\habitacionbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\habitacionbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\detallefacturabe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\detallefacturabe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\pedidodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\pedidodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\validacionesbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\validacionesbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\pedidos\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\pedidos\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\pedidos\\frmpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\pedidos\\frmpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\pedidos\\frmmodificarpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\pedidos\\frmmodificarpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\pedidos\\frmagregarpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\pedidos\\frmagregarpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\reservas\\frmagregarreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\reservas\\frmagregarreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\reservas\\frmbuscarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\reservas\\frmbuscarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\reservas\\frmbuscarhabitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\reservas\\frmbuscarhabitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\reservas\\frmcrearcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\reservas\\frmcrearcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\reservas\\frmcrearcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\reservas\\frmcrearcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\frmcheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\frmcheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\frmcheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\frmcheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\frmcheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\frmcheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\frmcheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\frmcheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\frmhabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\frmhabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\frmhabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\frmhabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\frmocupacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\frmocupacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\frmpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\frmpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\frmpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\frmpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\pedidos\\frmagregarpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\pedidos\\frmagregarpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\frmocupacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\frmocupacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmgrupospermisos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmgrupospermisos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmusuariogrupos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmusuariogrupos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\reservas\\frmbuscarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\reservas\\frmbuscarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\reservas\\frmbuscarhabitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\reservas\\frmbuscarhabitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\pedidos\\frmmodificarpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\pedidos\\frmmodificarpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\seguridad\\administradordesesionbe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\seguridad\\administradordesesionbe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\pedidobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\pedidobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\reservabe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\reservabe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\personabe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\personabe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\habitacionbe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\habitacionbe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\backupbe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\backupbe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\clientebe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\clientebe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\detallepedidobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\detallepedidobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\facturabe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\facturabe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\pedidobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\pedidobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\backupsbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\backupsbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\seguridad\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\seguridad\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\reservabll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\reservabll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\reservas\\frmagregarreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\reservas\\frmagregarreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\pedidos\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\pedidos\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\validacionesdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\validacionesdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\seguridadbll\\usuariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\seguridadbll\\usuariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\migrations\\202403120209416_salto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\migrations\\202403120209416_salto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\seguridad\\administradordesesiondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\seguridad\\administradordesesiondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\seguridad\\usuariobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\seguridad\\usuariobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\pedidos\\frmpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\pedidos\\frmpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\paneles\\pedidos\\frmagregarpedidos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\paneles\\pedidos\\frmagregarpedidos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmreportes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmreportes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmauditoria.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmauditoria.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\vista\\administrador\\frmusuariogrupos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21B33A7-D83C-477E-BD20-6A4097A89521}|Vista\\Vista.csproj|solutionrelative:vista\\administrador\\frmusuariogrupos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\entidades\\empleadobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B9B9FB-D9D0-4AAC-B75A-F504A68F85DF}|Entidades\\Entidades.csproj|solutionrelative:entidades\\empleadobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\migrations\\202403102154113_elimhist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\migrations\\202403102154113_elimhist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\productodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\productodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\controladora\\productobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6F6384-C77A-4575-BF92-7835FCDBD405}|Controladora\\Controladora.csproj|solutionrelative:controladora\\productobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\migrations\\202403101941285_acthistorica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\migrations\\202403101941285_acthistorica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\migrations\\202403100225366_actualizarfks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\migrations\\202403100225366_actualizarfks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\migrations\\202403100210031_actualizardatetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\migrations\\202403100210031_actualizardatetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\migrations\\202403092141338_actualizaraudit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\migrations\\202403092141338_actualizaraudit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\migrations\\202403092009384_auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\migrations\\202403092009384_auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\migrations\\202403090114405_act.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\migrations\\202403090114405_act.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\migrations\\202403090021194_telefonodouble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\migrations\\202403090021194_telefonodouble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\migrations\\202403090007225_bd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\migrations\\202403090007225_bd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\modelo\\seguridad\\grupodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508E4DF9-DDE8-4CEB-95B2-8EA77D928360}|Modelo\\Modelo.csproj|solutionrelative:modelo\\seguridad\\grupodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 345,
+          "SelectedChildIndex": 16,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "frmModificarPedidos.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmModificarPedidos.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Pedidos\\frmModificarPedidos.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmModificarPedidos.cs",
+              "RelativeToolTip": "Vista\\Paneles\\Pedidos\\frmModificarPedidos.cs",
+              "ViewState": "AQIAACIBAAAAAAAAAAAkwLQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.497Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "frmAuditoria.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmAuditoria.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmAuditoria.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmAuditoria.cs",
+              "RelativeToolTip": "Vista\\Administrador\\frmAuditoria.cs",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAswJYAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T19:02:23.767Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "frmCheckOut.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmCheckOut.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\frmCheckOut.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmCheckOut.cs",
+              "RelativeToolTip": "Vista\\Paneles\\frmCheckOut.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAYwHAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.472Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "frmPago.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmPago.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\frmPago.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmPago.cs",
+              "RelativeToolTip": "Vista\\Paneles\\frmPago.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T21:05:35.194Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "frmCrearCliente.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmCrearCliente.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Reservas\\frmCrearCliente.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmCrearCliente.cs",
+              "RelativeToolTip": "Vista\\Paneles\\Reservas\\frmCrearCliente.cs",
+              "ViewState": "AQIAAIMAAAAAAAAAAAA9wJIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.497Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "frmBuscarCliente.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmBuscarCliente.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Reservas\\frmBuscarCliente.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmBuscarCliente.cs",
+              "RelativeToolTip": "Vista\\Paneles\\Reservas\\frmBuscarCliente.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAAAFcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T20:16:05.098Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "frmAgregarReserva.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmAgregarReserva.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Reservas\\frmAgregarReserva.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmAgregarReserva.cs",
+              "RelativeToolTip": "Vista\\Paneles\\Reservas\\frmAgregarReserva.cs",
+              "ViewState": "AQIAANMAAAAAAAAAAAAqwP8AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T21:01:32.605Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "UsuarioBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\SeguridadBLL\\UsuarioBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\SeguridadBLL\\UsuarioBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\SeguridadBLL\\UsuarioBLL.cs",
+              "RelativeToolTip": "Controladora\\SeguridadBLL\\UsuarioBLL.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAuwKQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T23:43:36.709Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "UsuarioDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Seguridad\\UsuarioDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\Seguridad\\UsuarioDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Seguridad\\UsuarioDAL.cs",
+              "RelativeToolTip": "Modelo\\Seguridad\\UsuarioDAL.cs",
+              "ViewState": "AQIAAAEDAAAAAAAAAAAAwCEDAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.457Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PedidoDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\PedidoDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\PedidoDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\PedidoDAL.cs",
+              "RelativeToolTip": "Modelo\\PedidoDAL.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.447Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "frmOcupacion.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmOcupacion.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\frmOcupacion.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmOcupacion.cs",
+              "RelativeToolTip": "Vista\\Paneles\\frmOcupacion.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAiwGcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.472Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CheckInDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\CheckInDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\CheckInDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\CheckInDAL.cs",
+              "RelativeToolTip": "Modelo\\CheckInDAL.cs",
+              "ViewState": "AQIAAEYBAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HabitacionesDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\HabitacionesDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\HabitacionesDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\HabitacionesDAL.cs",
+              "RelativeToolTip": "Modelo\\HabitacionesDAL.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAqwO8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T21:42:49.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BackUpsDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\BackUpsDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\BackUpsDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\BackUpsDAL.cs",
+              "RelativeToolTip": "Modelo\\BackUpsDAL.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAgwGMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClienteDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\ClienteDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\ClienteDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\ClienteDAL.cs",
+              "RelativeToolTip": "Modelo\\ClienteDAL.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAHgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ContextoBD.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\ContextoBD.cs",
+              "RelativeDocumentMoniker": "Modelo\\ContextoBD.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\ContextoBD.cs",
+              "RelativeToolTip": "Modelo\\ContextoBD.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReservaDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\ReservaDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\ReservaDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\ReservaDAL.cs",
+              "RelativeToolTip": "Modelo\\ReservaDAL.cs",
+              "ViewState": "AQIAAPsAAAAAAAAAAAAAAEMGAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T20:23:25.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuditoriaDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\AuditoriaDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\AuditoriaDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\AuditoriaDAL.cs",
+              "RelativeToolTip": "Modelo\\AuditoriaDAL.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAqwB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T00:10:25.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmpleadoDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\EmpleadoDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\EmpleadoDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\EmpleadoDAL.cs",
+              "RelativeToolTip": "Modelo\\EmpleadoDAL.cs",
+              "ViewState": "AQIAALcAAAAAAAAAAAAAAHAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T23:56:02.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReportesDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\ReportesDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\ReportesDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\ReportesDAL.cs",
+              "RelativeToolTip": "Modelo\\ReportesDAL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T23:40:15.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "contextoState.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\contextoState.cs",
+              "RelativeDocumentMoniker": "Modelo\\contextoState.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\contextoState.cs",
+              "RelativeToolTip": "Modelo\\contextoState.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAAAG8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T05:03:27.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmUsuarios.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmUsuarios.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmUsuarios.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmUsuarios.cs",
+              "RelativeToolTip": "Vista\\Administrador\\frmUsuarios.cs",
+              "ViewState": "AQIAACABAAAAAAAAAAAswEYBAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T20:28:33.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmUsuarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmUsuarios.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmUsuarios.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmUsuarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Administrador\\frmUsuarios.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.478Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmAdministrador.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmAdministrador.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmAdministrador.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmAdministrador.cs",
+              "RelativeToolTip": "Vista\\Administrador\\frmAdministrador.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Login.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Login.cs",
+              "RelativeDocumentMoniker": "Vista\\Login.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Login.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Login.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmAdministrador.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmAdministrador.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmAdministrador.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmAdministrador.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Administrador\\frmAdministrador.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.487Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DetallePedidoHistoricoBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\Auditoria\\DetallePedidoHistoricoBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\Auditoria\\DetallePedidoHistoricoBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\Auditoria\\DetallePedidoHistoricoBE.cs",
+              "RelativeToolTip": "Entidades\\Auditoria\\DetallePedidoHistoricoBE.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAABoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T19:23:49.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmAuditoria.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmAuditoria.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmAuditoria.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmAuditoria.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Administrador\\frmAuditoria.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T19:01:44.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Login.cs",
+              "RelativeDocumentMoniker": "Vista\\Login.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Login.cs",
+              "RelativeToolTip": "Vista\\Login.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAuwEEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\App.config",
+              "RelativeDocumentMoniker": "Modelo\\App.config",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\App.config",
+              "RelativeToolTip": "Modelo\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-03-03T21:26:31.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\App.config",
+              "RelativeDocumentMoniker": "Vista\\App.config",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\App.config",
+              "RelativeToolTip": "Vista\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-03-03T21:42:52.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\App.config",
+              "RelativeDocumentMoniker": "Entidades\\App.config",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\App.config",
+              "RelativeToolTip": "Entidades\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-03-15T05:08:34.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AuditoriaBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\AuditoriaBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\AuditoriaBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\AuditoriaBLL.cs",
+              "RelativeToolTip": "Controladora\\AuditoriaBLL.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAcwCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T11:04:34.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "StateBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\StateBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\StateBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\StateBLL.cs",
+              "RelativeToolTip": "Controladora\\StateBLL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBcAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "State.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\State.cs",
+              "RelativeDocumentMoniker": "Entidades\\State.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\State.cs",
+              "RelativeToolTip": "Entidades\\State.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AdministradorDeSesionBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\SeguridadBLL\\AdministradorDeSesionBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\SeguridadBLL\\AdministradorDeSesionBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\SeguridadBLL\\AdministradorDeSesionBLL.cs",
+              "RelativeToolTip": "Controladora\\SeguridadBLL\\AdministradorDeSesionBLL.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CheckInBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\CheckInBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\CheckInBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\CheckInBLL.cs",
+              "RelativeToolTip": "Controladora\\CheckInBLL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T05:03:21.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "HabitacionBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\HabitacionBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\HabitacionBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\HabitacionBLL.cs",
+              "RelativeToolTip": "Controladora\\HabitacionBLL.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAjwDsAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T21:44:34.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DetalleFacturaBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\DetalleFacturaBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\DetalleFacturaBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\DetalleFacturaBE.cs",
+              "RelativeToolTip": "Entidades\\DetalleFacturaBE.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAswCQAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T04:57:21.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ValidacionesBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\ValidacionesBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\ValidacionesBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\ValidacionesBLL.cs",
+              "RelativeToolTip": "Controladora\\ValidacionesBLL.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAIA4wDIAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T16:41:58.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "frmProductos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmProductos.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Pedidos\\frmProductos.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmProductos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\Pedidos\\frmProductos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T05:21:28.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "EmpleadoBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\EmpleadoBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\EmpleadoBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\EmpleadoBLL.cs",
+              "RelativeToolTip": "Controladora\\EmpleadoBLL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T16:41:54.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ClienteBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\ClienteBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\ClienteBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\ClienteBLL.cs",
+              "RelativeToolTip": "Controladora\\ClienteBLL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "frmPedidos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmPedidos.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Pedidos\\frmPedidos.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmPedidos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\Pedidos\\frmPedidos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "frmModificarPedidos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmModificarPedidos.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Pedidos\\frmModificarPedidos.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmModificarPedidos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\Pedidos\\frmModificarPedidos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "frmAgregarPedidos.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmAgregarPedidos.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Pedidos\\frmAgregarPedidos.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmAgregarPedidos.cs",
+              "RelativeToolTip": "Vista\\Paneles\\Pedidos\\frmAgregarPedidos.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAUwFMAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T22:36:16.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "frmBuscarHabitacion.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmBuscarHabitacion.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Reservas\\frmBuscarHabitacion.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmBuscarHabitacion.cs",
+              "RelativeToolTip": "Vista\\Paneles\\Reservas\\frmBuscarHabitacion.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAcwH4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T04:56:39.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "frmCheckIn.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmCheckIn.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\frmCheckIn.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmCheckIn.cs",
+              "RelativeToolTip": "Vista\\Paneles\\frmCheckIn.cs",
+              "ViewState": "AQIAAKUAAAAAAAAAAAAAAEYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "frmCheckIn.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmCheckIn.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\frmCheckIn.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmCheckIn.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\frmCheckIn.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "frmCheckOut.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmCheckOut.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\frmCheckOut.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmCheckOut.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\frmCheckOut.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "frmClientes.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmClientes.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\frmClientes.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmClientes.cs",
+              "RelativeToolTip": "Vista\\Paneles\\frmClientes.cs",
+              "ViewState": "AQIAAF8BAAAAAAAAAAAAAGcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T04:52:39.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "frmCrearCliente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmCrearCliente.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Reservas\\frmCrearCliente.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmCrearCliente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\Reservas\\frmCrearCliente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "frmClientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmClientes.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\frmClientes.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmClientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\frmClientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "frmHabitaciones.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmHabitaciones.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\frmHabitaciones.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmHabitaciones.cs",
+              "RelativeToolTip": "Vista\\Paneles\\frmHabitaciones.cs",
+              "ViewState": "AQIAAF0BAAAAAAAAAAAkwGoBAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "frmHabitaciones.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmHabitaciones.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\frmHabitaciones.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmHabitaciones.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\frmHabitaciones.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "frmPago.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmPago.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\frmPago.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmPago.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\frmPago.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T06:29:00.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "frmAgregarPedidos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmAgregarPedidos.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Pedidos\\frmAgregarPedidos.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmAgregarPedidos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\Pedidos\\frmAgregarPedidos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "frmOcupacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmOcupacion.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\frmOcupacion.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\frmOcupacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\frmOcupacion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "frmMenu.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\frmMenu.cs",
+              "RelativeDocumentMoniker": "Vista\\frmMenu.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\frmMenu.cs",
+              "RelativeToolTip": "Vista\\frmMenu.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAADMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "frmMenu.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\frmMenu.cs",
+              "RelativeDocumentMoniker": "Vista\\frmMenu.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\frmMenu.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\frmMenu.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T19:36:27.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "frmEmpleado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmEmpleado.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmEmpleado.cs",
+              "ToolTip": "C:\\Users\\sebaf\\Desktop\\SGH - UAI - Final\\Vista\\Administrador\\frmEmpleado.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "frmGruposPermisos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmGruposPermisos.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmGruposPermisos.cs",
+              "ToolTip": "C:\\Users\\sebaf\\Desktop\\SGH - UAI - Final\\Vista\\Administrador\\frmGruposPermisos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "frmUsuarioGrupos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmUsuarioGrupos.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmUsuarioGrupos.cs",
+              "ToolTip": "C:\\Users\\sebaf\\Desktop\\SGH - UAI - Final\\Vista\\Administrador\\frmUsuarioGrupos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "frmBuscarCliente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmBuscarCliente.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Reservas\\frmBuscarCliente.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmBuscarCliente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\Reservas\\frmBuscarCliente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T04:27:16.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "frmBuscarHabitacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmBuscarHabitacion.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Reservas\\frmBuscarHabitacion.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmBuscarHabitacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\Reservas\\frmBuscarHabitacion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T04:26:49.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "frmReportes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmReportes.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmReportes.cs",
+              "ToolTip": "C:\\Users\\sebaf\\Desktop\\SGH - UAI - Final\\Vista\\Administrador\\frmReportes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T03:48:01.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "AdministradorDeSesionBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\Seguridad\\AdministradorDeSesionBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\Seguridad\\AdministradorDeSesionBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\Seguridad\\AdministradorDeSesionBE.cs",
+              "RelativeToolTip": "Entidades\\Seguridad\\AdministradorDeSesionBE.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAAAEsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "PedidoBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\PedidoBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\PedidoBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\PedidoBLL.cs",
+              "RelativeToolTip": "Controladora\\PedidoBLL.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAhwCYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "BackupBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\BackupBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\BackupBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\BackupBE.cs",
+              "RelativeToolTip": "Entidades\\BackupBE.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "ReservaBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\ReservaBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\ReservaBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\ReservaBE.cs",
+              "RelativeToolTip": "Entidades\\ReservaBE.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "ClienteBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\ClienteBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\ClienteBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\ClienteBE.cs",
+              "RelativeToolTip": "Entidades\\ClienteBE.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "DetallePedidoBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\DetallePedidoBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\DetallePedidoBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\DetallePedidoBE.cs",
+              "RelativeToolTip": "Entidades\\DetallePedidoBE.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T04:57:22.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "FacturaBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\FacturaBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\FacturaBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\FacturaBE.cs",
+              "RelativeToolTip": "Entidades\\FacturaBE.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAAAoAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T20:25:38.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "HabitacionBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\HabitacionBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\HabitacionBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\HabitacionBE.cs",
+              "RelativeToolTip": "Entidades\\HabitacionBE.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T05:11:16.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "PedidoBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\PedidoBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\PedidoBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\PedidoBE.cs",
+              "RelativeToolTip": "Entidades\\PedidoBE.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAwCMAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T20:32:36.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "PersonaBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\PersonaBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\PersonaBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\PersonaBE.cs",
+              "RelativeToolTip": "Entidades\\PersonaBE.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAuwCgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T04:18:23.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "BackupsBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\BackupsBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\BackupsBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\BackupsBLL.cs",
+              "RelativeToolTip": "Controladora\\BackupsBLL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "ReservaBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\ReservaBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\ReservaBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\ReservaBLL.cs",
+              "RelativeToolTip": "Controladora\\ReservaBLL.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAApwIcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T02:50:42.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "frmAgregarReserva.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmAgregarReserva.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Reservas\\frmAgregarReserva.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Reservas\\frmAgregarReserva.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Paneles\\Reservas\\frmAgregarReserva.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T03:14:35.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "frmReportes.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmReportes.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmReportes.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmReportes.cs",
+              "RelativeToolTip": "Vista\\Administrador\\frmReportes.cs",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAjwIAAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T03:21:04.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "frmProductos.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmProductos.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Pedidos\\frmProductos.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmProductos.cs",
+              "RelativeToolTip": "Vista\\Paneles\\Pedidos\\frmProductos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T20:56:17.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "ValidacionesDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\ValidacionesDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\ValidacionesDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\ValidacionesDAL.cs",
+              "RelativeToolTip": "Modelo\\ValidacionesDAL.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAuwFIAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "UsuarioBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\Seguridad\\UsuarioBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\Seguridad\\UsuarioBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\Seguridad\\UsuarioBE.cs",
+              "RelativeToolTip": "Entidades\\Seguridad\\UsuarioBE.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T01:45:13.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "202403120209416_Salto.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403120209416_Salto.cs",
+              "RelativeDocumentMoniker": "Modelo\\Migrations\\202403120209416_Salto.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403120209416_Salto.cs",
+              "RelativeToolTip": "Modelo\\Migrations\\202403120209416_Salto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T02:09:51.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "AdministradorDeSesionDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Seguridad\\AdministradorDeSesionDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\Seguridad\\AdministradorDeSesionDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Seguridad\\AdministradorDeSesionDAL.cs",
+              "RelativeToolTip": "Modelo\\Seguridad\\AdministradorDeSesionDAL.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAWwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "frmPedidos.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmPedidos.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Pedidos\\frmPedidos.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmPedidos.cs",
+              "RelativeToolTip": "Vista\\Paneles\\Pedidos\\frmPedidos.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAtwBcAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T00:04:07.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "packages.config",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\packages.config",
+              "RelativeDocumentMoniker": "Vista\\packages.config",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\packages.config",
+              "RelativeToolTip": "Vista\\packages.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-03-11T23:48:33.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "frmEmpleado.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmEmpleado.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmEmpleado.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmEmpleado.cs",
+              "RelativeToolTip": "Vista\\Administrador\\frmEmpleado.cs",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAowA4AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "frmAgregarPedidos.Designer.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmAgregarPedidos.Designer.cs",
+              "RelativeDocumentMoniker": "Vista\\Paneles\\Pedidos\\frmAgregarPedidos.Designer.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Paneles\\Pedidos\\frmAgregarPedidos.Designer.cs",
+              "RelativeToolTip": "Vista\\Paneles\\Pedidos\\frmAgregarPedidos.Designer.cs",
+              "ViewState": "AQIAAMIAAAAAAAAAAAAowNcAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T22:36:23.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "frmReportes.Designer.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmReportes.Designer.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmReportes.Designer.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmReportes.Designer.cs",
+              "RelativeToolTip": "Vista\\Administrador\\frmReportes.Designer.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAMwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T18:36:38.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "frmAuditoria.Designer.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmAuditoria.Designer.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmAuditoria.Designer.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmAuditoria.Designer.cs",
+              "RelativeToolTip": "Vista\\Administrador\\frmAuditoria.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T17:36:34.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "frmUsuarioGrupos.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmUsuarioGrupos.cs",
+              "RelativeDocumentMoniker": "Vista\\Administrador\\frmUsuarioGrupos.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Vista\\Administrador\\frmUsuarioGrupos.cs",
+              "RelativeToolTip": "Vista\\Administrador\\frmUsuarioGrupos.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAjwIwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "Modelo\\Migrations\\Configuration.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "Modelo\\Migrations\\Configuration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T00:06:33.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "EmpleadoBE.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\EmpleadoBE.cs",
+              "RelativeDocumentMoniker": "Entidades\\EmpleadoBE.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Entidades\\EmpleadoBE.cs",
+              "RelativeToolTip": "Entidades\\EmpleadoBE.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T19:17:35.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "202403102154113_elimHist.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403102154113_elimHist.cs",
+              "RelativeDocumentMoniker": "Modelo\\Migrations\\202403102154113_elimHist.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403102154113_elimHist.cs",
+              "RelativeToolTip": "Modelo\\Migrations\\202403102154113_elimHist.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T21:54:19.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "ProductoDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\ProductoDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\ProductoDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\ProductoDAL.cs",
+              "RelativeToolTip": "Modelo\\ProductoDAL.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAowEAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T20:56:47.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "ProductoBLL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\ProductoBLL.cs",
+              "RelativeDocumentMoniker": "Controladora\\ProductoBLL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Controladora\\ProductoBLL.cs",
+              "RelativeToolTip": "Controladora\\ProductoBLL.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAgwBkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T16:41:56.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "202403101941285_actHistorica.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403101941285_actHistorica.cs",
+              "RelativeDocumentMoniker": "Modelo\\Migrations\\202403101941285_actHistorica.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403101941285_actHistorica.cs",
+              "RelativeToolTip": "Modelo\\Migrations\\202403101941285_actHistorica.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T19:41:34.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "202403100225366_actualizarFKs.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403100225366_actualizarFKs.cs",
+              "RelativeDocumentMoniker": "Modelo\\Migrations\\202403100225366_actualizarFKs.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403100225366_actualizarFKs.cs",
+              "RelativeToolTip": "Modelo\\Migrations\\202403100225366_actualizarFKs.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T02:25:44.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "202403100210031_actualizarDateTime.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403100210031_actualizarDateTime.cs",
+              "RelativeDocumentMoniker": "Modelo\\Migrations\\202403100210031_actualizarDateTime.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403100210031_actualizarDateTime.cs",
+              "RelativeToolTip": "Modelo\\Migrations\\202403100210031_actualizarDateTime.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T02:10:12.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "202403092141338_actualizarAudit.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403092141338_actualizarAudit.cs",
+              "RelativeDocumentMoniker": "Modelo\\Migrations\\202403092141338_actualizarAudit.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403092141338_actualizarAudit.cs",
+              "RelativeToolTip": "Modelo\\Migrations\\202403092141338_actualizarAudit.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAzwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T21:41:42.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "202403092009384_Auditoria.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403092009384_Auditoria.cs",
+              "RelativeDocumentMoniker": "Modelo\\Migrations\\202403092009384_Auditoria.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403092009384_Auditoria.cs",
+              "RelativeToolTip": "Modelo\\Migrations\\202403092009384_Auditoria.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAQwFEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T20:09:44.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "202403090114405_Act.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403090114405_Act.cs",
+              "RelativeDocumentMoniker": "Modelo\\Migrations\\202403090114405_Act.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403090114405_Act.cs",
+              "RelativeToolTip": "Modelo\\Migrations\\202403090114405_Act.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T01:14:45.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 103,
+              "Title": "202403090021194_TelefonoDouble.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403090021194_TelefonoDouble.cs",
+              "RelativeDocumentMoniker": "Modelo\\Migrations\\202403090021194_TelefonoDouble.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403090021194_TelefonoDouble.cs",
+              "RelativeToolTip": "Modelo\\Migrations\\202403090021194_TelefonoDouble.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T00:21:26.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 104,
+              "Title": "202403090007225_BD.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403090007225_BD.cs",
+              "RelativeDocumentMoniker": "Modelo\\Migrations\\202403090007225_BD.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Migrations\\202403090007225_BD.cs",
+              "RelativeToolTip": "Modelo\\Migrations\\202403090007225_BD.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAQwIYAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T00:07:39.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 105,
+              "Title": "GrupoDAL.cs",
+              "DocumentMoniker": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Seguridad\\GrupoDAL.cs",
+              "RelativeDocumentMoniker": "Modelo\\Seguridad\\GrupoDAL.cs",
+              "ToolTip": "D:\\TODO\\FACULTAD\\3A-Segundo_Cuatrimestre\\Trabajo de diploma\\SGH - UAI - Final\\Modelo\\Seguridad\\GrupoDAL.cs",
+              "RelativeToolTip": "Modelo\\Seguridad\\GrupoDAL.cs",
+              "ViewState": "AQIAAFcBAAAAAAAAAAArwGABAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T21:26:31.457Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 55,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

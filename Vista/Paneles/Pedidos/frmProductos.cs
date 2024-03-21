@@ -82,12 +82,16 @@ namespace Vista.Paneles.Pedidos
             {
                 if (txtID.Text != "")
                 {
+                    productoBLL.EliminarProducto(Convert.ToInt32(txtID.Text));
+                    productoBLL.ListarProductosEnDGV(dgvProductos);
+
+                    /*
                     if (MessageBox.Show("¿Está seguro que desea eliminar el producto?", "Eliminar Producto", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         productoBLL.EliminarProducto(Convert.ToInt32(txtID.Text));
                         productoBLL.ListarProductosEnDGV(dgvProductos);
                         MessageBox.Show("Producto eliminado correctamente", "Eliminar Producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    }*/
                 }
                 else
                 {
@@ -103,7 +107,7 @@ namespace Vista.Paneles.Pedidos
 
 
 
-        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProductos_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -119,12 +123,7 @@ namespace Vista.Paneles.Pedidos
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-            }   
-
-
+            }
         }
-
-
-
     }
 }

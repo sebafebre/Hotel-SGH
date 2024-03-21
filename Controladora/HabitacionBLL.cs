@@ -62,7 +62,10 @@ namespace Controladora
             _habitacionesDAL.ListarHabitacionesEnDataGridView(dataGridView);
         }
 
-        
+        public void BuscarHabitacionesDGV(DataGridView dataGridView)
+        {
+            _habitacionesDAL.BuscarHabitacionesDGV(dataGridView);
+        }
 
         public void BuscarHabitacionDGV(DataGridView dataGridView)
         {

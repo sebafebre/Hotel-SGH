@@ -31,22 +31,7 @@ namespace Controladora
         }
 
         
-        /*
-        //Funcion Obtener un cliente de la base de datos
-        public ClienteBE ObtenerCliente(int idCliente)
-        {
-            return _clienteDal.ObtenerCliente(idCliente);
-        }*/
-
-        
-
-
-
-        /*
-        public List<ClienteBE> ListarClientes()
-        {
-            return _clienteDal.ListarClientes();
-        }*/
+       
 
 
         public void ListarClientesActivosEnDataGridView(DataGridView dataGridView)
@@ -61,12 +46,7 @@ namespace Controladora
             return _clienteDal.ObtenerIdCliente(cliente);
         }
 
-
-        public void CargarUsuariosEnComboBox(ComboBox comboBoxUsuarios, string numeroDNI)
-        {
-            _clienteDal.CargarUsuariosEnComboBox(comboBoxUsuarios, numeroDNI);
-        }
-
+        
 
 
 

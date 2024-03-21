@@ -18,10 +18,13 @@ namespace Vista.Administrador
 
         ValidacionesBLL validacionBLL = new ValidacionesBLL();
 
+
+
         public frmEmpleado()
         {
             InitializeComponent();
             empleadoBLL.ListarEmpleadosEnDGV(dgvEmpleados);
+            validacionBLL.AutocompletarNacionalidad(txtNacionalidad);
         }
 
         private bool ValidarCampos()
@@ -44,10 +47,10 @@ namespace Vista.Administrador
                 txtDNI.Focus();
                 return false;
             }
-            if (txtDireccion.Text == "")
+            if (txtNacionalidad.Text == "")
             {
                 MessageBox.Show("Debe completar el campo Dirección", "Agregar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtDireccion.Focus();
+                txtNacionalidad.Focus();
                 return false;
             }
             if (txtTelefono.Text == "")
@@ -56,7 +59,7 @@ namespace Vista.Administrador
                 txtTelefono.Focus();
                 return false;
             }
-            if (txtMail.Text == "" || validacionBLL.ValidarEmail(txtMail.Text) == false)
+            if (txtMail.Text == "" /* || validacionBLL.ValidarEmail(txtMail.Text) == false*/)
             {
                 MessageBox.Show("Debe completar el campo Mail", "Agregar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMail.Focus();
@@ -98,9 +101,9 @@ namespace Vista.Administrador
                         empleado.Id = Convert.ToInt32(txtIdEmpleado.Text);
                         empleado.Persona.Nombre = txtNombre.Text;
                         empleado.Persona.Apellido = txtApellido.Text;
-                        empleado.Persona.DNI = txtDNI.Text;
-                        empleado.Persona.Direccion = txtDireccion.Text;
-                        empleado.Persona.Telefono = txtTelefono.Text;
+                        empleado.Persona.DNI = Convert.ToInt32(txtDNI.Text);
+                        empleado.Persona.Direccion = txtNacionalidad.Text;
+                        empleado.Persona.Telefono = Convert.ToDouble(txtTelefono.Text);
                         empleado.Persona.Mail = txtMail.Text;
                         empleado.Persona.FechaNacimiento = dtpFechaNacimiento.Value;
                         //empleado.FechaIngreso = DateTime.Now;
@@ -140,10 +143,10 @@ namespace Vista.Administrador
                     empleado.Persona = new PersonaBE();
                     empleado.Persona.Nombre = txtNombre.Text;
                     empleado.Persona.Apellido = txtApellido.Text;
-                    empleado.Persona.DNI = txtDNI.Text;
+                    empleado.Persona.DNI = Convert.ToInt32(txtDNI.Text);
                     empleado.Persona.FechaNacimiento = dtpFechaNacimiento.Value;
-                    empleado.Persona.Direccion = txtDireccion.Text;
-                    empleado.Persona.Telefono = txtTelefono.Text;
+                    empleado.Persona.Direccion = txtNacionalidad.Text;
+                    empleado.Persona.Telefono = Convert.ToDouble(txtTelefono.Text);
                     empleado.Persona.Mail = txtMail.Text;
                     empleado.Persona.EstadoActivo = true;
                     empleado.Puesto = cbPuesto.Text;
@@ -200,7 +203,7 @@ namespace Vista.Administrador
                     txtNombre.Text = dgvEmpleados.CurrentRow.Cells[1].Value.ToString();
                     txtApellido.Text = dgvEmpleados.CurrentRow.Cells[2].Value.ToString();
                     txtDNI.Text = dgvEmpleados.CurrentRow.Cells[3].Value.ToString();
-                    txtDireccion.Text = dgvEmpleados.CurrentRow.Cells[4].Value.ToString();
+                    txtNacionalidad.Text = dgvEmpleados.CurrentRow.Cells[4].Value.ToString();
                     txtTelefono.Text = dgvEmpleados.CurrentRow.Cells[5].Value.ToString();
                     txtMail.Text = dgvEmpleados.CurrentRow.Cells[6].Value.ToString();
                     dtpFechaNacimiento.Value = Convert.ToDateTime(dgvEmpleados.CurrentRow.Cells[7].Value.ToString());

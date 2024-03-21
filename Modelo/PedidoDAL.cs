@@ -29,8 +29,7 @@ namespace Modelo
        
         
         //AgregarProductoAPedido --------------------------> BORRAR
-        /*
-        public void AgregarProductoAPedido(int idReserva, int idProducto, int cantidad)
+        /* public void AgregarProductoAPedido(int idReserva, int idProducto, int cantidad)
         {
             try
             {
@@ -132,35 +131,64 @@ namespace Modelo
 
         public void EliminarPedido(int nroPedido)
         {
-            try
+            using(var transaction = con.Database.BeginTransaction())
             {
-                // Buscamos el pedido por su ID
-                PedidoBE pedido = con.Pedido.FirstOrDefault(p => p.NroPedido == nroPedido);
-
-                List<DetallePedidoBE> listaDetalles = ObtenerDetallesPedidoDePedido(nroPedido);
-
-                if (pedido != null)
+                try
                 {
-                    foreach(var detallePedido in listaDetalles)
+                    // Buscamos el pedido por su ID
+                    PedidoBE pedido = con.Pedido.FirstOrDefault(p => p.NroPedido == nroPedido);
+
+                    FacturaBE factura = new FacturaBE();
+                    if (pedido != null)
                     {
-                        ProductoBE producto = con.Producto.FirstOrDefault(p => p.Id == detallePedido.Producto.Id);
-                        producto.CantidadStock += detallePedido.CantidadPedida;
+                        factura = pedido.Factura;
+
                     }
 
-                    // Eliminamos el pedido de la base de datos
-                    con.Pedido.Remove(pedido);
-                    con.SaveChanges();
+                    if (pedido.Estado == "Pagado" || factura != null)
+                    {
+                        MessageBox.Show("No se puede eliminar un pedido que ya ha sido pagado ya que tiene una factura asociada");
+                    }
+                    else
+                    {
+                        List<DetallePedidoBE> listaDetalles = ObtenerDetallesPedidoDePedido(nroPedido);
+
+                        if (pedido != null)
+                        {
+                            foreach (var detallePedido in listaDetalles)
+                            {
+                                ProductoBE producto = con.Producto.FirstOrDefault(p => p.Id == detallePedido.Producto.Id);
+                                producto.CantidadStock += detallePedido.CantidadPedida;
+                                con.DetallePedido.Remove(detallePedido);
+                                
+                            }
+
+                            
+                            con.SaveChanges();
+                            // Eliminamos el pedido de la base de datos
+                            con.Pedido.Remove(pedido);
+                            con.SaveChanges();
+                            
+
+                            transaction.Commit();
+
+                            MessageBox.Show("Pedido eliminado con éxito.");
+                        }
+                        else
+                        {
+                            // Si no se encuentra el pedido, puedes manejar el caso según tus requerimientos
+                            MessageBox.Show("No se encontró el pedido con el ID especificado.");
+                        }
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    // Si no se encuentra el pedido, puedes manejar el caso según tus requerimientos
-                    MessageBox.Show("No se encontró el pedido con el ID especificado.");
+                    transaction.Rollback();
+                    MessageBox.Show("Error al eliminar el pedido: " + ex.Message);
                 }
+
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al eliminar el pedido: " + ex.Message);
-            }
+            
         }
 
         #endregion
@@ -185,6 +213,7 @@ namespace Modelo
                     int nroPedido = detallePedido.Pedido.NroPedido;
                     con.DetallePedido.Remove(detallePedido);
                     con.SaveChanges();
+
                     //Actualizo el total del pedido
                     PedidoBE pedido = con.Pedido.FirstOrDefault(p => p.NroPedido == nroPedido);
                     List<DetallePedidoBE> listaDetalles = ObtenerDetallesPedidoDePedido(nroPedido);
@@ -198,7 +227,9 @@ namespace Modelo
 
                     // Eliminamos el detalle de pedido de la base de datos
                     //con.DetallePedido.Remove(detallePedido);
-                    //con.SaveChanges();
+                    con.SaveChanges();
+
+                    MessageBox.Show("Detalle de pedido eliminado con éxito.");
                 }
                 else
                 {
@@ -238,6 +269,8 @@ namespace Modelo
 
                     // Guardamos los cambios en la base de datos
                     con.SaveChanges();
+
+                    MessageBox.Show("Detalle de pedido modificado con éxito.");
                 }
                 else
                 {
@@ -542,7 +575,6 @@ namespace Modelo
         #region Metodos para frmModificarPedido
 
         //Listar Pedidos en DataGridView
-
         public void ListarPedidosEnDataGridView(DataGridView dataGridView)
         {
             // Limpiamos las filas existentes en el DataGridView
@@ -550,29 +582,96 @@ namespace Modelo
             dataGridView.Columns.Clear();
 
             // Obtener la lista de las Habitaciones
-            List<PedidoBE> listaPedidos = con.Pedido.ToList();
+            List<PedidoBE> listaPedidos = con.Pedido.Include(p => p.Reserva).Include(p => p.Reserva.Habitacion).ToList();
 
             // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
             dataGridView.Columns.Add("NroPedido", "NroPedido");
             dataGridView.Columns.Add("NroReserva", "NroReserva");
+            dataGridView.Columns.Add("NroHabitacion", "NroHabitacion");
             dataGridView.Columns.Add("Estado", "Estado");
             dataGridView.Columns.Add("FechaCreacion", "FechaCreacion");
             dataGridView.Columns.Add("Total", "Total");
 
             foreach (var pedido in listaPedidos)
             {
+
+                ReservaBE reserva = con.Reserva.FirstOrDefault(r => r.Id == pedido.Reserva.Id);
+
+                HabitacionBE habitacion = con.Habitacion.FirstOrDefault(h => h.Id == reserva.Habitacion.Id);
+
+
+
                 // Agregamos una fila al DataGridView
                 int rowIndex = dataGridView.Rows.Add();
 
                 dataGridView.Rows[rowIndex].Cells[0].Value = pedido.NroPedido; // Suponiendo que "Nombre" es la segunda columna agregada
-                dataGridView.Rows[rowIndex].Cells[1].Value = pedido.Reserva.NroReserva;
-                dataGridView.Rows[rowIndex].Cells[2].Value = pedido.Estado;
-                dataGridView.Rows[rowIndex].Cells[3].Value = pedido.FechaCreacion;
-                dataGridView.Rows[rowIndex].Cells[4].Value = pedido.Total;
+                dataGridView.Rows[rowIndex].Cells[1].Value = reserva.NroReserva;
+                dataGridView.Rows[rowIndex].Cells[2].Value = habitacion.NroHabitacion;
+                dataGridView.Rows[rowIndex].Cells[3].Value = pedido.Estado;
+                dataGridView.Rows[rowIndex].Cells[4].Value = pedido.FechaCreacion;
+                dataGridView.Rows[rowIndex].Cells[5].Value = pedido.Total;
             }
         }
+        
+
+        public void ListarPedidosEnDataGridView2(DataGridView dataGridView)
+        {
+            // Limpiamos las filas existentes en el DataGridView
+            dataGridView.Rows.Clear();
+            dataGridView.Columns.Clear();
+
+            // Obtener la lista de las Habitaciones
+            List<PedidoBE> listaPedidos = con.Pedido.Include(p => p.Reserva).Include(p => p.Reserva.Habitacion).ToList();
 
 
+
+            // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
+            dataGridView.Columns.Add("NroPedido", "NroPedido");
+            dataGridView.Columns.Add("NroReserva", "NroReserva");
+            dataGridView.Columns.Add("NroHabitacion", "NroHabitacion");
+            dataGridView.Columns.Add("Estado", "Estado");
+            dataGridView.Columns.Add("FechaCreacion", "FechaCreacion");
+            dataGridView.Columns.Add("Total", "Total");
+
+            foreach (var pedido in listaPedidos)
+            {
+
+
+                // Agregamos una fila al DataGridView
+                int rowIndex = dataGridView.Rows.Add();
+
+
+
+                dataGridView.Rows[rowIndex].Cells[0].Value = pedido.NroPedido;
+
+
+                
+
+                // Verificamos si la propiedad Reserva es nula antes de intentar acceder a sus propiedades
+                if (pedido.Reserva != null)
+                {
+                    dataGridView.Rows[rowIndex].Cells[1].Value = pedido.Reserva.NroReserva;
+
+                    // Verificamos si la propiedad Habitacion es nula antes de intentar acceder a sus propiedades
+                    if (pedido.Reserva.Habitacion != null)
+                    {
+                        dataGridView.Rows[rowIndex].Cells[2].Value = pedido.Reserva.Habitacion.NroHabitacion;
+                    }
+                    else
+                    {
+                        dataGridView.Rows[rowIndex].Cells[2].Value = pedido.Reserva.Habitacion?.NroHabitacion;
+                    }
+                }
+                else
+                {
+                    dataGridView.Rows[rowIndex].Cells[1].Value = pedido.Reserva?.NroReserva;
+                }
+
+                dataGridView.Rows[rowIndex].Cells[3].Value = pedido.Estado;
+                dataGridView.Rows[rowIndex].Cells[4].Value = pedido.FechaCreacion;
+                dataGridView.Rows[rowIndex].Cells[5].Value = pedido.Total;
+            }
+        }
 
 
 
@@ -873,7 +972,7 @@ namespace Modelo
                 if (reserva != null)
                 {
                     // Obtenemos los detalles de pedido asociados a la reserva
-                    listaDetalles = con.DetallePedido.Where(d => d.Pedido.Reserva.NroReserva == nroReserva).ToList();
+                    listaDetalles = con.DetallePedido.Where(d => d.Pedido.Reserva.NroReserva == nroReserva ).ToList();
                 }
                 else
                 {
@@ -890,26 +989,46 @@ namespace Modelo
             return listaDetalles;
         }
 
+        public List<DetallePedidoBE> ObtenerDetallesPendientesDeLaReserva(int nroReserva)
+        {
+            List<DetallePedidoBE> listaDetalles = new List<DetallePedidoBE>();
 
+            try
+            {
+                // Buscamos la reserva por su ID
+                ReservaBE reserva = con.Reserva.FirstOrDefault(r => r.NroReserva == nroReserva);
+
+                if (reserva != null)
+                {
+                    // Obtenemos los detalles de pedido asociados a la reserva
+                    listaDetalles = con.DetallePedido.Where(d => d.Pedido.Reserva.NroReserva == nroReserva && d.Pedido.Estado == "PagoPendiente").ToList();
+                }
+                else
+                {
+                    // Si no se encuentra la reserva, puedes manejar el caso según tus requerimientos
+                    Console.WriteLine("No se encontró la reserva con el ID especificado.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener los detalles del pedido: " + ex.Message);
+            }
+
+            return listaDetalles;
+        }
         #endregion
 
 
         #region Realizar Facturas y enviar --> CheckOut
 
 
-        
 
-
-
-
-
-        
-
-        public void GenerarFacturaTXT(int nroReserva, string tipoFactura, int idUsuario)
+        public void GenerarFacturaTXT(int nroReserva, string tipoFactura, string usuarioActual)
         {
             try
             {
-                GenerarFactura_DetalleFactura(nroReserva, tipoFactura, idUsuario);
+                GenerarFactura_DetalleFactura(nroReserva, tipoFactura, usuarioActual);
                 using (var transaction = con.Database.BeginTransaction())
                 {
                     try
@@ -921,7 +1040,7 @@ namespace Modelo
                         reserva.Habitacion.Estado = "Limpieza";
                         foreach (var pedido in listaPedidos)
                         {
-                            listaDetalles = ObtenerDetallesPedidoDeLaReserva(nroReserva);
+                            listaDetalles = ObtenerDetallesPendientesDeLaReserva(nroReserva);
                             pedido.Estado = "Pagado";
                             con.SaveChanges();
                         }
@@ -945,8 +1064,8 @@ namespace Modelo
                         contenidoFactura.AppendLine($"Subtotal: {reserva.Subtotal}");
                         contenidoFactura.AppendLine($"Impuestos: {reserva.Impuestos}");
                         contenidoFactura.AppendLine($"Total de la factura: {reserva.Total}");
-                        string ubica = "SGH - UAI";
-                        string nombreCarpetaExistente = "FacturasHotel";
+                        string ubica = "SGH - UAI - Final/ArchivosHotel";
+                        string nombreCarpetaExistente = "Facturas";
                         string rutaCarpetaExistente = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), ubica, nombreCarpetaExistente);
                         string carpetaReserva = Path.Combine(rutaCarpetaExistente, nroReserva.ToString());
 
@@ -962,7 +1081,7 @@ namespace Modelo
                         File.WriteAllText(rutaArchivo, contenidoFactura.ToString());
 
                         // Enviar correo electrónico con el archivo adjunto
-                        EnviarCorreoElectronico(cliente.Persona.Mail, "Factura de la reserva", "Adjunto se encuentra la factura de su reserva.", rutaArchivo, "HotelSGH.Diploma@gmail.com");
+                        EnviarCorreoElectronico(cliente.Persona.Mail, "Factura de la reserva", "Adjunto se encuentra la factura de su reserva.", rutaArchivo, "  *MAIL*  "); //> Completar con el mail el cual envia el correo electronico
 
                         transaction.Commit();
                         Console.WriteLine("Factura generada y correo electrónico enviado correctamente.");
@@ -980,7 +1099,7 @@ namespace Modelo
             }
         }
 
-        private void GenerarFactura_DetalleFactura(int nroReserva, string tipoFactura, int idUsuario)
+        private void GenerarFactura_DetalleFactura(int nroReserva, string tipoFactura, string usuarioActual)
         {
             using (var transaction = con.Database.BeginTransaction())
             {
@@ -990,7 +1109,7 @@ namespace Modelo
                     List<PedidoBE> listaPedidos = ObtenerPedidosPendientesDeReserva(nroReserva);
 
                     // Recuperamos el usuario por su Id
-                    UsuarioBE usuario = con.Usuario.FirstOrDefault(u => u.Id == idUsuario);
+                    UsuarioBE usuario = con.Usuario.Include(u => u.Empleado).FirstOrDefault(u => u.Nombre == usuarioActual);
 
                     if (usuario == null)
                     {
@@ -998,24 +1117,29 @@ namespace Modelo
                         return; // Salir del método si no se encuentra el usuario
                     }
 
+                    FacturaBE factura = new FacturaBE
+                    {
+                        Emisor = "Hotel SGH",
+                        NroFactura = con.Factura.Count() + 1, // Método para obtener el próximo número de factura de manera segura
+                        TipoFactura = tipoFactura,
+                        FechaEmision = DateTime.Now,
+                        Estado = "Pagado",
+                        Empleado = usuario.Empleado,
+                        Subtotal = listaPedidos.Sum(p => p.Subtotal),
+                        Impuestos = (decimal)(listaPedidos.Sum(p => p.Impuestos)),
+                        Total = (decimal)(listaPedidos.Sum(p => p.Total))
+
+                    };
+                    con.Factura.Add(factura);
+
                     foreach (var pedido in listaPedidos)
                     {
+                        pedido.Factura = factura;
+
                         // Obtenemos los detalles del pedido de la reserva
                         List<DetallePedidoBE> listaDetalles = ObtenerDetallesPedidoDeLaReserva(nroReserva);
 
-                        // Creamos una nueva factura
-                        FacturaBE factura = new FacturaBE
-                        {
-                            Emisor = "Hotel SGH",
-                            NroFactura = con.Factura.Count() + 1, // Método para obtener el próximo número de factura de manera segura
-                            TipoFactura = tipoFactura,
-                            FechaEmision = DateTime.Now,
-                            Estado = "Pagado",
-                            Pedido = pedido
-                        };
 
-                        // Agregamos la factura al contexto
-                        con.Factura.Add(factura);
 
                         foreach (var detalle in listaDetalles)
                         {
@@ -1051,95 +1175,8 @@ namespace Modelo
             }
         }
 
-        /*private void GenerarFactura_DetalleFactura(int nroReserva, string tipoFactura, int idUsuario)
-        {
-            using (var transaction = con.Database.BeginTransaction())
-            {
-                try
-                {
-                    List<PedidoBE> listaPedidos = ObtenerPedidosPendientesDeReserva(nroReserva);
+        
 
-                    List<DetallePedidoBE> listaDetalles = new List<DetallePedidoBE>();
-
-                    //buscamos que empleado esta realizando la factura, mediante el id del usuario que se logueo (el id es parameteo de entrada)
-                    // Primero, recuperas el usuario por su Id
-                    UsuarioBE usuario = con.Usuario.FirstOrDefault(u => u.Id == idUsuario);
-
-                    if (usuario != null)
-                    {
-                        // Ahora, puedes acceder al empleado asociado al usuario
-                        EmpleadoBE empleado = usuario.Empleado;
-
-                        if (empleado != null)
-                        {
-                            // Aquí tienes el empleado asociado al usuario
-                            Console.WriteLine($"El usuario {usuario.Nombre} tiene asociado al empleado {empleado.Persona.Nombre}");
-                        }
-                        else
-                        {
-                            // Si empleado es null, significa que el usuario no tiene un empleado asociado
-                            Console.WriteLine($"El usuario {usuario.Nombre} no tiene un empleado asociado.");
-                        }
-                    }
-                    else
-                    {
-                        // Si usuario es null, significa que no se encontró ningún usuario con el Id especificado
-                        Console.WriteLine("No se encontró ningún usuario con el Id especificado.");
-                    }
-
-
-                    foreach (var pedido in listaPedidos)
-                    {
-                        listaDetalles = ObtenerDetallesPedidoDeLaReserva(nroReserva);
-                        //pedido.Estado = "Pagado";
-
-
-                        //int idEmpleado = usuario.Empleado.Id;
-
-                        FacturaBE factura = new FacturaBE
-                        {
-                            Emisor = "Hotel SGH",
-                            //Empleado = con.Empleado.FirstOrDefault(e => e.Id == idEmpleado),
-                            NroFactura = con.Factura.Count() + 1,
-                            TipoFactura = tipoFactura,
-                            FechaEmision = DateTime.Now,
-                            Estado = "Pagado",
-                            Pedido = pedido,
-
-                        };
-                        con.SaveChanges();
-
-
-
-                        foreach (var detalle in listaDetalles)
-                        {
-
-                            DetalleFacturaBE detalleFactura = new DetalleFacturaBE
-                            {
-                                Factura = con.Factura.FirstOrDefault(f => f.NroFactura == factura.NroFactura),
-                                Producto = detalle.Producto,
-                                CantidadPedida = detalle.CantidadPedida,
-                                Subtotal = detalle.Subtotal,
-                                Impuestos = detalle.Impuestos,
-                                Total = detalle.Total
-                            };
-                            con.SaveChanges();
-                        }
-                    }
-                    con.SaveChanges();
-                    transaction.Commit();
-                }
-                catch (Exception ex)
-                { 
-                    transaction.Rollback();
-                    Console.WriteLine("Error al generar la factura: " + ex.Message);
-                }
-            }
-
-        }*/
-
-
-        //Sin funcionar por la seguridad de Gmail (habilitar el acceso de aplicaciones menos seguras) ---> verificacion de 2 pasos
         public void EnviarCorreoElectronico(string destinatario, string asunto, string cuerpo, string adjunto, string mail)
         {
             try
@@ -1155,9 +1192,10 @@ namespace Modelo
                 correo.Attachments.Add(adjuntoCorreo);
 
                 SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com";
+                smtp.Host = "smtp.office365.com";
                 smtp.Port = 587;
-                smtp.Credentials = new NetworkCredential("HotelSGH.Diploma@gmail.com", "HotelSGH@11");
+                smtp.UseDefaultCredentials = false; // No usar las credenciales predeterminadas
+                smtp.Credentials = new NetworkCredential("  mail     ", " contraseña  ");  //---> completar el mail y contraseña el cual va a enviar el mail
                 smtp.EnableSsl = true;
 
                 smtp.Send(correo);
@@ -1171,11 +1209,6 @@ namespace Modelo
                 Console.WriteLine("Error al enviar el correo electrónico: " + ex.Message);
             }
         }
-
-
-
-
-
 
 
 
@@ -1202,7 +1235,7 @@ namespace Modelo
 
             if (pedido != null)
             {
-                listaDetalles = con.DetallePedido.Where(d => d.Pedido == pedido && d.Pedido.Estado == "PagoPendiente").ToList();
+                listaDetalles = con.DetallePedido.Where(d => d.Pedido.Id == pedido.Id && d.Pedido.Estado == "PagoPendiente").ToList();
             }
 
             return listaDetalles;

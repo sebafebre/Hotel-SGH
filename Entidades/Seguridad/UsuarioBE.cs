@@ -17,6 +17,7 @@ namespace Entidades
         private int id;
         private string nombre;
         private string clave;
+        private string salto;
         #endregion
 
         #region Propiedades publicas
@@ -25,6 +26,8 @@ namespace Entidades
         public int Id { get; set; } 
         public string Nombre { get; set; }
         public string Clave { get; set; }
+
+        public string Salto { get; set; }
 
         public EmpleadoBE Empleado { get; set; }
         #endregion

@@ -171,7 +171,6 @@ C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\Entidades.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\EntityFramework.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\Modelo.dll
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\EPPlus.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\Controladora.pdb
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\Controladora.dll.config
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\Entidades.pdb
@@ -193,7 +192,6 @@ C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Login.resources
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmAgregarReserva.resources
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmCheckIn.resources
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmCheckOut.resources
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmClienteReserva.resources
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmClientes.resources
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmHabitaciones.resources
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmOcupacion.resources
@@ -207,9 +205,211 @@ C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.Pedidos.f
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Properties.Resources.resources
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.csproj.CopyComplete
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.exe
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.pdb
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\EPPlus.Interfaces.dll
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.csproj.Up2Date
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\Vista.exe.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\Vista.exe
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\Vista.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\Controladora.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Administrador.frmAdministrador.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Administrador.frmBackUps.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Administrador.frmEmpleado.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Administrador.frmGruposPermisos.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Administrador.frmReportes.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Administrador.frmUsuarioGrupos.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Administrador.frmUsuarios.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.frmMenu.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Login.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.frmAgregarReserva.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.frmCheckIn.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.frmCheckOut.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.frmClientes.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.frmHabitaciones.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.frmOcupacion.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.frmPedidos.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.Reservas.frmBuscarCliente.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.Reservas.frmBuscarHabitacion.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.frmReservas.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.Pedidos.frmAgregarPedidos.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.Pedidos.frmModificarPedidos.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.Pedidos.frmProductos.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.csproj.Up2Date
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.exe
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Administrador.frmAuditoria.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.frmPago.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Vista\obj\Debug\Vista.Paneles.frmCrearCliente.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Administrador.frmAdministrador.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Administrador.frmAuditoria.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Administrador.frmBackUps.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Administrador.frmEmpleado.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Administrador.frmGruposPermisos.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Administrador.frmReportes.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Administrador.frmUsuarioGrupos.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Administrador.frmUsuarios.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.frmMenu.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Login.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.frmPago.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.frmAgregarReserva.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.frmCheckIn.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.frmCheckOut.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.frmCrearCliente.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.frmClientes.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.frmHabitaciones.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.frmOcupacion.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.frmPedidos.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.Reservas.frmBuscarCliente.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.Reservas.frmBuscarHabitacion.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.frmReservas.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.Pedidos.frmAgregarPedidos.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.Pedidos.frmModificarPedidos.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Paneles.Pedidos.frmProductos.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.exe
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Vista.exe.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Vista.exe
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Vista.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\ClosedXML.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\System.Memory.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\SixLabors.Fonts.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\ExcelNumberFormat.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\System.IO.Packaging.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Irony.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\System.Buffers.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\XLParser.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Controladora.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\ClosedXML.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\System.Memory.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\SixLabors.Fonts.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\ExcelNumberFormat.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\System.IO.Packaging.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\System.Buffers.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Vista\obj\Debug\Vista.csproj.Up2Date
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\ClosedXML.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\System.Memory.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\SixLabors.Fonts.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\ExcelNumberFormat.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\System.IO.Packaging.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\Irony.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\System.Buffers.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\XLParser.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\ClosedXML.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\System.Memory.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\SixLabors.Fonts.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\ExcelNumberFormat.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\System.IO.Packaging.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\System.Buffers.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Administrador.frmAuditoria.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmPago.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmCrearCliente.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Vista.exe.config
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Vista.exe
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Vista.pdb
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Controladora.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Entidades.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\EntityFramework.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\EntityFramework.SqlServer.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Modelo.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\ClosedXML.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\System.Memory.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\DocumentFormat.OpenXml.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\SixLabors.Fonts.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\ExcelNumberFormat.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\System.IO.Packaging.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Irony.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\System.Buffers.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\XLParser.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\System.Numerics.Vectors.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Controladora.pdb
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Controladora.dll.config
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Entidades.pdb
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Entidades.dll.config
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\EntityFramework.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\EntityFramework.SqlServer.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Modelo.pdb
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\Modelo.dll.config
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\ClosedXML.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\System.Memory.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\DocumentFormat.OpenXml.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\SixLabors.Fonts.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\ExcelNumberFormat.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\System.IO.Packaging.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\System.Buffers.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\System.Numerics.Vectors.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Administrador.frmAdministrador.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Administrador.frmAuditoria.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Administrador.frmEmpleado.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Administrador.frmGruposPermisos.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Administrador.frmReportes.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Administrador.frmUsuarioGrupos.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Administrador.frmUsuarios.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.frmMenu.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Login.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmPago.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmAgregarReserva.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmCheckIn.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmCheckOut.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmCrearCliente.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmClientes.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmHabitaciones.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmOcupacion.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.frmPedidos.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.Reservas.frmBuscarCliente.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.Reservas.frmBuscarHabitacion.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.Pedidos.frmAgregarPedidos.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.Pedidos.frmModificarPedidos.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Paneles.Pedidos.frmProductos.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.Properties.Resources.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.csproj.Up2Date
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.exe
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Vista\obj\Debug\Vista.pdb

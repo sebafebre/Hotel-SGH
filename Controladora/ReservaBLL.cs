@@ -72,7 +72,7 @@ namespace Controladora
        
         public void GuardarReserva(int idCliente, int idHabitacion, DateTime fechaInicio, DateTime fechaFin, decimal subtotal, decimal imp, decimal total)
         {
-            reservaDAL.GuardarReserva(idCliente, idHabitacion, fechaInicio, fechaFin, subtotal, imp, total);
+            reservaDAL.GuardarReservaNueva(idCliente, idHabitacion, fechaInicio, fechaFin, subtotal, imp, total);
         }
 
         //Modificar Reserva
@@ -104,6 +104,12 @@ namespace Controladora
             reservaDAL.MostrarHabitacionesDisponiblesEnDataGridView(habitaciones, dataGridViewHabitaciones, labelError);
         }
 
+        public void filtrarHabitacionesDisponiblesDTP(DateTimePicker fechaLlegadaDateTimePicker, DateTimePicker fechaIdaDateTimePicker, string tipoHabitacion, string nroCamas, DataGridView dataGridViewHabitaciones, Label labelError)
+        {
+            reservaDAL.filtrarHabitacionesDisponiblesDTP(fechaLlegadaDateTimePicker, fechaIdaDateTimePicker, tipoHabitacion, nroCamas, dataGridViewHabitaciones, labelError);
+        }
+
+
         public List<HabitacionBE> ConsultarHabitacionesDisponibles2(DateTime fechaLlegada, DateTime fechaIda, string tipoHabitacion, string nroCamas)
         {
             return reservaDAL.ConsultarHabitacionesDisponibles2(fechaLlegada, fechaIda, tipoHabitacion, nroCamas);
@@ -113,7 +119,10 @@ namespace Controladora
             reservaDAL.DateTimePickerCambia2(fechaLlegadaDateTimePicker, fechaIdaDateTimePicker, tipoHabitacion, nroCamas, dataGridViewHabitaciones, labelError);
         }
 
-
+        public void VerificarHabitacionesDisponibles(DateTimePicker fechaLlegadaDateTimePicker, DateTimePicker fechaIdaDateTimePicker, Label labelError)
+        {
+            reservaDAL.VerificarHabitacionesDisponibles(fechaLlegadaDateTimePicker, fechaIdaDateTimePicker, labelError);
+        }
 
 
 
@@ -192,35 +201,44 @@ namespace Controladora
         }
 
 
-
-
-
-
-        public Dictionary<int, int> ContarReservasPorDiaDelMes2()
-        {
-            return reservaDAL.ContarReservasPorDiaDelMes2();
-            
-        }
-
-        public void ExportarReservasPorDiaDelMesACSV(Dictionary<int, int> reservasPorDia)
-        {
-            reservaDAL.ExportarReservasPorDiaDelMesACSV(reservasPorDia);
-            
-        }
-
-        public void ExportarReservasYCrearGrafico(int mes)
-        {
-            reservaDAL.ExportarReservasYCrearGrafico(mes);
-
-        }
-
-        public void ExportarReservasPorDiaDelMesAExcel(Dictionary<int, int> reservasPorDia)
-        {
-            reservaDAL.ExportarReservasPorDiaDelMesAExcel(reservasPorDia);
-
-        }
+        ReportesDAL reportesDAL = new ReportesDAL();
 
 
         
+        public Dictionary<int, int> ContarReservasPorDiaDelMesActual()
+        {
+            return reportesDAL.ContarReservasPorDiaDelMesActual();
+            
+        }
+
+        
+
+        public void ExportarReservasPorDiaDelMesAExcel(Dictionary<int, int> reservasPorDia, int mes)
+        {
+            reportesDAL.ExportarReservasPorDiaDelMesAExcel(reservasPorDia,  mes);
+
+        }
+
+        public Dictionary<int, int> ContarReservasPorDiaDelMesSeleccionado(int mes)
+        {
+            return reportesDAL.ContarReservasPorDiaDelMesSeleccionado(mes);
+        }
+
+        public Dictionary<int, int> ContarPedidosPorDiaDelMes()
+        {
+            return reportesDAL.ContarPedidosPorDiaDelMes();
+        }
+
+        public void ExportarPedidosPorDiaDelMesAExcel(Dictionary<int, int> reservasPorDia, int mes)
+        {
+            reportesDAL.ExportarPedidosPorDiaDelMesAExcel(reservasPorDia, mes);
+
+        }
+
+        public Dictionary<int, int> ContarPedidosPorDiaDelMesSeleccionado(int mes)
+        {
+            return reportesDAL.ContarPedidosPorDiaDelMesSeleccionado(mes);
+        }
+
     }
 }

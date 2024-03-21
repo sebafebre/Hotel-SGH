@@ -128,9 +128,9 @@ namespace Controladora
 
 
 
-        public void GenerarFacturaTXT(int nroReserva, string tipoFactura, int idUsuario)
+        public void GenerarFacturaTXT(int nroReserva, string tipoFactura, string usuarioActual)
         {
-            pedidoDAL.GenerarFacturaTXT(nroReserva, tipoFactura, idUsuario);
+            pedidoDAL.GenerarFacturaTXT(nroReserva, tipoFactura, usuarioActual);
         }
 
 

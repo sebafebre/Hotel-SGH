@@ -21,26 +21,31 @@ namespace Vista.Administrador
         {
             InitializeComponent();
             ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmEmpleado), this);
+            lblFormulario.Text = "Empleados";
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmUsuarios), this);
+            lblFormulario.Text = "Usuarios";
         }
 
         private void btnGrupoPermisos_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmUsuarioGrupos), this);
+            lblFormulario.Text = "Gestionar Grupos del Usuario";
         }
 
         private void btnGruposUsuario_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmUsuarioGrupos), this);
+            lblFormulario.Text = "Gestionar Grupos del Usuario";
         }
 
         private void btnGruposPermisos_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmGruposPermisos), this);
+            lblFormulario.Text = "Gestionar Grupos y Permisos";
         }
 
         
@@ -48,16 +53,21 @@ namespace Vista.Administrador
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmEmpleado), this);
+            lblFormulario.Text = "Empleados";
         }
 
-        private void btnBackups_Click(object sender, EventArgs e)
-        {
-            ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmBackUps), this);
-        }
+        
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmReportes), this);
+            lblFormulario.Text = "Reportes";
+        }
+
+        private void btnAuditoria_Click(object sender, EventArgs e)
+        {
+            ValidacionesBLL.CambiarPanel(typeof(Vista.Administrador.frmAuditoria), this);
+            lblFormulario.Text = "Auditoria";
         }
     }
 }

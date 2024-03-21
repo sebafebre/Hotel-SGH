@@ -225,7 +225,7 @@ namespace Modelo
         
 
 
-
+        /*
         // Método para cargar usuarios en el ComboBox según el número de DNI ingresado
         public void CargarUsuariosEnComboBox(ComboBox comboBoxClientes, string numeroDNI)
         {
@@ -256,7 +256,7 @@ namespace Modelo
                 MessageBox.Show("Error al cargar los usuarios: " + ex.Message);
             }
         }
-
+        */
 
 
 

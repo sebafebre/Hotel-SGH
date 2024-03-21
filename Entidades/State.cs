@@ -8,7 +8,7 @@ namespace Entidades
 {
     public abstract class State
     {
-        public abstract  void ProcesarPedido(List<DetallePedidoBE> listaDetallesPedidos, int nroReserva, string tipoFactura, string rutaCarpetaFacturas, EmpleadoBE empleado);
+        public abstract  void ProcesarPedido(List<DetallePedidoBE> listaDetallesPedidos, int nroReserva, string tipoFactura, string rutaCarpetaFacturas, EmpleadoBE empleado, int nroPedido);
     }
     
     

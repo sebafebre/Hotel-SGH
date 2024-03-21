@@ -140,7 +140,10 @@ namespace Controladora
 
 
 
-
+        public void AutocompletarNacionalidad(TextBox textbox)
+        {
+            validacionesDAL.AutocompletarNacionalidad(textbox);
+        }
 
 
 

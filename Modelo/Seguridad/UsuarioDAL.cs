@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.Entity;
 using System.Runtime.Remoting.Contexts;
 using System.ComponentModel;
+using static ClosedXML.Excel.XLPredefinedFormat;
+using DocumentFormat.OpenXml.InkML;
 
 namespace Modelo
 {
@@ -144,7 +146,7 @@ namespace Modelo
             dataGridView.Columns.Clear();
 
             // Obtener la lista de los usuarios
-            List<UsuarioBE> listaUsuarios = con.Usuario.ToList();
+            List<UsuarioBE> listaUsuarios = con.Usuario.Include(u => u.Empleado.Persona).ToList();
 
             // Iteramos sobre la lista de usuarios activos y agregamos cada usuario al DataGridView
             dataGridView.Columns.Add("Id Usuario", "Id Usuario");
@@ -378,11 +380,11 @@ namespace Modelo
             // Iteramos sobre la lista de grupos del usuario y agregamos cada grupo al DataGridView
             foreach (var grupoPermiso in listaGruposPermisosUsuario)
             {
-                
-                 
-                 int? id = grupoPermiso.Componente.Id;
-                 
-                
+
+
+                int? id = grupoPermiso.Componente.Id;
+
+
 
 
                 int rowIndex = dgvGruposPermisosUsuario.Rows.Add();
@@ -587,73 +589,10 @@ namespace Modelo
 
 
 
-        /* ObtenerPermisosUsuario
-        public List<PermisoBE> ObtenerPermisosUsuario(string nombreUsuario)
-        {
-            var permisosUsuario = new List<PermisoBE>();
-
-            var usuario = contexto.Usuario.FirstOrDefault(u => u.Nombre == nombreUsuario);
-
-            if (usuario != null)
-            {
-                var gruposUsuarioIds = contexto.UsuarioGrupo
-                                .Where(ug => ug.Usuario.Id == usuario.Id)
-                                .Select(ug => ug.Grupo.Id)
-                                .ToList();
-
-                foreach (var grupoId in gruposUsuarioIds)
-                {
-                    var permisosGrupoIds = contexto.GrupoPermiso
-                                                    .Where(gp => gp.Grupo.Id == grupoId)
-                                                    .Select(gp => gp.Permiso.Id)
-                                                    .ToList();
-
-                    foreach (var permisoId in permisosGrupoIds)
-                    {
-                        var permiso = contexto.Permiso.FirstOrDefault(p => p.Id == permisoId);
-                        if (permiso != null)
-                        {
-                            permisosUsuario.Add(permiso);
-                        }
-                    }
-                }
-
-            }
-
-            return permisosUsuario;
-        }
-        */
 
 
 
 
-
-
-        /*
-        public List<GrupoPermisoBE> ObtenerPermisosUsuario(int idUsuario)
-        {
-            try
-            {
-                // Buscar los grupos del usuario
-                List<UsuarioGrupoBE> usuarioGrupos = contexto.UsuarioGrupo.Where(ug => ug.Id == idUsuario).ToList();
-
-                // Buscar los permisos de los grupos del usuario
-                List<GrupoPermisoBE> grupoPermisos = new List<GrupoPermisoBE>();
-                foreach (UsuarioGrupoBE usuarioGrupo in usuarioGrupos)
-                {
-                    List<GrupoPermisoBE> permisos = contexto.GrupoPermiso.Where(gp => gp.Id == usuarioGrupo.Id).ToList();
-                    grupoPermisos.AddRange(permisos);
-                }
-
-                // Devolver los permisos
-                return grupoPermisos;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al obtener los permisos del usuario: " + ex.Message);
-                return null;
-            }
-        }*/
 
 
 
@@ -662,37 +601,6 @@ namespace Modelo
 
 
         /*
-        public List<GrupoPermisoBE> ObtenerPermisosUsuario(int idUsuario)
-        {
-            try
-            {
-                // Buscar el usuario por id
-                UsuarioBE usuario = contexto.Usuario.FirstOrDefault(u => u.Id == idUsuario);
-
-                // Buscar los grupos del usuario
-                List<UsuarioGrupoBE> usuarioGrupos = contexto.UsuarioGrupo.Where(ug => ug.Usuario.Id == idUsuario).ToList();
-
-                // Buscar los permisos de los grupos del usuario
-                List<GrupoPermisoBE> grupoPermisos = new List<GrupoPermisoBE>();
-                foreach (UsuarioGrupoBE usuarioGrupo in usuarioGrupos)
-                {
-                    List<GrupoPermisoBE> permisos = contexto.GrupoPermiso.Where(gp => gp.Grupo == usuarioGrupo.Grupo).ToList();
-                    grupoPermisos.AddRange(permisos);
-                }
-
-                // Devolver los permisos
-                return grupoPermisos;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al obtener los permisos del usuario: " + ex.Message);
-                return null;
-            }
-        }*/
-
-
-
-
         public bool VerificarCredencialesEncriptadas(string nombreUsuario, string clave)
         {
             // Obtener el usuario de la base de datos por su nombre
@@ -712,49 +620,224 @@ namespace Modelo
             return false; // Las credenciales son inválidas
         }
 
+        */
 
 
 
 
-        public UsuarioBE ValidarCredenciales(string nombre, string clave)
+
+
+
+
+
+        public UsuarioBE obtenerUsuarioLogueado(string nombreUsuario)
         {
             try
             {
-                using (var context = new ContextoBD())
-                {
-                    // Buscar el usuario por nombre de usuario y contraseña
-                    UsuarioBE usuario = context.Usuario.FirstOrDefault(u => u.Nombre == nombre && u.Clave == clave);
+                // Buscar el usuario por nombre de usuario
+                UsuarioBE usuarioLogueado = con.Usuario.Include(e => e.Empleado.Persona).FirstOrDefault(u => u.Nombre == nombreUsuario);
 
-                    // Devolver el usuario si se encuentra
-                    return usuario;
-                }
+                // Devolver el usuario si se encuentra
+                return usuarioLogueado;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al validar las credenciales del usuario: " + ex.Message);
+                Console.WriteLine("Error al obtener el usuario logueado: " + ex.Message);
                 return null;
             }
+
         }
 
 
 
 
-
-
-        
-        
-
         
 
 
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        #region Encriptar con SHA256
+        // Método para generar un salt aleatorio
+        private static string GenerarSalt()
+        {
+            byte[] saltBytes = new byte[16]; // 16 bytes para el salt
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                rng.GetBytes(saltBytes);
+            }
+            return Convert.ToBase64String(saltBytes);
+        }
+
+        // Método para crear un hash de contraseña con SHA-256 y el salt proporcionado
+        private static string HashContraseña(string contraseña, string salt)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                // Concatenar la contraseña con el salt y calcular el hash
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(contraseña + salt));
+                return Convert.ToBase64String(hashedBytes);
+            }
+        }
+
+        // Método para verificar la contraseña de un usuario
+        public  bool VerificarContraseña(string nombreUsuario, string contraseña)
+        {
+            using (var con = new ContextoBD())
+            {
+                // Obtener el usuario de la base de datos (asumiendo que hay un método para obtener el usuario por nombre de usuario)
+
+                UsuarioBE usuario = con.Usuario.FirstOrDefault(u => u.Nombre == nombreUsuario);
+
+                if (usuario != null)
+                {
+                    // Calcular el hash de la contraseña ingresada utilizando el salt almacenado
+                    string hashContraseñaIngresada = HashContraseña(contraseña, usuario.Salto);
+
+                    // Comparar los hashes
+                    return hashContraseñaIngresada == usuario.Clave;
+                }
+
+                // Si el usuario no existe, ocurrirá un error de autenticación
+                return false;
+            }
+            
+        }
+        #endregion
+
+
+
+        #region ABM Usaurio
+        //Agregar usuario
+        public void AgregarUsuarioEncriptado(UsuarioBE usuario)
+        {
+            try
+            {
+                usuario.Empleado = con.Empleado.FirstOrDefault(e => e.Id == usuario.Empleado.Id);
+
+                if (con.Usuario.Any(u => u.Nombre == usuario.Nombre))
+                {
+                    MessageBox.Show( "El nombre de usuario ya existe");
+                }
+                if( usuario.Empleado == null)
+                {
+                    MessageBox.Show("El empleado no existe");
+                }
+                else
+                {
+                    string salt = GenerarSalt();
+
+                    // Crear el hash de la contraseña con el salt
+                    string hashContraseña = HashContraseña(usuario.Clave, salt);
+
+                    usuario.Clave = CalcularHash(usuario.Clave);
+                    usuario.Nombre = usuario.Nombre;
+                    usuario.Clave = hashContraseña;
+                    usuario.Salto = salt;
+                    usuario.Empleado = con.Empleado.FirstOrDefault(e => e.Id == usuario.Empleado.Id);
+                    con.Usuario.Add(usuario);
+                    con.SaveChanges();
+
+                    MessageBox.Show("El usuario se agregó correctamente");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al agregar el usuario: " + ex.Message);
+                MessageBox.Show("Error al agregar el usuario" );
+            }
+        }
+
+
+        //Modificar usuario
+        public void ModificarUsuarioEncriptado(UsuarioBE usuario)
+        {
+            try
+            {
+                // Buscar el usuario por id
+                UsuarioBE usuarioExistente = con.Usuario.FirstOrDefault(u => u.Id == usuario.Id);
+
+                if (usuarioExistente != null)
+                {
+                    // Modificar el usuario
+                    string salt = GenerarSalt();
+                    string hashContraseña = HashContraseña(usuario.Clave, salt);
+
+                    usuarioExistente.Nombre = usuario.Nombre;
+                    usuarioExistente.Clave = hashContraseña;
+                    usuarioExistente.Salto = salt;
+                    usuarioExistente.Empleado = con.Empleado.FirstOrDefault(e => e.Id == usuario.Empleado.Id);
+
+                    // Guardar los cambios en la base de datos
+                    con.SaveChanges();
+
+                    MessageBox.Show( "El usuario se modificó correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el usuario");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al modificar el usuario: " + ex.Message);
+                MessageBox.Show("Error al modificar el usuario");
+            }
+        }
+
+        //Eliminar usuario
+        public void EliminarUsuarioEncriptado(UsuarioBE usuario)
+        {
+            try
+            {
+                // Buscar el usuario por id
+                UsuarioBE usuarioAEliminar = con.Usuario.FirstOrDefault(u => u.Id == usuario.Id);
+
+                if (usuarioAEliminar != null)
+                {
+                    // Eliminar el usuario
+                    con.Usuario.Remove(usuarioAEliminar);
+
+                    // Guardar los cambios en la base de datos
+                    con.SaveChanges();
+
+                    MessageBox.Show("El usuario se eliminó correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el usuario");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al eliminar el usuario: " + ex.Message);
+                MessageBox.Show("Error al eliminar el usuario");
+            }
+        }
+
+        #endregion
+
+        
 
     }
 
-
-
-
-
 }
+
 
 
 

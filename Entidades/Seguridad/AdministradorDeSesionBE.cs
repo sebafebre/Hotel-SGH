@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Entidades.Seguridad
 {
@@ -18,7 +20,7 @@ namespace Entidades.Seguridad
         public DateTime FechaInicio { get; set; }
 
 
-        
+        /*
         public static AdministradorDeSesionBE obtenerInstancia
         {
             get
@@ -30,8 +32,28 @@ namespace Entidades.Seguridad
                 return _sesion;
 
             }
+        }*/
+
+        public static AdministradorDeSesionBE ObtenerInstancia
+        {
+            get
+            {
+                if (_sesion == null)
+                {
+                    lock (_lock)
+                    {
+                        if (_sesion == null)
+                        {
+                            _sesion = new AdministradorDeSesionBE();
+                        }
+                    }
+                }
+                return _sesion;
+            }
         }
 
+
+        /*
         public static void Login(UsuarioBE usuario)
         {
             lock (_lock)
@@ -44,11 +66,28 @@ namespace Entidades.Seguridad
                 }
                 else
                 {
-                    throw new Exception("Ya hay un usuario logueado");
+                    MessageBox.Show("Ya hay un usuario logueado");
                 }
 
             }
 
+        }*/
+        public static void Login(UsuarioBE usuario)
+        {
+            lock (_lock)
+            {
+                AdministradorDeSesionBE sesion = ObtenerInstancia;
+
+                if (sesion.Usuario == null)
+                {
+                    sesion.Usuario = usuario;
+                    sesion.FechaInicio = DateTime.Now;
+                }
+                else
+                {
+                    MessageBox.Show("Ya hay un usuario logueado");
+                }
+            }
         }
 
 
@@ -62,7 +101,7 @@ namespace Entidades.Seguridad
                 }
                 else
                 {
-                    throw new Exception("Sesion no iniciada");
+                    MessageBox.Show("Sesion no iniciada");
                 }
             }
 

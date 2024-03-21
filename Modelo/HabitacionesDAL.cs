@@ -145,6 +145,35 @@ namespace Modelo
             }
         }
 
+        public void BuscarHabitacionesDGV(DataGridView dataGridView)
+        {
+            // Limpiamos las filas existentes en el DataGridView
+            dataGridView.Rows.Clear();
+            dataGridView.Columns.Clear();
+
+            // Obtener la lista de las Habitaciones
+            List<HabitacionBE> listaHabitaciones = con.Habitacion.ToList();
+
+            // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
+
+            dataGridView.Columns.Add("Nro de Habitacion", "Nro de Habitacion");
+            dataGridView.Columns.Add("Tipo de Habitacion", "Tipo de Habitacion");
+            dataGridView.Columns.Add("Camas", "Camas");
+            dataGridView.Columns.Add("Precio Diario", "Precio Diario");
+
+            foreach (var habitacion in listaHabitaciones)
+            {
+                // Agregamos una fila al DataGridView
+                int rowIndex = dataGridView.Rows.Add();
+
+                dataGridView.Rows[rowIndex].Cells[0].Value = habitacion.NroHabitacion; // Suponiendo que "IdCliente" es la primera columna agregada
+                dataGridView.Rows[rowIndex].Cells[1].Value = habitacion.TipoHabitacion; // Suponiendo que "Nombre" es la segunda columna agregada
+                dataGridView.Rows[rowIndex].Cells[2].Value = habitacion.TipoCamas; // y así sucesivamente
+                dataGridView.Rows[rowIndex].Cells[3].Value = habitacion.PrecioDiario;
+            }
+        }
+
+
 
         public void BuscarHabitacionDGV(DataGridView dataGridView)
         {
@@ -209,35 +238,5 @@ namespace Modelo
         
         
 
-
-        /*
-        //Mostrar datos en el DataGridView
-        public List<HabitacionBE> ListarHabitaciones()
-        {
-            return con.Habitacion.ToList();
-        }
-
-
-
-        
-
-        public HabitacionBE ObtenerHabitacion(int idHabitacion)
-        {
-            return con.Habitacion.Find(idHabitacion);
-        }
-        */
-
-
-
-
-        /*
-        //Calcular proximo Id
-        public int ProximoId()
-        {
-            //return con.Habitacion.Max(h => h.Id) + 1;
-
-            return con.Habitacion.Any() ? con.Habitacion.Max(h => h.Id) + 1 : 1;
-
-        }*/
     }
 }

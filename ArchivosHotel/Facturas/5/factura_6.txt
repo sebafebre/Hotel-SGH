@@ -1,0 +1,10 @@
+DETALLE DE LA FACTURA
+Cliente: Sebastian Febre
+Reserva ID: 5
+Fecha de la reserva: 03/04/2024 0:00:00 hasta 30/06/2024 0:00:00
+Total de la estadia: 37268,00
+Productos:
+Producto: CocaCola  cantidad 1 precio: 100 total 121,00  
+Subtotal: 30800,00
+Impuestos: 6468,00
+Total de la factura: 37268,00

@@ -15,8 +15,12 @@ namespace Entidades
         private int nroPedido;
         private string estado;
         private DateTime fechaCreacion;
+        private decimal subtotal;
+        private decimal impuestos;
         private decimal total;
+
         private ReservaBE reserva;
+        private FacturaBE factura;
 
 
 
@@ -29,10 +33,14 @@ namespace Entidades
         public int NroPedido { get; set; }
         public string Estado { get; set; }
 
-        [Column(TypeName = "Date")]
+        //[Column(TypeName = "Date")]
         public DateTime FechaCreacion { get; set; }
+        public decimal Subtotal { get; set; }
+        public decimal Impuestos { get; set; }
         public decimal Total { get; set; }
         public virtual ReservaBE Reserva { get; set; }
+
+        public virtual FacturaBE Factura { get; set; }
 
     }
 }

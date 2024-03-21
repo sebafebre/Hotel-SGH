@@ -76,21 +76,208 @@ C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Modelo.pdb
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Entidades.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EntityFramework.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EPPlus.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Entidades.pdb
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Entidades.dll.config
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EntityFramework.xml
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.CrearBD.resources
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.tablaBackup.resources
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.actualizarBD.resources
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.GenerateResource.cache
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.CopyComplete
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.pdb
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.ComponentModel.Annotations.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EPPlus.Interfaces.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.Buffers.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.Memory.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.Buffers.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.Memory.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.Up2Date
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\ClosedXML.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\ExcelNumberFormat.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\Irony.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\SixLabors.Fonts.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.IO.Packaging.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\XLParser.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\ClosedXML.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\ExcelNumberFormat.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\SixLabors.Fonts.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\System.IO.Packaging.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EPPlus.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\bin\Debug\EPPlus.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\ClosedXML.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\EPPlus.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\ExcelNumberFormat.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\Irony.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\SixLabors.Fonts.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\System.Buffers.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\System.IO.Packaging.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\System.Memory.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\XLParser.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\ClosedXML.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\EPPlus.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\ExcelNumberFormat.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\SixLabors.Fonts.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\System.Buffers.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\System.IO.Packaging.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\System.Memory.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.csproj.Up2Date
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.Migrations.BD.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.csproj.GenerateResource.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.Migrations.TelefonoDouble.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.Migrations.Act.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.Migrations.Auditoria.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.Migrations.actualizarAudit.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.Migrations.actualizarDateTime.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.Migrations.actualizarFKs.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.Migrations.actHistorica.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Modelo\obj\Debug\Modelo.Migrations.elimHist.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.Migrations.BD.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.Migrations.TelefonoDouble.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.Migrations.Act.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.Migrations.Auditoria.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.Migrations.actualizarAudit.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.Migrations.actualizarDateTime.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.Migrations.actualizarFKs.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.Migrations.actHistorica.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.Migrations.elimHist.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.csproj.GenerateResource.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\ClosedXML.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\EPPlus.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\ExcelNumberFormat.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\Irony.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\SixLabors.Fonts.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\System.Buffers.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\System.IO.Packaging.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\System.Memory.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\XLParser.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\ClosedXML.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\EPPlus.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\ExcelNumberFormat.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\SixLabors.Fonts.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\System.Buffers.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\System.IO.Packaging.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\System.Memory.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.csproj.Up2Date
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Modelo\obj\Debug\Modelo.Migrations.Salto.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.BD.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.TelefonoDouble.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.Act.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.Auditoria.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.actualizarAudit.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.actualizarDateTime.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.actualizarFKs.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.actHistorica.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.elimHist.resources
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.Salto.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\Modelo.dll.config
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\Modelo.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\Modelo.pdb
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\ClosedXML.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\DocumentFormat.OpenXml.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\Entidades.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\EntityFramework.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\EPPlus.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\EPPlus.Interfaces.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\EPPlus.System.Drawing.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\ExcelNumberFormat.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\Irony.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\SixLabors.Fonts.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\System.Buffers.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\System.ComponentModel.Annotations.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\System.IO.Packaging.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\System.Memory.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\System.Numerics.Vectors.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\XLParser.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\Entidades.pdb
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\Entidades.dll.config
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\ClosedXML.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\DocumentFormat.OpenXml.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\EntityFramework.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\EPPlus.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\ExcelNumberFormat.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\SixLabors.Fonts.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\System.Buffers.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\System.IO.Packaging.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\System.Memory.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\System.Numerics.Vectors.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.BD.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.TelefonoDouble.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.Act.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.Auditoria.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.actualizarAudit.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.actualizarDateTime.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.actualizarFKs.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.actHistorica.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.elimHist.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.Migrations.Salto.resources
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.GenerateResource.cache
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.csproj.Up2Date
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Modelo\obj\Debug\Modelo.pdb

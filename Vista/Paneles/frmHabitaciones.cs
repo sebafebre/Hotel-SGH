@@ -30,6 +30,7 @@ namespace Vista.Paneles
         {
             InitializeComponent();
             habitacionBLL.ListarHabitacionesEnDataGridView(dgvHabitaciones);
+            VerificasPermisos();
         }
 
 
@@ -222,64 +223,7 @@ namespace Vista.Paneles
         #region DataGridView Habitaciones
         private void dgvHabitaciones_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            validacionBLL.LimpiarCampos(this.Controls);
-            try
-            {
-                //Poner los datos del cliente seleccionado en los campos correspondientes
-                if (dgvHabitaciones.CurrentRow != null)
-                {
-                    txtIdHabitacion.Text = dgvHabitaciones.CurrentRow.Cells[0].Value.ToString();
-                    //cbNumHabitacion.Text = string numeroHabitacionSimple = numeroCompletoHabitacion.Substring(2);
-                    cbPiso.SelectedItem = dgvHabitaciones.CurrentRow.Cells[2].Value.ToString();
-                    cbTipoHabitacion.SelectedItem = dgvHabitaciones.CurrentRow.Cells[3].Value.ToString();
 
-                    DGV_DatosEstado();
-
-                    txtPrecioDiario.Text = dgvHabitaciones.CurrentRow.Cells[5].Value.ToString();
-                    cbNroCamas.SelectedItem = dgvHabitaciones.CurrentRow.Cells[6].Value.ToString();
-                    string numeroCompletoHabitacion = dgvHabitaciones.CurrentRow.Cells[1].Value.ToString();
-
-                    
-
-
-                    // Obtener el último dígito si es un número de tres dígitos o los dos últimos si es de cuatro dígitos
-                    int ultimosDigitos = Convert.ToInt32( numeroCompletoHabitacion.Substring(numeroCompletoHabitacion.Length - 2));
-
-                    // Si los dos últimos dígitos son "00", tomamos solo el tercer dígito
-                    if (ultimosDigitos < 10 && numeroCompletoHabitacion.Length >= 3)
-                    {
-                        string tercerDigito = numeroCompletoHabitacion.Substring(numeroCompletoHabitacion.Length - 3, 1);
-                        cbNumHabitacion.Text = tercerDigito;
-                    }
-                    else
-                    {
-                        cbNumHabitacion.Text = ultimosDigitos.ToString();
-                    }
-
-                    /*
-                    cbNumHabitacion.Text = numeroCompletoHabitacion.Substring(2);
-
-
-                    // Obtener el último dígito si es un número de tres dígitos o los dos últimos si es de cuatro dígitos
-                    string ultimosDigitos = numeroCompletoHabitacion.Substring(numeroCompletoHabitacion.Length - 2);
-
-                    // Si los dos últimos dígitos son "00", tomamos solo el tercer dígito
-                    if (ultimosDigitos == "00" && numeroCompletoHabitacion.Length >= 3)
-                    {
-                        string tercerDigito = numeroCompletoHabitacion.Substring(numeroCompletoHabitacion.Length - 3, 1);
-                        cbNumHabitacion.Text = tercerDigito; 
-                    }
-                    else
-                    {
-                       cbNumHabitacion.Text = ultimosDigitos;
-                    }*/
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
         }
         public void DGV_DatosEstado()
         {
@@ -361,12 +305,7 @@ namespace Vista.Paneles
 
         private bool ValidarCampos()
         {
-            /*if (string.IsNullOrEmpty(this.cbPiso.Text) || string.IsNullOrEmpty(this.cbNumHabitacion.Text)  || string.IsNullOrEmpty(this.txtPrecioDiario.Text) || string.IsNullOrEmpty(this.cbTipoHabitacion.Text) || string.IsNullOrEmpty(this.cbNroCamas.Text))
-            {
-                MessageBox.Show("Debe completar todos los campos.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }*/
-            //return true;
+            
 
             if (string.IsNullOrEmpty(this.cbPiso.Text))
             {
@@ -395,6 +334,51 @@ namespace Vista.Paneles
                 return false;
             }
             return true;
+        }
+
+        private void dgvHabitaciones_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            validacionBLL.LimpiarCampos(this.Controls);
+            try
+            {
+                //Poner los datos del cliente seleccionado en los campos correspondientes
+                if (dgvHabitaciones.CurrentRow != null)
+                {
+                    txtIdHabitacion.Text = dgvHabitaciones.CurrentRow.Cells[0].Value.ToString();
+                    cbPiso.SelectedItem = dgvHabitaciones.CurrentRow.Cells[2].Value.ToString();
+                    cbTipoHabitacion.SelectedItem = dgvHabitaciones.CurrentRow.Cells[3].Value.ToString();
+
+                    DGV_DatosEstado();
+
+                    txtPrecioDiario.Text = dgvHabitaciones.CurrentRow.Cells[5].Value.ToString();
+                    cbNroCamas.SelectedItem = dgvHabitaciones.CurrentRow.Cells[6].Value.ToString();
+                    string numeroCompletoHabitacion = dgvHabitaciones.CurrentRow.Cells[1].Value.ToString();
+
+
+
+
+                    // Obtener el último dígito si es un número de tres dígitos o los dos últimos si es de cuatro dígitos
+                    int ultimosDigitos = Convert.ToInt32(numeroCompletoHabitacion.Substring(numeroCompletoHabitacion.Length - 2));
+
+                    
+                    if (ultimosDigitos < 10 && numeroCompletoHabitacion.Length >= 3)
+                    {
+                        string tercerDigito = numeroCompletoHabitacion.Substring(numeroCompletoHabitacion.Length - 3, 1);
+                        cbNumHabitacion.Text = tercerDigito;
+                    }
+                    else
+                    {
+                        cbNumHabitacion.Text = ultimosDigitos.ToString();
+                    }
+
+                    
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }

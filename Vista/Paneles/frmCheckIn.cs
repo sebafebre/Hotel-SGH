@@ -41,8 +41,29 @@ namespace Vista.Paneles
 
         private void txtBuscarDNI_TextChanged(object sender, EventArgs e)
         {
-            string dni = txtBuscarDNI.Text.Trim().ToLower();
-            checkinBLL.BuscarClientePorDNI(dni, dgvReservas);
+            
+            try
+            {
+                if (usuarioEscribiendo)
+                {
+                    if (!string.IsNullOrEmpty(txtBuscarDNI.Text))
+                    {
+                        string dniBusqueda = txtBuscarDNI.Text.Trim().ToLower();
+                        checkinBLL.BuscarClientePorDNI(dniBusqueda, dgvReservas);
+                    }
+
+                    // Restablecer usuarioEscribiendo solo cuando el usuario ha terminado de escribir
+                    usuarioEscribiendo = false;
+                }
+                if (string.IsNullOrEmpty(txtBuscarDNI.Text))
+                {
+                    checkinBLL.ListarReservasPendientesEnDataGridView(dgvReservas);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnCheckIn_Click(object sender, EventArgs e)
@@ -78,8 +99,7 @@ namespace Vista.Paneles
                     lblFechaIda.Text = fechaIda.ToString("dd/MM/yyyy");
 
 
-                    //lblFechaLlegada.Text = dgvReservas.CurrentRow.Cells[3].Value.ToString();
-                    //lblFechaIda.Text = dgvReservas.CurrentRow.Cells[4].Value.ToString();
+                 
                     lblNroHabitacion.Text = dgvReservas.CurrentRow.Cells[5].Value.ToString();
                     lblTipoHabitacion.Text = dgvReservas.CurrentRow.Cells[6].Value.ToString();
                     lblCamas.Text = dgvReservas.CurrentRow.Cells[7].Value.ToString();
@@ -140,5 +160,13 @@ namespace Vista.Paneles
         {
 
         }
+        private bool usuarioEscribiendo = false;
+        private void txtBuscarDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            usuarioEscribiendo = e.KeyChar != '\b';
+        }
+
+        
+
     }
 }

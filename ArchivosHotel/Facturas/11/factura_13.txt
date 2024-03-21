@@ -1,0 +1,15 @@
+DETALLE DE LA FACTURA
+Fecha de la emision de la Factura:  12/03/2024 4:02:14   
+Cliente: sebaUlt    feb
+Reserva ID: 11
+Fecha de la reserva: 08/03/2024 0:00:00 hasta 09/03/2024 0:00:00
+ 
+ 
+ 
+ 
+Productos:
+Producto: Jugo de naranja  cantidad: 2  precio U: 65   total:  157,30  
+Producto: CocaCola  cantidad: 1  precio U: 100   total:  121,00  
+Subtotal: 230,00
+Impuestos: 48,30
+Total de la factura: 278,30

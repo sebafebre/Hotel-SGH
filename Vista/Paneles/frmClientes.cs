@@ -18,11 +18,13 @@ namespace Vista.Paneles
 
         ClienteBLL clienteBLL = new ClienteBLL();
         ValidacionesBLL validacionesBLL = new ValidacionesBLL();
+        private AutoCompleteStringCollection autoCompleteCollection;
 
         public frmClientes()
         {
             InitializeComponent();
             clienteBLL.ListarClientesActivosEnDataGridView(dgvClientes);
+            validacionesBLL.AutocompletarNacionalidad(txtNacionalidad);
         }
 
 
@@ -70,9 +72,9 @@ namespace Vista.Paneles
                     cliente.Persona.EstadoActivo = true;
                     cliente.Persona.Nombre = txtNombre.Text;
                     cliente.Persona.Apellido = txtApellido.Text;
-                    cliente.Persona.DNI = txtDNI.Text;
-                    cliente.Persona.Direccion = txtDireccion.Text;
-                    cliente.Persona.Telefono = txtTelefono.Text;
+                    cliente.Persona.DNI = Convert.ToInt32(txtDNI.Text);
+                    cliente.Persona.Direccion = txtNacionalidad.Text;
+                    cliente.Persona.Telefono =Convert.ToDouble(txtTelefono.Text);
                     cliente.Persona.Mail = txtMail.Text;
                     cliente.Persona.FechaNacimiento = dtpFechaNacimiento.Value;
                     cliente.FechaDeAlta = DateTime.Now;
@@ -111,9 +113,9 @@ namespace Vista.Paneles
                         cliente.Id = Convert.ToInt32(txtID.Text);
                         cliente.Persona.Nombre = txtNombre.Text;
                         cliente.Persona.Apellido = txtApellido.Text;
-                        cliente.Persona.DNI = txtDNI.Text;
-                        cliente.Persona.Direccion = txtDireccion.Text;
-                        cliente.Persona.Telefono = txtTelefono.Text;
+                        cliente.Persona.DNI = Convert.ToInt32(txtDNI.Text);
+                        cliente.Persona.Direccion = txtNacionalidad.Text;
+                        cliente.Persona.Telefono = Convert.ToDouble(txtTelefono.Text);
                         cliente.Persona.Mail = txtMail.Text;
                         cliente.Persona.FechaNacimiento = dtpFechaNacimiento.Value;
                         cliente.FechaDeAlta = DateTime.Now;
@@ -144,34 +146,6 @@ namespace Vista.Paneles
         #endregion
 
 
-        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            validacionesBLL.LimpiarCampos(this.Controls);
-            try
-            {
-                //Poner los datos del cliente seleccionado en los campos correspondientes
-                if (dgvClientes.CurrentRow != null)
-                {
-                    txtID.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
-                    txtNombre.Text = dgvClientes.CurrentRow.Cells[1].Value.ToString();
-                    txtApellido.Text = dgvClientes.CurrentRow.Cells[2].Value.ToString();
-                    txtDNI.Text = dgvClientes.CurrentRow.Cells[3].Value.ToString();
-
-                    txtDireccion.Text = dgvClientes.CurrentRow.Cells[4].Value.ToString();
-
-                    txtTelefono.Text = dgvClientes.CurrentRow.Cells[5].Value.ToString();
-                    txtMail.Text = dgvClientes.CurrentRow.Cells[6].Value.ToString();
-                    dtpFechaNacimiento.Value = Convert.ToDateTime(dgvClientes.CurrentRow.Cells[7].Value.ToString());
-
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
-
         private bool ValidarCampos()
         {
             if(txtNombre.Text == "")
@@ -192,10 +166,10 @@ namespace Vista.Paneles
                 txtDNI.Focus();
                 return false;
             }
-            else if (txtDireccion.Text == "")
+            else if (txtNacionalidad.Text == "")
             {
                 MessageBox.Show("El campo Dirección no puede estar vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtDireccion.Focus();
+                txtNacionalidad.Focus();
                 return false;
             }
             else if (txtTelefono.Text == "")
@@ -257,11 +231,28 @@ namespace Vista.Paneles
             }
 
         }
+        private bool usuarioEscribiendo = false;
 
         private void txtDNI_TextChanged(object sender, EventArgs e)
         {
             try
             {
+                if (usuarioEscribiendo)
+                {
+                    if (!string.IsNullOrEmpty(txtDNI.Text))
+                    {
+                        string dniBusqueda = txtDNI.Text.Trim().ToLower();
+                        validacionesBLL.BuscarPorDNI(dniBusqueda, dgvClientes);
+                    }
+
+                    // Restablecer usuarioEscribiendo solo cuando el usuario ha terminado de escribir
+                    usuarioEscribiendo = false;
+                }
+                if (string.IsNullOrEmpty(txtDNI.Text))
+                {
+                    clienteBLL.ListarClientesActivosEnDataGridView(dgvClientes);
+                }
+
                 string dni = txtDNI.Text;
                 //validacionesBLL.ValidarDni(dni);
                 validacionesBLL.ValidarSoloNumeros((TextBox)sender);
@@ -271,6 +262,20 @@ namespace Vista.Paneles
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
 
         private void txtDireccion_TextChanged(object sender, EventArgs e)
         {
@@ -309,6 +314,44 @@ namespace Vista.Paneles
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            usuarioEscribiendo = e.KeyChar != '\b';
+        }
+
+        private void dgvClientes_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            try
+            {
+                //Poner los datos del cliente seleccionado en los campos correspondientes
+                if (dgvClientes.CurrentRow != null)
+                {
+                    txtID.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
+                    txtNombre.Text = dgvClientes.CurrentRow.Cells[1].Value.ToString();
+                    txtApellido.Text = dgvClientes.CurrentRow.Cells[2].Value.ToString();
+                    txtDNI.Text = dgvClientes.CurrentRow.Cells[3].Value.ToString();
+
+                    txtNacionalidad.Text = dgvClientes.CurrentRow.Cells[4].Value.ToString();
+
+                    txtTelefono.Text = dgvClientes.CurrentRow.Cells[5].Value.ToString();
+                    txtMail.Text = dgvClientes.CurrentRow.Cells[6].Value.ToString();
+                    dtpFechaNacimiento.Value = Convert.ToDateTime(dgvClientes.CurrentRow.Cells[7].Value.ToString());
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }

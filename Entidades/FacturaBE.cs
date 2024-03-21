@@ -18,8 +18,10 @@ namespace Entidades
         private int nroFactura;
         private DateTime fechaEmision;
         private string estado;
+        private decimal subtotal;
+        private decimal impuestos;
+        private decimal total;
         private EmpleadoBE empleado;
-        private PedidoBE pedido;
         #endregion
 
 
@@ -34,12 +36,31 @@ namespace Entidades
         public DateTime FechaEmision { get; set; }
         public string Estado { get; set; }
 
+        public decimal Subtotal { get; set; }
+        public decimal Impuestos { get; set; }
+
+        public decimal Total { get; set; }
+
         
 
         public virtual EmpleadoBE Empleado { get; set; }
-        public virtual PedidoBE Pedido { get; set; }
         #endregion
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

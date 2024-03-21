@@ -77,7 +77,6 @@ C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Entidades.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EntityFramework.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Modelo.dll
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EPPlus.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Entidades.pdb
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Entidades.dll.config
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Modelo.pdb
@@ -86,9 +85,120 @@ C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EntityFramework.
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\obj\Debug\Controladora.csproj.AssemblyReference.cache
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\obj\Debug\Controladora.csproj.CoreCompileInputs.cache
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\obj\Debug\Controladora.csproj.CopyComplete
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\obj\Debug\Controladora.dll
 C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\obj\Debug\Controladora.pdb
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EPPlus.Interfaces.dll
-C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\obj\Debug\Controla.1EE7A4DA.Up2Date
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\Controladora.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\obj\Debug\Controladora.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\obj\Debug\Controladora.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\obj\Debug\Controla.1EE7A4DA.Up2Date
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\obj\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia\Controladora\obj\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\obj\Debug\Controladora.csproj.AssemblyReference.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\obj\Debug\Controladora.csproj.CoreCompileInputs.cache
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\obj\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\obj\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\Controladora.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\Controladora.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\Controladora.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\Entidades.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\EntityFramework.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\Modelo.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\ClosedXML.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\System.Memory.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\SixLabors.Fonts.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\ExcelNumberFormat.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\System.IO.Packaging.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\Irony.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\System.Buffers.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\XLParser.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\Entidades.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\Entidades.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\Modelo.pdb
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\Modelo.dll.config
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\EntityFramework.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\ClosedXML.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\System.Memory.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\SixLabors.Fonts.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\ExcelNumberFormat.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\System.IO.Packaging.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\System.Buffers.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final - copia - copia\Controladora\obj\Debug\Controla.1EE7A4DA.Up2Date
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\ClosedXML.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\System.Memory.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\SixLabors.Fonts.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\ExcelNumberFormat.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\System.IO.Packaging.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\Irony.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\System.Buffers.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\XLParser.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\ClosedXML.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\System.Memory.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\SixLabors.Fonts.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\ExcelNumberFormat.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\System.IO.Packaging.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\System.Buffers.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sebaf\Desktop\SGH - UAI - Final\Controladora\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\Controladora.dll.config
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\Controladora.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\Controladora.pdb
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\Entidades.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\EntityFramework.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\EntityFramework.SqlServer.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\Modelo.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\ClosedXML.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\System.Memory.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\DocumentFormat.OpenXml.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\SixLabors.Fonts.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\ExcelNumberFormat.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\System.IO.Packaging.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\Irony.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\System.Buffers.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\XLParser.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\System.Numerics.Vectors.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\Entidades.pdb
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\Entidades.dll.config
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\Modelo.pdb
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\Modelo.dll.config
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\EntityFramework.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\EntityFramework.SqlServer.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\ClosedXML.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\System.Memory.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\DocumentFormat.OpenXml.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\SixLabors.Fonts.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\ExcelNumberFormat.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\System.IO.Packaging.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\System.Buffers.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\System.Numerics.Vectors.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\obj\Debug\Controladora.csproj.AssemblyReference.cache
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\obj\Debug\Controladora.csproj.CoreCompileInputs.cache
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\obj\Debug\Controla.1EE7A4DA.Up2Date
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\obj\Debug\Controladora.dll
+D:\TODO\FACULTAD\3A-Segundo_Cuatrimestre\Trabajo de diploma\SGH - UAI - Final\Controladora\obj\Debug\Controladora.pdb

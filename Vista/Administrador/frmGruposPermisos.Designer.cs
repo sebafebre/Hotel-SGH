@@ -154,6 +154,7 @@
             // 
             this.dgvPermisos.AllowUserToAddRows = false;
             this.dgvPermisos.AllowUserToDeleteRows = false;
+            this.dgvPermisos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(154)))), ((int)(((byte)(153)))));
             this.dgvPermisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPermisos.Location = new System.Drawing.Point(628, 12);
             this.dgvPermisos.Name = "dgvPermisos";
@@ -168,6 +169,7 @@
             // 
             this.dgvGrupos.AllowUserToAddRows = false;
             this.dgvGrupos.AllowUserToDeleteRows = false;
+            this.dgvGrupos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(154)))), ((int)(((byte)(153)))));
             this.dgvGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrupos.Location = new System.Drawing.Point(7, 12);
             this.dgvGrupos.Name = "dgvGrupos";
@@ -240,7 +242,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(154)))), ((int)(((byte)(141)))));
-            this.ClientSize = new System.Drawing.Size(1473, 457);
+            this.ClientSize = new System.Drawing.Size(1317, 457);
             this.Controls.Add(this.btnQuitarPermisoAGrupo);
             this.Controls.Add(this.btnAgregarPermisoAGrupo);
             this.Controls.Add(this.txtIdGrupo);

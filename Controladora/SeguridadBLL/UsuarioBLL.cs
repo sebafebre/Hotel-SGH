@@ -21,13 +21,14 @@ namespace Controladora
 
 
         //ValidarCredenciales de Modelo.UsuarioDAL
+        /*
         public UsuarioBE ValidarCredenciales(string usuario, string password)
         {
             return usuarioDAL.ValidarCredenciales(usuario, password);
-        }
+        }*/
         public bool VerificarCredencialesEncriptadas(string nombreUsuario, string clave)
         {
-            return usuarioDAL.VerificarCredencialesEncriptadas(nombreUsuario, clave);
+            return usuarioDAL.VerificarContraseña(nombreUsuario, clave);
         }
 
 
@@ -91,7 +92,10 @@ namespace Controladora
 
 
 
-
+        public UsuarioBE obtenerUsuarioLogueado(string nombreUsuario)
+        {
+            return usuarioDAL.obtenerUsuarioLogueado(nombreUsuario);
+        }
 
 
 
@@ -138,6 +142,43 @@ namespace Controladora
         {
             usuarioDAL.ListarGruposYPermisosUsuarioEnDataGridView(dgvGruposPermisosUsuario, idUsuario);
         }
+
+
+
+
+
+
+
+        #region ABM Usaurio
+        //Agregar usuario
+        public void AgregarUsuarioEncriptado(UsuarioBE usuario)
+        {
+            usuarioDAL.AgregarUsuarioEncriptado(usuario);
+            
+
+        }
+
+
+        //Modificar usuario
+        public void ModificarUsuarioEncriptado(UsuarioBE usuario)
+        {
+             usuarioDAL.ModificarUsuarioEncriptado(usuario);
+
+        }
+
+        //Eliminar usuario
+        public void EliminarUsuarioEncriptado(UsuarioBE usuario)
+        {
+             usuarioDAL.EliminarUsuarioEncriptado(usuario);
+
+        }
+
+        public bool VerificarContraseña(string nombreUsuario, string contraseña)
+        {
+            return usuarioDAL.VerificarContraseña(nombreUsuario, contraseña);
+
+        }
+        #endregion
 
 
 

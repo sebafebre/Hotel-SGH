@@ -69,7 +69,7 @@ namespace Vista.Administrador
                     usuario.Nombre = txtUsuario.Text;
                     usuario.Clave = txtClave.Text;
 
-                    usuarioBLL.AgregarUsuario(usuario);
+                    usuarioBLL.AgregarUsuarioEncriptado(usuario);
                     validacionBLL.LimpiarCampos(this.Controls);
 
                     usuarioBLL.ListarUsuariosEnDGV(dgvUsuarios);
@@ -93,10 +93,11 @@ namespace Vista.Administrador
                     UsuarioBE usuario = new UsuarioBE();
                     usuario.Empleado = new EmpleadoBE();
                     usuario.Empleado.Id = Convert.ToInt32(txtIdEmpleado.Text);
+                    usuario.Id = Convert.ToInt32(txtIdUsuario.Text);
                     usuario.Nombre = txtUsuario.Text;
                     usuario.Clave = txtClave.Text;
 
-                    usuarioBLL.ModificarUsuario(usuario);
+                    usuarioBLL.ModificarUsuarioEncriptado(usuario);
                     validacionBLL.LimpiarCampos(this.Controls);
                 }
                 else
@@ -184,3 +185,143 @@ namespace Vista.Administrador
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Creado por Sebastian Febre
+// https://github.com/sebafebre

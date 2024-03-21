@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvHabitaciones = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -50,14 +52,16 @@
             this.rbLimpieza = new System.Windows.Forms.RadioButton();
             this.cbNumHabitacion = new System.Windows.Forms.ComboBox();
             this.lblError = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
+            this.dgvHabitaciones = new System.Windows.Forms.DataGridView();
             this.flpEstado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1175, 170);
+            this.label9.Location = new System.Drawing.Point(763, 175);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(88, 16);
             this.label9.TabIndex = 39;
@@ -65,8 +69,9 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1157, 202);
+            this.label5.Location = new System.Drawing.Point(745, 207);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 16);
             this.label5.TabIndex = 36;
@@ -74,8 +79,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1166, 132);
+            this.label3.Location = new System.Drawing.Point(754, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 16);
             this.label3.TabIndex = 34;
@@ -83,8 +89,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1226, 86);
+            this.label2.Location = new System.Drawing.Point(814, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 16);
             this.label2.TabIndex = 33;
@@ -92,30 +99,18 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1240, 48);
+            this.label1.Location = new System.Drawing.Point(828, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 16);
             this.label1.TabIndex = 32;
             this.label1.Text = "ID:";
             // 
-            // dgvHabitaciones
-            // 
-            this.dgvHabitaciones.AllowUserToAddRows = false;
-            this.dgvHabitaciones.AllowUserToDeleteRows = false;
-            this.dgvHabitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHabitaciones.Location = new System.Drawing.Point(12, 12);
-            this.dgvHabitaciones.Name = "dgvHabitaciones";
-            this.dgvHabitaciones.ReadOnly = true;
-            this.dgvHabitaciones.RowHeadersWidth = 51;
-            this.dgvHabitaciones.RowTemplate.Height = 24;
-            this.dgvHabitaciones.Size = new System.Drawing.Size(1067, 471);
-            this.dgvHabitaciones.TabIndex = 31;
-            this.dgvHabitaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHabitaciones_CellClick);
-            // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(1409, 422);
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.Location = new System.Drawing.Point(995, 418);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(102, 49);
             this.btnEliminar.TabIndex = 30;
@@ -125,7 +120,8 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(1164, 422);
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.Location = new System.Drawing.Point(750, 418);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(102, 49);
             this.btnModificar.TabIndex = 29;
@@ -135,7 +131,8 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(1289, 422);
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.Location = new System.Drawing.Point(875, 418);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(102, 49);
             this.btnAgregar.TabIndex = 28;
@@ -145,7 +142,8 @@
             // 
             // txtIdHabitacion
             // 
-            this.txtIdHabitacion.Location = new System.Drawing.Point(1287, 48);
+            this.txtIdHabitacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIdHabitacion.Location = new System.Drawing.Point(875, 53);
             this.txtIdHabitacion.Name = "txtIdHabitacion";
             this.txtIdHabitacion.ReadOnly = true;
             this.txtIdHabitacion.Size = new System.Drawing.Size(121, 22);
@@ -153,7 +151,8 @@
             // 
             // txtPrecioDiario
             // 
-            this.txtPrecioDiario.Location = new System.Drawing.Point(1287, 170);
+            this.txtPrecioDiario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrecioDiario.Location = new System.Drawing.Point(875, 175);
             this.txtPrecioDiario.Name = "txtPrecioDiario";
             this.txtPrecioDiario.ReadOnly = true;
             this.txtPrecioDiario.Size = new System.Drawing.Size(121, 22);
@@ -161,6 +160,7 @@
             // 
             // cbPiso
             // 
+            this.cbPiso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbPiso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPiso.FormattingEnabled = true;
             this.cbPiso.Items.AddRange(new object[] {
@@ -170,13 +170,14 @@
             "4",
             "5",
             "6"});
-            this.cbPiso.Location = new System.Drawing.Point(1287, 86);
+            this.cbPiso.Location = new System.Drawing.Point(875, 91);
             this.cbPiso.Name = "cbPiso";
             this.cbPiso.Size = new System.Drawing.Size(121, 24);
             this.cbPiso.TabIndex = 40;
             // 
             // cbTipoHabitacion
             // 
+            this.cbTipoHabitacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbTipoHabitacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoHabitacion.FormattingEnabled = true;
             this.cbTipoHabitacion.Items.AddRange(new object[] {
@@ -184,7 +185,7 @@
             "Medium",
             "Premium",
             "Suit"});
-            this.cbTipoHabitacion.Location = new System.Drawing.Point(1287, 202);
+            this.cbTipoHabitacion.Location = new System.Drawing.Point(875, 207);
             this.cbTipoHabitacion.Name = "cbTipoHabitacion";
             this.cbTipoHabitacion.Size = new System.Drawing.Size(121, 24);
             this.cbTipoHabitacion.TabIndex = 42;
@@ -192,6 +193,7 @@
             // 
             // cbNroCamas
             // 
+            this.cbNroCamas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbNroCamas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNroCamas.FormattingEnabled = true;
             this.cbNroCamas.Items.AddRange(new object[] {
@@ -199,7 +201,7 @@
             "2-Simple",
             "1-Matrimonial",
             "2-Matrimoniales"});
-            this.cbNroCamas.Location = new System.Drawing.Point(1287, 236);
+            this.cbNroCamas.Location = new System.Drawing.Point(875, 241);
             this.cbNroCamas.Name = "cbNroCamas";
             this.cbNroCamas.Size = new System.Drawing.Size(121, 24);
             this.cbNroCamas.TabIndex = 43;
@@ -207,8 +209,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1185, 236);
+            this.label4.Location = new System.Drawing.Point(773, 241);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 16);
             this.label4.TabIndex = 44;
@@ -216,8 +219,9 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1210, 283);
+            this.label6.Location = new System.Drawing.Point(798, 288);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 16);
             this.label6.TabIndex = 45;
@@ -236,10 +240,11 @@
             // 
             // flpEstado
             // 
+            this.flpEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.flpEstado.Controls.Add(this.rbDisponible);
             this.flpEstado.Controls.Add(this.rbOcupado);
             this.flpEstado.Controls.Add(this.rbLimpieza);
-            this.flpEstado.Location = new System.Drawing.Point(1287, 283);
+            this.flpEstado.Location = new System.Drawing.Point(875, 288);
             this.flpEstado.Name = "flpEstado";
             this.flpEstado.Size = new System.Drawing.Size(116, 88);
             this.flpEstado.TabIndex = 47;
@@ -268,6 +273,7 @@
             // 
             // cbNumHabitacion
             // 
+            this.cbNumHabitacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbNumHabitacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNumHabitacion.FormattingEnabled = true;
             this.cbNumHabitacion.Items.AddRange(new object[] {
@@ -291,7 +297,7 @@
             "18",
             "19",
             "20"});
-            this.cbNumHabitacion.Location = new System.Drawing.Point(1287, 129);
+            this.cbNumHabitacion.Location = new System.Drawing.Point(875, 134);
             this.cbNumHabitacion.Name = "cbNumHabitacion";
             this.cbNumHabitacion.Size = new System.Drawing.Size(121, 24);
             this.cbNumHabitacion.TabIndex = 48;
@@ -305,12 +311,62 @@
             this.lblError.Size = new System.Drawing.Size(0, 16);
             this.lblError.TabIndex = 49;
             // 
+            // dgvHabitaciones
+            // 
+            this.dgvHabitaciones.AllowUserToAddRows = false;
+            this.dgvHabitaciones.AllowUserToDeleteRows = false;
+            this.dgvHabitaciones.AllowUserToResizeColumns = false;
+            this.dgvHabitaciones.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(230)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(135)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(230)))), ((int)(((byte)(205)))));
+            this.dgvHabitaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHabitaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvHabitaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHabitaciones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(154)))), ((int)(((byte)(153)))));
+            this.dgvHabitaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvHabitaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvHabitaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(192)))), ((int)(((byte)(152)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(135)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(230)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHabitaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvHabitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(242)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(135)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(192)))), ((int)(((byte)(152)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHabitaciones.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvHabitaciones.EnableHeadersVisualStyles = false;
+            this.dgvHabitaciones.Location = new System.Drawing.Point(12, 12);
+            this.dgvHabitaciones.Name = "dgvHabitaciones";
+            this.dgvHabitaciones.ReadOnly = true;
+            this.dgvHabitaciones.RowHeadersVisible = false;
+            this.dgvHabitaciones.RowHeadersWidth = 51;
+            this.dgvHabitaciones.RowTemplate.Height = 24;
+            this.dgvHabitaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHabitaciones.Size = new System.Drawing.Size(703, 455);
+            this.dgvHabitaciones.TabIndex = 50;
+            this.dgvHabitaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHabitaciones_CellClick_1);
+            // 
             // frmHabitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(154)))), ((int)(((byte)(141)))));
-            this.ClientSize = new System.Drawing.Size(1595, 495);
+            this.ClientSize = new System.Drawing.Size(1110, 491);
+            this.Controls.Add(this.dgvHabitaciones);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.cbNumHabitacion);
             this.Controls.Add(this.flpEstado);
@@ -324,7 +380,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvHabitaciones);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -332,9 +387,9 @@
             this.Controls.Add(this.txtPrecioDiario);
             this.Name = "frmHabitaciones";
             this.Text = "frmHabitaciones";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).EndInit();
             this.flpEstado.ResumeLayout(false);
             this.flpEstado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,7 +402,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvHabitaciones;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
@@ -364,5 +418,6 @@
         private System.Windows.Forms.RadioButton rbLimpieza;
         private System.Windows.Forms.ComboBox cbNumHabitacion;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.DataGridView dgvHabitaciones;
     }
 }
