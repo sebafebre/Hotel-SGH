@@ -34,7 +34,6 @@ namespace Modelo
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo agregar la habitacion. ");
-                //   return "No se pudo agregar la habitacion. " + ex.Message;
 
             }
         }

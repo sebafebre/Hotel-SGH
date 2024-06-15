@@ -71,10 +71,7 @@ namespace Controladora
             return pedidoDAL.AgregarPedido(listaDetallesPedidos, dgvProductos, idProducto, NomProduct, CantPedido);
         }
 
-        /*public void FinalizarPedido(List<DetallePedidoBE> listaDetallesPedidos, int nroReserva)
-        {
-            pedidoDAL.FinalizarPedido( listaDetallesPedidos , nroReserva);   
-        }*/
+        
 
         public List<DetallePedidoBE> CancelarPedido(List<DetallePedidoBE> listaDetallesPedidos, DataGridView dgvProductos, DataGridView dgvDetalles)
         {

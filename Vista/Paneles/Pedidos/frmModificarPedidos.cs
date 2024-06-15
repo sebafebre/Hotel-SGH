@@ -69,7 +69,6 @@ namespace Vista.Paneles.Pedidos
             {
                 if (txtIdDetalle.Text != "" && txtNombreProducto.Text != "" )
                 {
-                    //int nroReserva = Convert.ToInt32(txtNroReserva.Text);
                     int idDetalle = Convert.ToInt32(txtIdDetalle.Text);
                     string nomProd = txtNombreProducto.Text;
                     pedidoBLL.EliminarDetallePedido(idDetalle, nomProd);
@@ -167,7 +166,6 @@ namespace Vista.Paneles.Pedidos
                     int nroPedido = Convert.ToInt32(txtNroPedido.Text);
                     string estadoSeleccionado = validacionBLL.ObtenerEstadoSeleccionado(flpEstado);
                     int nroReserva = Convert.ToInt32(txtNroReserva.Text);
-                    //pedido.Estado = estadoSeleccionado;
                     if (estadoSeleccionado == "Pago en el momento" /*&&*/ )
                     {
 
@@ -182,17 +180,7 @@ namespace Vista.Paneles.Pedidos
                         formularioPago.nroPedido = nroPedido;
                         formularioPago.ShowDialog(); 
 
-                        /*
-
-                        List<DetallePedidoBE> listaDetallesPedidos = pedidoBLL.ObtenerListaDetallesPedidos(nroPedido);
-
-                        stateBLL.FinalizarPedido(listaDetallesPedidos, nroReserva, estadoSeleccionado, "A", usuarioActual, nroPedido);
-
-                        //pedidoBLL.ModificarEstadoPedido(nroPedido, estadoSeleccionado);
-
-                        //MessageBox.Show("Habitacion modificada correctamente", "Modificar Habitacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
-                         */
                         pedidoBLL.ListarPedidosEnDataGridView(dgvPedidos);
 
                         validacionBLL.LimpiarCampos(this.Controls);
@@ -289,8 +277,7 @@ namespace Vista.Paneles.Pedidos
                 if (dgvDetalles.CurrentRow != null)
                 {
                     txtIdDetalle.Text = dgvDetalles.CurrentRow.Cells[0].Value.ToString();
-                    //txtNroReserva.Text = dgvDetalles.CurrentRow.Cells[0].Value.ToString();
-                    //
+                    
                     txtNombreProducto.Text = dgvDetalles.CurrentRow.Cells[2].Value.ToString();
                     txtCantProducto.Text = dgvDetalles.CurrentRow.Cells[3].Value.ToString();
                     lblPrecioProd.Text = dgvDetalles.CurrentRow.Cells[5].Value.ToString();
@@ -321,24 +308,20 @@ namespace Vista.Paneles.Pedidos
                 if (dgvPedidos.CurrentRow != null)
                 {
                     int nroPedido = Convert.ToInt32(dgvPedidos.CurrentRow.Cells[0].Value.ToString());
-                    //row.Cells["Nro de Habitacion"].Value.ToString().
 
-                    string nroReserva = dgvPedidos.CurrentRow.Cells[/*"NroReserva"*/1].Value.ToString();
+                    string nroReserva = dgvPedidos.CurrentRow.Cells[1].Value.ToString();
                     txtNroReserva.Text = nroReserva.ToString();
 
 
-                    string nroHabitacion = dgvPedidos.CurrentRow.Cells[/*"NroReserva"*/2].Value.ToString();
+                    string nroHabitacion = dgvPedidos.CurrentRow.Cells[2].Value.ToString();
                     txtNroHabitacion.Text = nroHabitacion.ToString();
 
-                    //txtNombreProducto.Text = dgvDetalles.CurrentRow.Cells[2].Value.ToString();
-                    //txtCantProducto.Text = dgvDetalles.CurrentRow.Cells[3].Value.ToString();
 
 
                     ClienteBE clienteReserva;
                     HabitacionBE habitacionReserva;
 
                     pedidoBLL.ObtenerDatosClienteYHabitacion(Convert.ToInt32(nroReserva), out clienteReserva, out habitacionReserva);
-                    //txtNroHabitacion.Text = habitacionReserva.NroHabitacion.ToString();
                     txtNombreCliente.Text = clienteReserva.Persona.Nombre + clienteReserva.Persona.Apellido;
                     txtBuscarDNI.Text = clienteReserva.Persona.DNI.ToString();
                     txtNroPedido.Text = nroPedido.ToString();
@@ -348,7 +331,6 @@ namespace Vista.Paneles.Pedidos
 
                     DGV_DatosEstadoPedido();
 
-                    //ListarDetallesDelPedidoDGV(int IdPedido, DataGridView dataGridView)
                     pedidoBLL.ListarDetallesDelPedidoDGV(nroPedido, dgvDetalles);
                 }
             }

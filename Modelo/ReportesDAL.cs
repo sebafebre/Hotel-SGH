@@ -12,7 +12,6 @@ using Chart = Microsoft.Office.Interop.Excel.Chart;
 using Application = Microsoft.Office.Interop.Excel.Application;
 using System.Globalization;
 using System.Windows.Forms;
-//using System.Windows.Forms.DataVisualization.Charting;
 
 
 
@@ -72,9 +71,7 @@ namespace Modelo
 
             List<ReservaBE> reservasDelMes = con.Reserva
                 .Where(r =>
-                    // La reserva comienza antes o durante el mes actual
                     (r.FechaLlegada <= ultimoDiaDelMes && r.FechaIda >= primerDiaDelMes) ||
-                    // La reserva termina después o durante el mes actual
                     (r.FechaIda >= primerDiaDelMes && r.FechaIda <= ultimoDiaDelMes))
                 .ToList();
 
@@ -308,10 +305,7 @@ namespace Modelo
             DateTime primerDiaDelMes = new DateTime(fechaActual.Year, fechaActual.Month, 1);
             DateTime ultimoDiaDelMes = primerDiaDelMes.AddMonths(1).AddDays(-1);
 
-            /*
-            List<ReservaBE> reservasDelMes = con.Reserva
-                .Where(r => (r.FechaLlegada >= primerDiaDelMes && r.FechaLlegada <= ultimoDiaDelMes) || (r.FechaIda >= primerDiaDelMes && r.FechaIda <= ultimoDiaDelMes))
-                .ToList();*/
+            
 
             List<ReservaBE> reservasDelMes = con.Reserva
             .Where(r =>
@@ -385,27 +379,7 @@ namespace Modelo
         #endregion
 
 
-        #region Mostrar datos en frmReporte
-        //
-        //
-
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //
-        //
-        #endregion
 
 
 

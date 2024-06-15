@@ -20,19 +20,7 @@ namespace Entidades.Seguridad
         public DateTime FechaInicio { get; set; }
 
 
-        /*
-        public static AdministradorDeSesionBE obtenerInstancia
-        {
-            get
-            {
-                if (_sesion == null) //throw new Exception("No hay una sesion iniciada");
-                {
-                    _sesion = new AdministradorDeSesionBE();
-                }
-                return _sesion;
-
-            }
-        }*/
+        
 
         public static AdministradorDeSesionBE ObtenerInstancia
         {
@@ -53,25 +41,8 @@ namespace Entidades.Seguridad
         }
 
 
-        /*
-        public static void Login(UsuarioBE usuario)
-        {
-            lock (_lock)
-            {
-                if (_sesion == null)
-                {
-                    _sesion = new AdministradorDeSesionBE();
-                    _sesion.Usuario = usuario;
-                    _sesion.FechaInicio = DateTime.Now;
-                }
-                else
-                {
-                    MessageBox.Show("Ya hay un usuario logueado");
-                }
-
-            }
-
-        }*/
+      
+       
         public static void Login(UsuarioBE usuario)
         {
             lock (_lock)

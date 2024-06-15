@@ -11,7 +11,6 @@ namespace Modelo
 {
     public class ProductoDAL
     {
-        //ContextoBD con = new ContextoBD();
         ContextoBD con = new ContextoBD();
         public void AgregarProducto(ProductoBE producto)
         {
@@ -42,8 +41,7 @@ namespace Modelo
                             con.Producto.Add(producto);
                         }
                     }
-                    //// Sumar la cantidad del producto existente con la cantidad del nuevo producto
-                    //productoExistente.CantidadStock += producto.CantidadStock;
+                    
                 }
                 else
                 {
@@ -106,12 +104,8 @@ namespace Modelo
             }
         }
 
-        /*
-        public List<ProductoBE> ListarProductos()
-        {
-            return con.Producto.ToList();
-        }
-        */
+       
+        
 
         public void ListarProductosEnDGV(DataGridView dataGridView)
         {
@@ -119,10 +113,7 @@ namespace Modelo
             dataGridView.Rows.Clear();
 
             dataGridView.Columns.Clear();
-            // Obtener la lista de las Habitaciones
-            //List<ReservaBE> listaReservas = ListarReservas();
-
-            // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
+            
 
 
             dataGridView.Columns.Add("Id Producto", "Id Producto");

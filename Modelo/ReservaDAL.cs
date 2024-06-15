@@ -25,13 +25,12 @@ using System.Net;
 
 
 
-//using LicenseContext = OfficeOpenXml.LicenseContext;
+
 
 namespace Modelo
 {
     public class ReservaDAL
     {
-        //ContextoBD con = new ContextoBD();
         ContextoBD con = new ContextoBD();
 
         private List<ReservaBE> reservas = new List<ReservaBE>();
@@ -151,7 +150,6 @@ namespace Modelo
                                 $"Habitación: {reserva.Habitacion.NroHabitacion}\n" +
                                 $"Fecha de inicio: {reserva.FechaLlegada}\n" +
                                 $"Fecha de fin: {reserva.FechaIda}\n" +
-                                // Agrega más detalles según tus necesidades...
                                 $"Subtotal: {reserva.Subtotal}\n" +
                                 $"Impuestos: {reserva.Impuestos}\n" +
                                 $"Total: {reserva.Total}\n";
@@ -212,12 +210,10 @@ namespace Modelo
         {
             try
             {
-                // Obtener el cliente y la habitación correspondientes a los IDs proporcionados
-                //var cliente = con.Cliente.Find(idCliente);
+               
 
                 ClienteBE cliente = con.Cliente.FirstOrDefault(h => h.Persona.DNI == DNICliente);
 
-                //var habitacion = con.Habitacion.Find(idHabitacion);
                 HabitacionBE habitacion = con.Habitacion.FirstOrDefault(h => h.NroHabitacion == NroHabitacion);
 
                 if (cliente == null || habitacion == null)
@@ -242,7 +238,6 @@ namespace Modelo
                     reservaModificar.FechaLlegada = fechaInicio;
                     reservaModificar.FechaIda = fechaFin;
                     reservaModificar.NroReserva = reserva.NroReserva;
-                    //reservaModificar.Estado = reserva.Estado;
                     reservaModificar.Subtotal = reserva.Subtotal;
                     reservaModificar.Impuestos = reserva.Impuestos;
                     reservaModificar.Total = reserva.Total;
@@ -674,7 +669,6 @@ namespace Modelo
             else
             {
                 // Si no hay habitaciones disponibles, puedes mostrar un mensaje o realizar alguna acción
-                //MessageBox.Show("No hay habitaciones disponibles para el rango de fechas seleccionado.");
                 labelError.Text = "No hay habitaciones disponibles para el rango de fechas seleccionado.";
 
             }
@@ -694,10 +688,8 @@ namespace Modelo
             dataGridView.Rows.Clear();
 
             dataGridView.Columns.Clear();
-            // Obtener la lista de las Habitaciones
-            //List<ReservaBE> listaReservas = ListarReservas();
+            
 
-            // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
 
 
             dataGridView.Columns.Add("Nro de Reserva", "Nro de Reserva");
@@ -738,14 +730,11 @@ namespace Modelo
         }
         public void ListarReservasActivasEnDataGridView(DataGridView dataGridView)
         {
-            // Limpiamos las filas existentes en el DataGridView
+ 
             dataGridView.Rows.Clear();
 
             dataGridView.Columns.Clear();
-            // Obtener la lista de las Habitaciones
-            //List<ReservaBE> listaReservas = ListarReservas();
-
-            // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
+            
 
 
             dataGridView.Columns.Add("Nro de Reserva", "Nro de Reserva");
@@ -790,11 +779,7 @@ namespace Modelo
             dataGridView.Rows.Clear();
 
             dataGridView.Columns.Clear();
-            // Obtener la lista de las Habitaciones
-            //List<ReservaBE> listaReservas = ListarReservas();
-
-            // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
-
+            
 
             dataGridView.Columns.Add("Nro de Reserva", "Nro de Reserva");
             dataGridView.Columns.Add("Nombre Cliente", "Nombre Cliente");
@@ -834,14 +819,10 @@ namespace Modelo
         }
         public void ListarReservasTodasEnDataGridView(DataGridView dataGridView)
         {
-            // Limpiamos las filas existentes en el DataGridView
             dataGridView.Rows.Clear();
 
             dataGridView.Columns.Clear();
-            // Obtener la lista de las Habitaciones
-            //List<ReservaBE> listaReservas = ListarReservas();
-
-            // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
+            
 
 
             dataGridView.Columns.Add("Nro de Reserva", "Nro de Reserva");
@@ -898,10 +879,7 @@ namespace Modelo
             DateTime primerDiaDelMes = new DateTime(fechaActual.Year, fechaActual.Month, 1);
             DateTime ultimoDiaDelMes = primerDiaDelMes.AddMonths(1).AddDays(-1);
 
-            /*
-            List<ReservaBE> reservasDelMes = con.Reserva
-                .Where(r => (r.FechaLlegada >= primerDiaDelMes && r.FechaLlegada <= ultimoDiaDelMes) || (r.FechaIda >= primerDiaDelMes && r.FechaIda <= ultimoDiaDelMes))
-                .ToList();*/
+            
 
             List<ReservaBE> reservasDelMes = con.Reserva
             .Where(r =>
@@ -1019,9 +997,7 @@ namespace Modelo
             chartPIE.Series[0].Points[1].Color = Color.OrangeRed;   // Color para "Ocupada"
             chartPIE.Series[0].Points[2].Color = Color.Cyan;  // Color para "Limpieza"
 
-            // Configura el Chart
-            //chartPIE.Series[1].ChartType = SeriesChartType.Pie;
-            //chartPIE.Legends[1].Enabled = true;
+            
         }
 
 
@@ -1041,291 +1017,7 @@ namespace Modelo
 
 
         #region Metodo TextBox Dinero realizado hasta fin de mes
-        /*
-        public Dictionary<int, decimal> CalcularGananciaFuturaAproximada()
-        {
-            DateTime fechaActual = DateTime.Now;
-            DateTime primerDiaDelMes = new DateTime(fechaActual.Year, fechaActual.Month, 1);
-            DateTime ultimoDiaDelMes = primerDiaDelMes.AddMonths(1).AddDays(-1);
-
-            // Contar reservas activas por día del mes actual
-            //Dictionary<int, int> reservasPorDia = ContarReservasActivasPorDia();
-            Dictionary<int, int> reservasPorDia = ObtenerReservasActivasPorDia();
-
-            // Calcular costo de reservas activas por día del mes
-            Dictionary<int, decimal> costoReservasPorDia = new Dictionary<int, decimal>();
-
-            foreach (var reservaPorDia in reservasPorDia)
-            {
-                int dia = reservaPorDia.Key;
-                int cantidadReservas = reservaPorDia.Value;
-
-                // Calcula el costo total de las reservas activas para este día
-                decimal costoTotalReservasDia = CalcularCostoReservasActivasDia(dia);
-
-                costoReservasPorDia.Add(dia, costoTotalReservasDia);
-            }
-
-            return costoReservasPorDia;
-        }
-
-        private decimal CalcularCostoReservasActivasDia(int dia)
-        {
-            decimal costoTotalDia = 0;
-
-            // Obtener las reservas activas para el día especificado
-            List<ReservaBE> reservasActivas = ObtenerReservasActivasPorDia(dia);
-
-            // Calcular el costo total sumando los costos de cada reserva activa
-            foreach (var reserva in reservasActivas)
-            {
-                // Supongamos que cada reserva tiene un método para obtener su costo
-                costoTotalDia += reserva.ObtenerCosto();
-            }
-
-            return costoTotalDia;
-        }
-
-        private List<ReservaBE> ObtenerReservasActivasPorDia(int dia)
-        {
-            // Obtén la fecha específica para el día que estás buscando
-            DateTime fechaEspecifica = new DateTime(DateTime.Now.Year, DateTime.Now.Month, dia);
-
-            using (var con = new ContextoBD())
-            {
-                try
-                {
-                    // Consulta para obtener las reservas activas para el día específico
-                    List<ReservaBE> reservasActivas = con.Reserva
-                        .Where(r => r.FechaLlegada <= fechaEspecifica && r.FechaIda >= fechaEspecifica && r.Estado == "Activa")
-                        .ToList();
-
-                    return reservasActivas;
-                }
-                catch (Exception ex)
-                {
-                    // Manejo de excepciones si ocurre algún error al acceder a la base de datos
-                    Console.WriteLine("Error al obtener las reservas activas para el día especificado: " + ex.Message);
-                    return new List<ReservaBE>(); // Devuelve una lista vacía en caso de error
-                }
-            }
-        }
-
         
-        private Dictionary<int, int> ContarReservasActivasPorDia()
-        {
-            DateTime fechaActual = DateTime.Now;
-            DateTime primerDiaDelMes = new DateTime(fechaActual.Year, fechaActual.Month, 1);
-            DateTime ultimoDiaDelMes = primerDiaDelMes.AddMonths(1).AddDays(-1);
-
-            Dictionary<int, int> reservasPorDia = new Dictionary<int, int>();
-
-            // Inicializar el diccionario con valores cero para cada día del mes
-            for (int dia = 1; dia <= ultimoDiaDelMes.Day; dia++)
-            {
-                reservasPorDia.Add(dia, 0);
-            }
-
-            // Obtener las reservas activas del mes
-            List<ReservaBE> reservasActivasMes = ObtenerReservasActivasMes(primerDiaDelMes, ultimoDiaDelMes);
-
-            // Contar las reservas activas por día del mes
-            foreach (var reserva in reservasActivasMes)
-            {
-                DateTime fechaInicio = reserva.FechaLlegada > primerDiaDelMes ? reserva.FechaLlegada : primerDiaDelMes;
-                DateTime fechaFin = reserva.FechaIda < ultimoDiaDelMes ? reserva.FechaIda : ultimoDiaDelMes;
-
-                for (DateTime fecha = fechaInicio; fecha <= fechaFin; fecha = fecha.AddDays(1))
-                {
-                    int diaReserva = fecha.Day;
-                    reservasPorDia[diaReserva]++;
-                }
-            }
-
-            return reservasPorDia;
-        }
-
-        private List<ReservaBE> ObtenerReservasActivasMes(DateTime primerDiaDelMes, DateTime ultimoDiaDelMes)
-        {
-            using (var con = new ContextoBD())
-            {
-                try
-                {
-                    // Consulta para obtener las reservas activas del mes
-                    List<ReservaBE> reservasActivasMes = con.Reserva
-                        .Where(r => r.Estado == "Activa" &&
-                                    ((r.FechaLlegada <= ultimoDiaDelMes && r.FechaIda >= primerDiaDelMes) ||   // La reserva comienza antes o durante el mes actual
-                                    (r.FechaIda >= primerDiaDelMes && r.FechaIda <= ultimoDiaDelMes))) // La reserva termina después o durante el mes actual
-                        .ToList();
-
-                    return reservasActivasMes;
-                }
-                catch (Exception ex)
-                {
-                    // Manejo de excepciones si ocurre algún error al acceder a la base de datos
-                    Console.WriteLine("Error al obtener las reservas activas del mes: " + ex.Message);
-                    return new List<ReservaBE>(); // Devuelve una lista vacía en caso de error
-                }
-            }
-        }
-        
-        */
-
-
-
-
-
-
-
-        /*
-        private decimal ObtenerCosto(ReservaBE reserva)
-        {
-            // Supongamos que tienes un método en tu clase ReservaBE para obtener el costo por noche
-            decimal costoPorNoche = reserva.Habitacion.PrecioDiario;
-
-            // Calcula la duración de la reserva en noches
-            TimeSpan duracionReserva = reserva.FechaIda - reserva.FechaLlegada;
-            int numeroNoches = duracionReserva.Days;
-
-            // Calcula el costo total de la reserva multiplicando el costo por noche por el número de noches
-            decimal costoTotal = costoPorNoche * numeroNoches;
-
-            return costoTotal;
-        }
-
-        
-
-
-        public decimal CalcularGananciaFuturaAproximada()
-        {
-            //SAca los dias del mes
-            DateTime fechaActual = DateTime.Now;
-            DateTime primerDiaDelMes = new DateTime(fechaActual.Year, fechaActual.Month, 1);
-            DateTime ultimoDiaDelMes = primerDiaDelMes.AddMonths(1).AddDays(-1);
-
-
-            Dictionary<int, int> reservasPorDia = ObtenerReservasActivasPorDia();
-
-
-
-            decimal gananciaTotal = 0;
-
-            foreach (var reservaPorDia in reservasPorDia)
-            {
-                int dia = reservaPorDia.Key;
-                int cantidadReservas = reservaPorDia.Value;
-
-                decimal costoTotalReservasDia = CalcularCostoReservasActivasDia(dia);
-                gananciaTotal += costoTotalReservasDia;
-            }
-
-            return gananciaTotal;
-        }
-
-
-        // Este método ahora calcula el costo total de todas las reservas activas para un día específico
-        private decimal CalcularCostoReservasActivasDia(int dia)
-        {
-            decimal costoTotalDia = 0;
-
-            List<ReservaBE> reservasActivas = ObtenerReservasActivasPorDia(dia);
-
-            foreach (var reserva in reservasActivas)
-            {
-                costoTotalDia += ObtenerCosto(reserva); // Suma los costos en lugar de sobrescribir
-            }
-
-            return costoTotalDia;
-        }
-
-
-        private List<ReservaBE> ObtenerReservasActivasPorDia(int dia)
-        {
-            // Obtén la fecha específica para el día que estás buscando
-            DateTime fechaEspecifica = new DateTime(DateTime.Now.Year, DateTime.Now.Month, dia);
-
-            using (var con = new ContextoBD())
-            {
-                try
-                {
-                    // Consulta para obtener las reservas activas para el día específico
-                    List<ReservaBE> reservasActivas = con.Reserva
-                        .Include(r => r.Habitacion) // Cargar la entidad Habitacion relacionada
-                        .Where(r => r.FechaLlegada <= fechaEspecifica && r.FechaIda >= fechaEspecifica && r.Estado == "Activa")
-                        .ToList();
-
-                    return reservasActivas;
-                }
-                catch (Exception ex)
-                {
-                    // Manejo de excepciones si ocurre algún error al acceder a la base de datos
-                    Console.WriteLine("Error al obtener las reservas activas para el día especificado: " + ex.Message);
-                    return new List<ReservaBE>(); // Devuelve una lista vacía en caso de error
-                }
-            }
-        }
-
-
-
-        // Este método ahora calcula la ganancia total del mes
-        private Dictionary<int, int> ObtenerReservasActivasPorDia()
-        {
-            DateTime fechaActual = DateTime.Now;
-            DateTime primerDiaDelMes = new DateTime(fechaActual.Year, fechaActual.Month, 1);
-            DateTime ultimoDiaDelMes = primerDiaDelMes.AddMonths(1).AddDays(-1);
-
-            Dictionary<int, int> reservasPorDia = new Dictionary<int, int>();
-
-            for (int dia = 1; dia <= ultimoDiaDelMes.Day; dia++)
-            {
-                reservasPorDia.Add(dia, 0);
-            }
-
-            List<ReservaBE> reservasActivasMes = ObtenerReservasActivasMes(primerDiaDelMes, ultimoDiaDelMes);
-
-            foreach (var reserva in reservasActivasMes)
-            {
-                DateTime fechaInicio = reserva.FechaLlegada > primerDiaDelMes ? reserva.FechaLlegada : primerDiaDelMes;
-                DateTime fechaFin = reserva.FechaIda < ultimoDiaDelMes ? reserva.FechaIda : ultimoDiaDelMes;
-                
-                for (DateTime fecha = fechaInicio; fecha <= fechaFin; fecha = fecha.AddDays(1))
-                {
-                    int diaReserva = fecha.Day;
-                    reservasPorDia[diaReserva]++;
-                }
-            }
-
-            return reservasPorDia;
-        }
-
-        // Este método ahora calcula la ganancia total del mes
-        private List<ReservaBE> ObtenerReservasActivasMes(DateTime primerDiaDelMes, DateTime ultimoDiaDelMes)
-        {
-            using (var con = new ContextoBD())
-            {
-                try
-                {
-                    List<ReservaBE> reservasActivasMes = con.Reserva
-                        .Where(r => r.Estado == "Activa" &&
-                                    ((r.FechaLlegada <= ultimoDiaDelMes && r.FechaIda >= primerDiaDelMes) ||
-                                    (r.FechaIda >= primerDiaDelMes && r.FechaIda <= ultimoDiaDelMes)))
-                        .ToList();
-
-                    return reservasActivasMes;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error al obtener las reservas activas del mes: " + ex.Message);
-                    return new List<ReservaBE>();
-                }
-            }
-        }*/
-
-
-
-
-
-
         public decimal CalcularGananciaFuturaAproximada()
         {
 
@@ -1342,22 +1034,14 @@ namespace Modelo
                     decimal PrecioTotalReservas = 0;
 
                     List<ReservaBE> reservasActivas = ObtenerReservasActivasMes(primerDiaDelMes, ultimoDiaDelMes);
-                    /*
-                    for (int dia = 1; dia <= ultimoDiaDelMes.Day; dia++)
-                    {
-                        List<ReservaBE> reservasActivasDia = ObtenerReservasActivasPorDia(dia);
-                    }*/
+                    
 
                     foreach (var reserva in reservasActivas)
                     {
 
                         DateTime fechaInicio = reserva.FechaLlegada > primerDiaDelMes ? reserva.FechaLlegada : primerDiaDelMes;
                         DateTime fechaFin = reserva.FechaIda < ultimoDiaDelMes ? reserva.FechaIda : ultimoDiaDelMes;
-                        /*
-                        for (DateTime fecha = fechaInicio; fecha <= fechaFin; fecha = fecha.AddDays(1))
-                        {
-                            PrecioTotalReservas += reserva.Habitacion.PrecioDiario;
-                        }*/
+                        
 
                         int Dias = Convert.ToInt32((fechaFin - fechaInicio).TotalDays);
                         PrecioTotalReservas += reserva.Habitacion.PrecioDiario * Dias;

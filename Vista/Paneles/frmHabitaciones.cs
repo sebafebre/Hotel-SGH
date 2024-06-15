@@ -43,7 +43,6 @@ namespace Vista.Paneles
 
             List<string> permisos = new List<string>();
 
-            //foreach (var item in permisosUsuario)
             foreach (var item in permisosUsuario)
             {
                 permisos.Add(item.Componente.Nombre);
@@ -364,7 +363,7 @@ namespace Vista.Paneles
                     if (ultimosDigitos < 10 && numeroCompletoHabitacion.Length >= 3)
                     {
                         string tercerDigito = numeroCompletoHabitacion.Substring(numeroCompletoHabitacion.Length - 3, 1);
-                        cbNumHabitacion.Text = tercerDigito;
+                        cbNumHabitacion.Text = ultimosDigitos.ToString();
                     }
                     else
                     {

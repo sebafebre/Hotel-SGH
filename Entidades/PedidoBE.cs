@@ -33,7 +33,6 @@ namespace Entidades
         public int NroPedido { get; set; }
         public string Estado { get; set; }
 
-        //[Column(TypeName = "Date")]
         public DateTime FechaCreacion { get; set; }
         public decimal Subtotal { get; set; }
         public decimal Impuestos { get; set; }

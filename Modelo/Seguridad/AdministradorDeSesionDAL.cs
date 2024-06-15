@@ -15,7 +15,6 @@ namespace Modelo.Seguridad
         UsuarioDAL usuarioDAL = new UsuarioDAL();
 
         
-        //AdministradorDeSesionBE admSesion = AdministradorDeSesionBE.obtenerInstancia;
 
         
 

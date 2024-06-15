@@ -307,8 +307,6 @@ namespace Vista.Administrador
             {
                 if (txtIdGrupo.Text != "" && txtIdPermiso.Text != "")
                 {
-                    //int idGrupo = Convert.ToInt32(txtIdGrupo.Text);
-                    //int idPermiso = Convert.ToInt32(txtIdPermiso.Text);
                     grupoBLL.AgregarPermisoAGrupo(idComponenteGrupo, idComponentePermiso);
                     
                     permisoBLL.ListarPermisosGrupoEnDGV(dgvPermisos, idComponenteGrupo);

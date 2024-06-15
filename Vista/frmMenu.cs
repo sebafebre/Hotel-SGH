@@ -16,7 +16,6 @@ namespace Vista
 {
     public partial class frmMenu : Form
     {
-        //private UsuarioBE usuario;
         UsuarioBLL usaurioBLL = new UsuarioBLL();
         GrupoBLL grupoBLL = new GrupoBLL();
 
@@ -26,7 +25,7 @@ namespace Vista
 
 
 
-        public frmMenu(/*UsuarioBE usuario*/)
+        public frmMenu()
         {
             InitializeComponent();
             

@@ -36,13 +36,9 @@ namespace Entidades.Auditoria
         public decimal Impuestos { get; set; }
         public decimal Total { get; set; }
 
-        //[ForeignKey("Reserva")]
         public int? ReservaId { get; set; }
-        //public virtual ReservaBE Reserva { get; set; }
 
-        //[ForeignKey("Factura")]
         public int? FacturaId { get; set; }
-        //public virtual FacturaBE Factura { get; set; }
 
         public int? PedidoId { get; set; }
 

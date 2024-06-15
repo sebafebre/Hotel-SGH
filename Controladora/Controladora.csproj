@@ -61,7 +61,6 @@
     <Compile Include="EmpleadoBLL.cs" />
     <Compile Include="SeguridadBLL\AdministradorDeSesionBLL.cs" />
     <Compile Include="SeguridadBLL\GrupoBLL.cs" />
-    <Compile Include="SeguridadBLL\GrupoPermisoBLL.cs" />
     <Compile Include="HabitacionBLL.cs" />
     <Compile Include="PedidoBLL.cs" />
     <Compile Include="ProductoBLL.cs" />

@@ -59,7 +59,7 @@ namespace Vista.Administrador
                 txtTelefono.Focus();
                 return false;
             }
-            if (txtMail.Text == "" /* || validacionBLL.ValidarEmail(txtMail.Text) == false*/)
+            if (txtMail.Text == "" )
             {
                 MessageBox.Show("Debe completar el campo Mail", "Agregar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMail.Focus();
@@ -229,8 +229,7 @@ namespace Vista.Administrador
                 string dni = txtDNI.Text.Trim().ToLower();
                 empleadoBLL.BuscarEmpleadoPorDNI(dni, dgvEmpleados);
 
-                //string dniTexto = txtDNI.Text;
-                //validacionBLL.ValidarDni(dniTexto);
+                
             }
             catch (Exception ex)
             {
@@ -288,7 +287,6 @@ namespace Vista.Administrador
             {
                 validacionBLL.ValidarSoloNumeros((TextBox)sender);
                 string telefono = txtTelefono.Text;
-                //validacionBLL.ValidarTelefono(telefono);
             }
             catch (Exception ex)
             {

@@ -34,14 +34,10 @@ namespace Entidades.Auditoria
         public decimal Impuestos { get; set; }
         public decimal Total { get; set; }
 
-        //[ForeignKey("Producto")]
         public int? ProductoId { get; set; }
-        //public virtual ProductoBE Producto { get; set; }
 
 
-        //[ForeignKey("Pedido")]
         public int? PedidoId { get; set; }
-        //public virtual PedidoBE Pedido { get; set; }
 
 
         public int? DetallePedidoId { get; set; }

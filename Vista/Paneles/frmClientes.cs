@@ -68,7 +68,6 @@ namespace Vista.Paneles
                 {
                     ClienteBE cliente = new ClienteBE();
                     cliente.Persona = new PersonaBE();
-                    //cliente.Id = Convert.ToInt32(txtID.Text);
                     cliente.Persona.EstadoActivo = true;
                     cliente.Persona.Nombre = txtNombre.Text;
                     cliente.Persona.Apellido = txtApellido.Text;
@@ -81,7 +80,6 @@ namespace Vista.Paneles
 
                     clienteBLL.AgregarCliente(cliente);
                   
-                    //this.clienteTableAdapter.Fill(this.sGHDataSet.Cliente);
 
                     clienteBLL.ListarClientesActivosEnDataGridView(dgvClientes);
                 }
@@ -288,7 +286,6 @@ namespace Vista.Paneles
             {
                 string numero = txtTelefono.Text;
                 validacionesBLL.ValidarSoloNumeros((TextBox)sender);
-                //validacionesBLL.ValidarTelefono(numero);
             }
             catch (Exception ex)
             {

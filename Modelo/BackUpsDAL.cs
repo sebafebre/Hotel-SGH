@@ -15,49 +15,7 @@ namespace Modelo
     public class BackUpsDAL
     {
         ContextoBD con = new ContextoBD();
-        /*public void CrearBackup()
-        {
-            try
-            {
-                string ubicacionProyecto = "SGH - UAI - Final";
-                string carpetaBakups = "Backups";
-
-                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                string backupDirectory = Path.Combine(desktopPath, ubicacionProyecto, carpetaBakups);
-
-                // Verificar y crear el directorio de backups si no existe
-                if (!Directory.Exists(backupDirectory))
-                {
-                    Directory.CreateDirectory(backupDirectory);
-                }
-
-                // Nombre del archivo de respaldo con la fecha actual
-                string backupFileName = $"Backup_{DateTime.Now:yyyyMMdd_HHmmss}.bak";
-                string backupPath = Path.Combine(backupDirectory, backupFileName);
-
-                // Consulta SQL para realizar la copia de seguridad de la base de datos actual
-                string query = $"BACKUP DATABASE PruebaComponente2 TO DISK = '{backupPath}'";
-                con.Database.ExecuteSqlCommand(TransactionalBehavior.DoNotEnsureTransaction, query);
-
-                // Guarda los detalles del backup en la base de datos
-                var nuevoBackup = new BackupBE
-                {
-                    RutaArchivo = backupPath,
-                    FechaDeDatos = DateTime.Now
-                };
-
-                con.Backup.Add(nuevoBackup);
-                con.SaveChanges();
-
-                MessageBox.Show("Copia de seguridad creada exitosamente.");
-                MessageBox.Show("Backup creado exitosamente.");
-                // CargarBackups(); // Llamada a método en la capa de vista
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al crear la copia de seguridad: " + ex.Message);
-            }
-        }*/
+        
         public class AppConfig
         {
             public string DataDirectory { get; set; }
@@ -146,36 +104,7 @@ namespace Modelo
                 throw new Exception("Error al actualizar el backup.", ex);
             }
 
-            /*
-            try
-            {
-
-                // Nombre del archivo de respaldo con la fecha actual
-                string ubicacionProyecto = "SGH - UAI";
-                string carpetaBakups = "Backups";
-
-                string backupFileName = $"Backup_{DateTime.Now:yyyyMMdd_HHmmss}.bak";
-                string desktopPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), ubicacionProyecto, carpetaBakups);
-                string backupPath = Path.Combine(desktopPath, backupFileName);
-
-                // Consulta SQL para realizar la copia de seguridad de la base de datos actual
-                string query = $"BACKUP DATABASE YourDatabase TO DISK = '{backupPath}'";
-                con.Database.ExecuteSqlCommand(TransactionalBehavior.DoNotEnsureTransaction, query);
-
-                // Actualiza la ruta del archivo de respaldo en el objeto BackupBE
-                backup.RutaArchivo = backupPath;
-                backup.FechaDeDatos = DateTime.Now; // Actualiza la fecha al momento actual
-
-                // Marca el objeto como modificado y guarda los cambios en la base de datos
-                con.Entry(backup).State = EntityState.Modified;
-                con.SaveChanges();
-
-                MessageBox.Show("Backup actualizado exitosamente.");
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al actualizar el backup.", ex);
-            }*/
+            
         }
 
         public void ActualizarBaseDatosConBackup(BackupBE backup)

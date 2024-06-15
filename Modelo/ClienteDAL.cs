@@ -12,7 +12,6 @@ namespace Modelo
 {
     public class ClienteDAL
     {
-        //ContextoBD con = new ContextoBD();
         ContextoBD con = new ContextoBD();
 
 
@@ -120,14 +119,7 @@ namespace Modelo
 
          #region Metodos para el DataGridView
 
-        /*
-
-        //Funcion Obtener un cliente de la base de datos
-        public ClienteBE ObtenerCliente(int idCliente)
-        {
-            return con.Cliente.Find(idCliente);
-        }
-        */
+        
         
 
 
@@ -170,38 +162,10 @@ namespace Modelo
             }
         }
 
-
-
-
-        /*
-        public List<ClienteBE> ListarClientes()
-        {
-            return con.Cliente.ToList();
-        }*/
-
-        /*BuscarCliente
-        public List<ClienteBE> BuscarCliente(string nombre, string apellido, string dni)
-        {
-            return con.Cliente.Where(c => c.Persona.Nombre.Contains(nombre) && c.Persona.Apellido.Contains(apellido) && c.Persona.DNI.Contains(dni)).ToList();
-        }*/
+        
         #endregion
 
-        /*BuscarClientePorDNI
-        public void BuscarClientePorDNI(string dni, DataGridView dgvClientes)
-        {
-            foreach (DataGridViewRow row in dgvClientes.Rows)
-            {
-                if (row.Cells["DNI"].Value != null && row.Cells["DNI"].Value.ToString() == dni)
-                {
-                    row.Selected = true;
-                    dgvClientes.CurrentCell = row.Cells[0];
-                    return; // Termina la búsqueda una vez que se encuentra el cliente
-                }
-            }
-
-            // Si no se encuentra el cliente, puedes mostrar un mensaje o realizar alguna acción adicional.
-            MessageBox.Show("Cliente no encontrado.");
-        }*/
+        
 
 
 
@@ -219,74 +183,6 @@ namespace Modelo
                 return -1;
             }
         }
-
-
-
-        
-
-
-        /*
-        // Método para cargar usuarios en el ComboBox según el número de DNI ingresado
-        public void CargarUsuariosEnComboBox(ComboBox comboBoxClientes, string numeroDNI)
-        {
-            try
-            {
-                List<string> clientes = new List<string>();
-
-                clientes.Clear();
-
-                // Obtener la lista de usuarios desde la base de datos que coinciden con el número de DNI
-                clientes = con.Cliente
-                                  .Include(c => c.Persona)
-                                  .Where(c => c.Persona.EstadoActivo == true && c.Persona.DNI.StartsWith(numeroDNI))
-                                  .Select(c => c.Persona.DNI)
-                                  .ToList();
-
-                // Limpiar la lista de sugerencias del ComboBox
-                comboBoxClientes.Items.Clear();
-
-                // Agregar los usuarios que coinciden con el número de DNI ingresado a la lista de sugerencias del ComboBox
-                comboBoxClientes.Items.AddRange(clientes.ToArray());
-
-                // Mostrar el ComboBox desplegando su lista de opciones
-                comboBoxClientes.DroppedDown = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los usuarios: " + ex.Message);
-            }
-        }
-        */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

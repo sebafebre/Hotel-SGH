@@ -69,12 +69,10 @@ namespace Vista.Paneles
                     if (Accion == "CheckOut")
                     {
                         pedidoBLL.GenerarFacturaTXT(nroReserva, cbTipoFactura.Text, usuarioActual);
-                        //MessageBox.Show("CheckOut realizado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     if (Accion == "PagoDePedido")
                     {
                         stateBLL.FinalizarPedido(listaDetallesPedidos, nroReserva, Estado, cbTipoFactura.Text, usuarioActual, nroPedido);
-                        //MessageBox.Show("Pedido pagado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     nroPedido = -1;

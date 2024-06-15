@@ -32,18 +32,6 @@ namespace Controladora
 
 
 
-        /*
-        public void BuscarClientePorDNI(string dni, DataGridView dgvClientes)
-        {
-            reservaDAL.BuscarClientePorDNI(dni, dgvClientes);
-        }*/
-
-
-        /*
-        public void BuscarClientesDGVReserva(DataGridView dataGridView)
-        {
-            reservaDAL.BuscarClientesDGVReserva(dataGridView);
-        }*/
 
         public void FiltrarHabitaciones(string cbTipoHabitacion, string cbNroCamas, DataGridView dataGridViewHabitaciones)
         {
@@ -52,22 +40,14 @@ namespace Controladora
 
 
 
-        /*
-        public void ListarHabitacionesDGVReservas(DataGridView dataGridView)
-        {
-            reservaDAL.ListarHabitacionesDGVReservas(dataGridView);
-        }*/
+        
 
 
 
 
 
 
-        /*
-        public bool GuardarReserva(int idCliente, int idHabitacion, DateTime fechaInicio, DateTime fechaFin, int nroReserva)
-        {
-            return reservaDAL.GuardarReserva(idCliente, idHabitacion, fechaInicio, fechaFin, nroReserva);
-        }*/
+        
 
        
         public void GuardarReserva(int idCliente, int idHabitacion, DateTime fechaInicio, DateTime fechaFin, decimal subtotal, decimal imp, decimal total)
@@ -87,16 +67,7 @@ namespace Controladora
 
         }
 
-            /*
-            public void DateTimePickerCambia(DateTimePicker fechaLlegadaDateTimePicker, DateTimePicker fechaIdaDateTimePicker, DataGridView dataGridViewHabitaciones)
-            {
-                reservaDAL.DateTimePickerCambia(fechaLlegadaDateTimePicker, fechaIdaDateTimePicker, dataGridViewHabitaciones);
-            }*/
-            /*
-            public List<HabitacionBE> ConsultarHabitacionesDisponibles(DateTime fechaLlegada, DateTime fechaIda)
-            {
-                return reservaDAL.ConsultarHabitacionesDisponibles(fechaLlegada, fechaIda);
-            }*/
+            
 
 
         public void MostrarHabitacionesDisponiblesEnDataGridView(List<HabitacionBE> habitaciones, DataGridView dataGridViewHabitaciones, Label labelError)
@@ -148,7 +119,6 @@ namespace Controladora
         #endregion
 
 
-        //Busca la reserva del DataGridView y cambia el estado a "Activa"
         
 
 

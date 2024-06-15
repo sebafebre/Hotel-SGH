@@ -19,60 +19,13 @@ namespace Modelo
 {
     public class PedidoDAL
     {
-        //ContextoBD con = new ContextoBD();
-
-        //private ContextoBD dbContext;
-        //dbContext = ContextoBD.Instancia();
+        
 
         ContextoBD con = new ContextoBD();
 
        
         
-        //AgregarProductoAPedido --------------------------> BORRAR
-        /* public void AgregarProductoAPedido(int idReserva, int idProducto, int cantidad)
-        {
-            try
-            {
-                // Buscamos la reserva por su ID
-                ReservaBE reserva = con.Reserva.FirstOrDefault(r => r.Id == idReserva);
-
-                if (reserva != null)
-                {
-                    // Buscamos el producto por su ID
-                    ProductoBE producto = con.Producto.FirstOrDefault(p => p.Id == idProducto);
-
-                    if (producto != null)
-                    {
-                        // Creamos un nuevo pedido
-                        PedidoBE pedido = new PedidoBE
-                        {
-                            Reserva = reserva,
-                            Producto = producto,
-                            Cantidad = cantidad,
-                            Fecha = DateTime.Now
-                        };
-
-                        // Agregamos el pedido a la base de datos
-                        con.Pedido.Add(pedido);
-                        con.SaveChanges();
-                    }
-                    else
-                    {
-                        // Si no se encuentra el producto, puedes manejar el caso según tus requerimientos
-                        Console.WriteLine("No se encontró el producto con el ID especificado.");
-                    }
-                }
-                else
-                {
-                    // Si no se encuentra la reserva, puedes manejar el caso según tus requerimientos
-                    Console.WriteLine("No se encontró la reserva con el ID especificado.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al agregar el producto al pedido: " + ex.Message);
-            }
-        }*/
+        
 
 
         #region Eliminar / Modificar Pedidos
@@ -193,6 +146,9 @@ namespace Modelo
 
         #endregion
 
+
+
+
         #region Eliminar y Modificar DetallesPedido
 
         public void EliminarDetallePedido(int idDetalle, string  NombreProd)
@@ -225,8 +181,7 @@ namespace Modelo
                         
                     }
 
-                    // Eliminamos el detalle de pedido de la base de datos
-                    //con.DetallePedido.Remove(detallePedido);
+                    
                     con.SaveChanges();
 
                     MessageBox.Show("Detalle de pedido eliminado con éxito.");
@@ -257,9 +212,7 @@ namespace Modelo
                     // Modificamos la cantidad del detalle de pedido
                     detallePedido.CantidadPedida = cantidad;
                     detallePedido.Subtotal = cantidad * detallePedido.Producto.PrecioUnitario;
-                    //detallePedido.Impuestos = (decimal)(cantidad * detallePedido.Producto.PrecioUnitario * 0.21);
                     detallePedido.Impuestos = (decimal)(   (double)detallePedido.Subtotal   * 0.21);
-                    //detallePedido.Total = (decimal)(cantidad * detallePedido.Producto.PrecioUnitario * 1.21);
                     detallePedido.Total = (decimal)(detallePedido.Subtotal  +  detallePedido.Impuestos);
 
                     //Actualizo el total del pedido
@@ -335,10 +288,7 @@ namespace Modelo
             dataGridView.Rows.Clear();
 
             dataGridView.Columns.Clear();
-            // Obtener la lista de las Habitaciones
-            //List<ReservaBE> listaReservas = ListarReservas();
-
-            // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
+            
 
 
             dataGridView.Columns.Add("Id Producto", "Id Producto");
@@ -376,20 +326,7 @@ namespace Modelo
             }
         }
 
-        ///---------------------------------/////BORRARRRR 
-        /*
-         public void ActualizarStockCancelarEnDataGridView(DataGridView dataGridView, int idProducto, int cantidadPedida)
-         {
-                    foreach (DataGridViewRow row in dataGridView.Rows)
-                    {
-                        if (row.Cells[0].Value != null && Convert.ToInt32(row.Cells[0].Value) == idProducto)
-                        {
-                            int cantidadStockActual = Convert.ToInt32(row.Cells[2].Value);
-                            row.Cells[2].Value = cantidadStockActual + cantidadPedida;
-                            break; // Salir del bucle una vez actualizada la cantidad de stock
-                        }
-                    }
-         }*/
+        
 
 
         public List<DetallePedidoBE> AgregarPedido(List<DetallePedidoBE> listaDetallesPedidos, DataGridView dgvProductos, int idProducto, string NomProduct, int CantPedido)
@@ -436,15 +373,13 @@ namespace Modelo
                 // Restaurar el stock de los productos en el DataGridView de productos
                 foreach (var detallePedido in listaDetallesPedidos)
                 {
-                    // Recuperar la cantidad original del producto antes de que se agregara al pedido
-                    //int cantidadOriginal = detallePedido.CantidadPedida;
+                    
 
 
                     detallePedido.Producto = con.Producto.FirstOrDefault(p => p.Id == detallePedido.Producto.Id);
                     detallePedido.Producto.CantidadStock += detallePedido.CantidadPedida;
 
-                    // Restaurar el stock del producto en el DataGridView
-                    //ActualizarStockCancelarEnDataGridView(dgvProductos, detallePedido.Producto.Id, cantidadOriginal);
+                   
                 }
                 con.SaveChanges();
                 ListarProductosEnDGV(dgvProductos);
@@ -469,77 +404,7 @@ namespace Modelo
 
 
 
-        /*public void FinalizarPedido(List<DetallePedidoBE> listaDetallesPedidos, int nroReserva)   //, DataGridView dgvProductos, int idProducto, string NomProduct, int Cantidad)
-        {
-            using (var transaction = con.Database.BeginTransaction())
-            {
-                try
-                {
-                    //List<DetallePedidoBE> listaDetallesPedidos = AgregarPedido(dgvProductos,  idProducto,  NomProduct,  Cantidad);
-                    ClienteBE cliente = new ClienteBE();
-                    // Se crea el pedido
-                    PedidoBE pedido = new PedidoBE
-                    {
-                        NroPedido = con.Pedido.Count() + 1,
-                        Reserva = con.Reserva.FirstOrDefault(r => r.NroReserva == nroReserva),
-                        Estado = "PagoPendiente",
-                        FechaCreacion = DateTime.Now,
-                        Total = listaDetallesPedidos.Sum(d => d.Total)
-                    };
-
-                    // Se agrega el pedido a la base de datos
-                    con.Pedido.Add(pedido);
-
-                    // Se agregan los detalles de pedido al pedido
-                    foreach (var detallePedido in listaDetallesPedidos)
-                    {
-                        detallePedido.Pedido = pedido; // Asignar el pedido a cada detalle
-
-                       
-                        //ProductoBE producto = con.Producto.FirstOrDefault(p => p.Id == detallePedido.Producto.Id);
-                        ///if (producto != null) // Verifica si el producto existe
-                        //{
-                        //    producto.CantidadStock -= detallePedido.CantidadPedida;
-                        //}
-
-
-                        //AGREGADO
-                        //detallePedido.Producto = con.Producto.FirstOrDefault(p => p.Id == detallePedido.Producto.Id);
-                        //detallePedido.Producto.CantidadStock -= detallePedido.CantidadPedida;
-                    }
-
-                    // Se agregan los detalles de pedido a la base de datos
-                    con.DetallePedido.AddRange(listaDetallesPedidos);
-                    
-                    
-                    // Se actualiza el stock de los productos
-                    //foreach (var detallePedido in listaDetallesPedidos)
-                    //{
-                    //    ProductoBE producto = con.Producto.FirstOrDefault(p => p.Id == detallePedido.Producto.Id);
-                    //    if (producto != null) // Verifica si el producto existe
-                    //    {
-                    //        producto.CantidadStock -= detallePedido.CantidadPedida;
-                    //    }
-                    //}
-
-
-                    // Guardar todos los cambios en la base de datos
-                    con.SaveChanges();
-
-                    // Commit de la transacción si todo ha sido exitoso
-                    transaction.Commit();
-
-                    Console.WriteLine("Pedido Realizado ");
-                }
-                catch (Exception ex)
-                {
-                    // Rollback de la transacción en caso de error
-                    transaction.Rollback();
-                    Console.WriteLine("Error al finalizar el pedido: " + ex.Message);
-                    // Manejar el error adecuadamente, posiblemente mostrar un mensaje al usuario
-                }
-            }
-        }*/
+       
         
         public void CargarDetallesEnDataGridView(List<DetallePedidoBE> listaDetalles, DataGridView dataGridView)
         {
@@ -863,8 +728,7 @@ namespace Modelo
                     dataGridView.Rows.Clear();
                     dataGridView.Columns.Clear();
 
-                    // Obtener la lista de las Habitaciones
-                    ///List<PedidoBE> listaPedidos = con.Pedido.ToList();
+                    
 
                     // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
                     dataGridView.Columns.Add("NroPedido", "NroPedido");

@@ -20,9 +20,7 @@ namespace Entidades.Seguridad
         [Key]
         public int Id { get; set; }
 
-        //public int UsuarioId { get; set; }
         public UsuarioBE Usuario { get; set; }
-        //public int GrupoId { get; set; }
         public ComponenteBE Componente { get; set; }
     }
 }

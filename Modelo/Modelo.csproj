@@ -207,7 +207,6 @@
     <Compile Include="ReservaDAL.cs" />
     <Compile Include="Seguridad\AdministradorDeSesionDAL.cs" />
     <Compile Include="Seguridad\GrupoDAL.cs" />
-    <Compile Include="Seguridad\GrupoPermisoDAL.cs" />
     <Compile Include="HabitacionesDAL.cs" />
     <Compile Include="Seguridad\PermisoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

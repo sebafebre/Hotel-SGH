@@ -33,7 +33,6 @@ namespace Entidades
         public decimal Impuestos { get; set; }
         public decimal Total { get; set; }
 
-        //public virtual FacturaBE Factura { get; set; }
         public virtual ProductoBE Producto { get; set; }
         public virtual FacturaBE Factura { get; set; }
     }

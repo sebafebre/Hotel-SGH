@@ -238,9 +238,7 @@ namespace Vista.Paneles.Pedidos
 
         private void txtBuscarDNI_TextChanged(object sender, EventArgs e)
         {
-            /*
-            string dni = txtBuscarDNI.Text.Trim().ToLower();
-            checkinBLL.BuscarClientePorDNI(dni, dgvReservas);*/
+            
 
             try
             {
@@ -322,7 +320,6 @@ namespace Vista.Paneles.Pedidos
                     CantProductoSelec = Convert.ToInt32(dgvProductos.CurrentRow.Cells[2].Value.ToString());
                     PrecioProductoSelec = Convert.ToInt32(dgvProductos.CurrentRow.Cells[3].Value.ToString());
 
-                    //lblTotal.Text = (Convert.ToInt32(txtCantProducto.Text) * PrecioProductoSelec).ToString();
 
                     if (txtCantProducto.Text != "")
                     {

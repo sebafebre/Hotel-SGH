@@ -15,16 +15,7 @@ namespace Controladora.SeguridadBLL
 
         #region Listar en DGVieww
 
-        /*
-        public void ListarGruposEnDGV(System.Windows.Forms.DataGridView dgvGrupos)
-        {
-            grupoDAL.ListarGruposEnDGV(dgvGrupos);
-        }*/
-        /*
-        public void ListarGruposUsuarioEnDataGridView(System.Windows.Forms.DataGridView dgvGrupos, int idUsuario)
-        {
-            grupoDAL.ListarGruposUsuarioEnDataGridView(dgvGrupos, idUsuario);
-        }*/
+        
 
         
         public void ListarGruposEnDGV(System.Windows.Forms.DataGridView dgvGruposPermisosUsuario)

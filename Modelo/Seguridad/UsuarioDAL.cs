@@ -186,7 +186,6 @@ namespace Modelo
                 UsuarioBE usuario = con.Usuario.FirstOrDefault(u => u.Id == idUsuario);
 
                 // Buscar el grupo por id
-                //ComponenteBE componente = con.Componente.FirstOrDefault(g => g.Id == idComponenteGrupo);
                 GrupoBE grupo = con.Grupo.Include(gp => gp.Componente).Where(gp => gp.Componente.Id == idComponenteGrupo).FirstOrDefault();
 
                 if (usuario != null && grupo != null)
@@ -220,7 +219,6 @@ namespace Modelo
             catch (Exception ex)
             {
                 Console.WriteLine("Error al agregar el grupo al usuario: " + ex.Message);
-                //return "Error al agregar el grupo al usuario";
                 MessageBox.Show("Error al agregar el grupo al usuario");
             }
         }
@@ -239,7 +237,6 @@ namespace Modelo
 
                 if (usuario != null && componente != null)
                 {
-                    //UsuarioGrupoBE usuarioGrupo = new UsuarioGrupoBE
                     UsuarioGrupoComponenteBE usuarioGrupoComponente = con.UsuarioGrupoComponente.Where(gp => gp.Componente.Id == idComponente && gp.Usuario.Id == idUsuario).FirstOrDefault();
                     // Agregar el grupo al usuario
                     con.UsuarioGrupoComponente.Remove(usuarioGrupoComponente);
@@ -292,20 +289,17 @@ namespace Modelo
                         // Guardar los cambios en la base de datos
                         con.SaveChanges();
 
-                        //return "El grupo se agregó al usuario correctamente";
                         MessageBox.Show("El permiso se agregó al usuario correctamente");
                     }
                 }
                 else
                 {
-                    //return "No se encontró el usuario o el grupo";
                     MessageBox.Show("No se encontró el usuario o el permiso");
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al agregar el permiso al usuario: " + ex.Message);
-                //return "Error al agregar el grupo al usuario";
                 MessageBox.Show("Error al agregar el permiso al usuario");
             }
 
@@ -324,7 +318,6 @@ namespace Modelo
 
                 if (usuario != null && componente != null)
                 {
-                    //UsuarioGrupoBE usuarioGrupo = new UsuarioGrupoBE
                     UsuarioGrupoComponenteBE usuarioGrupoComponente = con.UsuarioGrupoComponente.Where(gp => gp.Componente.Id == idComponente && gp.Usuario.Id == idUsuario).FirstOrDefault();
                     // Agregar el grupo al usuario
                     con.UsuarioGrupoComponente.Remove(usuarioGrupoComponente);
@@ -361,19 +354,9 @@ namespace Modelo
             // Obtener la lista de los grupos del usuario
             List<UsuarioGrupoComponenteBE> listaGruposPermisosUsuario = con.UsuarioGrupoComponente.Include(ug => ug.Componente).Where(ug => ug.Usuario.Id == idUsuario).ToList();
 
-            /*------->No trae el .include(Componente)
-            List<ComponenteBE> componentesUsuario = new List<ComponenteBE>();
-            foreach (var grupopermiso in listaGruposPermisosUsuario)
-            {
-                ComponenteBE comp = con.Componente.FirstOrDefault(p => p.Id == grupopermiso.Componente.Id);
-                if (comp != null)
-                {
-                    componentesUsuario.Add(comp);
-                }
-            }*/
+           
 
             // Agregamos las columnas al DataGridView
-
             dgvGruposPermisosUsuario.Columns.Add("Id", "Id");
             dgvGruposPermisosUsuario.Columns.Add("Nombre", "Nombre");
 
@@ -383,9 +366,6 @@ namespace Modelo
 
 
                 int? id = grupoPermiso.Componente.Id;
-
-
-
 
                 int rowIndex = dgvGruposPermisosUsuario.Rows.Add();
                 dgvGruposPermisosUsuario.Rows[rowIndex].Cells["Id"].Value = id ?? 0;  /*grupoPermiso.Componente.Id ?? 0;*/
@@ -439,34 +419,7 @@ namespace Modelo
                         permisosSimples.Add(permiso);
                     }
                 }
-                /*
-                // Obtener los grupos del usuario y los permisos asociados a esos grupos
-                var gruposUsuario = con.UsuarioGrupoComponente
-                    .Where(ugc => ugc.Usuario.Id == usuario.Id)
-                    .Select(ugc => ugc.Componente)
-                    .ToList();
-
-
-                var permisosGrupos = new List<GrupoBE>();
                 
-                foreach (var componente in gruposUsuario)
-                {
-                    var permisosGrupo = con.GrupoComponente.Include( gc => gc.Grupo)
-                        .Where(gc => gc.Componente.Id == componente.Id).Select(gc => gc.Grupo.Id).ToList();
-
-                    permisosGrupos.Add(componente);
-                }
-
-                var listaPermisos = new List<ComponenteBE>();
-                foreach (var permiso in permisosGrupos)
-                {
-                    var permisosGrupo = con.GrupoComponente
-                        .Where(gc => gc.Grupo.Id == permiso.Id)
-                        .Select(gc => gc.Componente)
-                        .ToList();
-
-                    permisosGrupos.AddRange(listaPermisos);
-                }*/
 
                 // Obtener los grupos del usuario y los permisos asociados a esos grupos
                 var gruposUsuario = con.UsuarioGrupoComponente
@@ -598,38 +551,6 @@ namespace Modelo
 
 
 
-
-
-        /*
-        public bool VerificarCredencialesEncriptadas(string nombreUsuario, string clave)
-        {
-            // Obtener el usuario de la base de datos por su nombre
-            UsuarioBE usuario = con.Usuario.FirstOrDefault(u => u.Nombre == nombreUsuario);
-
-            if (usuario != null)
-            {
-                // Calcular el hash de la contraseña ingresada
-                string claveHash = CalcularHash(clave);
-
-                // Comparar el hash calculado con el hash almacenado en la base de datos
-                if (claveHash == usuario.Clave)
-                {
-                    return true; // Las credenciales son válidas
-                }
-            }
-            return false; // Las credenciales son inválidas
-        }
-
-        */
-
-
-
-
-
-
-
-
-
         public UsuarioBE obtenerUsuarioLogueado(string nombreUsuario)
         {
             try
@@ -652,20 +573,6 @@ namespace Modelo
 
 
         
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
 
 
 

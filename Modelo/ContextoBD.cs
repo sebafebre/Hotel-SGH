@@ -19,30 +19,7 @@ namespace Modelo
     public partial class ContextoBD : DbContext
     {
 
-        #region Singleton 
-
-        /*
-        public static ContextoBD instance;
-        private static readonly object lockObject = new object();
-
-        public static ContextoBD Instance
-        {
-            get
-            {
-                lock (lockObject)
-                {
-                    if (instance == null)
-                    {
-                        instance = new ContextoBD();
-                    }
-                    return instance;
-                }
-            }
-        }
-        */
-
-
-        #endregion
+        
 
         public ContextoBD() : base("HotelSGH")
         {

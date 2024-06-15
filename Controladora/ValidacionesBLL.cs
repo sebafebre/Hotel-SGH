@@ -14,8 +14,7 @@ namespace Controladora
     public class ValidacionesBLL
     {
         ValidacionesDAL validacionesDAL = new ValidacionesDAL();
-        //retornar las validaciones que se encuentran en ValidacionesDAL
-        //AbrirFormulario
+        
         public static void AbrirFormulario(Type tipoFormulario, Form frmMenu)
         {
             ValidacionesDAL.AbrirFormulario(tipoFormulario, frmMenu);

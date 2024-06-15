@@ -60,8 +60,6 @@ namespace Modelo
             dataGridView.Rows.Clear();
 
             dataGridView.Columns.Clear();
-            // Obtener la lista de las Habitaciones
-            //List<ReservaBE> listaReservas = ListarReservas();
 
             // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
 
@@ -108,8 +106,6 @@ namespace Modelo
             dataGridView.Rows.Clear();
 
             dataGridView.Columns.Clear();
-            // Obtener la lista de las Habitaciones
-            //List<ReservaBE> listaReservas = ListarReservas();
 
             // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
 
@@ -156,8 +152,6 @@ namespace Modelo
             dataGridView.Rows.Clear();
 
             dataGridView.Columns.Clear();
-            // Obtener la lista de las Habitaciones
-            //List<ReservaBE> listaReservas = ListarReservas();
 
             // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
 
@@ -204,8 +198,6 @@ namespace Modelo
             dataGridView.Rows.Clear();
 
             dataGridView.Columns.Clear();
-            // Obtener la lista de las Habitaciones
-            //List<ReservaBE> listaReservas = ListarReservas();
 
             // Iteramos sobre la lista de clientes activos y agregamos cada cliente al DataGridView
 

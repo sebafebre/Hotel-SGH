@@ -21,11 +21,6 @@ namespace Controladora
 
 
         //ValidarCredenciales de Modelo.UsuarioDAL
-        /*
-        public UsuarioBE ValidarCredenciales(string usuario, string password)
-        {
-            return usuarioDAL.ValidarCredenciales(usuario, password);
-        }*/
         public bool VerificarCredencialesEncriptadas(string nombreUsuario, string clave)
         {
             return usuarioDAL.VerificarContraseña(nombreUsuario, clave);

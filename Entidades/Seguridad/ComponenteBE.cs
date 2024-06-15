@@ -27,7 +27,6 @@ namespace Entidades
     public abstract class Componente
     {
         public abstract void Crear(ComponenteBE componente);
-        //void Unir(ComponenteBE componente, GrupoBE grupo);
         public abstract void Eliminar(ComponenteBE componente);
         public abstract void Modificar(ComponenteBE componente);
     }

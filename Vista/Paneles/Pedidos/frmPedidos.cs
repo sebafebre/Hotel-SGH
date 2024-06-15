@@ -44,7 +44,6 @@ namespace Vista.Paneles
         private void btnFrmPedidos_Click(object sender, EventArgs e)
         {
             ValidacionesBLL.AbrirFormulario(typeof(frmPedidos), this);
-            //lblFormulario.Text = "Pedidos";
         }
 
         private void btnAgregarPedido_Click(object sender, EventArgs e)

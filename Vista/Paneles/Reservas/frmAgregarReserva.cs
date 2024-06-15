@@ -134,13 +134,11 @@ namespace Vista.Paneles
         private void dtpFechaLlegada_ValueChanged(object sender, EventArgs e)
         {
             CalcularPrecios();
-            //reservaBLL.DateTimePickerCambia(dtpFechaLlegada, dtpFechaIda, dgvHabitaciones);
             reservaBLL.VerificarHabitacionesDisponibles(dtpFechaLlegada, dtpFechaIda, lblError);
         }
         private void dtpFechaIda_ValueChanged(object sender, EventArgs e)
         {
             CalcularPrecios();
-            //reservaBLL.DateTimePickerCambia(dtpFechaLlegada, dtpFechaIda, dgvHabitaciones);
             reservaBLL.VerificarHabitacionesDisponibles(dtpFechaLlegada, dtpFechaIda, lblError);
         }
 

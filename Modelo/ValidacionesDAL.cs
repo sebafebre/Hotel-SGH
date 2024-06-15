@@ -18,9 +18,8 @@ namespace Modelo
 {
     public class ValidacionesDAL
     {
-        //Crear la funcion AbrirFormulario() para que en los formPantallaPrincipal solo tengan que llamar la funcion
+        //uncion AbrirFormulario() para que en los formPantallaPrincipal solo tengan que llamar la funcion
         //y pasarle el tipo de formulario que quieren abrir
-        //ejemplo: AbrirFormulario(typeof(frmOcupacion));
         public static void AbrirFormulario(Type tipoFormulario, Form frmMenu)
         {
             Form frm = (Form)Activator.CreateInstance(tipoFormulario);

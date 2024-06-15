@@ -15,58 +15,7 @@ namespace Modelo
 {
     public class GrupoDAL 
     {
-        //ContextoBD con = new ContextoBD();
         ContextoBD con = new ContextoBD();
-
-
-        /*
-        public override void Crear(ComponenteBE comp) 
-        {
-            GrupoBE grupo = new GrupoBE();
-            grupo.Componente = comp;
-
-            con.Componente.Add(comp);
-            con.Grupo.Add(grupo);
-            con.SaveChanges();
-
-        }
-
-        public override void Eliminar(ComponenteBE comp)
-        {
-            // Obtener el Id del componente
-            int idcomp = comp.ObtenerId();
-
-            // Buscar el grupo que tiene el Id proporcionado
-            GrupoBE grupo = con.Grupo.FirstOrDefault(gr => gr.Componente.ObtenerId() == idcomp);
-
-            if (grupo != null)
-            {
-                con.Componente.Remove(comp);
-                // Si se encontró el grupo, eliminarlo del contexto y guardar los cambios
-                con.Grupo.Remove(grupo);
-                con.SaveChanges();
-            }
-        }
-        public override void Listar(int depth)
-        {
-
-        }
-        */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -80,17 +29,15 @@ namespace Modelo
             List<GrupoBE> Grupos = con.Grupo.Include(p => p.Componente).ToList();
 
 
-            // Limpiamos las filas existentes en el DataGridView
+           
             dgvGruposPermisosUsuario.Rows.Clear();
             dgvGruposPermisosUsuario.Columns.Clear();
 
 
-            // Agregamos las columnas al DataGridView
             dgvGruposPermisosUsuario.Columns.Add("Id", "Id");
             dgvGruposPermisosUsuario.Columns.Add("Nombre", "Nombre");
 
-            // Iteramos sobre la lista de grupos del usuario y agregamos cada grupo al DataGridView
-            // Iteramos sobre la lista de permisos del grupo y agregamos cada permiso al DataGridView
+            
             foreach (var grupo in Grupos)
             {
                 int rowIndex = dgvGruposPermisosUsuario.Rows.Add();
@@ -103,11 +50,9 @@ namespace Modelo
 
         public void ListarGruposYPermisosUsuarioEnDataGridView(DataGridView dgvGruposPermisosUsuario, int idUsuario)
         {
-            // Limpiamos las filas existentes en el DataGridView
             dgvGruposPermisosUsuario.Rows.Clear();
             dgvGruposPermisosUsuario.Columns.Clear();
 
-            // Obtener la lista de los grupos del usuario
             List<UsuarioGrupoComponenteBE> listaGruposPermisosUsuario = con.UsuarioGrupoComponente.Include(ug => ug.Componente).Where(ug => ug.Usuario.Id == idUsuario).ToList();
 
             List<GrupoComponenteBE> listaGrupoComponentes = con.GrupoComponente.Include(p => p.Componente).Where(p => p.Grupo.Id == idUsuario).ToList();
@@ -118,11 +63,9 @@ namespace Modelo
 
 
 
-            // Agregamos las columnas al DataGridView
             dgvGruposPermisosUsuario.Columns.Add("Id", "Id");
             dgvGruposPermisosUsuario.Columns.Add("Nombre", "Nombre");
 
-            // Iteramos sobre la lista de grupos del usuario y agregamos cada grupo al DataGridView
             foreach (var grupoPermiso in listaGruposPermisosUsuario)
             {
                 int rowIndex = dgvGruposPermisosUsuario.Rows.Add();
@@ -130,42 +73,7 @@ namespace Modelo
                 dgvGruposPermisosUsuario.Rows[rowIndex].Cells["Nombre"].Value = grupoPermiso.Componente.Nombre;
             }
         }
-        /*
-        public void ListarGruposEnComboBox(System.Windows.Forms.ComboBox cboGrupos)
-        {
-            var grupos = from g in con.Grupo
-                         select g;
-            cboGrupos.DataSource = grupos.ToList();
-            cboGrupos.DisplayMember = "Nombre";
-            cboGrupos.ValueMember = "Id";
-        }
-
-        public void ListarGruposEnDGV(System.Windows.Forms.DataGridView dgvGrupos)
-        {
-            var grupos = from g in con.Grupo
-                         select new
-                         {
-                             idComponente = g.Componente.Id,
-                             Nombre = g.Componente.Nombre,
-                         };
-            dgvGrupos.DataSource = grupos.ToList();
-
-        }*/
-
-        //Listar los grupos que tiene el Usuario
-        /*
-        public void ListarGruposUsuarioEnDataGridView(System.Windows.Forms.DataGridView dgvGrupos, int idUsuario)
-        {
-            var grupos = from g in con.Grupo
-                         join gu in con.UsuarioGrupoComponente on g.Id equals gu.Componente.Id
-                         where gu.Usuario.Id == idUsuario
-                         select new
-                         {
-                             idComponente = g.Componente.Id,
-                             Nombre = g.Componente.Nombre,
-                         };
-            dgvGrupos.DataSource = grupos.ToList();
-        }*/
+        
         #endregion
 
 
@@ -183,8 +91,7 @@ namespace Modelo
                 {
                     throw new Exception("Ya existe un grupo con ese nombre.");
                 }
-                //grupo.Componente.Id = grupo.Id;
-                //grupo.Componente.Nombre = grupo.Componente.Nombre;
+                
                 con.Grupo.Add(grupo);
                 con.SaveChanges();
 
@@ -203,8 +110,6 @@ namespace Modelo
                 GrupoBE grupoAModificar = con.Grupo.Include(g => g.Componente).FirstOrDefault(g => g.Id == grupo.Id);
 
 
-
-                //Ahora modificar el cliente
                 grupoAModificar.Componente.Nombre = grupo.Componente.Nombre;
 
                 con.SaveChanges();
@@ -242,19 +147,13 @@ namespace Modelo
                 GrupoBE grupo = con.Grupo.Where(gp => gp.Componente.Id == idGrupo).FirstOrDefault();
                 ComponenteBE componente = con.Componente.Find(idComponente);
                 GrupoComponenteBE grupoComponenteEliminar = con.GrupoComponente.FirstOrDefault((gp => gp.Grupo.Componente.Id == idGrupo && gp.Componente.Id == idComponente));
-                //grupoComponente.Grupo = grupo;
-                //grupoComponente.Componente = componente;
+                
                 con.GrupoComponente.Remove(grupoComponenteEliminar);
                 con.SaveChanges();
                 MessageBox.Show("Permiso quitado del grupo correctamente", "Quitar Permiso a Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                /*
-                GrupoBE grupo = con.Grupo.Find(idGrupo);
-                PermisoBE permiso = con.Permiso.Find(idPermiso);
-                GrupoComponenteBE grupoPermiso = con.GrupoComponente.Where(gp => gp.Grupo.Id == idGrupo && gp.Componente.Id == idPermiso).FirstOrDefault();
-                con.GrupoComponente.Remove(grupoPermiso);
-                con.SaveChanges();*/
+               
             }
             catch (Exception ex)
             {
@@ -306,7 +205,6 @@ namespace Modelo
                 // Obtener permisos directamente asignados al usuario
                 var listaComponentesUsuario = con.UsuarioGrupoComponente.Include(ugc => ugc.Componente)
                     .Where(ugc => ugc.Usuario.Id == usuario.Id)
-                    //.Select(ugc => ugc.Componente)
                     .ToList();
 
 
@@ -318,8 +216,6 @@ namespace Modelo
                 {
                     var listPermisos = con.Permiso.Include(gc => gc.Componente)
                         .Where(gc => gc.Componente.Id == usuarioComponente.Componente.Id)
-                        //.Where(gc => gc.Componente.Id == usuarioComponente.Id)
-                        //.Select(gc => gc.Componente)
                         .ToList();
 
                     listaPermisosSimples.AddRange(listPermisos);
@@ -335,8 +231,6 @@ namespace Modelo
                 {
                     List<GrupoBE> listGrupo = con.Grupo.Include(gc => gc.Componente)
                         .Where(gc => gc.Componente.Id == usuarioComponente.Componente.Id)
-                        //.Where(gc => gc.Componente.Id == usuarioComponente.Id)
-                        //.Select(gc => gc.Componente)
                         .ToList();
                     listaGrupos.AddRange(listGrupo);
                 }
@@ -359,7 +253,6 @@ namespace Modelo
                 {
                     var listGrupoPermisos = con.Permiso.Include(gc => gc.Componente)
                         .Where(gc => gc.Componente.Id == permsiso.Componente.Id)
-                        //.Select(gc => gc.Componente)
                         .ToList();
 
                     listaPermisosDeGrupos.AddRange(listGrupoPermisos);
@@ -400,11 +293,9 @@ namespace Modelo
                 }
                 else
                 {
-                    //GrupoBE grupo = new GrupoBE();
                     GrupoBE grupo = new GrupoBE();
                     grupo.Componente = componente;
 
-                    //guardar en bd
                     con.Componente.Add(componente);
                     con.Grupo.Add(grupo);
                     con.SaveChanges();
@@ -420,15 +311,7 @@ namespace Modelo
         }
         public override void Eliminar(ComponenteBE componente)
         {
-            /*
-            GrupoBE grupo = con.Grupo.Include(p => p.Componente).FirstOrDefault(p => p.Componente.Id == componente.Id);
-            //grupo.Componente = componente;
-            ComponenteBE compEliminar = con.Componente.FirstOrDefault(p => p.Id == componente.Id);
-            con.Grupo.Remove(grupo);
-            con.Componente.Remove(compEliminar);
-
-            con.SaveChanges();
-            */
+            
 
             GrupoBE grupo = con.Grupo.Include(p => p.Componente).FirstOrDefault(p => p.Componente.Id == componente.Id);
 
@@ -459,7 +342,6 @@ namespace Modelo
                 con.Componente.Remove(compEliminar);
                 con.SaveChanges();
                 MessageBox.Show("Grupo eliminado con exito");
-                // Actualizar las propiedades del permiso
 
             }
 

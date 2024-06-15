@@ -13,11 +13,7 @@ namespace Controladora
     public class HabitacionBLL
     {
         HabitacionesDAL _habitacionesDAL = new HabitacionesDAL();
-        /*
-        public string AgregarHabitacion(HabitacionBE habitacion)
-        {
-            return _habitacionesDAL.AgregarHabitacion(habitacion);
-        }*/
+        
 
         public void AgregarHabitacion(HabitacionBE habitacion)
         {
@@ -38,23 +34,7 @@ namespace Controladora
         }
 
 
-        /*
-        //Funcion Obtener un habitacion de la base de datos
-        public HabitacionBE ObtenerHabitacion(int idHabitacion)
-        {
-            return _habitacionesDAL.ObtenerHabitacion(idHabitacion);
-        }*/
-
-        //limpiar campos (textbox, combobox, etc)
         
-
-
-
-        /*
-        public List<HabitacionBE> ListarHabitaciones()
-        {
-            return _habitacionesDAL.ListarHabitaciones();
-        }*/
 
 
         public void ListarHabitacionesEnDataGridView(DataGridView dataGridView)
@@ -77,11 +57,7 @@ namespace Controladora
             return _habitacionesDAL.ObtenerEstadoSeleccionado(flowLayoutPanel);
         }
 
-        /*
-        public int ProximoId()
-        {
-            return _habitacionesDAL.ProximoId();
-        }*/
+        
 
     }
 }

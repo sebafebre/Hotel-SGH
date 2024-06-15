@@ -70,15 +70,7 @@ namespace Vista.Administrador
 
                     usuarioBLL.ListarGruposYPermisosUsuarioEnDataGridView(dgvGrupoPermisoUsuario, idUsuario);
 
-                    /* ObtenerDatosClienteYHabitacion
-                    ClienteBE clienteReserva;
-                    HabitacionBE habitacionReserva;
-
-                    pedidoBLL.ObtenerDatosClienteYHabitacion(nroReservaDGV, out clienteReserva, out habitacionReserva);
-
-                    txtNroHabitacion.Text = habitacionReserva.NroHabitacion.ToString();
-                    txtNombreCliente.Text = clienteReserva.Persona.Nombre + clienteReserva.Persona.Apellido;
-                    txtBuscarDNI.Text = clienteReserva.Persona.DNI;*/
+                   
                 }
             }
             catch (Exception ex)
@@ -98,17 +90,7 @@ namespace Vista.Administrador
                     txtIdComponenteGrupo.Text = dgvGrupos.CurrentRow.Cells[0].Value?.ToString();
 
                     int IdComponenteGrupo = Convert.ToInt32(dgvGrupos.CurrentRow.Cells[0].Value?.ToString());
-                    //permisoBLL.ListarPermisosGrupoEnDGV(dgvGrupoPermisoUsuario, idGrupo);
-
-                    /* ObtenerDatosClienteYHabitacion
-                    ClienteBE clienteReserva;
-                    HabitacionBE habitacionReserva;
-
-                    pedidoBLL.ObtenerDatosClienteYHabitacion(nroReservaDGV, out clienteReserva, out habitacionReserva);
-
-                    txtNroHabitacion.Text = habitacionReserva.NroHabitacion.ToString();
-                    txtNombreCliente.Text = clienteReserva.Persona.Nombre + clienteReserva.Persona.Apellido;
-                    txtBuscarDNI.Text = clienteReserva.Persona.DNI;*/
+                   
                 }
             }
             catch (Exception ex)
@@ -204,8 +186,7 @@ namespace Vista.Administrador
                 if (txtIdComponentePermiso.Text != "" && txtIdUsuario.Text != "")
                 {
                     usuarioBLL.AgregarPermisoAUsuario(idUsuario, idComponentePermiso);
-                    //permisoBLL.ListarPermisosGrupoEnDGV(dgvGrupoPermisoUsuario, idUsuario);
-                    //validacionBLL.LimpiarCampos(this.Controls);
+                    
                     usuarioBLL.ListarGruposYPermisosUsuarioEnDataGridView(dgvGrupoPermisoUsuario, idUsuario);
                 }
                 else
@@ -229,12 +210,10 @@ namespace Vista.Administrador
                 if (txtIdEliminar.Text != "" && txtIdUsuario.Text != "")
                 {
                     int idUsuario = Convert.ToInt32(txtIdUsuario.Text);
-                    //int idPermiso = Convert.ToInt32(txtIdPermiso.Text);
                     idComponentePermiso = Convert.ToInt32(txtIdEliminar.Text);
 
                     usuarioBLL.EliminarPermisoAUsuario(idUsuario, idComponentePermiso );
-                    //permisoBLL.ListarPermisosGrupoEnDGV(dgvGrupoPermisoUsuario, idUsuario);
-                    //validacionBLL.LimpiarCampos(this.Controls);
+                    
                     usuarioBLL.ListarGruposYPermisosUsuarioEnDataGridView(dgvGrupoPermisoUsuario, idUsuario);
                 }
                 else
@@ -267,32 +246,7 @@ namespace Vista.Administrador
                 MessageBox.Show("Error: " + ex.Message);
             }
 
-            /*
-            try
-            {
-                //Poner los datos del cliente seleccionado en los campos correspondientes
-                if (dgvPermisos.CurrentRow != null)
-                {
-                    txtIdPermiso.Text = dgvGrupos.CurrentRow.Cells[0].Value?.ToString();
-
-                    int idPermiso = Convert.ToInt32(dgvGrupos.CurrentRow.Cells[0].Value?.ToString());
-                    //permisoBLL.ListarPermisosGrupoEnDGV(dgvPermisosDelGrupo, idPermiso);
-
-                    /* ObtenerDatosClienteYHabitacion
-                    ClienteBE clienteReserva;
-                    HabitacionBE habitacionReserva;
-
-                    pedidoBLL.ObtenerDatosClienteYHabitacion(nroReservaDGV, out clienteReserva, out habitacionReserva);
-
-                    txtNroHabitacion.Text = habitacionReserva.NroHabitacion.ToString();
-                    txtNombreCliente.Text = clienteReserva.Persona.Nombre + clienteReserva.Persona.Apellido;
-                    txtBuscarDNI.Text = clienteReserva.Persona.DNI;*//*
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }*/
+            
 
         }
 
@@ -303,7 +257,6 @@ namespace Vista.Administrador
                 //Poner los datos del cliente seleccionado en los campos correspondientes
                 if (dgvGrupoPermisoUsuario.CurrentRow != null)
                 {
-                    //txtIdPermiso.Text = dgvPermisos.CurrentRow.Cells[0].Value?.ToString();
                     
                     txtIdEliminar.Text = dgvGrupoPermisoUsuario.CurrentRow.Cells[0].Value?.ToString();
                     idComponenteEliminar = (int)dgvGrupoPermisoUsuario.CurrentRow.Cells[0].Value;

@@ -100,25 +100,21 @@ namespace Modelo
 
                 if (pedido.Operacion == "Crear")
                 {
-                    //DGV.Rows[rowIndex].Cells[6].Style.BackColor = Color.Yellow; // Crear en amarillo
                     DGV.Rows[rowIndex].Cells[6].Value = pedido.Operacion;
                     DGV.Rows[rowIndex].DefaultCellStyle.BackColor = Color.Yellow;
                 }
                 else if (pedido.Operacion == "Modificar")
                 {
-                    //DGV.Rows[rowIndex].Cells[6].Style.BackColor = Color.Orange; // Modificar en naranja
                     DGV.Rows[rowIndex].Cells[6].Value = pedido.Operacion;
                     DGV.Rows[rowIndex].DefaultCellStyle.BackColor = Color.Orange;
                 }
                 else if (pedido.Operacion == "Eliminar")
                 {
-                    //DGV.Rows[rowIndex].Cells[6].Style.BackColor = Color.Red; // Eliminar en rojo
                     DGV.Rows[rowIndex].Cells[6].Value = pedido.Operacion;
                     DGV.Rows[rowIndex].DefaultCellStyle.BackColor = Color.Red;
                 }
                 if (pedido.FechaModificacion == pedidosHistoricos.Where(d => d.PedidoId == pedido.PedidoId).Max(d => d.FechaModificacion) && (pedido.Operacion == "Crear" || pedido.Operacion == "Modificar"))
                 {
-                    //DGV.Rows[rowIndex].Cells[6].Style.BackColor = Color.Green; // Ultimo detalle creado es verde
                     DGV.Rows[rowIndex].Cells[6].Value = pedido.Operacion;
                     DGV.Rows[rowIndex].DefaultCellStyle.BackColor = Color.Green;
                 }
@@ -164,26 +160,22 @@ namespace Modelo
 
                 if (detalle.Operacion == "Crear")
                 {
-                    //DGV.Rows[rowIndex].Cells[6].Style.BackColor = Color.Yellow; // Crear en amarillo
                     DGV.Rows[rowIndex].Cells[6].Value = detalle.Operacion;
                     DGV.Rows[rowIndex].DefaultCellStyle.BackColor = Color.Yellow;
                 }
                 else if (detalle.Operacion == "Modificar")
                 {
-                    //DGV.Rows[rowIndex].Cells[6].Style.BackColor = Color.Orange; // Modificar en naranja
                     DGV.Rows[rowIndex].Cells[6].Value = detalle.Operacion;
                     DGV.Rows[rowIndex].DefaultCellStyle.BackColor = Color.Orange;
                 }
                 else if (detalle.Operacion == "Eliminar")
                 {
-                    //DGV.Rows[rowIndex].Cells[6].Style.BackColor = Color.Red; // Eliminar en rojo
                     DGV.Rows[rowIndex].Cells[6].Value = detalle.Operacion;
 
                     DGV.Rows[rowIndex].DefaultCellStyle.BackColor = Color.Red;
                 }
                 if (detalle.FechaModificacion == detallesHistoricos.Where(d => d.DetallePedidoId == detalle.DetallePedidoId).Max(d => d.FechaModificacion) && (detalle.Operacion == "Crear" || detalle.Operacion == "Modificar"))
                 {
-                    //DGV.Rows[rowIndex].Cells[6].Style.BackColor = Color.Green; // Ultimo detalle creado es verde
                     DGV.Rows[rowIndex].Cells[6].Value = detalle.Operacion;
                     DGV.Rows[rowIndex].DefaultCellStyle.BackColor = Color.Green;
                     
@@ -433,32 +425,7 @@ namespace Modelo
 
 
 
-        #region Mostrar cambios históricos
-        //
-        //Creado por Sebastian Febre
-        // https://github.com/sebafebre
-        //
-        #region Mostrar cambios de Factura
-
-
-
-
-
-
-        #endregion
-
-        #region Mostrar cambios de Pedido
-
-        #endregion
-
-        #region Mostrar cambios de DetallePedido
-
-        #endregion
-
-
-        //
-        //
-        #endregion
+        
 
 
 
@@ -527,7 +494,7 @@ namespace Modelo
             // Obtenemos las facturas de la base de datos
             var facturas = _con.Factura.ToList();
 
-            //var reserva = _con.pedido.Where(p => p.factura == facturas);
+      
             // Agregamos las columnas una vez fuera del bucle
 
             dataGridView.Columns.Add("Id Factura", "ID Factura");
@@ -543,7 +510,6 @@ namespace Modelo
             // Agregamos las facturas al DataGridView
             foreach (var factura in facturas)
             {
-                // Use FirstOrDefault to get a single result from the query
                 PedidoBE pedido = _con.Pedido
                     .Include(p => p.Reserva)
                     .Include(p => p.Reserva.Cliente)
@@ -556,16 +522,12 @@ namespace Modelo
                     PersonaBE personaCliente = _con.Persona.FirstOrDefault(p => p.Id == pedido.Reserva.Cliente.Persona.Id);
                     HabitacionBE habitacion = _con.Habitacion.FirstOrDefault(h => h.Id == pedido.Reserva.Habitacion.Id);
 
-                    // The rest of your code remains the same
                     int rowIndex = dataGridView.Rows.Add();
                     dataGridView.Rows[rowIndex].Cells[0].Value = factura.Id;
                     dataGridView.Rows[rowIndex].Cells[1].Value = factura.FechaEmision;
                     dataGridView.Rows[rowIndex].Cells[2].Value = factura.Total;
-                    //dataGridView.Rows[rowIndex].Cells[3].Value = factura.Estado;
-                    dataGridView.Rows[rowIndex].Cells[3].Value = personaCliente?.DNI; // Check for nullability
-                    //dataGridView.Rows[rowIndex].Cells[5].Value = personaCliente?.Nombre + " " + personaCliente?.Apellido; // Check for nullability
-                    dataGridView.Rows[rowIndex].Cells[4].Value = habitacion?.NroHabitacion; // Check for nullability
-                    //dataGridView.Rows[rowIndex].Cells[7].Value = factura.Empleado?.Persona?.Nombre + " " + factura.Empleado?.Persona?.Apellido; // Check for nullability
+                    dataGridView.Rows[rowIndex].Cells[3].Value = personaCliente?.DNI; 
+                    dataGridView.Rows[rowIndex].Cells[4].Value = habitacion?.NroHabitacion; 
                 }
             }
 
@@ -604,15 +566,13 @@ namespace Modelo
                     PersonaBE personaCliente = _con.Persona.FirstOrDefault(p => p.Id == reserva.Cliente.Persona.Id);
                     HabitacionBE habitacion = _con.Habitacion.FirstOrDefault(h => h.Id == reserva.Habitacion.Id);
 
-                    // The rest of your code remains the same
                     int rowIndex = dataGridView.Rows.Add();
                     dataGridView.Rows[rowIndex].Cells[0].Value = pedido.Id; // -->  ver con q remplezar
                     dataGridView.Rows[rowIndex].Cells[1].Value = pedido.FechaCreacion;
                     dataGridView.Rows[rowIndex].Cells[2].Value = pedido.Estado;
                     dataGridView.Rows[rowIndex].Cells[3].Value = reserva.Id; //-->Eliminar o  ver con q remplezar
                     dataGridView.Rows[rowIndex].Cells[4].Value = personaCliente?.DNI;
-                    //dataGridView.Rows[rowIndex].Cells[5].Value = personaCliente?.Nombre + " " + personaCliente?.Apellido; // Check for nullability
-                    dataGridView.Rows[rowIndex].Cells[5].Value = habitacion?.NroHabitacion; // Check for nullability
+                    dataGridView.Rows[rowIndex].Cells[5].Value = habitacion?.NroHabitacion; 
                 }
 
             }
@@ -640,7 +600,6 @@ namespace Modelo
 
             foreach (var detalle in detallesPedido)
             {
-                // The rest of your code remains the same
                 int rowIndex = dataGridView.Rows.Add();
                 dataGridView.Rows[rowIndex].Cells[0].Value = detalle.Id;
                 dataGridView.Rows[rowIndex].Cells[3].Value = detalle?.NombreProducto;

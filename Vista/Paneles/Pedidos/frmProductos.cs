@@ -85,13 +85,7 @@ namespace Vista.Paneles.Pedidos
                     productoBLL.EliminarProducto(Convert.ToInt32(txtID.Text));
                     productoBLL.ListarProductosEnDGV(dgvProductos);
 
-                    /*
-                    if (MessageBox.Show("¿Está seguro que desea eliminar el producto?", "Eliminar Producto", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        productoBLL.EliminarProducto(Convert.ToInt32(txtID.Text));
-                        productoBLL.ListarProductosEnDGV(dgvProductos);
-                        MessageBox.Show("Producto eliminado correctamente", "Eliminar Producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }*/
+                    
                 }
                 else
                 {

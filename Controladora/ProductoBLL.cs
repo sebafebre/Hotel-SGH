@@ -28,11 +28,7 @@ namespace Controladora
             productoDAL.EliminarProducto(id);
         }
 
-        /*
-        public List<ProductoBE> ListarProductos()
-        {
-            return productoDAL.ListarProductos();
-        }*/
+        
 
         public void ListarProductosEnDGV(DataGridView dataGridView)
         {
